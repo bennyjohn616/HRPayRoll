@@ -1,0 +1,6 @@
+@State_ApiSideOnly_HostAddress = http://localhost:5015
+
+GET {{State_ApiSideOnly_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
