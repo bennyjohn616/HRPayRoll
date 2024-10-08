@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Form-12 BA";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <a href="#" id="Form12BATreeView">
+            <span class="title">
+                Click here : <u> Previous Form12 Part BA</u>
+            </span>
+        </a>
+        @*<h4>Form 12 BA Download</h4>
+        <div id="tdsView" style="width: 300px; height: 600px; overflow: scroll;overflow:auto">
+            <input type="button" value="Download Form16" onclick="$slaryView.downloadForm16()" />
+        </div>*@
+    </div>
+
+</div>
+
+<script src="~/Js/salaryView.js"></script>
+<script type="text/javascript">
+    $('#Form12BATreeView').on("click", function (e) {
+        if (this.id == '') {
+            return false;
+        }
+        else {
+            $payroll.CallControler(this);
+        }
+    });
+</script>

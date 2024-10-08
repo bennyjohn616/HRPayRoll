@@ -1,0 +1,144 @@
+﻿<meta http-equiv=“Pragma” content=”no-cache, no-store, must-revalidate”>
+<meta http-equiv=“Expires” content=”0″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<html>
+<body>
+    <form id="frmView" data-toggle="validator" role="form" action="" enctype="multipart/form-data">
+        <div class="modal-dialog-full-width dialog1">
+            <div class="nodisp showhide" id="loader" style="width:80%;height:80%">
+                <img src="~/assets/images/spinner.gif" />
+            </div>
+            <div class="modal-content">
+                @*<div class="modal-header" style="margin:0px;">
+                        <h4 class="modal-title" id="H4">
+                            Document View
+                        </h4>
+                    </div>*@
+                <div class="modal-body" style="margin:0px;">
+                    <button id="closepreview" type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <div>
+                        Employee No : <label id="empno" style="margin:10px"></label>
+                        Name : <label id="empname" style="margin:10px"></label>
+                        Serial No : <label id="slno" style="margin:10px"></label>
+                        Description : <label id="description" style="margin:10px"></label>
+                    </div>
+                    <div id="Doc1">
+                        <iframe id="preview" src="" typeof="application/pdf"></iframe>
+                    </div>
+                    <div>
+                        <span>
+                            </br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+<script>
+
+   $Check1 =
+    {
+        getimage: function (context) {
+            debugger;
+            $('#preview').attr('src', '');
+            $('#preview').hide();
+            $Check1.show();
+            $.ajax({
+                type: 'POST',
+                url: "Verify/GetImage",
+                contentType: "application/json; charset=utf-8;image/png;application/pdf",
+                data: JSON.stringify({ data: context }),
+                async: false,
+                success: function (jsonResult) {
+                    $Check1.hide();
+                    //alert("image" + msg);
+                    debugger;
+                    var out = jsonResult.result;
+                    var data = context;
+                    var extarray = context.split('.');
+                    ext = extarray[extarray.length - 1];
+                    var type = '';
+                    if (ext == "pdf") {
+                        type = "application/pdf";
+                    }
+                    else if (ext == "jpg" || ext == "jpeg") {
+                        type = "image/jpg";
+                    }
+                    else if (ext == 'doc' || ext == "docx") {
+                        type = "application/docx"
+                    }
+                    else {
+                        type = "application/lpg";
+                    }
+                    var empno = $('#EmpCode option:selected').text();
+                    var name = $('#EmpCode option:selected').data('name');
+                    $('#empno').html(empno);
+                    $('#empname').html(name);
+                    $('#slno').html($Check.slno);
+                    $('#description').html($Check.Description);
+                    $('#remarks').val($Check.Remarks);
+
+                    var input = jsonResult.result;
+                    if (typeof input != "undefined") {
+                        var start = input.indexOf("tempfiles");
+                        var end = jsonResult.result.length;
+                    }
+
+                    $('#preview').attr('src', '');
+                    $('#preview').attr('typeof', type);
+                    if (input == "" || typeof input == "undefined") {
+                        $('#preview').attr('typeof', '');
+                        $("#preview").attr('src', "");
+                        alert("Error in Retrieving document");
+                    }
+                    else {
+                        $("#preview").attr('src', input.substring(start, end));
+                    }
+                    $('#preview').show();
+                    $('#Viewpreview').modal('show');
+                },
+                // $('#img1').attr('src', "data:image/png;base64," + out);
+                error: function (msg) {
+                    $Check1.hide();
+                    alert("error in image");
+                }
+            })
+        },
+
+        show: function () {
+            $('#loader').removeClass('nodisp');
+        },
+
+        hide: function () {
+            $('#loader').addClass('nodisp');
+        },
+
+    }
+
+</script>
+<style>
+    iframe {
+        border: 6px solid blue;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        height: 450px;
+        display: block;
+    }
+
+    .dialog1 {
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+    .showhide {
+        z-index: 9999;
+    }
+</style>
+

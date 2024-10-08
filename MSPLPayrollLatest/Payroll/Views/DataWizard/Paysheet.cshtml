@@ -1,0 +1,254 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="form-horizontal">
+
+    <ul class="nav nav-tabs" id="empNavtabs">
+        @*tabs-left*@        
+        <li>
+            <a href="#setting" data-toggle="tab" class="wizard" id="wizardsettng">Settings</a>
+        </li>
+        <li class="active">
+            <a href="#rpt" data-toggle="tab" class="wizard" id="wizardrpt">Report</a>
+        </li>
+
+    </ul>
+
+    <div class="tab-content" id="tabcontent">
+
+        <div id="rpt" class="tab-pane fade in active">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                Title
+                            </label>
+                            <div class="col-md-9">
+                                <select id="sltRpt" class="form-control"></select>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="button" id="btnGetReport" value="Get Report" onclick="$PaySheet.generatePaySheet()" class="btn custom-button ">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                From
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltSMonth" class="form-control">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <input id="sltSYear" onkeypress="return $validator.IsNumeric(event, 'sltSYear')" maxlength="4" min="4" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">
+                                To
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltNMonth" class="form-control">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <input id="sltNYear" onkeypress="return $validator.IsNumeric(event,'sltNYear')" maxlength="4" min="4" />
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            @*<ul class="nav nav-tabs" id="rptFilterNavtabs">
+
+                <li class="active"><a href="#step6" data-toggle="tab" class="wizard" id="wizardStep6">Filters</a></li>
+
+
+            </ul>*@
+
+            <label class="control-label col-md-4">Filters </label>
+            <div class="tab-content" id="tabcontent3">
+
+
+                <div id="step6" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="form-horizontal">
+                            <div class="col-sm-12">
+
+
+                                @Html.Partial("~/Views/DataWizard/Filters.cshtml")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row" id="divReport">
+
+            </div>
+
+            
+        </div>
+        <div id="setting" class="tab-pane fade in ">
+            <div class="row">
+                <div class="form-horizontal">
+                    <div class="col-sm-12">
+
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <input type="text" id="txtrptTitle" class="form-control" placeholder="Description" style="display:none" value="" />
+                                <select id="sltRptedit" class="form-control"></select>
+                            </div>
+
+                            <div cclass="col-md-6">
+                                <input type="button" id="btnPSSaveSetting" value="Save" onclick="$PaySheet.savePaySetting()" class="btn custom-button ">
+                                <input type="button" id="btnCancelSetting" value="Cancel" onclick="$PaySheet.cancelSetting()" class="btn custom-button ">
+                                <input type="button" id="btNewSetting" value="New" onclick="$PaySheet.newPSSetting()" class="btn custom-button ">
+                                <input type="button" id="btDeleteSetting" value="Delete" onclick="$PaySheet.deleteSettings()" class="btn custom-button ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <input type="text" id="txtTitle" class="form-control" placeholder="Title" value="" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="col-sm-12">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="radio" id="rbconsolidate" name="isDetail" > Consolidate Report
+                                <input type="radio" id="rbDeail" name="isDetail" checked> Detail Report
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="col-sm-12">
+                        <ul class="nav nav-tabs" id="rptsettingNavtabs">
+                            <li class="active"><a href="#step3" data-toggle="tab" class="wizard" id="wizardStep3"> Report Fields</a></li>
+                            <li>
+                                <a href="#step2" data-toggle="tab" class="wizard" id="wizardStep2">Category </a>
+                            </li>
+
+                            <li><a href="#step7" data-toggle="tab" class="wizard" id="wizardStep7">Grouping</a></li>
+                        </ul>
+                        <div class="tab-content" id="tabcontent2">
+                            <div id="step3" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="form-horizontal">
+                                        <div class="col-sm-12">
+                                            @Html.Partial("~/Views/DataWizard/CatMasterField.cshtml")
+                                        </div>
+                                        <div class="col-sm-12">
+                                            @Html.Partial("~/Views/DataWizard/Earning.cshtml")
+                                        </div>
+                                        <div class="col-sm-12">
+                                            @Html.Partial("~/Views/DataWizard/Deduction.cshtml")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="step2" class="tab-pane fade in  ">
+                                <div class="row">
+                                    <div class="form-horizontal">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-6">
+                                                @Html.Partial("~/Views/DataWizard/Category.cshtml")
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="step7" class="tab-pane fade in ">
+                                <div class="row">
+                                    <div class="form-horizontal">
+                                        <div class="col-sm-12">
+                                            @Html.Partial("~/Views/DataWizard/Grouping.cshtml")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Js/application.js"></script>
+<script src="~/assets/plugins/ModalPopups.js"></script>
+<script src="~/Js/DataWizard/Paysheet.js"></script>
+<script src="~/js/Company/CompanyCom.js"></script>
+<script src="~/Js/DataWizard/Payslipsetting.js"></script>
+<script>
+    $PaySheet.LoadPaySheetsetting();
+</script>
+

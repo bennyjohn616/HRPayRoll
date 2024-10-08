@@ -1,0 +1,108 @@
+﻿<div class="form-horizontal">
+    <div class="col-lg-12">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="control-label col-md-4 ">
+                       Employee Code
+                </label>
+                <div class="col-md-6">
+                    <select class="form-control " id="sltFromEmpCode">
+                         
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <br>
+        <br>
+    </div>
+    <div class="col-md-4">
+        <input type="button" id="btnFlexiPaySummary" onclick="$dwDeductions.FlexiPayReport()" value="GetReport" class="btn custom-button btnRight marginbt7 ">
+    </div>
+</div>
+<div class="col-md-12 nodisp table-responsive" id="empFlex">
+    <table id="tblempFlex" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+        <thead>
+            <tr>
+
+                <th>
+                    EmployeeCode
+                </th>
+                <th>
+                    EmployeeName
+                </th>
+                <th>
+                    Basic Salary
+                </th>
+                <th>
+                    FIXED CHILDREN EDU ALLOWANCE
+                </th>
+                <th>
+                    FIXED CONVEYANCE ALLOWANCE
+                </th>
+                <th>
+                    FIXED FLEXIBLE ALLOWANCE
+                </th>
+                <th>
+                    FIXED HOUSE RENT ALLOWANCE
+                </th>
+                <th>
+                    FIXED LEAVE TRAVEL ALLOWANCE
+                </th>
+                <th>
+                    FIXED MEAL VOUCHER
+                </th>
+                <th>
+                    FIXED SPECIAL ALLOWANCE
+                </th>
+                <th>
+                    FIXED TELECOM ALLOWANCE
+                </th>
+                <th>
+                    GIFT VOUCHER
+                </th>
+                <th>
+                    NPS CONTRIBUTION
+                </th>
+                <th>
+                    EARNED GROSS
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</div>
+<script src="~/Js/DataWizard/DWDeductions.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        debugger
+       
+        $.ajax({
+            type: 'POST',
+            url: $app.baseUrl + "Employee/GetEmployeesWithName",
+            contentType: "application/json; charset=utf-8",
+            data: null,
+            dataType: "json",
+            async: false,
+            success: function (msg) {
+                var out = msg;
+                $('#sltFromEmpCode').html('');
+                $('#sltFromEmpCode').append($("<option></option>").val('00000000-0000-0000-0000-000000000000').html('--Select--'));
+                $('#sltFromEmpCode').append($("<option></option>").val('11111111-1111-1111-1111-111111111111').html('        ALL   '));
+                $.each(msg.result, function (index, blood) {
+                    $('#sltFromEmpCode').append($("<option></option>").val(blood.empid).html(blood.EmpcodeName));
+                });
+            },
+            error: function (msg) {
+            }
+        });
+
+    })
+
+</script>

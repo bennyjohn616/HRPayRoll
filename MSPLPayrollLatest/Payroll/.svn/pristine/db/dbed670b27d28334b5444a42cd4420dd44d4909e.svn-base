@@ -1,0 +1,233 @@
+﻿<!-- Modal -->
+<form id="frmFormula" data-toggle="validator" role="form" action="javascript:$formulaCreation.save()">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    <label class="control-label" id="lblFormulatitle">
+                        Add/Edit Formula
+                    </label>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="form-horizontal" id="dvNormalFormula">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Field Name <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtFieldName" class="form-control" readonly="readonly" placeholder="Enter the Field Name"
+                                         maxlength="30"   required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Type
+                                </label>
+                                <div class="col-md-7">
+                                    <select id="sltEntityType" class="form-control">
+                                        <option value="1">Master Input</option>
+                                        <option value="2">Monthly Input</option>
+                                        <option value="3">Percentage</option>
+                                        <option value="4">Conditional</option>
+                                        <option value="5">Range</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="hdMonthlyInput">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4" id="lblfrmla">
+                                        Formula <label id="lblman" style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="txtFormula" multiple class="form-control" @*readonly="readonly"*@ placeholder="Enter the Formula"
+                                               maxlength="200" @*required*@ />
+
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button id="btnViewIf" class="btn custom-button">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </button>
+                                        <button id="btnViewRange" class="btn custom-button">
+                                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group nodisp" id="dvArrearMap">
+                                    <label class="control-label col-md-4">
+                                        Arrear Map Field
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="txtArrearMapField" maxlength="40" class="form-control" placeholder="Enter the Arrear Match Field" />
+                                    </div>
+                                </div>
+                                <div class="form-group nodisp" id="dvEligibityFromula">
+                                    <label class="control-label col-md-4">
+                                        Eligibility
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="txtEligibilityFormula" class="form-control" placeholder="Enter the Arrear Match Field" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Percentage
+                                    </label>
+                                    <div class="col-md-7">
+                                        @*onkeypress="return $validator.IsNumeric(event, this.id);"*@
+                                        <input type="text" id="txtPercentage" class="form-control" placeholder="Enter the Percentage" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Maximum
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="txtMaximum" onkeypress="return $validator.IsNumeric(event, this.id);" class="form-control" placeholder="Enter the Maximum" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Rounding
+                                </label>
+                                <div class="col-md-7">
+                                    <select class="form-control" id="sltRounding">
+                                        <option value="1">NORMAL</option>
+                                        <option value="2">>1RUPEE</option>
+                                        <option value="3"><1RUPEE</option>
+                                        <option value="15">=1RUPEE</option>
+                                        <option value="4">50 PAISE</option>
+                                        <option value="5">>50 PAISE</option>
+                                        <option value="6"><50 PAISE</option>
+                                        @*<option value="7">10 PAISE</option>
+                                        <option value="8">>10 PAISE</option>
+                                        <option value="9">5 PAISE</option>
+                                        <option value="10">>5 PAISE</option>*@
+                                        <option value="11">5 RUPEES</option>
+                                        <option value="12">>5 RUPEES</option>
+                                        <option value="13"><5 RUPEES</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="dvChildBehav">
+
+
+                            </div>
+                        </div>
+                        <div class="form-horizontal hide" id="dvConditionalFormula">
+                            <div class="form-group">
+                                <label class="control-label col-md-2">
+                                    Formula
+                                </label>
+                                <div class="col-md-10">
+                                    <textarea rows="2" id="txtIfFormula" class="form-control" readonly="readonly" style="max-width:400px;max-height:60px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">    If Condition</h3>
+
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="text-right paddingcustomize col-md-12">
+                                            <button id="btnIfClose" class="btn btn-primary marginbt7"> Close</button>
+                                            <button id="btnIfSaveClose" class="btn btn-primary marginbt7"> Save Close</button>
+                                            <button id="btnIfBuildFormula" class="btn btn-primary marginbt7"> View Formula</button>
+                                            <button id="btnIfAdd" class="btn btn-primary marginbt7"> Add</button>
+                                        </div>
+                                        <div class="row" id="dvIfElseCondition">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-horizontal hide" id="dvRangeFormula">
+                            <div class="form-group">
+                                <label class="control-label col-md-2">
+                                    Base Value
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="hidden" id="hdnBaseValue" />
+                                    <textarea rows="2" id="txtBaseValue" class="form-control" readonly="readonly"></textarea>
+                                </div>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">    Ranges</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="text-right paddingcustomize col-md-12">
+                                        <button id="btnRangeClose" class="btn btn-primary marginbt7"> Close</button>
+                                        <button id="btnRangeSaveClose" class="btn btn-primary marginbt7"> Save Close</button>
+                                        <button id="btnRangeAdd" class="btn btn-primary marginbt7"> Add</button>
+                                    </div>
+                                    <div class="row" id="dvRanges">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5" id="dvFormulaCreationAttribute">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Operator
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn custom-button operator "><i>+</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>-</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>*</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>/</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>(</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>)</i></button>
+                                        <button type="button" class="btn custom-button remove"><i><--</i></button>
+                                        <button type="button" class="btn custom-button enternumber marginbt7">Enter Number</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div>
+                            <label>Search:</label>
+                            <input name="searchF" id="salsearch" placeholder="Filter...">
+                            <button id="btnResetSearch" class="btn custom-button">&times;</button>
+                            <label for="hideMode">
+                                <input type="checkbox" id="hideMode" checked="checked">
+                                Hide unmatchs
+                            </label>
+                        </div>
+                        <div id="attributeModeltree">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnFormulaSave" class="btn custom-button" onclick="$formulaCreation.save();" >
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+    @*<div id="AddData" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+             data-keyboard="false">
+            <div id="renderId">
+            </div>
+        </div>*@
+</form>
+<script src="~/Js/Company/FieldCreation.js"></script>
+
+

@@ -1,0 +1,11 @@
+08/09/2023 19:17:56
+Log
+System.Web.IHttpHandler.ProcessRequest
+External component has thrown an exception.
+   at System.Web.Handlers.TraceHandler.System.Web.IHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================

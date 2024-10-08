@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DBConnection-Web.config Connection String" description="DBConnection Connection String used in web.config by the application to access the database." defaultValue="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=Enlighted;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Mindspay_NewTax\\Payroll\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBConnection']/@connectionString" />
+  </parameter>
+  <parameter name="LoginDBConnection-Web.config Connection String" description="LoginDBConnection Connection String used in web.config by the application to access the database." defaultValue="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=MindspayLogin;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Mindspay_NewTax\\Payroll\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LoginDBConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ServerCon-Web.config Connection String" description="ServerCon Connection String used in web.config by the application to access the database." defaultValue="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=Master;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Mindspay_NewTax\\Payroll\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ServerCon']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Mindspay_NewTax\\Payroll\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Payroll.Models.ApplicationDbContext-Web.config Connection String" description="Payroll.Models.ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="Payroll.Models.ApplicationDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Mindspay_NewTax\\Payroll\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Payroll.Models.ApplicationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

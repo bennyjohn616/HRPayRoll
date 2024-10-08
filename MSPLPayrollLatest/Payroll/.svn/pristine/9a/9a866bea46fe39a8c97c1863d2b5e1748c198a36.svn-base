@@ -1,0 +1,184 @@
+﻿
+<form>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Shift Name</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Excess Stay Considered as</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Over Time calculation Starts After</label>
+            </div>
+            <div class="col-md-6">
+                <input type='time' class="form-control" value='' />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Minimum OT Hour Allocated Per day</label>
+            </div>
+            <div class="col-md-6">
+                <input type='time' class="form-control" value='' />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Maximum OT Hour Allocated Per day</label>
+            </div>
+            <div class="col-md-6">
+                <input type='time' class="form-control" value='' />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Early Coming To Shift Considered as OT</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">OT Break Hour</label>
+            </div>
+            <div class="col-md-2">
+                <input type='time' class="form-control" value='' />
+            </div>
+            <div class="col-md-2">
+                <label class="control-label"> Early OT Break Hour</label>
+            </div>
+            <div class="col-md-2">
+                <input type='time' class="form-control" value='' />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label"> Late Hour Deducted From OT</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">OT Slip Is Mandatory</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+  
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">OT Rounding Type</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">OT Rounding</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">WeekOFF Working Hours Conidered as OT</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Restrict Excess Manual Entry For OT</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-6">
+                <label class="control-label"><input type="checkbox"> Apply The Setting For All Shift</label>
+            </div>
+        </div>
+    </div>
+
+</form>

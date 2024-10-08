@@ -1,0 +1,292 @@
+﻿
+@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<input type="hidden" id="hdnEmployeeId" value="@Session["EmployeeGUID"]" />
+<input type="hidden" id="hdnEmpId" value="@Session["EmployeeId"]" />
+<input type="hidden" id="hdnRoleName" value="@Session["RoleName"]" />
+<input type="hidden" id="hdnEmpCode" value="@Session["EmployeeCode"]" />
+<input type="hidden" id="EntryDate" value="@Session["EntryDate"]" />
+<input type="hidden" id="prsMonth" value=0 />
+<input type="hidden" id="prsYear" value=0 />
+<input type="hidden" id="LockMonth" value=0 />
+<input type="hidden" id="LockYear" value=0 />
+<iframe src="~/StretchSession.aspx" width="0" height="0" style="display:none;"/>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group" id="prctype">
+            <label class="control-label col-md-2">
+                Process Type
+            </label>
+            <div class="col-md-6">
+                <select id="sltPayrollType" class="form-control col-md-6" autofocus>
+                    @*<option value="Cat">Category</option>
+                        @*<option value="Cost">CostCentre</option>
+                        <option value="Grd">Grade</option>
+                        <option value="SEMP">Single Employee</option>
+                        <option value="AEMP">All Employees</option>*@
+                </select>
+            </div>
+                <div class="col-md-4 pull-right ">
+                     <label class="control-label col-md-4">
+                            Year
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltYear" class="form-control" autofocus disabled></select>
+                            @*<input type="text" id="sltYear" maxlength="4" class="form-control" onkeypress="return $validator.IsNumeric(event,this.id)" />*@
+
+                        </div>
+                </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div id="dvPayrollprocess" class="nodisp">
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12">
+
+                     <div class="col-md-4">
+
+                        <label class="control-label col-md-4">
+                            Month
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltMonth" class="form-control">
+                                <option value='0'>--Select--</option>
+                                <option value='1'>January</option>
+                                <option value='2'>February</option>
+                                <option value='3'>March</option>
+                                <option value='4'>April</option>
+                                <option value='5'>May</option>
+                                <option value='6'>June</option>
+                                <option value='7'>July</option>
+                                <option value='8'>August</option>
+                                <option value='9'>September</option>
+                                <option value='10'>October</option>
+                                <option value='11'>November</option>
+                                <option value='12'>December</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+       
+                    <div class="col-md-4" id="dvCat">
+
+                        <label class="control-label col-md-4" id="lblPayrollprocess">
+                            Select Category
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltCategory" class="form-control" autofocus></select>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div id="btnarea" class="pull-right">
+                                <input type="button" id="btnSave" value="Process" class="btn custom-button ">
+
+                                <input type="button" id="btnDelete" value="Delete" class="btn custom-button ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" id="info">
+            <div id="dvTitle">
+            </div>
+            <div id="dvDynamicEntity">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dvError" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Payroll Error
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal" id="dvErrorMsg">
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="workSheetpreview" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/TaxTransaction/WorksheetReportPreview.cshtml")
+</div>
+
+<div id="dynamicProcessForm" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <iframe id='downloadfileIframe' src="~/Entity/DownLoad"></iframe>
+</div>
+
+
+
+<link href="~/assets/css/jquery-confirm.min.css" rel="stylesheet" />
+<script src="~/assets/js/jquery-confirm.min.js"></script>
+<script src="~/Js/Tax/txProcess.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Tax/declaractionEntry.js"></script>
+<script>
+    $companyCom.loadYear({ id: "sltYear" });
+    $companyCom.loadPreviousPayrollProcessMonthYear({ id: 'sltPayrollType', condi: 'Incometax' }) //Load Payroll type
+  //  $taxHistory.LoadEntityModelDrop();
+ 
+    $(document).ready(function () {
+        if ($('#hdnRoleName').val().toUpperCase() == "EMPLOYEE") {
+            var empcode = $('#hdnEmpCode').val();
+            var empid = $('#hdnEmpId').val();
+            $('#sltCategory').append($("<option selected></option>").val(empid).html(empcode));
+            $('#sltPayrollType').val('Single Employee');
+            $taxHistory.selectedpayrollType = "Single Employee";
+            $('#dvPayrollprocess').removeClass('nodisp')
+            $("#dvCat").removeClass('nodisp');
+        }
+     
+    });
+
+
+    $("#btnSave").click(function () {
+        $taxHistory.save();
+    });
+    $("#btnDelete").click(function () {
+        if (confirm("Would you like to delete income tax process")) {
+            $taxHistory.selectedCategoryId = $('#sltCategory').val();
+            $taxHistory.year = $('#sltYear').val();
+            $taxHistory.month = $('#sltMonth').val();
+            $taxHistory.selectedpayrollType = $('#sltPayrollType').val();
+            $taxHistory.financeYear;
+            $taxHistory.DeleteValidation();
+        }
+        else
+        {
+            return false;
+        }
+    });
+
+
+    $('#sltMonth').change(function () {
+        debugger;
+        $('#btnarea').hide();
+        if ($('#sltMonth').val() > 0) {
+            $('#dvCat').show();
+        if ($('#sltPayrollType').val() == "All Employees")  {
+            $taxHistory.GetLockLoad();
+            $('#dvCat').hide();
+        }
+        if ($('#sltPayrollType').val() == "Single Employee") {
+            $taxHistory.GetLockLoad();
+            $('#dvCat').show();
+
+        }
+  
+     $taxHistory.month = $('#sltMonth').val();
+     var sltcategoryVal = $('#sltCategory').val();
+     // alert(sltcategoryVal);
+     sltcategoryVal = sltcategoryVal == null ? "00000000-0000-0000-0000-000000000000" : sltcategoryVal;
+     if ($('#sltCategory').val() != "00000000-0000-0000-0000-000000000000") {
+          var sd = new Date($taxHistory.financeYear.startDate);
+          var ed = new Date($taxHistory.financeYear.EndDate);
+          if (ed.getMonth() + 1 >= $taxHistory.month) {
+              $('#sltYear').val(ed.getFullYear());
+            }
+            else {
+                 $('#sltYear').val(sd.getFullYear());
+            }
+                $taxHistory.selectedEntityModelname = $('#sltCategory').find('option:selected').text();
+                $taxHistory.selectedCategoryId = sltcategoryVal;
+                if ($('#hdnRoleName').val().toUpperCase() != "EMPLOYEE") {
+                    $taxHistory.LoadPayrolltype();
+                }
+                $taxHistory.LoadGridData();
+            }
+            //else {
+            //     alert("Please select the Employee Or category")
+            //     return;
+            //    }
+        }
+    
+    });
+
+  
+        //$taxHistory.LoadPayrolltype();
+ 
+
+    $('#sltYear').change(function () {
+        $taxHistory.year = $('#sltYear').val();
+        $taxHistory.LoadPayrolltype();
+        $taxHistory.LoadGridData();
+
+    });
+
+    $('#sltPayrollType').change(function () {
+        debugger;
+        $('#dvPayrollprocess').addClass('nodisp');
+        $("#dvDynamicEntity").html('');
+        $("#dvTitle").html('');
+        $('#btnarea').hide();
+        $("#dvCat").hide();
+        $('#sltMonth').val(0);
+     
+
+        if ($('#sltPayrollType').val() == "0") {
+            $('#dvPayrollprocess').addClass('nodisp');
+
+        } else {
+            $('#dvPayrollprocess').removeClass('nodisp');
+            $taxHistory.selectedCategoryId = $('#sltPayrollType').val() != 'All Employees' ? $('#sltCategory').val() != null ? $('#sltCategory').val() : '00000000-0000-0000-0000-000000000000' : '00000000-0000-0000-0000-000000000000';
+            $taxHistory.selectedpayrollType = $('#sltPayrollType').val();
+            $('#lblPayrollprocess').text($taxHistory.selectedpayrollType);
+            // $taxHistory.LoadPayrolltype();
+            // $taxHistory.LoadGridData();
+        }
+    });
+
+    $('#sltCategory').change(function () {
+
+        if ($('#sltCategory').val() != "00000000-0000-0000-0000-000000000000" && $('#sltMonth').val() > 0) {
+            $taxHistory.GetLockLoad();
+            $taxHistory.selectedEntityModelname = $('#sltCategory').find('option:selected').text();
+            $taxHistory.selectedCategoryId = $('#sltCategory').val();
+            $taxHistory.LoadGridData();
+        } else {
+            $("#dvDynamicEntity").html('');
+            $("#dvTitle").html('');
+        }
+    });
+
+    
+
+</script>
+
+
+

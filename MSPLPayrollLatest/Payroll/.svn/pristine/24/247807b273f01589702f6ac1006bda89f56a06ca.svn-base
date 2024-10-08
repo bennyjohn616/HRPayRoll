@@ -1,0 +1,1890 @@
+20/07/2023 13:38:02
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+Form16 Part A_2023 -24
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\_Form12BA_2023-2024.pdf
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\_2023-24.pdf
+=======================================================================
+20/07/2023 13:38:02
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\_PartB_2023-2024.pdf
+=======================================================================
+20/07/2023 13:38:06
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:38:16
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:39:17
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\1096__F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\1096__Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 13:47:59
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\1096__Form16 Part B_2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:48:16
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\1096__F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\1096__Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 13:49:42
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\1096__Form16 Part B_2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:54:24
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:24
+GetTDSFormList
+1H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:24
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+Form 12BA_2021 - 2022
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+Form 12BA_2022 - 2023
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2021 - 2022\1178_BJVPA7143K_F12BA_AY 2021 - 2022.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2022 - 2023\1178_BJVPA7143K_F12BA_AY 2022 - 2023.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\1178_BJVPA7143K_F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+1178Done
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2021 -22\1178_BJVPA7143K_Form16 Part A_2021 -22.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2022 -23\1178_BJVPA7143K_Form16 Part A_2022 -23.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\1178_BJVPA7143K_Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2021 - 2022\1178_BJVPA7143K_Form16 Part B_2021 - 2022.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2022 - 2023\1178_BJVPA7143K_Form16 Part B_2022 - 2023.pdf
+=======================================================================
+20/07/2023 13:54:25
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\1178_BJVPA7143K_Form16 Part B_2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:54:43
+Log
+LegacyNormalizePath
+Illegal characters in path.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at System.IO.FileInfo..ctor(String fileName)
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2036
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:54:51
+Log
+LegacyNormalizePath
+Illegal characters in path.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at System.IO.FileInfo..ctor(String fileName)
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2036
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:54:57
+Log
+LegacyNormalizePath
+Illegal characters in path.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at System.IO.FileInfo..ctor(String fileName)
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2036
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+1H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+Form16 Part B_2021 - 2022
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+Form16 Part B_2022 - 2023
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+Form16 Part B_2023 - 2024
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form 12BA_2021 - 2022\1178_BJVPA7143K_Form 12BA_2021 - 2022.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form 12BA_2022 - 2023\1178_BJVPA7143K_Form 12BA_2022 - 2023.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form 12BA_2023 - 2024\1178_BJVPA7143K_Form 12BA_2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form16 Part A_2021 -22\1178_BJVPA7143K_F16 Part A_2021 -22.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form16 Part A_2022 -23\1178_BJVPA7143K_F16 Part A_2022 -23.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form16 Part A_2023 -24\1178_BJVPA7143K_F16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form16 Part B_2021 - 2022\1178_BJVPA7143K_F16 Part B_AY 2021 - 2022.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form16 Part B_2022 - 2023\1178_BJVPA7143K_F16 Part B_AY 2022 - 2023.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS/Form16\Form16 Part B_2023 - 2024\1178_BJVPA7143K_F16 Part B_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 13:55:04
+GetTDSFormList
+1178Done
+=======================================================================
+20/07/2023 13:55:22
+Log
+LegacyNormalizePath
+Illegal characters in path.
+   at System.IO.Path.LegacyNormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   at System.IO.Path.GetFullPathInternal(String path)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at System.IO.FileInfo..ctor(String fileName)
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2036
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+1H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+Form16 Part A_2021 -22
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+Form16 Part A_2022 -23
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+Form16 Part A_2023 -24
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+2H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2021 - 2022\BJVPA7143K_Form12BA_2021-2022.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2022 - 2023\BJVPA7143K_Form12BA_2022-2023.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\BJVPA7143K_Form12BA_2023-2024.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2021 -22\BJVPA7143K_2021-22.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2022 -23\BJVPA7143K_2022-23.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\BJVPA7143K_2023-24.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+1178Done
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2021 - 2022\BJVPA7143K_PartB_2021-2022.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2022 - 2023\BJVPA7143K_PartB_2022-2023.pdf
+=======================================================================
+20/07/2023 13:55:41
+GetTDSFormList
+H:\Form Download\ych\Enlighted\3\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\BJVPA7143K_PartB_2023-2024.pdf
+=======================================================================
+20/07/2023 13:59:03
+Log
+.ctor
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:03
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:03
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:03
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:03
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:03
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:03
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:08
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+.ctor
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:23
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:24
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:24
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 13:59:27
+Log
+TryGetConnection
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SQLDBOperation.DBOperation.GetTableData(SqlCommand sqlCommand) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\SQLDBperation\DBOperation.cs:line 231
+=======================================================================
+System.ComponentModel.Win32Exception (0x80004005): The wait operation timed out
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+1H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+Form 12BA_2021 - 2022
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+Form 12BA_2022 - 2023
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\KBPLPY0011_ASGPV1262M_F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+KBPLPY0011Done
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\KBPLPY0011_ASGPV1262M_Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\KBPLPY0011_ASGPV1262M_Form16 Part B_2023 - 2024.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2022 - 2023\KBPLPY0011_ASGPV1262M_Form16 Part B_2022 - 2023.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2021 - 2022\KBPLPY0011_ASGPV1262M_F12BA_AY 2021 - 2022.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2022 - 2023\KBPLPY0011_ASGPV1262M_F12BA_AY 2022 - 2023.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2021 -22\KBPLPY0011_ASGPV1262M_Form16 Part A_2021 -22.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2022 -23\KBPLPY0011_ASGPV1262M_Form16 Part A_2022 -23.pdf
+=======================================================================
+20/07/2023 14:02:31
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2021 - 2022\KBPLPY0011_ASGPV1262M_Form16 Part B_2021 - 2022.pdf
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+Form16 Part B_2023 - 2024
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form 12BA_2023 - 2024\1096__Form 12BA_2023 - 2024.pdf
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form16 Part A_2023 -24\1096__F16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 14:04:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form16 Part B_2023 - 2024\1096__F16 Part B_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+Form16 Part B_2023 - 2024
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form 12BA_2023 - 2024\1096__Form 12BA_2023 - 2024.pdf
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form16 Part A_2023 -24\1096__F16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 14:18:07
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form16 Part B_2023 - 2024\1096__F16 Part B_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 14:19:20
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 14:20:12
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+1H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+Form 12BA_2021 - 2022
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+Form 12BA_2022 - 2023
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+2H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\KBPLPY0011_ASGPV1262M_F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+KBPLPY0011Done
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\KBPLPY0011_ASGPV1262M_Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\KBPLPY0011_ASGPV1262M_Form16 Part B_2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2022 - 2023\KBPLPY0011_ASGPV1262M_Form16 Part B_2022 - 2023.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2021 - 2022\KBPLPY0011_ASGPV1262M_F12BA_AY 2021 - 2022.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2022 - 2023\KBPLPY0011_ASGPV1262M_F12BA_AY 2022 - 2023.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2021 -22\KBPLPY0011_ASGPV1262M_Form16 Part A_2021 -22.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2022 -23\KBPLPY0011_ASGPV1262M_Form16 Part A_2022 -23.pdf
+=======================================================================
+20/07/2023 15:03:42
+GetTDSFormList
+H:\Form Download\ych\KALSBREWERIES-(PONDICHERRY)\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2021 - 2022\KBPLPY0011_ASGPV1262M_Form16 Part B_2021 - 2022.pdf
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+Form16 Part B_2023 - 2024
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form 12BA_2023 - 2024\1096__Form 12BA_2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form16 Part A_2023 -24\1096__F16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 15:06:12
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS/Form16\Form16 Part B_2023 - 2024\1096__F16 Part B_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:11:44
+Log
+GetControllerInstance
+The controller for path '/Temp/ae43bc7b-c5c0-4c7e-bf1f-55cdcc2e96b7' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 15:12:20
+Log
+GetControllerInstance
+The controller for path '/Temp/ae43bc7b-c5c0-4c7e-bf1f-55cdcc2e96b7' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\1076__F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\1076__Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 15:12:31
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\1076__Form16 Part B_2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:13:10
+Log
+LoadForm16
+Index was outside the bounds of the array.
+   at Payroll.Controllers.EmployeeController.LoadForm16(String Payslipfile) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\Controllers\EmployeeController.cs:line 2001
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 15:15:49
+Log
+GetControllerInstance
+The controller for path '/Temp/ae43bc7b-c5c0-4c7e-bf1f-55cdcc2e96b7' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 15:16:00
+Log
+GetControllerInstance
+The controller for path '/Temp/ae43bc7b-c5c0-4c7e-bf1f-55cdcc2e96b7' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+=======================================================================
+
+=======================================================================
+20/07/2023 15:18:20
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:18:21
+GetTDSFormList
+1H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:18:30
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:18:35
+GetTDSFormList
+Form 12BA_2023 - 2024
+=======================================================================
+20/07/2023 15:19:16
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:19:16
+GetTDSFormList
+2H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\
+=======================================================================
+20/07/2023 15:20:17
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form 12BA_2023 - 2024\1065__F12BA_AY 2023 - 2024.pdf
+=======================================================================
+20/07/2023 15:20:17
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part A_2023 -24\1065__Form16 Part A_2023 -24.pdf
+=======================================================================
+20/07/2023 15:20:17
+GetTDSFormList
+H:\Form Download\ych\Y3\1\pip\payslipreports\C0006\TDS\Form16\Form16 Part B_2023 - 2024\1065__Form16 Part B_2023 - 2024.pdf
+=======================================================================

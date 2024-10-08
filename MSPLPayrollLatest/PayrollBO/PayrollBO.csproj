@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC762D1A-F698-4CB1-89A2-746A535969DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PayrollBO</RootNamespace>
+    <AssemblyName>PayrollBO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core">
+      <HintPath>..\packages\AWSSDK.Core.3.5.1.58\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3">
+      <HintPath>..\packages\AWSSDK.S3.3.5.7.5\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FormRights.cs" />
+    <Compile Include="Admin\FormRightsList.cs" />
+    <Compile Include="Admin\Forms.cs" />
+    <Compile Include="Admin\FormsList.cs" />
+    <Compile Include="Admin\Role.cs" />
+    <Compile Include="Admin\RoleList.cs" />
+    <Compile Include="AWS\AmazonUploader.cs" />
+    <Compile Include="AWS\AWSUpload.cs" />
+    <Compile Include="Admin\UserCompanymapping.cs" />
+    <Compile Include="Admin\UserCompanymappingList.cs" />
+    <Compile Include="Admin\UserList.cs" />
+    <Compile Include="Company\BankList.cs" />
+    <Compile Include="Company\Branch.cs" />
+    <Compile Include="Company\CompanyConnection.cs" />
+    <Compile Include="Company\Location.cs" />
+    <Compile Include="Company\LocationList.cs" />
+    <Compile Include="Company\LWFSetting.cs" />
+    <Compile Include="Company\PTax.cs" />
+    <Compile Include="Company\PTaxList.cs" />
+    <Compile Include="Company\PTaxRangeList.cs" />
+    <Compile Include="Company\PTLocation.cs" />
+    <Compile Include="Company\PTLocationList.cs" />
+    <Compile Include="ComValue.cs" />
+    <Compile Include="DynamicEntity\AttributeModelBehavior.cs" />
+    <Compile Include="DynamicEntity\AttributeModelBehaviorList.cs" />
+    <Compile Include="Company\BranchList.cs" />
+    <Compile Include="Company\CategoryList.cs" />
+    <Compile Include="Company\CompanyList.cs" />
+    <Compile Include="Company\CostCentreList.cs" />
+    <Compile Include="Company\DepartmentList.cs" />
+    <Compile Include="Company\DesignationList.cs" />
+    <Compile Include="Company\ESIDespensaryList.cs" />
+    <Compile Include="Company\EsiLocationList.cs" />
+    <Compile Include="Company\GradeList.cs" />
+    <Compile Include="Company\HRComponent.cs" />
+    <Compile Include="Company\HRComponentList.cs" />
+    <Compile Include="Company\JoiningDocumentList.cs" />
+    <Compile Include="DynamicEntity\AttributeModel.cs" />
+    <Compile Include="DynamicEntity\AttributeModelList.cs" />
+    <Compile Include="DynamicEntity\AttributeModelType.cs" />
+    <Compile Include="DynamicEntity\AttributeModelTypeList.cs" />
+    <Compile Include="DynamicEntity\BABehavior.cs" />
+    <Compile Include="DynamicEntity\BABehaviorList.cs" />
+    <Compile Include="DynamicEntity\Entity.cs" />
+    <Compile Include="DynamicEntity\EntityAdditionalInfo.cs" />
+    <Compile Include="DynamicEntity\EntityAdditionalInfoList.cs" />
+    <Compile Include="DynamicEntity\EntityAttributeModel.cs" />
+    <Compile Include="DynamicEntity\EntityAttributeModelList.cs" />
+    <Compile Include="DynamicEntity\EntityAttributeValue.cs" />
+    <Compile Include="DynamicEntity\EntityAttributeValueList.cs" />
+    <Compile Include="DynamicEntity\EntityBehavior.cs" />
+    <Compile Include="DynamicEntity\EntityBehaviorList.cs" />
+    <Compile Include="DynamicEntity\EntityList.cs" />
+    <Compile Include="DynamicEntity\EntityMapping.cs" />
+    <Compile Include="DynamicEntity\EntityMappingList.cs" />
+    <Compile Include="DynamicEntity\EntityMasterValue.cs" />
+    <Compile Include="DynamicEntity\EntityMasterValueList.cs" />
+    <Compile Include="DynamicEntity\EntityModel.cs" />
+    <Compile Include="DynamicEntity\EntityModelList.cs" />
+    <Compile Include="DynamicEntity\EntityModelMapping.cs" />
+    <Compile Include="DynamicEntity\EntityModelMappingList.cs" />
+    <Compile Include="DynamicEntity\FormulaRecursive.cs" />
+    <Compile Include="DynamicEntity\MonthlyInput.cs" />
+    <Compile Include="DynamicEntity\MonthlyInputList.cs" />
+    <Compile Include="DynamicEntity\PayrollHistory.cs" />
+    <Compile Include="DynamicEntity\PayrollHistoryList.cs" />
+    <Compile Include="DynamicEntity\PayrollHistoryValue.cs" />
+    <Compile Include="DynamicEntity\PayrollHistoryValueList.cs" />
+    <Compile Include="DynamicEntity\PaySlipAttributeList.cs" />
+    <Compile Include="DynamicEntity\PaySlipAttributes.cs" />
+    <Compile Include="DynamicEntity\PaySlipSetting.cs" />
+    <Compile Include="DynamicEntity\PayslipsettingList.cs" />
+    <Compile Include="DynamicEntity\PFChallanList.cs" />
+    <Compile Include="DynamicEntity\PFChallan.cs" />
+    <Compile Include="DynamicEntity\TableCategory.cs" />
+    <Compile Include="DynamicEntity\TableCategoryList.cs" />
+    <Compile Include="DynamicEntity\Tableleave.cs" />
+    <Compile Include="Employee\AttributeValue.cs" />
+    <Compile Include="Employee\AttributeValueList.cs" />
+    <Compile Include="Company\Bank.cs" />
+    <Compile Include="Employee\EmpExpense.cs" />
+    <Compile Include="Employee\EmployeeAcademicList.cs" />
+    <Compile Include="Employee\EmployeeAddressList.cs" />
+    <Compile Include="Employee\EmployeeBenefitComponentList.cs" />
+    <Compile Include="Employee\EmployeeContractDetail.cs" />
+    <Compile Include="Employee\EmployeeEmegencyContactList.cs" />
+    <Compile Include="Employee\EmployeeEmployeementList.cs" />
+    <Compile Include="Employee\EmployeeFamilyList.cs" />
+    <Compile Include="Employee\EmployeeHrComponent.cs" />
+    <Compile Include="Employee\EmployeeHrComponentList.cs" />
+    <Compile Include="Employee\EmployeeJoingDocumentList.cs" />
+    <Compile Include="Employee\EmployeeLanguageKnownList.cs" />
+    <Compile Include="Employee\EmployeeList.cs" />
+    <Compile Include="Employee\EmployeeNomineeList.cs" />
+    <Compile Include="Employee\EmployeePastDataList.cs" />
+    <Compile Include="Employee\EmployeeTrainingList.cs" />
+    <Compile Include="Employee\EmpPersonalList.cs" />
+    <Compile Include="Employee\EmpResignation.cs" />
+    <Compile Include="Employee\Emp_Bank.cs" />
+    <Compile Include="Employee\Emp_BankList.cs" />
+    <Compile Include="Employee\Emp_Personal.cs" />
+    <Compile Include="Employee\EntityTempData.cs" />
+    <Compile Include="Employee\EntityTempDataList.cs" />
+    <Compile Include="Employee\ExpenseAssignMgr.cs" />
+    <Compile Include="Employee\Release.cs" />
+    <Compile Include="Import.cs" />
+    <Compile Include="Import\ImportColumn.cs" />
+    <Compile Include="Import\importTable.cs" />
+    <Compile Include="Import\ImportTemplate.cs" />
+    <Compile Include="Import\ImportTemplateDetail.cs" />
+    <Compile Include="Import\ImportTemplateDetailList.cs" />
+    <Compile Include="Import\ImportTemplateList.cs" />
+    <Compile Include="Leave\AssignManager.cs" />
+    <Compile Include="Leave\CompOffBO.cs" />
+    <Compile Include="Leave\CreditLeave.cs" />
+    <Compile Include="Leave\CreditLeaveList.cs" />
+    <Compile Include="Leave\DebitLeave.cs" />
+    <Compile Include="Leave\DebitLeaveList.cs" />
+    <Compile Include="Leave\DefaultLOPid.cs" />
+    <Compile Include="Leave\Holidays.cs" />
+    <Compile Include="Leave\HolidaysList.cs" />
+    <Compile Include="Leave\LeaveBase.cs" />
+    <Compile Include="Leave\LeaveConfigList.cs" />
+    <Compile Include="Leave\LeaveCreditSettingsBO.cs" />
+    <Compile Include="Leave\LeaveFinanceYear.cs" />
+    <Compile Include="Leave\LeaveFinanceYearList.cs" />
+    <Compile Include="Leave\LeaveMasterList.cs" />
+    <Compile Include="Leave\LeaveOpeningList.cs" />
+    <Compile Include="Leave\LeaveOpenings.cs" />
+    <Compile Include="Leave\LeaveRequestList.cs" />
+    <Compile Include="Leave\LeaveRequests.cs" />
+    <Compile Include="Leave\LeaveSettingsBO.cs" />
+    <Compile Include="Leave\LeaveType.cs" />
+    <Compile Include="Leave\LeaveTypeList.cs" />
+    <Compile Include="Leave\LeaveTypeSettingList.cs" />
+    <Compile Include="Leave\MailConfig.cs" />
+    <Compile Include="Leave\ManagerAccess.cs" />
+    <Compile Include="Leave\ManagerAccessList.cs" />
+    <Compile Include="Leave\ManagerEligiblity.cs" />
+    <Compile Include="Leave\ManagerEligiblityList.cs" />
+    <Compile Include="Leave\MonthlyLeaveLimit.cs" />
+    <Compile Include="Leave\WeekoffCalculationList.cs" />
+    <Compile Include="Leave\WeekoffComponentMatching.cs" />
+    <Compile Include="Leave\WeekoffComponentMatchingList.cs" />
+    <Compile Include="Loan\LoanEntry.cs" />
+    <Compile Include="Loan\LoanEntryList.cs" />
+    <Compile Include="Loan\LoanMaster.cs" />
+    <Compile Include="Loan\LoanMasterList.cs" />
+    <Compile Include="Loan\LoanTransaction.cs" />
+    <Compile Include="Loan\LoanTransactionList.cs" />
+    <Compile Include="LoginHistory.cs" />
+    <Compile Include="Master\BloodGroup.cs" />
+    <Compile Include="Company\Category.cs" />
+    <Compile Include="Company\Company.cs" />
+    <Compile Include="Company\CostCentre.cs" />
+    <Compile Include="Company\Department.cs" />
+    <Compile Include="Company\Designation.cs" />
+    <Compile Include="Employee\Employee.cs" />
+    <Compile Include="Employee\EmployeeAcademic.cs" />
+    <Compile Include="Employee\EmployeeAddress.cs" />
+    <Compile Include="Employee\EmployeeBenefitComponent.cs" />
+    <Compile Include="Employee\EmployeeEmegencyContact.cs" />
+    <Compile Include="Employee\EmployeeEmployeement.cs" />
+    <Compile Include="Employee\EmployeeFamily.cs" />
+    <Compile Include="Employee\EmployeeJoingDocument.cs" />
+    <Compile Include="Employee\EmployeeLanguageKnown.cs" />
+    <Compile Include="Employee\EmployeeNominee.cs" />
+    <Compile Include="Employee\EmployeeTraining.cs" />
+    <Compile Include="Company\EsiDespensary.cs" />
+    <Compile Include="Company\EsiLocation.cs" />
+    <Compile Include="Company\Grade.cs" />
+    <Compile Include="Company\JoiningDocument.cs" />
+    <Compile Include="Master\BloodGroupList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\User.cs" />
+    <Compile Include="Company\PTaxRange.cs" />
+    <Compile Include="Settings\ApprovelTransaction.cs" />
+    <Compile Include="Settings\ApprovelTransactionList.cs" />
+    <Compile Include="Settings\EmployeeRole.cs" />
+    <Compile Include="Settings\ESI.cs" />
+    <Compile Include="Settings\FormCommand.cs" />
+    <Compile Include="Settings\FormCommandList.cs" />
+    <Compile Include="Settings\PF.cs" />
+    <Compile Include="Settings\Emp_CodeSetting.cs" />
+    <Compile Include="Settings\PremiumSettingComponent.cs" />
+    <Compile Include="Settings\PremiumSetting.cs" />
+    <Compile Include="Settings\PremiumSettingList.cs" />
+    <Compile Include="Settings\RoleFormCommand.cs" />
+    <Compile Include="Settings\RoleFormCommandList.cs" />
+    <Compile Include="Settings\Setting.cs" />
+    <Compile Include="Settings\SettingDefinition.cs" />
+    <Compile Include="Settings\SettingDefinitionList.cs" />
+    <Compile Include="Settings\Emp_CodeSettingList.cs" />
+    <Compile Include="Settings\SettingList.cs" />
+    <Compile Include="Settings\SettingValue.cs" />
+    <Compile Include="Settings\SettingValueList.cs" />
+    <Compile Include="SignalR.cs" />
+    <Compile Include="Static\Language.cs" />
+    <Compile Include="Static\RelationShip.cs" />
+    <Compile Include="SuperAdmin\SACompCreation.cs" />
+    <Compile Include="TaxActivities\GrossSalaryActivity.cs" />
+    <Compile Include="TaxActivities\IncomeTaxComputeActivity.cs" />
+    <Compile Include="TaxActivities\NetTaxActivity.cs" />
+    <Compile Include="TaxActivities\PayrollActivity.cs" />
+    <Compile Include="TaxActivities\TaxComputeActivity.cs" />
+    <Compile Include="TaxActivities\TaxSectionActivity.cs" />
+    <Compile Include="TaxComputation.cs" />
+    <Compile Include="TaxActivities\OneTimeTaxActivity.cs" />
+    <Compile Include="Tax\HouseProperty.cs" />
+    <Compile Include="Tax\HousePropertyList.cs" />
+    <Compile Include="Tax\IncomeMatching.cs" />
+    <Compile Include="Tax\IncomeMatchingList.cs" />
+    <Compile Include="Tax\ITax.cs" />
+    <Compile Include="Tax\LifeInsurance.cs" />
+    <Compile Include="Tax\LifeInsuranceList.cs" />
+    <Compile Include="Tax\MedicalInsurance.cs" />
+    <Compile Include="Tax\MedicalInsuranceList.cs" />
+    <Compile Include="Tax\OtherExamption.cs" />
+    <Compile Include="Tax\OtherExamptionList.cs" />
+    <Compile Include="Tax\SavgProof.cs" />
+    <Compile Include="Tax\SavgProofList.cs" />
+    <Compile Include="Tax\TaxBehavior.cs" />
+    <Compile Include="Tax\TaxBehaviorList.cs" />
+    <Compile Include="Tax\TaxHistory.cs" />
+    <Compile Include="Tax\TaxHistoryAP.cs" />
+    <Compile Include="Tax\TaxHistoryList.cs" />
+    <Compile Include="Tax\TaxHistoryReport.cs" />
+    <Compile Include="Tax\TaxHistoryReportList.cs" />
+    <Compile Include="Tax\TaxImportColumns.cs" />
+    <Compile Include="Tax\TaxImportTables.cs" />
+    <Compile Include="Tax\TXActualRentPaid.cs" />
+    <Compile Include="Tax\TxActualRentPaidList.cs" />
+    <Compile Include="Tax\TXChallanEntry.cs" />
+    <Compile Include="Tax\TXChallanEntryList.cs" />
+    <Compile Include="Tax\TXEmployeeSection.cs" />
+    <Compile Include="Tax\TXEmployeeSectionDefinition.cs" />
+    <Compile Include="Tax\TXEmployeeSectionDefinitionList.cs" />
+    <Compile Include="Tax\TXEmployeeSectionList.cs" />
+    <Compile Include="Tax\TXFinanceYear.cs" />
+    <Compile Include="Tax\TXFinanceYearList.cs" />
+    <Compile Include="Tax\TXProjIncome.cs" />
+    <Compile Include="Tax\TXProjIncomeList.cs" />
+    <Compile Include="Tax\TXSection.cs" />
+    <Compile Include="Tax\TXSectionDefinition.cs" />
+    <Compile Include="Tax\TXSectionDefinitionList.cs" />
+    <Compile Include="Tax\TXSectionList.cs" />
+    <Compile Include="Tax\TXSlabCategory.cs" />
+    <Compile Include="Tax\TXSlabCategoryList.cs" />
+    <Compile Include="Tax\TXSlabRange.cs" />
+    <Compile Include="Tax\TXSlabRangeList.cs" />
+    <Compile Include="Transaction\ArrearHistory.cs" />
+    <Compile Include="Transaction\ArrearHistoryList.cs" />
+    <Compile Include="Transaction\CreditDays.cs" />
+    <Compile Include="Transaction\CreditDaysList.cs" />
+    <Compile Include="Transaction\FullFinalSettlement.cs" />
+    <Compile Include="Transaction\FullFinalSettlementDetail.cs" />
+    <Compile Include="Transaction\FullFinalSettlementDetailList.cs" />
+    <Compile Include="Transaction\Increment.cs" />
+    <Compile Include="Transaction\IncrementDetail.cs" />
+    <Compile Include="Transaction\IncrementDetailList.cs" />
+    <Compile Include="Transaction\IncrementList.cs" />
+    <Compile Include="Settings\PremiumSettingComponentList.cs" />
+    <Compile Include="Transaction\PayrollTransaction.cs" />
+    <Compile Include="Transaction\PaytranList.cs" />
+    <Compile Include="Transaction\StopPayment.cs" />
+    <Compile Include="Transaction\StopPaymentList.cs" />
+    <Compile Include="UserRole.cs" />
+    <Compile Include="UserSession.cs" />
+    <Compile Include="Util\Eval.cs" />
+    <Compile Include="Util\EvaluateExpression.cs" />
+    <Compile Include="Util\ifElseStmt.cs" />
+    <Compile Include="Util\TextParser.cs" />
+    <Compile Include="Util\validator.cs" />
+    <Compile Include="Verify\VEmp.cs" />
+    <Compile Include="Verify\VEmpList.cs" />
+    <Compile Include="Verify\Verifier.cs" />
+    <Compile Include="Verify\VerifierList.cs" />
+    <Compile Include="Verify\VerifyEmp.cs" />
+    <Compile Include="Verify\VerifyEmpList.cs" />
+    <Compile Include="Verify\VerifyFinYr.cs" />
+    <Compile Include="Verify\VerifyFinYrList.cs" />
+    <Compile Include="Verify\VerifyProof.cs" />
+    <Compile Include="Verify\VerifyProofList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQLDBperation\SQLDBperation.csproj">
+      <Project>{330DE9CD-2E54-42F7-B19D-2877A39C8939}</Project>
+      <Name>SQLDBperation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TraceError\TraceError.csproj">
+      <Project>{2fb2f008-6a88-4620-b098-6b36e1fb6ce3}</Project>
+      <Name>TraceError</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="cd1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamlAppDef Include="TaxComputationActivity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\AWSSDK.S3.3.5.7.4\analyzers\dotnet\cs\AWSSDK.S3.CodeAnalysis.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

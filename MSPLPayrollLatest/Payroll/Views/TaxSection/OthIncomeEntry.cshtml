@@ -1,0 +1,78 @@
+﻿<form id="frmOthIncome" data-toggle="validator" role="form" action="">
+    <div class="modal-dialog"style="width: 60% ;height:85%">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Miscellaneous Income Entry
+                </h4>
+
+                <h4 class="modal-title" id="H4">
+                    Miscellaneous Income Entered here will be Considered for Projection of Income Tax for the
+                </h4>
+                <h4 class="modal-title" id="H4">
+                    financial year but will not be taken into account for Monthly Income Tax Calculation.
+                </h4>
+
+
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12">
+                    <div class="form-horizontal">
+                        <div class="form-group" id="msg-head">
+                            <div class="col-md-11">
+                                <label class="bg-info" id="msg1"> </label>
+                                <label class="bg-info" id="msg2"> </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group months">
+                            <label class="control-label col-md-4">
+                                Projection Income 1 :
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="Income1" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Projection Income 2 :
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="Income2" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Projection Income 3:
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="Income3" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label ">
+                                Total:
+                            </label>
+                            <input type="text" id="total" class="form-control" maxlength="20" disabled />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" id="btnOthSave" class="btn custom-button" onclick="$declaractionEntry.submitOthIncEntry()">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+

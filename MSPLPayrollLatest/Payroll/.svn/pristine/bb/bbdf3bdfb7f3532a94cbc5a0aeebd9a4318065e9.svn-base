@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "TaxIndex";
+    // Layout = "~/Views/Shared/_ITaxLayout.cshtml";
+
+}
+
+
+<h2>IncomeTax</h2>
+
+

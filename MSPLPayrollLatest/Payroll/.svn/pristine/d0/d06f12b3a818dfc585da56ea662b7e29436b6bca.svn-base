@@ -1,0 +1,171 @@
+﻿<!-- Modal -->
+<form id="frmCompany" data-toggle="validator" role="form" data-rolecmd="Payroll-Dashboard-Company">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add/Edit Company
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Company Name <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtCompanyname" class="form-control" placeholder="Enter the Company Name" data-rolecmd="Payroll-Dashboard-Company-name"
+                                                                                                                                           maxlength="100" autofocus required />
+                        </div>
+                    </div>
+                    <div class="form-group"> 
+                        <label class="control-label col-md-4">
+                            Address Line 1 <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtAddressline1" class="form-control" placeholder="Enter the Company Address"  data-rolecmd="Payroll-Dashboard-Company-Address1"
+                                   maxlength="50" data-error="Enter the Company Address" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Address Line 2 <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtAdressline2" class="form-control" placeholder="Enter the Company Address" data-rolecmd="Payroll-Dashboard-Company-Address2"
+                                   maxlength="50" data-error="Enter the Company Address" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            City <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtCity" onkeypress="return $validator.alphaonly(event, this.id)" class="form-control" placeholder="Enter the City" data-rolecmd="Payroll-Dashboard-Company-City"
+                                   maxlength="50" data-error="Enter the City" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            State <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtState" onkeypress="return $validator.alphaonly(event, this.id)" class="form-control" placeholder="Enter the State" data-rolecmd="Payroll-Dashboard-Company-State"
+                                   maxlength="30" data-error="Enter the State" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Country <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtCountry" onkeypress="return $validator.alphaonly(event, this.id)" class="form-control" placeholder="Enter the Country" data-rolecmd="Payroll-Dashboard-Company-Country"
+                                   maxlength="30" data-error="Enter the Country" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Pin Code <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtPinCode" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="6" class="form-control" placeholder="Enter the Pin Code"
+                             data-rolecmd="Payroll-Dashboard-Company-Pincode"      data-error="Enter the Pin Code" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Phone <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtPhone" onkeypress="return $validator.IsPhoneCompanyCreate(event, this.id)" oncopy="    return false" onpaste="    return false" maxlength="100" class="form-control" placeholder="Enter the Phone Number"
+
+                                 data-rolecmd="Payroll-Dashboard-Company-Phone"  data-error="Enter the Phone Number" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            E-Mail <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="email" id="txtEMail" oncopy="return false" onpaste="return false" class="form-control" maxlength="100" placeholder="Enter the E-Mail Id"
+                                  data-rolecmd="Payroll-Dashboard-Company-Email" data-error="Enter the E-Mail Id" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Employee Login Cut-off Date<label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="cutoffdate"  class="form-control" placeholder="Enter Employee login cut-off date"
+                                   data-rolecmd="Payroll-Dashboard-Company-cutoffdate" data-error="Enter the cut-off date" required readonly/>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Company Logo<label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="file" id="txtcomprofile" name="file" accept="image/*" class="form-control" placeholder="Select company logo" onchange="Companylogo(this)" />
+                            <img id="imgCompanylogoView" src="" class="img-circle img-inline" style="max-height:200px;max-width:200px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnSend" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="~/assets/js/jquery-1.11.2.min.js"></script>
+<script src="~/assets/js/jquery-ui.js"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        
+        $('#txtcompanylogo').on('change', function (e) {
+            
+            var file = $(this);
+            var test = 'Event Triggered';
+
+        });
+
+        $(function () {
+            $("#cutoffdate").datepicker({dateFormat: 'dd/MM/yy'});
+        });
+
+    });
+
+   
+
+    function Companylogo(input)
+    {
+        
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                
+                $('#imgCompanylogoView')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(150);        
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+     }
+
+   
+</script>

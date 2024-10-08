@@ -1,0 +1,608 @@
+﻿// created by Madhavan 22/07/2023
+var $FlexiPay = {
+    selectDefaultValue: function (id, text) {
+        debugger;
+        var splAnnum = parseFloat($("#annuSpl").val());
+        var splCalcu = parseFloat($("#splCalcu").val());
+        var perMonth = parseFloat($("#perMonthSpl").val());
+        var peyearSpl = parseFloat($("#annuSpl").val());
+        //var flexiPay = parseFloat($("#flexible").val());
+        var displeflexiPay = parseFloat($("#flexiValue").val());
+        var result = text.toUpperCase();
+        if (isNaN(perMonth)) {
+            perMonth = 0;
+        }
+        if (isNaN(splAnnum)) {
+            splAnnum = 0;
+        }
+        if (isNaN(splCalcu)) {
+            splCalcu = 0;
+        }
+        if (id == "giftSelec") {
+            var giftAmount = parseFloat(4500);
+            
+            if (result == "YES") {
+               
+                if (peyearSpl < giftAmount) {
+                    $app.showAlert(" Gift Voucher Less Then Special Allowance =" + peyearSpl, 3);
+                    return false;
+                }
+                 
+                $("#perAnnumGift").val(giftAmount);
+                $("#annuGift").val(giftAmount);
+                $("#perMonthGift").val(giftAmount / 12);
+                $("#giftSpan").text("Valid Input");
+                $("#giftSpan").css("background-color", "green");
+                //var Total = flexiPay - giftAmount;
+                //$("#flexible").val(Total);
+                var Splvalue = splAnnum - giftAmount
+                var loadSplForMonth =( Splvalue / 12 ).toFixed(2);
+                $("#annuSpl").val(Splvalue);
+                $("#perAnnumSpl").val(Splvalue);
+                $("#perMonthSpl").val(loadSplForMonth);
+            }
+            if (result == "NO") {
+                $("#perAnnumGift").val("");
+                $("#annuGift").val("");
+                $("#perMonthGift").val("");
+                var Total = splAnnum + giftAmount;
+               // $("#flexible").val(Total);
+                var loadSplForMonth = (Total / 12) .toFixed(2);
+                $("#annuSpl").val(Total);
+                $("#perAnnumSpl").val(Total);
+                $("#perMonthSpl").val(loadSplForMonth);
+                $("#giftSpan").text("");
+                $("#giftSpan").css("background-color", "lightgray");
+            }
+        }
+        if (id == "mealSelec") {
+            var meal = parseFloat( 26400);
+            
+            if (result == "YES") {
+               
+                if (peyearSpl < meal) {
+                    $app.showAlert(" Meal Voucher Less Then Special Allowance =" + peyearSpl, 3);
+                    return false;
+                }
+                
+                $("#perAnnumMeal").val(meal);
+                $("#annuMeal").val(meal);
+                $("#perMonthMeal").val(meal / 12);
+                $("#mealSpan").text("Valid Input");
+                $("#mealSpan").css("background-color", "green");
+                //var Total = flexiPay - meal;
+               // $("#flexible").val(Total);
+                var Splvalue = splAnnum - meal
+                var loadSplForMonth = (Splvalue / 12).toFixed(2);
+                $("#annuSpl").val(Splvalue);
+                $("#perAnnumSpl").val(Splvalue);
+                $("#perMonthSpl").val(loadSplForMonth);
+            }
+            if (result == "NO") {
+                $("#perAnnumMeal").val("");
+                $("#annuMeal").val("");
+                $("#perMonthMeal").val("");
+                var Total = splAnnum + meal;
+               // $("#flexible").val(Total);
+                var loadSplForAnnum = Total
+                var loadSplForMonth = (loadSplForAnnum / 12) .toFixed(2);
+                $("#annuSpl").val(loadSplForAnnum);
+                $("#perAnnumSpl").val(loadSplForAnnum);
+                $("#perMonthSpl").val(loadSplForMonth);
+                $("#mealSpan").text("");
+                $("#mealSpan").css("background-color", "lightgray");
+            }
+        }
+        if (id == "convSelec") {
+            var conv = parseFloat( 21600);
+            if (result == "YES") {
+                 
+                if (peyearSpl < conv) {
+                    $app.showAlert("Conveyance Less Then Special Allowance =" + peyearSpl, 3);
+                    return false;
+                }
+                $("#perAnnumConv").val(conv);
+                $("#annuConv").val(conv);
+                $("#perMonthConv").val(conv / 12);
+                $("#convSpan").text("Valid Input");
+                $("#convSpan").css("background-color", "green");
+                //var Total = flexiPay - conv;
+                //$("#flexible").val(Total);
+                var displeSpl = splAnnum - conv
+                $("#splCalcu").val(displeSpl);
+                var loadSplForMonth =( displeSpl / 12 ).toFixed(2);
+                $("#annuSpl").val(displeSpl);
+                $("#perAnnumSpl").val(displeSpl);
+                $("#perMonthSpl").val(loadSplForMonth);
+            }
+            if (result == "NO") {
+                $("#perAnnumConv").val("");
+                $("#annuConv").val("");
+                $("#perMonthConv").val("");
+                var Total = splAnnum + conv;
+                //$("#flexible").val(Total);
+                var loadSplForMonth = (Total / 12) .toFixed(2); 
+                $("#annuSpl").val(Total);
+                $("#perAnnumSpl").val(Total);
+                $("#perMonthSpl").val(loadSplForMonth);
+                $("#convSpan").text("");
+                $("#convSpan").css("background-color", "lightgray");
+            }
+        }
+        if (id == "eduSelec") {
+            var edu = parseFloat( 2400);
+            if (result == "YES") {
+                 
+                if (peyearSpl < edu) {
+                    $app.showAlert("Conveyance Less Then Special Allowance =" + peyearSpl, 3);
+                    return false;
+                }
+                $("#perAnnumEdu").val(edu);
+                $("#annuEdu").val(edu);
+                $("#perMonthEdu").val(edu / 12);
+                $("#eduSpan").text("Valid Input");
+                $("#eduSpan").css("background-color", "green");
+                //var Total = flexiPay - edu;
+                //$("#flexible").val(Total);
+                var displeSpl = splAnnum - edu
+                $("#splCalcu").val(displeSpl);
+                var loadSplForMonth = (displeSpl / 12) .toFixed(2);
+                $("#annuSpl").val(displeSpl);
+                $("#perAnnumSpl").val(displeSpl);
+                $("#perMonthSpl").val(loadSplForMonth);
+            }
+            if (result == "NO") {
+                $("#perAnnumEdu").val("");
+                $("#annuEdu").val("");
+                $("#perMonthEdu").val("");
+                var Total = splAnnum + edu;
+               // $("#flexible").val(Total);
+               // var flex = parseFloat($("#flexible").val());
+                var disspl = $("#splCalcu").val();
+                var loadSplForAnnum = Total
+                var loadSplForMonth = (Total / 12) .toFixed(2);
+                $("#annuSpl").val(loadSplForAnnum);
+                $("#perAnnumSpl").val(loadSplForAnnum);
+                $("#perMonthSpl").val(loadSplForMonth);
+                $("#eduSpan").text("");
+                $("#eduSpan").css("background-color", "lightgray");
+            }
+        }
+    },
+    calcuFlexi: function () {
+       
+        var edu = parseFloat($("#perMonthEdu").val());
+        var spl = parseFloat($("#perMonthSpl").val());
+        var tele = parseFloat($("#perMonthTele").val());
+        var nps = parseFloat($("#perMonthNps").val());
+        var conv = parseFloat($("#perMonthConv").val());
+        var meal = parseFloat($("#perMonthMeal").val());
+        var gift = parseFloat($("#perMonthGift").val());
+        var lta = parseFloat($("#perMonthLta").val());
+        var hra = parseFloat($("#perMonthHra").val());
+        if (!isNaN(edu)) {
+            $("#perAnnumEdu").val((edu * 12).toFixed(2));
+            $("#annuEdu").val((edu * 12).toFixed(2));
+            if (edu != 0) {
+                $("#eduSelec").val("yes");
+            }
+        }
+        if (!isNaN(spl)) {
+            $("#perAnnumSpl").val((spl * 12).toFixed(2));
+            $("#annuSpl").val((spl * 12).toFixed(2));
+            if (spl != 0) {
+                $("#splSelec").val("yes");
+            }
+        }
+        if (!isNaN(tele)) {
+            $("#perAnnumTele").val((tele * 12).toFixed(2));
+            $("#annuTele").val((tele * 12).toFixed(2));
+
+            
+            if (tele != 0) {
+                $("#teleSelec").val("yes");
+                $("#annuTele").prop("disabled", true);
+            }
+        }
+        if (!isNaN(nps)) {
+            $("#perAnnumNps").val((nps * 12).toFixed(2));
+            $("#annumNps").val((nps * 12).toFixed(2));
+            
+          
+            if (nps != 0) {
+                $("#npsSelec").val("yes");
+                $("#annumNps").prop("disabled", true);
+            }
+        }
+        if (!isNaN(conv)) {
+            $("#perAnnumConv").val((conv * 12).toFixed(2));
+            $("#annuConv").val((conv * 12).toFixed(2));
+            if (conv != 0) {
+                $("#convSelec").val("yes")
+            }
+        }
+        if (!isNaN(meal)) {
+            $("#perAnnumMeal").val((meal * 12).toFixed(2));
+            $("#annuMeal").val((meal * 12).toFixed(2));
+            if (meal != 0) {
+                $("#mealSelec").val("yes");
+            }
+        }
+        if (!isNaN(gift)) {
+            $("#perAnnumGift").val((gift * 12).toFixed(2));
+            $("#annuGift").val((gift * 12).toFixed(2));
+            if (gift != 0) {
+                $("#giftSelec").val("yes");
+            }
+        }
+        if (!isNaN(lta)) {
+            $("#perAnnumLta").val((lta * 12).toFixed(2));
+            $("#annuLta").val((lta * 12).toFixed(2));
+           
+            
+            if (lta !=0) {
+                $("#ltaSelec").val("yes");
+                $("#annuLta").prop("disabled", true);
+            }
+        }
+        if (!isNaN(hra)) {
+            $("#perAnnumHra").val((hra * 12).toFixed(2));
+            $("#annuHra").val((hra * 12).toFixed(2));
+           
+            if (hra) {
+                $("#hraSelec").val("yes");
+                $("#annuHra").prop("disabled", true);
+            }
+        }
+         
+    },
+     //onKeyup function Use to SalaryMaster html
+    checkValue: function (event, id) {
+       
+        var splAnnumValu = parseFloat($("#annuSpl").val());
+        //var flexiPay = $("#flexible").val();
+        var FlexiPayDispled = $("#flexiValue").val();
+        var value = parseFloat($("#" + id).val());
+        var basicForHra = parseFloat($("#basic").val()) * 0.5;
+        var basicForNps = parseFloat($("#basic").val()) * 0.1;
+        var basicForLta = parseFloat($("#basic").val()) / 12;
+        var basicForTelec = parseFloat($("#basic").val()) * 0.1;
+        if (id === "annuHra") {
+            if (splAnnumValu < value) {
+                $app.showAlert("Maximum  of HRA Which ever is less Then=" + splAnnumValu, 3);
+                $("#" + id).val("");
+                $("#hraSpan").text("Invalid Input");
+                $("#hraSpan").css("background-color", "red");
+            }
+            $("#perAnnumSpl").val( );
+            $("#hraSelec").val("yes");
+            if (isNaN(value)) {
+                $("#hraSelec").val("no");
+                $("#hraSpan").text("");
+                $("#hraSpan").css("background-color", "lightgray");
+            } else if (value > basicForHra) {
+                $app.showAlert("Input value is Less than 50% of Basic Salary=" + basicForHra, 3);
+                $("#hraSpan").text("Invalid Input");
+                $("#hraSpan").css("background-color", "red");
+            } else if (value < basicForHra) {
+                $("#hraSpan").text("Valid Input");
+                $("#hraSpan").css("background-color", "green");
+            } else if (value == basicForHra) {
+                $("#hraSpan").text("Valid Input");
+                $("#hraSpan").css("background-color", "green");
+            }
+        }
+        
+      
+        if (id === "annumNps") {
+            if (splAnnumValu < value) {
+                $app.showAlert("Maximum  of NPS Which ever is less Then=" + splAnnumValu, 3);
+                $("#" + id).val("");
+                $("#npsSpan").text("Invalid Input");
+                $("#npsSpan").css("background-color", "red");
+            }
+            $("#npsSelec").val("yes");
+            if (isNaN(value)) {
+                $("#npsSelec").val("no");
+                $("#npsSpan").text("");
+                $("#npsSpan").css("background-color", "lightgray");
+            } else if (value > basicForNps) {
+                $app.showAlert("10% of Basic Salary '" + basicForNps + "' or Balance in Special Allowance whichever is less", 3);
+                $("#npsSpan").text("Invalid Input");
+                $("#npsSpan").css("background-color", "red");
+            } else if (value < basicForNps) {
+               
+                $("#npsSpan").text("Valid Input");
+                $("#npsSpan").css("background-color", "green");
+            }
+            else if (value === basicForNps) {
+
+                $("#npsSpan").text("Valid Input");
+                $("#npsSpan").css("background-color", "green");
+            }
+        }
+        if (id === "annuLta") {
+            if (splAnnumValu < value) {
+                $app.showAlert("Maximum  of NPS Which ever is less Then=" + splAnnumValu, 3);
+                $("#" + id).val("");
+                $("#ltaSpan").text("Invalid Input");
+                $("#ltaSpan").css("background-color", "red");
+            }
+            $("#ltaSelec").val("yes");
+            if (isNaN(value)) {
+                $("#ltaSelec").val("no");
+                $("#ltaSpan").text("");
+                $("#ltaSpan").css("background-color", "lightgray");
+            } else if (value > basicForLta) {
+                $app.showAlert("Less Than 1 Month Basic Salary=" + basicForLta, 3);
+                $("#ltaSpan").text("Invalid Input");
+                $("#ltaSpan").css("background-color", "red");
+            } else if (value < basicForLta) {
+               
+                $("#ltaSpan").text("Valid Input");
+                $("#ltaSpan").css("background-color", "green");
+            }
+            else if (value == basicForLta) {
+
+                $("#ltaSpan").text("Valid Input");
+                $("#ltaSpan").css("background-color", "green");
+            }
+          
+        }
+        if (id === "annuTele") {
+            if (splAnnumValu < value) {
+                $app.showAlert("Maximum  of NPS Which ever is less Then=" + splAnnumValu, 3);
+                $("#" + id).val("");
+                $("#teleSpan").text("Invalid Input");
+                $("#teleSpan").css("background-color", "red");
+            }
+            $("#teleSelec").val("yes");
+            if (isNaN(value)) {
+                $("#teleSelec").val("no");
+                $("#teleSpan").text("");
+                $("#teleSpan").css("background-color", "lightgray");
+            } else if (value > basicForTelec) {
+                $app.showAlert("Maximum of 60000 INR Per Annum or 10% of Basic Salary Which ever is less=" + basicForTelec, 3);
+                $("#teleSpan").text("Invalid Input");
+                $("#teleSpan").css("background-color", "red");
+            } else if (value < basicForTelec) {
+                $("#teleSpan").text("Valid Input");
+                $("#teleSpan").css("background-color", "green");
+            }
+        } else if (value === basicForTelec) {
+            $("#teleSpan").text("Valid Input");
+            $("#teleSpan").css("background-color", "green");
+        }
+         
+    },
+    //onChange Event Use to SalaryMaster html
+    changedval: function (id, event) {
+        
+        var value = parseFloat($("#" + id).val());
+        var splvalu = parseFloat($("#perAnnumSpl").val());
+
+        if (!isNaN(value)) {
+            var total = parseFloat(splvalu - value);
+            if (splvalu < value) {
+
+            }
+            $("#perAnnumSpl").val(total);
+            $("#perMonthSpl").val((total / 12) .toFixed(2));
+            if (id === "annuHra") {
+                $("#perMonthHra").val((value / 12) .toFixed(2));
+                $("#perAnnumHra").val(value);
+                $("#annuSpl").val(total);
+                $("#" + id).prop("disabled",true);
+            }
+            if (id === "annuLta") {
+                $("#perMonthLta").val((value / 12) .toFixed(2));
+                $("#perAnnumLta").val(value);
+                $("#annuSpl").val(total);
+                $("#" + id).prop("disabled", true);
+            }
+            if (id === "annumNps") {
+                $("#perMonthNps").val((value / 12) .toFixed(2));
+                $("#perAnnumNps").val(value);
+                $("#annuSpl").val(total);
+                $("#" + id).prop("disabled", true);
+            }
+            if (id === "annuTele") {
+                $("#perMonthTele").val((value / 12) .toFixed(2));
+                $("#perAnnumTele").val(value);
+                $("#annuSpl").val(total);
+                $("#" + id).prop("disabled", true);
+            }
+        }
+        else {
+           
+        }
+    },
+    saveCheck: function () {
+        var isValid = true; // Initialize a flag variable
+        
+        $(".validation-check").each(function () {
+            var validLabel = $(this);
+            if (validLabel.text() === "Invalid Input") {
+               
+                isValid = false; // Set the flag to false if any label has "Invalid Input"
+                return false; // Exit the loop early since we found an invalid input
+            }
+        });
+
+        if (isValid) {
+            return true;
+            // All labels are valid
+        } else {
+            // At least one label is invalid
+        }
+
+    },
+    saveFlexiPay: function () {
+       var checkval =  this.saveCheck();
+      
+        var valuesArray = [];
+
+        var contex = $("#annuSpl").val();
+        $("#flexible").val("0");
+
+        $("[data-id]").each(function () {
+            var input = $(this);
+            debugger;
+            if (input[0].tagName === "INPUT") {
+                if (input[0].value == "") {
+                    input[0].value = "0";
+                }
+
+                valuesArray.push({
+                    Id: input.attr("data-id"),
+                    value: input[0].value,
+                    AttributeModelId: input.attr("data-id"),
+                });
+            }
+        });
+
+        
+        var formData = {
+            entityId: $("#tblFlexiPay").attr("data-entity") ,
+            entityModelId: $("#tblFlexiPay").attr("data-modelid") ,
+            EntityKeyValues : valuesArray
+        };
+        var refEntity = $("form").attr("id");
+        var refEntityModel = "Employee";
+        if (checkval) {
+            $app.showAlert("Are You Sure Do you want Save", 1);
+            $.ajax({
+                url: $app.baseUrl + "Entity/SaveEntityMasterValue",
+                data: JSON.stringify({ dataValue: formData, refEntityId: refEntity, refEntityModel: refEntityModel, saveMappingId: null }),
+                dataType: "json",
+                contentType: "application/json",
+                type: "POST",
+                success: function (jsonResult) {
+                    var result = jsonResult.result;
+                    $app.showAlert("Saved Successfuly ",1)
+
+                },
+                error: function () {
+                    $app.showAlert(jsonResult.Message, 4);
+                }
+
+            })
+        }
+        else {
+            $app.showAlert("Some Invalid Input ", 4);
+        }
+    },
+    loadDataCheck: function () {
+        if ($('#convSelec').val() == "yes") {
+            $("#convSpan").text("Valid Input");
+            $("#convSpan").css("background-color", "green");
+        }
+        if ($("#giftSelec").val()=="yes") {
+            $("#giftSpan").text("Valid Input");
+            $("#giftSpan").css("background-color", "green");
+        }
+        if ($("#mealSelec").val="yes") {
+            $("#mealSpan").text("Valid Input");
+            $("#mealSpan").css("background-color", "green");
+        }
+        
+        if ($("#eduSelec").val = "yes") {
+            $("#eduSpan").text("Valid Input");
+            $("#eduSpan").css("background-color", "green");
+        }
+        
+        if ($("#annuHra").val() != "" && $("#annuHra").val() != "0.00") {
+            $("#hraSpan").text("Valid Input");
+            $("#hraSpan").css("background-color", "green");
+        }
+        if ($("#annuLta").val() != "" && $("#annuLta").val() != "0.00") {
+            $("#ltaSpan").text("Valid Input");
+            $("#ltaSpan").css("background-color", "green");
+        }
+        if ($("#annuTele").val() != "" && $("#annuTele").val() != "0.00") {
+            $("#teleSpan").text("Valid Input");
+            $("#teleSpan").css("background-color", "green");
+        }
+        if ($("#annumNps").val() != "" && $("#annumNps").val() != "0.00") {
+            $("#npsSpan").text("Valid Input");
+            $("#npsSpan").css("background-color", "green");
+        }
+    },
+    changeInput: function (sid, cotext) {
+       
+        var selectedval = cotext.toUpperCase();
+        var spl = parseFloat($("#annuSpl").val())
+        if (sid == "npsSelec") {
+            if (selectedval == "NO") {
+                var nps = parseFloat($("#annumNps").val());
+                if (!isNaN(nps) && !isNaN(spl)) {
+                    var total = spl + nps  ;
+                    $("#annuSpl").val(total);
+                    $("#perMonthSpl").val((total / 12).toFixed(2));
+                    $("#perAnnumSpl").val(total);
+                    $("#annumNps").prop("disabled", false);
+                    $("#npsSpan").text("");
+                    $("#npsSpan").css("background-color", "lightgray");
+                    $("#annumNps").val("");
+                    $("#perMonthNps").val("");
+                    $("#perAnnumNps").val("");
+                }
+            }
+        }
+        if (sid == "hraSelec") {
+            if (selectedval == "NO") {
+                var hra = parseFloat($("#annuHra").val());
+                if (!isNaN(hra) && !isNaN(spl)) {
+                    var total = spl + hra ;
+                    $("#annuSpl").val(total);
+                    $("#perMonthSpl").val((total / 12).toFixed(2));
+                    $("#perAnnumSpl").val(total);
+                    $("#annuHra").prop("disabled", false);
+                    $("#hraSpan").text("");
+                    $("#hraSpan").css("background-color", "lightgray");
+                    $("#annuHra").val("");
+                    $("#perMonthHra").val("");
+                    $("#perAnnumHra").val("");
+                }
+            }
+        }
+        if (sid == "teleSelec") {
+            debugger; 
+            if (selectedval == "NO") {
+                var tele = parseFloat($("#annuTele").val());
+                if (!isNaN(tele) && !isNaN(spl)) {
+                    var total = spl + tele;
+                    $("#annuSpl").val(total);
+                    $("#perMonthSpl").val((total / 12).toFixed(2));
+                    $("#perAnnumSpl").val(total);
+                    $("#annuTele").prop("disabled", false);
+                    $("#teleSpan").text("");
+                    $("#teleSpan").css("background-color", "lightgray");
+                    $("#perMonthTele").val("");
+                    $("#annuTele").val("");
+                    $("#perAnnumTele").val("");
+                }
+            }
+        }
+        if (sid == "ltaSelec") {
+            if (selectedval == "NO") {
+                var lta = parseFloat($("#annuLta").val());
+                if (!isNaN(lta) && !isNaN(spl)) {
+                    var total = spl + lta;
+                    $("#annuSpl").val(total);
+                    $("#perMonthSpl").val((total / 12).toFixed(2));
+                    $("#perAnnumSpl").val(total);
+                    $("#annuLta").prop("disabled", false);
+                    $("#annuLta").val("");
+                    $("#ltaSpan").text("");
+                    $("#ltaSpan").css("background-color", "lightgray");
+                    $("#perAnnumLta").val("");
+                    $("#perMonthLta").val("");
+                }
+            }
+        }
+    },
+    inputDisabled: function (selector) {
+
+    }
+}

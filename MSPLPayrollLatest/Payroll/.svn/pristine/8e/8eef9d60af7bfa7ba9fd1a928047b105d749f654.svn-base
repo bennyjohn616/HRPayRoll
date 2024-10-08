@@ -1,0 +1,118 @@
+﻿
+<form id="frmFormula" data-toggle="validator" role="form">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add/Edit Formula
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Field Name
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtFieldName" class="form-control" readonly="readonly" placeholder="Enter the Field Name"
+                                         autofocus  required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Type
+                                </label>
+                                <div class="col-md-7">
+                                    <select id="sltEntityType" class="form-control">
+                                        <option value="1">Master Input</option>
+                                        <option value="2">Monthly Input</option>
+                                        <option value="3">Percentage</option>
+                                        <option value="4">Conditional</option>
+                                        <option value="5">Range</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Value/Formula
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtFormula" class="form-control" readonly="readonly" placeholder="Enter the Value/Formula"
+                                           required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Percentage
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtPercentage" onkeypress="return $validator.IsNumeric(event, this.id);" class="form-control" placeholder="Enter the Percentage"
+                                           required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Maximum
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtMaximum" onkeypress="return $validator.IsNumeric(event, this.id);" class="form-control" placeholder="Enter the Maximum"
+                                           required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Rounding
+                                </label>
+                                <div class="col-md-7">
+                                    <select class="form-control" id="sltRounding">
+                                        <option value="1">>1RUPEE</option>
+                                        <option value="2"><1RUPEE</option>
+                                        <option value="3">50 PAISE</option>
+                                        <option value="4">>50 PAISE</option>
+                                        <option value="5"><50 PAISE</option>
+                                        <option value="6">10 PAISE</option>
+                                        <option value="7">>10 PAISE</option>
+                                        <option value="8">5 PAISE</option>
+                                        <option value="9">>5 PAISE</option>
+                                        <option value="10">5 RUPEES</option>
+                                        <option value="11">>5 RUPEES</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            @*<span class="glyphicon glyphicon-asterisk"></span>
+                                <span class="glyphicon glyphicon-plus"></span>*@
+                            <button type="button" class="btn btn-default operator ">+</button>
+                            <button type="button" class="btn btn-primary operator">-</button>
+                            <button type="button" class="btn btn-info operator">*</button>
+                            <button type="button" class="btn btn-success operator">/</button>
+                            <button type="button" class="btn btn-warning operator">(</button>
+                            <button type="button" class="btn btn-danger operator">)</button>
+                            <button type="button" class="btn btn-danger remove"><--</button>
+                            <button type="button" class="btn btn-default enternumber">Enter Number</button>
+                        </div>
+                        <div id="attributeModeltree">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnFormulaSave" class="btn btn-default">
+                    Save
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

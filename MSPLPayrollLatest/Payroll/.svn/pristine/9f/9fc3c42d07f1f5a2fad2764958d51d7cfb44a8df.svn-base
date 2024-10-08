@@ -1,0 +1,21 @@
+﻿.marginbt7{
+        margin: 7px 0 7px;
+}
+.operator,.remove,.enternumber{
+    padding:4px 8px;
+}
+/*Grid Customization*/
+
+/*
+table.dataTable thead .sorting_asc{
+        background-color: #73a4cf;
+}
+table.dataTable tbody tr.selected{
+    background:rgba(31, 181, 172, 1)
+}*/
+.context-menu-item:hover{
+    color:#fff;
+}
+.paddingcustomize{
+    padding:3px;
+}

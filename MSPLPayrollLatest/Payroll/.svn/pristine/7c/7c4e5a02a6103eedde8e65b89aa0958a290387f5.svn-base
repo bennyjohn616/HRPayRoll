@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    //Layout = "~/Views/Shared/_HomeLayout.cshtml";/* Request.IsAjaxRequest() ? null : null;*/
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+
+
+<script src="~/Scripts/dataTables.fixedColumns.min.js"></script>
+
+<div class="form-horizontal">
+
+    <ul class="nav nav-tabs" id="empNavtabs">
+        <li><a href="#step1" data-toggle="tab" class="wizard" id="MasterCompSettings">Master Component Rights</a></li>
+        <li><a href="#step2" data-toggle="tab" class="wizard" id="MultiEntry">Multi Entry values</a></li>
+     
+
+    </ul>
+
+    <div class="tab-content" id="tabcontent">
+        <div id="step1" class="tab-pane fade in active">
+            @Html.Partial("~/Views/DataWizard/MultiEntryCompSettings.cshtml")
+        </div>
+        <div id="step2" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_MultiEntry.cshtml")
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Emp/MultiEntry.js"></script>
+<script>
+ 
+    window.onload = function () {
+        var a = $('.dataTables_scrollHeadInner table').first().css("margin-left");
+        var b = $('.dataTables_scrollHeadInner table').first().css("width");
+        $(".dataTables_scrollBody table").css({ 'margin-left': a, "width": b });
+    }
+</script>
+
+@section Scripts
+{
+    <script src="~/Js/Company/CompanyCom.js"></script>
+    <script src="~/Js/Emp/MultiEntry.js"></script>
+}

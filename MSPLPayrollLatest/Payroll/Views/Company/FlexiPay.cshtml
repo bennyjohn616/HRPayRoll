@@ -1,0 +1,55 @@
+﻿<form id="flexiBay">
+    
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: $app.baseUrl + "Entity/CreateFlexiPayTable",
+            contentType: 'application/json; charset=utf-8',
+            type: "GET",
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (jsonResult) {
+                debugger;
+                if (jsonResult.Status) {
+                    var result = jsonResult.result;
+                    debugger
+                     
+                   
+                    var html = '<div class="form-horizontal">';
+                   
+                    for (var i = 0; i < result.length; i++)  {
+                        if (result[i].IsBasicPay) {
+                          var basi = '<div class="form-group">';
+                            basi = basi + ' <label class="control-label col-md-2"> ' + result[i].Name + '</label>';
+                            basi += '<div class="col-md-2 "> <input id="basic" disabled type="text" class="form-control col-md-2"> <br /><br /></div >';
+                            basi += '<div class="col-md-2"> <input id="basicMonth" data-id="' + result[i].Id +' " disabled type="text" class="form-control col-md-2"><br /><br /></div ></div >';
+                        }
+                        if (result[i].IsFlexiPay) {
+                           var flexi =  '<div class="form-group"> <label class="control-label col-md-2">' + result[i].Name + '</label>';
+                            flexi += '<div class="col-md-2"> <input id="flexible" data-id="' + result[i].Id + ' " disabled="" type="text" class="form-control col-md-4"></div >'
+                            flexi += '  <input id="flexiValue" style="visibility:hidden" type="text"></div >'
+                        }
+                    }
+                    var fbtn = '<div class="col-md-11"><input type="button" onclick="$FlexiPay.editFlexiPay()" id="btnEditFlexi" value="Edit" class="btn custom-button btnRight marginbt7"></div><div class="col-md-1"><input type="button" onclick="$FlexiPay.saveFlexiPay()" id="btnSaveFlexi" value="Save" class="btn custom-button btnRight marginbt7"></div>';
+                    var fTable = '<div class="col-md-12 table-responsive"> <table id="tblFlexiPay" data-entity="" data-modelid="" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">';
+                    fTable += ' <thead>< tr ><th>Component</th><th>Opting (Yes/No)</th><th>Per Annum</th><th>Per Month</th><th>Input Per Annum</th><th>Validation Check</th></tr ></thead >';
+
+                    result.sort(function (a, b) {
+                        return a.DisplayOrder - b.DisplayOrder
+                    });
+                    $.each(result, function (index, benefit) {
+                        fTable += ''
+                    })
+                    html = html + basi + flexi + '</div> </div> ' + fbtn
+                    $("#flexiBay").html(html);
+                }
+                else {
+                    $app.showAlert("Something Went Worng ", 4)
+                }
+            }
+        })
+    });
+</script>

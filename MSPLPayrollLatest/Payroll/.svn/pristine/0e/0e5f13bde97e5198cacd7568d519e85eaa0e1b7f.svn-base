@@ -1,0 +1,26 @@
+﻿
+<h2>Tax Section</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" id="btnAddSection" value="Add" class="btn custom-button btnRight marginbt7"
+               data-toggle="modal" data-target="#AddOtherIncomeHeads">
+    </div>
+
+    <div id="dvOtherSection" class="col-md-12 table-responsive">
+       
+    </div>
+    <div id="AddOtherIncomeHeads" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/TaxSection/OtherIncomeHeads.cshtml")
+    </div>
+</div>
+
+<script type="text/javascript" src="~/Js/Tax/otherIncomeHeads.js"></script>
+<script type="text/javascript" src="~/Js/Tax/txSection.js"></script>
+<script>
+    $txOtherIncome.loadInitial();
+</script>
+
+

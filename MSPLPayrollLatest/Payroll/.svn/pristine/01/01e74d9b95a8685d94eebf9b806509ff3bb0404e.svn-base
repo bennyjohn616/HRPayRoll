@@ -1,0 +1,112 @@
+08/08/2023 12:23:32
+SendTestMail
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:23:32
+Log
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:47:05
+SendTestMail
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:47:05
+Log
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:47:49
+SendTestMail
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:47:49
+Log
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:48:27
+SendTestMail
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================
+08/08/2023 12:48:27
+Log
+CheckResponse
+Transaction failed. The server response was: Transaction failed
+   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at NotificationEngine.PayRoleMail.SendTestMail(String smtpServer, Int32 portNo, String frommail, String frompassword, Boolean sslen) in E:\WorkingFolder\Madhavan\MSPLPayrollLatest\NotificationEngine\PayRoleMail.cs:line 425
+=======================================================================
+
+=======================================================================

@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+@*<link href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css" />
+    <link href="~/assets/fonts/font-awesome/css/font-awesome.css" rel="stylesheet"
+          type="text/css" />
+    <link href="~/assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/css/responsive.css" rel="stylesheet" type="text/css" />*@
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+@*<link href="~/assets/css/custom.css" rel="stylesheet" />*@
+<script type="text/javascript" language="javascript">
+    $rootUrl = "@Url.Content("~/")";
+    //alert($rootUrl);
+</script>
+
+<style>
+    .alignlabel {
+        height: 10em;
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 55%;
+        left: 35%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .alignbutton {
+         height: 10em;
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        bottom:70%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .aligntext{
+         height: 10em;
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        bottom:50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    .alignLink{
+         height: 10em;
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        bottom:50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<div class="aligntable">
+    <table align="center">
+
+        <tr>
+
+            <td>
+                <div class="alignlabel">
+                    <label id="reason"> Reason</label>
+                    <label id="msg"> </label>
+                </div>
+            </td>
+            <td>
+                <div class="aligntext">
+                    <textarea name="txtReject" cols="40" rows="5" id="txtReject" class="form-control" placeholder=""></textarea>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <div class="alignbutton">
+                    <button type="button" id="btnReject" class="btn custom-button" onclick=" $leave.RejectLeave();">
+                        Submit
+                    </button>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <div class="alignLink">
+                    <a href='~/Views/Login/Index.cshtml'> Click here to Login</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script src="~/Js/Leave/leaveRequest.js" type="text/javascript"></script>
+<script src="~/Js/application.js" type="text/javascript"></script>
+

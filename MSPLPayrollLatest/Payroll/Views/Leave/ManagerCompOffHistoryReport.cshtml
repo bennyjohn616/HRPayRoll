@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Manager CompOff History view";
+}
+
+<input id="ReportType" name="hiddenId" type="hidden" value="Manager" />
+<div class="col-md-12 ">
+    <div class="form-group col-md-6 ">
+        <h2>Manager View Reports</h2>
+    </div>
+
+</div>
+@Html.Partial("~/Views/Leave/_CompOffHistoryTable.cshtml")
+
+<script src="~/Js/Leave/CompOffReport.js" type="text/javascript"></script>
+<script>
+    $CompoffReport.EmployeeCompOffHistroy("Manager");
+</script>

@@ -1,0 +1,173 @@
+﻿
+<h2 id="pgeTitle"> Expense Approve / Reject</h2>
+<div class="form-horizontal">
+    <div class="col-sm-12">
+        <div class="col-sm-12">
+            <div class="form-group pull-right">
+                <input type="button" value="Approve" onclick="$leave.approve()" class="btn custom-button  " />
+                <input type="button" value="Reject" class="btn custom-button marginbt7" onclick="$leave.intializereason(data='Reject')" data-target="#AddReason" data-toggle="modal" />
+            </div>
+            <div class="form-group pull-left nodisp" id="divattachid">
+                <label id="lblhiddenattachpath" class="control-label nodisp">
+
+                </label>
+                <label id="lblpriority" class="control-label">
+                    Attachemnt Available For Approval
+                </label>
+                <input type="button" value="View" style="cursor:pointer" class="btn custom-button marginbt7" data-toggle="modal" data-target="#AppRejShowattachment" onclick="AddInitialize($('#lblhiddenattachpath').text())" />
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Employee Code <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input class="form-control" type="text" id="apEmpCode" onchange="" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Cost Center <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7 ">
+                    <input type="text" class="form-control" placeholder="Enter Your Cost Center" id="apCostCenter" />
+                </div>
+                <input id="apEmpId"
+                       name="hiddenId"
+                       type="hidden"
+                       value="@Session["EmployeeId"]" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Purpose For Expense <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7  ">
+                    <textarea placeholder="Enter Value Here" class="form-control" id="apPurpose">  </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Date of Expense Item <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input type="text" class="datepicker form-control Reqrd" id="apItemDate" placeholder="Enter The Expense Item Date" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Cost of Expense <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control    " id="apCostExpense" placeholder="Enter The Number" />
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Cost Center Manager <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7 nodisp">
+                    <input type="text" id="ap1stLevel" class="form-control" readonly disabled="disabled" />
+                </div>
+                <div class="col-md-7">
+                    <input type="text" id="ap1stlvlData" class="form-control" readonly disabled="disabled" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Category  Of Expense<label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input class="form-control" placeholder="Select The Category of Your Expenes " id="apCategory" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Description of Expense <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <textarea placeholder="Enter Value Here" style="height:200px" rows="6" class="form-control" id="apDescrip">  </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Date Submitted <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input type="text" class="datepicker form-control Reqrd" id="apSubmitDate" placeholder="Select Today's Team And Submitted" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Attchment</label>
+                <div class="col-md-7">
+                    <input type="file" class="form-control " id="apfile" placeholder="Add Attchment" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-12 table-responsive">
+    <table id="tblEmpexpensApprove" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    EmployeeCode
+                </th>
+                <th>
+                    Cost Center
+                </th>
+                <th>
+                    Cost Center Manager
+                </th>
+                <th>
+                    Purpose For Expense
+                </th>
+                <th>
+                    Category Of Expense
+                </th>
+                <th>
+                    Date Of Expense
+                </th>
+                <th>
+                    Cost of Expense
+                </th>
+                <th>
+                    Description Of Expense
+                </th>
+                <th>
+                    Date Submitted
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Attachment
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+
+        </thead>
+    </table>
+
+</div>
+<script src="~/Js/PayrollMain.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $empExpens.expenseApprove();
+    })
+</script>

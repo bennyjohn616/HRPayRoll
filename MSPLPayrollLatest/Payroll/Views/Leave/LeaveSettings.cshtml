@@ -1,0 +1,90 @@
+﻿<!-- Modal -->
+<div class="form-horizontal">
+
+    <ul class="nav nav-tabs" id="LeaveSettingsNavtabs">
+
+        <li><a href="#MasterSettings" data-toggle="tab" class="empTab" id="LevMaster_Settings">Master Settings</a></li>
+        <li><a href="#LeaveTypesetting" data-toggle="tab" class="empTab" id="Leavetype_Settings">Leave Settings</a></li>
+        <li><a href="#LeaveConfigurations" data-toggle="tab" class="empTab" id="Levave_Config">Leave Configuration</a></li>
+        @*<li><a href="#HolidaysSetting" data-toggle="tab" class="empTab" id="LevHoliday_Settings">Holiday Settings</a></li>*@
+        <li><a href="#WeekoffSettings" data-toggle="tab" class="empTab" id="LevWeekoff_Settings">Weekoff Settings</a></li>
+        <li><a href="#CompoffSettings" data-toggle="tab" class="empTab" id="LevCompoff_Settings">Compoff Settings</a></li>
+        <li><a href="#CreditSettings" data-toggle="tab" class="empTab" id="LevCredit_Settings">Credit Settings</a></li>
+        <li><a href="#LeaveEncashmentSettings" data-toggle="tab" class="empTab" id="LeaveEncashment_Settings">Encashment Settings</a></li>
+      
+     
+    </ul>
+    <div class="tab-content" id="tabcontent">
+
+        <div id="MasterSettings" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/LeaveMasterSettings.cshtml")
+        </div>
+        <div id="LeaveTypesetting" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/LeaveTypeSettingList.cshtml")
+        </div>
+        <div id="LeaveConfigurations" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/LeaveConfiguration.cshtml")
+        </div>
+        <div id="HolidaysSetting" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/HolidayList.cshtml")
+        </div>
+        <div id="WeekoffSettings" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/WeekoffSettings.cshtml")
+        </div>
+        <div id="CompoffSettings" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/CompoffSettings.cshtml")
+        </div>
+        <div id="CreditSettings" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/LeaveCreditList.cshtml")
+        </div>
+        <div id="LeaveEncashmentSettings" class="tab-pane fade">
+            @Html.Partial("~/Views/Leave/LeaveEncashmentSettings.cshtml")
+        </div>
+  
+    </div>
+
+</div>
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+<script src="~/Js/application.js" type="text/javascript"> </script>
+<script src="~/Js/Leave/leaveCreditsettings.js"></script>
+<script src="~/Js/Leave/LeaveSettings.js"></script>
+
+<script>
+    function fnValidatePAN(Obj) {
+        if (Obj == null) Obj = window.event.srcElement;
+        if (Obj.value != "") {
+            ObjVal = Obj.value;
+            var panPat = /^([a-zA-Z]{5})(\d{4})([a-zA-Z]{1})$/;
+            var code = /([C,P,H,F,A,T,B,L,J,G])/;
+            var code_chk = ObjVal.substring(3, 4);
+            if (ObjVal.search(panPat) == -1) {
+                alert("Invalid Pan No");
+                Obj.focus();
+                return false;
+            }
+            if (code.test(code_chk) == false) {
+                $app.showAlert("Invaild PAN Card No.", 4);
+                return false;
+            }
+        }
+    }
+    function fnChecklength(obj, min) {
+        if (obj.value != "") {
+            txt = obj.value.length;
+            if (txt == min) {
+                return true
+            } else {
+                $app.showAlert("Input not Valid, Please enter exact " + min + " Digits", 4);
+                //alert("Input not Valid");
+                return false
+            }
+        }
+    }
+
+    $('#LeaveSettingsNavtabs a').on("click", function (e) {
+        debugger;
+        $("#tabcontent").removeClass('nodisp');
+        $LeaveCreditsettings.LoadLeaveRelated(this);
+    });
+
+</script>

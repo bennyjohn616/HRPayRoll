@@ -1,0 +1,344 @@
+﻿<!-- Modal -->
+<form id="frmField" data-toggle="validator" role="form">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add/Edit Field
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Field Name <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtFieldName" class="form-control" placeholder="Enter the Field Name" 
+                                maxlength="30" autofocus  required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Display As <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtDisplayAs" class="form-control" placeholder="Enter the Display Name"
+                                  maxlength="100" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Data Type <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <select id="txtDataType" class="form-control" required>
+                                <option value="String">Text</option>
+                                <option value="Number">Number</option>
+                                <option value="Date">Date</option>
+                                <option value="Bool">Boolean</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="dvDataSize">
+                        <label class="control-label col-md-4">
+                            Data Size 
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtDataSize" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="10" class="form-control" placeholder="Enter the Data Size"/>
+                        </div>
+                    </div>
+                    <div class="form-group nodisp" >
+                        <label class="control-label col-md-4">
+                            Default Value
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtDefaultValue" maxlength="10" class="form-control" placeholder="Enter the Default Value" />
+                        </div>
+                    </div>
+                   
+
+                    <div id="dvMasterFieldBehavior">
+                        <h4>
+                            Behavior
+                        </h4>
+                        <hr />
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Mandatory
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdMandatoryYes" name="Mandatory" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdMandatoryNo" name="Mandatory" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group" >
+                            <label class="control-label col-md-4">
+                                Field Type
+                            </label>
+                            <div class="col-md-7">
+                                <select id="sltFieldType" class="form-control">
+                                    <option value="Direct">Direct</option>
+                                    <option value="PopUp">Pop Up</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group nodisp" id="dvEntityModelDrop">
+                            <label class="control-label col-md-4">
+                                Entity Model
+                            </label>
+                            <div class="col-md-7">
+                                <select id="sltRefEntityModel" class="form-control"><option selected="selected"></option></select>
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Order
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtOrder" class="form-control" placeholder="Enter the Default Value" />
+                                </div>
+                            </div>*@
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Transaction
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdTransactionYes" name="Transaction" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdTransactionNo" name="Transaction" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Filter
+                                </label>
+                                <div class="col-md-7">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="rdFilterYes" name="Filter" value="True" />Yes
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" id="rdFilterNo" name="Filter" value="False" />No
+                                    </label>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div id="dvEarningFieldBehavior">
+                        <h4>
+                            Behavior
+                        </h4>
+                        <hr />
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Include For Gross Pay
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdIncludeGrossYes" name="IncludeGross" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdIncludeGrossNo" name="IncludeGross" checked="checked" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Monthly Input
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdMonthlyInputYes" name="MonthlyInput" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdMonthlyInputNo" name="MonthlyInput" checked="checked" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Taxable
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdTaxableYes" name="Taxable" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdTaxableNo" name="Taxable" checked="checked" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Increment
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdIncrementYes" name="Increment" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdIncrementNo" name="Increment" checked="checked" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Full & Final Settlement
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdFinalSettlementYes" name="FinalSettlement" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdFinalSettlementNo" checked="checked" name="FinalSettlement" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Reimbursement
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdReimbursementYes" name="Reimbursement" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdReimbursementNo" checked="checked" name="Reimbursement" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                            <label class="control-label col-md-4">
+                                    FlexiPay
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdFlexiPayYes"   onclick="$entitymodel.showFlexiPay()" name="FlexiPay" value="True" /> Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdFlexiPayNo" checked="checked" name="FlexiPay" value="False" />No
+                                </label>
+                            </div>
+                        </div>*@
+                    </div>
+                    <div id="dvDeductionFieldBehavior">
+                        <h4>
+                            Behavior
+                        </h4>
+                        <hr />
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Include For Gross Pay Deduction
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdIncludeGrossDeductionYes" name="IncludeGrossDeduction"
+                                           value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdIncludeGrossDeductionNo" checked="checked" name="IncludeGrossDeduction" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Monthly Input
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdMonthlyInputDeductionYes" name="MonthlyInputDeduction"
+                                           value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdMonthlyInputDeductionNo" checked="checked" name="MonthlyInputDeduction" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Installment
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdInstallmentYes" name="Installment" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdInstallmentNo" checked="checked" name="Installment" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                <div id="dvTaxBehaviour">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Mandatory
+                        </label>
+                        <div class="col-md-7">
+                            <label class="radio-inline">
+                                <input type="radio" id="rdtxMandatoryYes" name="txMandatory" value="True" />Yes
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" id="rdtxMandatoryNo" name="txMandatory" value="False" />No
+                            </label>
+                        </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Order No
+                        </label>
+                        <div class="col-md-7">
+                           <input class="form-control" id="txtOrderNo" type="text" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnFieldSave" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" id="btnSaveClose" class="btn custom-button">
+                    Save & Close 
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+@*<div id="ShowFlexiPay" data-toggle="validator" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add/Edit Field
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <select id="showFlexiComponent" class="form-control">
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@

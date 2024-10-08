@@ -1,0 +1,123 @@
+﻿
+<h1 class="title">Separation</h1>
+<div class="row">
+    <form role="form" id="Resignation" action="javascript:$Resignation.CheckPayrollProcees()">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Add/Edit Resignation
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Category
+                                </label>
+                                <div class="col-md-6">
+                                    <select id="sltResgCategorylist" class="form-control" autofocus></select>
+                                    <span id="lblCategory"></span>
+                                </div>
+                            </div>
+
+                            <div class="nodisp" id="dvemp">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Employee Code
+                                    </label>
+                                    <div class="col-md-6">
+                                        <select id="sltResgEmployeelist" class="form-control"></select>
+                                        <span id="lblempcode"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nodisp" id="dvdetails">
+                                <div class="form-group" id="dvEmpName">
+                                    <label class="control-label col-md-4">
+                                        Employee Name
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtEmpName" class="form-control" readonly placeholder="Employee Name"
+                                               required />
+                                    </div>
+                                </div>
+                                <div class="form-group" id="dvDOJ">
+                                    <label class="control-label col-md-4">
+                                        Date of Joining <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtDOJ" class="form-control" readonly placeholder="Enter the Date of Joining"
+                                               required disabled/>
+                                    </div>
+                                </div> 
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Resgination Date <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtResignationDate" class="form-control datepicker" placeholder="Enter the Resignation Date"
+                                               readonly required />
+                                    </div>
+                                </div>                              
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Last Working Date <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtLastWorkingDate" class="form-control datepicker" placeholder="Enter the Last Working Date"
+                                               readonly required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Reason <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtReason" class="form-control" placeholder="Enter the Reason"
+                                               maxlength="60" data-error="Enter the Location" required />
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display:none">
+                                    <div>
+                                        <input type="text" id="txtMonthlyLast" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                    <div>
+                                        <input type="text" id="txtPayrollLast" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display:none">
+                                    <div>
+                                        <input type="text" id="txtMonthly" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                    <div>
+                                        <input type="text" id="txtPayroll" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-sm-10">
+                                        <div class="form-group pull-right">
+                                            <button type="submit" id="btnSave" class="btn custom-button"> Save</button>
+                                            <button type="button" class="btn custom-button" data-dismiss="modal">Close</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>

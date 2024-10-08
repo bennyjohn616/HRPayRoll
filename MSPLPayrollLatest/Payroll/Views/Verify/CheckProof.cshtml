@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "CompanyView";
+    //Layout = "~/Views/Shared/_HomeLayout.cshtml";/* Request.IsAjaxRequest() ? null : null;*/
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<script src="~/Scripts/dataTables.fixedColumns.min.js"></script>
+<script src="~/assets/js/dataTables.autoFill.min.js"></script>
+<div class="row">
+    <div class="col-md-12">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" id="Input">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label col-md-12" id="lblCompany">
+                    Fin year
+                </label>
+                <div class="col-md-12">
+                    <label id="FinYear" class="form-control" autofocus></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label class="control-label col-md-12" id="lblCompany">
+                    Company
+                </label>
+                <div class="col-md-8">
+                    <select id="CName" class="form-control col-md-4" style="width:auto;margin-right:10px">
+                    </select>
+                    <Input id="btn-company" type="button" class="col-md-3 btn btn-primary" value="Proceed" onclick="$Check.LoadData()" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nodisp" id="Input1">
+    <div class="form-group">
+        <div class="col-md-2">
+            <label class="control-label col-md-2">
+                Employee
+            </label>
+        </div>
+        <div class="col-md-2">
+            <select id="EmpCode" class="form-control col-md-2" onchange="$Check.EmpChange()"></select>
+        </div>
+        <h5>
+            <label class="control-label col-md-3" id="name" style="width:auto">
+                Name :
+            </label>
+        </h5>
+        <div class="col-md-2">
+            <Input type="button" class="form-control btn-primary" style="border-style:ridge" value="Change Company" onclick="$Check.ScreenInit()" />
+        </div>
+
+    </div>
+</div>
+
+<div>
+    </br>
+    </br>
+</div>
+
+<div id="table-disp" class="nodisp">
+    <div class="col-md-12 table-responsive" id="dvVerifyProof">
+        Click on the Link Icon to Open a Particular Document
+        <table id="tblVerifyDoc" class="table table-fixed table-striped table-hover table-condensed userTablehand dataTable no-footer">
+            <thead>
+            <th>
+                Serial No.
+            </th>
+            <th>
+                Description
+            </th>
+            <th class="nodisp">
+                FileRef
+            </th>
+            <th>
+                File
+            </th>
+            <th>
+                Upload Date
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Remarks
+            </th>
+            </thead>
+            <!--<tbody>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td class="nodisp">
+            </td>
+            <td width="10px">
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>-->
+            <!--<td style="width:10px">
+            </td>-->
+            <!--</tbody>-->
+        </table>
+    </div>
+    <div id="Viewpreview" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/Verify/CheckView.cshtml")
+    </div>
+</div>
+
+
+<script src="~/Js/Verify/CheckProof.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script>
+    window.onload = function () {
+        var a = $('.dataTables_scrollHeadInner table').first().css("margin-left");
+        var b = $('.dataTables_scrollHeadInner table').first().css("width");
+        $(".dataTables_scrollBody table").css({ 'margin-left': a, "width": b });
+    }
+</script>
+@section Scripts
+{
+    <script src="~/Js/Company/CompanyCom.js"></script>
+    <script src="~/Js/Verify/CheckProof.js"></script>
+}
+
+<script>
+    $(document).ready(function () {
+        $Check.empid = '@Session["EmployeeId"]';
+        $('#input1').addClass('nodisp');
+        $('#table-disp').addClass('nodisp');
+        $Check.LoadInitial();
+    });
+
+</script>
+
+

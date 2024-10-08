@@ -1,0 +1,162 @@
+﻿
+<form>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Shift Name</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Max Mts Allowed Per Month</label>
+            </div>
+            <div class="col-md-6">
+                <input type='time' class="form-control" value='' />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Max Mts Allowed Per day</label>
+            </div>
+            <div class="col-md-2">
+                <input type='time' class="form-control" value='' />
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">Mn Mts Allowed Per day</label>
+            </div>
+            <div class="col-md-2">
+                <input type='time' class="form-control" value='' />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label" >Deduction</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Deduction From 1st Minute</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Adjusted In Leave</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Auto Permission Applicable</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Exceeding Permission Hours Will be consider as Late hour</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Early Going Not Add To Late</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Permission Hour Rounding Type</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Permission Hours Rounding For</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-6">
+                <label class="control-label"><input type="checkbox"> Apply The Setting For All Shift</label>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

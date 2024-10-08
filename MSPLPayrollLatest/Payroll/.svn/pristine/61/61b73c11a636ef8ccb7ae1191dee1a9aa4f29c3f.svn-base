@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Emp_HRComponentList";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h4>HR Component</h4>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <input type="button" id="btnempHRComponent" value="Add" class="btn custom-button pull-right"
+                   data-toggle="modal" data-target="#AddEmp_HRComponent">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <div class=" scrol" id="dvEmpHRComponent">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="AddEmp_HRComponent" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/Employee/Emp_HRComponent.cshtml")
+</div>
+
+
+<script src="~/Js/Company/HRComponent.js"></script>
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Company/HRComponent.js"></script>
+    <script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

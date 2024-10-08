@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-11">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label col-md-12">
+                    Select Salary Grade
+                </label>
+                <div class="col-md-12">
+                    <select id="sltMasterEntityModel" class="form-control" autofocus></select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-1">
+        <input type="button" id="btnMasterSave" value="Save" onclick="$masterEarnDedSettings.saveSettings()" class="btn custom-button center">
+    </div>
+    <div class="row col-md-12" id="clrcode">
+        <label style="background-color:#ffff0099; border:1px solid black; padding:2px;">Increment</label>
+        <label style="background-color:#001fff7a; border:1px solid black; padding:2px;">Monthly</label>
+        <label style="background-color:white; border:1px solid black; padding:2px;">Formula</label>
+        <label style="background-color:#ff000091; border:1px solid black; padding:2px;">Condition</label>
+        <label style="background-color:#db5bd161; border:1px solid black; padding:2px;">Range</label>
+    </div>
+    <div class="col-md-10" id="dvMasterEarnDedSettingsTable">
+
+    </div>
+</div>
+<div class="row">
+
+</div>
+
+
+<script src="~/Js/Emp/MultiEntry.js"></script>
+<script>
+    $multiEntryInput.LoadEntityModel({ id: 'sltMasterEntityModel' });
+
+</script>
+@section scripts
+    {
+    <script src="~/Js/Emp/MultiEntry.js"></script>
+
+}
+
+
+
+

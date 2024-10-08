@@ -1,0 +1,59 @@
+﻿<!-- Modal -->
+<form id="frmPopup" data-toggle="validator" role="form" action="javascript:$comPopup.save();">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close closePopup" >
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    <label id="PopupTitle">Add/Edit Popup</label>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Name <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtName" class="form-control" placeholder="Enter the value"
+                                 maxlength="40" autofocus required />
+                        </div>
+                    </div>
+                </div>
+                <div id="ESIpopup">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Is Applicable
+                            </label>
+                            <div class="col-md-1">
+                                <input type="checkbox" id="chkisApplicable" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Employer Code
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" maxlength="25" id="txtEmployerCode" class="form-control" placeholder="Enter the Employer Code" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnBranchSave" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button closePopup">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

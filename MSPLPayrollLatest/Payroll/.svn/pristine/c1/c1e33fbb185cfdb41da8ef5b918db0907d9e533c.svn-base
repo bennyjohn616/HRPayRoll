@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <WebPublishMethod>MSDeploy</WebPublishMethod>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <SiteUrlToLaunchAfterPublish />
+    <LaunchSiteAfterPublish>True</LaunchSiteAfterPublish>
+    <ExcludeApp_Data>False</ExcludeApp_Data>
+    <MSDeployServiceURL>13.232.173.236</MSDeployServiceURL>
+    <DeployIisAppPath>Site1</DeployIisAppPath>
+    <RemoteSitePhysicalPath />
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
+    <MSDeployPublishMethod>WMSVC</MSDeployPublishMethod>
+    <EnableMSDeployBackup>False</EnableMSDeployBackup>
+    <UserName>MSPL\Administrator</UserName>
+    <_SavePWD>False</_SavePWD>
+    <PublishDatabaseSettings>
+      <Objects xmlns="">
+        <ObjectGroup Name="DefaultConnection" Order="1" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbCodeFirst">
+            <Source Path="DBContext" DbContext="Payroll.Models.ApplicationDbContext, Payroll" Origin="Convention" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LoginDBConnection" Order="2" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="Server=DESKTOP-A1N289K\SQLEXPRESS;Database=MindspayLogin;Integrated Security=true" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\LoginDBConnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="Server=DESKTOP-A1N289K\SQLEXPRESS;Database=MindspayLogin;Integrated Security=true" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+        <ObjectGroup Name="DBConnection" Order="4" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="Server=DESKTOP-A1N289K\SQLEXPRESS;Database=Enlighted;Integrated Security=true" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\DBConnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="Server=DESKTOP-A1N289K\SQLEXPRESS;Database=Enlighted;Integrated Security=true" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+        <ObjectGroup Name="ServerCon" Order="5" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="Server=DESKTOP-A1N289K\SQLEXPRESS;Database=Master;Integrated Security=true" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\ServerCon_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="Server=DESKTOP-A1N289K\SQLEXPRESS;Database=Master;Integrated Security=true" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <ADUsesOwinOrOpenIdConnect>False</ADUsesOwinOrOpenIdConnect>
+  </PropertyGroup>
+  <ItemGroup>
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)DBConnection-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)DefaultConnection-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)LoginDBConnection-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)ServerCon-Web.config Connection String" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ConnectionStringsToInsert Include="DefaultConnection" />
+  </ItemGroup>
+</Project>

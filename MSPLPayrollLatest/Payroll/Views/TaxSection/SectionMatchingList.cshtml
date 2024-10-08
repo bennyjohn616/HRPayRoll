@@ -1,0 +1,91 @@
+﻿
+
+
+<h2>Section Matching List</h2>
+
+
+<div class="row">
+   
+    <div class="col-md-12 table-responsive" id="divSectionMatchingDetail">
+        <table id="tblSectionMatching" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+            <thead>
+                <tr>
+                    <th class="nodisp">
+                    </th>
+                    <th>
+                        Parent Section
+                    </th>
+                    <th>
+                         Section
+                    </th>
+                    <th>
+                        Formula
+                    </th>
+                    <th>
+                        Projection
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div id="MatchingMaster" class="modal fade">
+
+        <div class="col-md-12">
+            <!-- Modal -->
+            <form id="frmFormula" data-toggle="validator" role="form">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="H4">
+                                Section Matching
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal">
+                                @Html.Partial("~/Views/TaxSection/SectionMatching.cshtml")
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" id="btnSave" class="btn custom-button" onclick="$sectionMatching.save()">
+                                Save
+                            </button>
+                            <button type="button" class="btn custom-button" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+        </div>
+
+    </div>
+    </div>
+    <script type="text/javascript" src="~/Js/Tax/sectionMatching.js"></script>
+
+
+<script type="text/javascript">
+    $sectionMatching.loadInitial();
+    $formulaCreation.loadAttributeModelList('Tax');
+    
+</script>
+

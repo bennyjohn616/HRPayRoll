@@ -1,0 +1,22 @@
+﻿@Html.Partial("~/Views/TaxTransaction/TaxProcess.cshtml")
+
+<script>
+    $(document).ready(function (e) {
+        debugger;
+        $taxHistory.processtype = "employee";
+        $taxHistory.GetDefaultfinyear();
+        $taxHistory.EmpId = $('#TaxEmpId').val();
+        $('#sltCategory').html('');
+        $companyCom.loadPreviousPayrollProcessMonthYear({ id: 'sltPayrollType', condi: 'Incometax', type: $taxHistory.processtype, EmpId: $taxHistory.EmpId }) //Load Payroll type
+
+        if (($('#hdnRoleName').val().toUpperCase() == "EMPLOYEE") || ($taxHistory.EmpId != "00000000-0000-0000-0000-000000000000")) {
+            var empcode = $('#hdnEmpCode').val();
+            var empid = $('#hdnEmpId').val();
+            $('#sltCategory').append($("<option selected></option>").val(empid).html(empcode));
+            $('#sltPayrollType').val('Single Employee');
+            $taxHistory.selectedpayrollType = "Single Employee";
+            $('#dvPayrollprocess').removeClass('nodisp')
+            $("#dvCat").removeClass('nodisp');
+        }
+    });
+</script>

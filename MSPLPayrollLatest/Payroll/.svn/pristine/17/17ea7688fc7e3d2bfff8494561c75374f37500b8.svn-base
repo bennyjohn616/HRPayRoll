@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Popup List";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>
+    Popup
+</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Email Template
+                </label>
+                <div class="col-md-7">
+                    <select class="form-control" id="ddEMailTemplate" autofocus>
+                        <option value="0">--Select--</option>
+                        <option value="Payslip">Payslip</option>
+                        <option value="WorkSheet">WorkSheet</option>
+                        <option value="Form16">Cost Centre</option>
+                        <option value="PendingProof">Pending Proof</option>
+                        <option value="Benefit">Benefit</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 text-right">
+
+    </div>
+    <div id="dvTemplateForm" class="hide">
+        <div class="col-md-12">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Subject <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtSubject" class="form-control" placeholder="Enter the value"
+                               maxlength="100" autofocus required />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Message Title <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtTitle" class="form-control" placeholder="Enter the value"
+                               maxlength="100" autofocus required />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Message  <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtMessage" class="form-control" placeholder="Enter the value"
+                               autofocus required />
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Status  <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtStatus" class="form-control" placeholder="Enter the value"
+                               autofocus required />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Js/Company/popup.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Company/popup.js" type="text/javascript"></script>
+}

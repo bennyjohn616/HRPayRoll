@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="form-horizontal" >
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.Partial("~/Views/DataWizard/Category.cshtml")
+                </div>
+                <div class="col-md-2">
+                    <div class="col-md-6">
+                        <input type="button" id="btnCeView" value="View" class="btn custom-button pull-left">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="button" id="btnCeSave" value="Save" class="btn custom-button pull-left">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                       Payroll Month
+                    </label>
+                    <div class="col-md-8">
+                        <select id="sltCeMonth" class="form-control">
+                            <option value="0">--Select--</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Challan Date
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" id="txtChallanDate" class="form-control Reqrd" placeholder="Enter Challan Date" readonly="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Challan No
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" id="txtChallanNo" class="form-control Reqrd" placeholder="Enter Challan No">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Bank Name
+                    </label>
+                    <div class="col-md-8">
+                        <select id="ddBank" class="form-control"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Cheque/DD
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" id="txtCheque" class="form-control Reqrd" placeholder="Enter Cheque/DD">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Book Entry
+                    </label>
+                    <div class="col-md-8">
+                        <select id="bookEntry" class="form-control">
+                            <option value="0">--Select--</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        BSR Code
+                    </label>
+                    <div class="col-md-8">
+                        <input type="text" id="txtBSRCode" class="form-control Reqrd" placeholder="Enter Cheque/DD">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12" id="dvFromEmployeeTable">
+
+            </div>
+        </div>
+    </div>
+<script src="~/Js/company/CompanyCom.js"></script>
+<script src="~/Js/DataWizard/Payslipsetting.js"></script>
+<script src="~/Js/DataWizard/DWCategory.js"></script>
+<script src="~/Js/Tax/form16Challan.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#txtChallanDate").datepicker({
+            dateFormat: 'dd-M-yy',
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+2",
+        });
+    });
+    $dwcategory.loadComponent();
+    $companyCom.loadBank({ id: "ddBank" });
+
+</script>
+
+
+
+
+

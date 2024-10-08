@@ -1,0 +1,120 @@
+﻿<style>
+    .icon-background2 {
+        color: #01978e;
+    }
+
+    .fa-info {
+        color: red;
+    }
+</style>
+
+
+         
+
+<div class="col-md-12" id="encashmentalert">
+    <span class="fa-stack fa-2x">
+        <i class="fa fa-circle fa-stack-2x icon-background2"></i>
+        <i class="fa fa-info fa-stack-1x"></i>
+    </span>
+    <span style="font-size:20px;color:red">Please Enter the Master Settings Before Entering the  Encashment Settings!!!</span>
+</div>
+
+
+<label class="control-label col-md-6 nodisp" id="lblhiddenparameter"></label>
+<div class="nodisp" id="encashmentzdetails">
+    <div class="form-horizontal">
+        <h2>Leave Encashment Settings</h2>
+        <div class="col-md-12">          
+            <div class="col-md-6">
+                <div class="form-group" id="divencashmentParameter">
+                    <label class="control-label col-md-6" id="lblencashmentParameter">
+                        Dynamic Load: <label style="color:red;font-size: 13px"></label>
+                    </label>
+                    <div class="col-md-6">
+                        <select id="ddlencashmentParameter" class="form-control"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-6">
+                        Leave Type:  <label style="color:red;font-size: 13px"></label>
+                    </label>
+                    <div class="col-md-6">
+                        <select id="ddlEncashlevtype" class="form-control"></select>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-6">
+                        Encashment Component:  <label style="color:red;font-size: 13px"></label>
+                    </label>
+                    <div class="col-md-6">
+                        <select id="ddlEncashcomp" class="form-control"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-6">
+                        Encashment Limit: <label style="color:red;font-size: 13px"></label>
+                    </label>
+                    <div class="col-md-6">
+                        <input type="text" id="txtEncashLimit" class="form-control" required />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button type="submit" id="btnsaveEncashsettings" class="btn custom-button">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Js/Leave/MailConfiguration.js" type="text/javascript"></script>
+<script src="~/Js/Leave/leaveCreditsettings.js"></script>
+<script>
+    $("#btnsaveEncashsettings").on('click', function ()
+    {
+        debugger;
+        var saveencashset = true;
+        if ($("#txtEncashLimit").val() == "") {
+            saveencashset = false;
+            $app.showAlert('Please Enter Encashment Limit', 4);
+        }
+        else {
+            if (parseInt($("#txtEncashLimit").val()) == 0) {
+                $app.showAlert('Please Enter Encashment Limit,Zero is not a valid input', 4);
+            }
+        }
+       
+        if ($("#ddlEncashcomp").val() == "select")
+        {
+            saveencashset = false;
+            $app.showAlert('Please Select Encashment Component', 4);
+        }
+        if ($("#ddlEncashlevtype").val() == "select") {
+            saveencashset = false;
+            $app.showAlert('Please Select Leave Type!', 4);
+        }
+        if(saveencashset == true)
+        {
+            $leaveSettings.SaveLeaveEncashment();
+        }
+    });
+
+    $('#ddlEncashlevtype').change(function () {
+        debugger;
+        if ($("#ddlEncashlevtype").val() != "select")
+        {
+            $leaveSettings.CheckSaveLeaveEncashment();
+        }
+        else
+        {
+            $("#ddlEncashcomp").val("select");
+            $("#txtEncashLimit").val("");
+        }
+      
+    });
+
+</script>
+

@@ -1,0 +1,237 @@
+﻿@{
+    ViewBag.Title = "Entity";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2></h2>
+<div class="col-sm-12">
+  
+        <input id="btnAddMapping" type="button" disabled value="Add" class="btn custom-button pull-right" onclick="$entitymodel.AddFields()" />
+    
+</div>
+<div class="row" id="dvEntityModel">
+    <div class="col-md-4">
+        <div>
+            <h3>
+                Tables
+            </h3>
+
+            <label>Search:</label>
+            <input name="searchTables" id="salsearch" placeholder="Filter...">
+            <button id="btnResetSearchTables" class="btn custom-button">&times;</button>
+            <label for="hideMode">
+                <input type="checkbox" id="hideModeTables" checked="checked">
+                Hide unmatches
+            </label>
+        </div>
+        <br />
+        <div></div>
+        @*<table id="entityModeltree" style="width: 300px; height: 210px; overflow: scroll;overflow:auto">
+            <thead><tr><th>Tables</th></tr></thead>
+            <tbody></tbody>
+        </table>*@
+        <div id="entityModeltree" style="width: 300px; height: 310px; overflow: scroll;overflow:auto">
+        </div>
+        
+            <input id="btnAddMapping" type="button" value="Add" class="btn custom-button pull-right" onclick="$entitymodel.renderFlexiFields()">
+
+         
+        <h4>
+            Flexipay Component
+        </h4>
+        @*<label>Search:</label>
+        <input name="search" placeholder="Filter...">
+        <button id="btnResetSearch" class="btn custom-button">&times;</button>
+        <label for="hideMode">
+            <input type="checkbox" id="hideMode" checked="checked">
+            Hide unmatches
+        </label>*@
+
+        <div id="Flexipaycom" style="width: 300px; height: 210px; overflow: scroll;overflow:auto">
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div>
+            <h3>
+                Table with Column
+            </h3>
+            <label>Search:</label>
+            <input name="search1" id="salsearch" placeholder="Filter...">
+            <button id="btnResetSearch1" class="btn custom-button">&times;</button>
+            <label for="hideMode">
+                <input type="checkbox" id="hideMode1" checked="checked">
+                Hide unmatches
+            </label>
+        </div>
+        <br />
+        <div></div>
+        <div id="entityAttributeModeltree" style="width: 300px; height: 600px; overflow: scroll; overflow:auto">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div>
+            <h3>
+                Columns
+            </h3>
+            <label>Search:</label>
+            <input name="search" placeholder="Filter...">
+            <button id="btnResetSearch" class="btn custom-button" >&times;</button>
+            <label for="hideMode">
+                <input type="checkbox" id="hideMode" checked="checked">
+                Hide unmatches
+            </label>  
+        </div>
+        <br />
+        <div id="attributeModeltree"  style="width: 300px; height: 600px; overflow: scroll;overflow:auto">
+        </div>
+    </div>
+    
+</div>
+<div id="AddField" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/Company/Field.cshtml")
+</div>
+<div id="AddEntity" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <form id="frmEntity" data-toggle="validator" role="form">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Add/Edit Table
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Entity Name <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtName" class="form-control" placeholder="Enter the Field Name"
+                                   maxlength="60"  autofocus  required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Display As <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtDisplayAs" class="form-control" placeholder="Enter the Display As"
+                                     maxlength="60"  required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Relations
+                            </label>
+                            <div class="col-md-7">
+                                <select id="sltEntityRelation" class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="btnEntitySave" class="btn custom-button">
+                        Save
+                    </button>
+                    <button type="button" class="btn custom-button" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="AddEntityAttribute" class="modal fade" role="dialog" aria-hidden="true"
+     data-backdrop="static" data-keyboard="false">
+    <form id="frmEntityAttribute" data-toggle="validator" role="form">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Add/Edit Table
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Attribute Name <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtName" class="form-control" placeholder="Enter the Field Name"
+                                     maxlength="40"  required />
+                            </div>
+                            <input type="hidden" id="hdnDisplayOrder" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Default Value
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtDefaultvalue" maxlength="10" class="form-control" placeholder="Enter the Default value" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Active
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdActiveYes"  name="isactive" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdActiveNo" name="isactive" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Hidden
+                            </label>
+                            <div class="col-md-7">
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdHiddenYes" name="isHidden" value="True" />Yes
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="rdHiddenNo" name="isHidden" value="False" />No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="btnEntitySave" class="btn custom-button">
+                        Save
+                    </button>
+                    <button type="button" class="btn custom-button" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="~/Js/Company/entityModel.js" type="text/javascript"></script>
+<script src="~/Js/Company/FieldCreation.js" type="text/javascript"></script>
+<script>
+    $('#AddField').on('shown.bs.modal', function (e) {
+        $($filedCreation.formData).find('#txtFieldName').focus();
+    })
+
+</script>
+@section Scripts
+{
+    <script src="~/Js/Company/entityModel.js" type="text/javascript"></script>
+    <script src="~/Js/Company/FieldCreation.js" type="text/javascript"></script>
+
+}

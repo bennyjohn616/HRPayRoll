@@ -1,0 +1,358 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>Full & Final Settlement</h2>
+<div class="row">
+    <div class="col-md-12">
+        <form role="form" id="FullFinalSettlement">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-12 nodisp" id="dvsave">
+                            <div class="pull-right">
+                                <div class="form-group">
+                                    @*<button type="submit" id="btnSend" onclick="$FullFinalSettlement.save()" class="btn custom-button">
+                    Process
+                </button>*@
+                                    <button type="button" id="btnRefreshProcess"  class="btn custom-button">
+                                        Refresh
+                                    </button>
+                                    <button type="button" id="btnDeleteProcess" onclick="$FullFinalSettlement.DeleteFFProcess()" class="btn custom-button">
+                                        Delete
+                                    </button>
+                                    <button type="button" id="btnPrevProcess" onclick="$FullFinalSettlement.PreviewFFProcess()" class="btn custom-button">
+                                        Preview
+                                    </button>
+                                    
+
+                                    <input type="checkbox" id="chkincludeTax" />
+                                    <label class="control-label " id="chkIncomeTax">
+                                        Include Tax Process
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                   
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Month
+                            </label>
+                            <div class="col-md-6">
+                                <select id="FullsltMonth" class="form-control">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Category
+                            </label>
+                            <div class="col-md-6">
+                                <select id="sltCategorylist" class="form-control" autofocus></select>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-horizontal">                     
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Year
+                            </label>
+                            <div class="col-md-6">
+                                <select id="FullsltYear" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="form-group nodisp" id="dvemp">
+                            <label class="control-label col-md-4">
+                                Employee Code
+                            </label>
+                            <div class="col-md-6">
+                                <select id="sltEmployeelist" class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 nodisp" id="dvdetails">
+
+                <div class="col-md-6">
+                    <div class="form-horizontal">
+                        <div class="form-group nodisp">
+                            <label class="control-label col-md-4">
+                                Apply Month <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <select id="sltFafMonth" class="form-control" placeholder="Enter the Stop Payment Month" required></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Last Working Date <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtLastWorkingDate" class="form-control" placeholder="Enter the Last Working Date"
+                                       data-error="Enter the Location" required readonly />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Relieving Date <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtRelievingDate" class="form-control datepicker" placeholder="Enter the Relieving Date"
+                                       required readonly />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Notice Period to be served <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtNoticePeriod" class="form-control" placeholder="Enter the Notice Period"
+                                       data-error="Enter the Notice Period" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Loan Amount ToPay <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtLoanAmount" class="form-control" placeholder="Enter the Loan Amount"
+                                       data-error="Enter the Location" required readonly/>
+                            </div>
+                        </div>
+                        <div class="form-group nodisp">
+                            <label class="control-label col-md-4">
+                                Salary Days <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtSalaryDays" class="form-control" placeholder="Enter the Salary Days"
+                                       data-error="Enter the Location" required />
+                            </div>
+                        </div>
+                        <div class="form-group nodisp">
+                            <label class="control-label col-md-4">
+                                Month Days @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtMonthDays" class="form-control" placeholder="Enter the Month Days"
+                                       data-error="Enter the Location" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-horizontal">
+                        <div class="form-group nodisp">
+                            <label class="control-label col-md-4">
+                                Apply Year <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtApplyYear" class="form-control" placeholder="Enter the Apply Year"
+                                       required />
+                            </div>
+                        </div>
+                        <div class="form-group nodisp">
+                            <label class="control-label col-md-4">
+                                Date of joining <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txDoj" class="form-control" placeholder="Enter the Apply Year"
+                                       required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Resignation Date <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtResignationDate" class="form-control datepicker" placeholder="Enter the Resignation Date"
+                                       required readonly />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Settlement Date <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtSettlementDate" class="form-control datepicker" placeholder="Enter the Settlement Date"
+                                       required readonly />
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                                <label class="control-label col-md-4">
+                                    LOP Days <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtLOPDays" class="form-control" placeholder="Enter the LOP Days"
+                                           data-error="Enter the Location" required />
+                                </div>
+                            </div>*@
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Notes <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtNotes" class="form-control" placeholder="Enter the Notes"
+                                       data-error="Enter the Location" required />
+                            </div>
+                        </div>
+                        <div class="form-group" hidden="hidden">
+                            <label class="control-label col-md-4">
+                                Report Name <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtReportName" class="form-control" placeholder="Enter the Report Name"
+                                       maxlength="20" data-error="Enter the Location" required />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-12 text-right">
+                    <input type="button" id="btnAddFFProcess" value="MI" class="btn custom-button marginbt7"
+                           data-toggle="modal" data-target="#AddFFProcess" onclick="">
+                </div>
+                <div class="col-md-12" id="dvFullFinal">
+
+
+                </div>
+
+            </div>
+
+        </form>
+
+        <div id="AddFFProcess" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+             data-keyboard="false">
+            <div id="dvFFprocess">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="H4">
+                                Monthly Inputs for Full and Final Settlement
+                            </h4>
+                        </div>
+                        @*//----------*@
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    @*<div id="dvTitle">
+                                        </div>*@
+                                    <div id="dvDynamicEntity" class="scrol table-responsive">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-horizontal">
+                                @* <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-4">
+                                            Month
+                                        </label>
+                                        <div class="col-md-8">
+                                            <select class="form-control" id="sltMonth">
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </div>
+                                    </div>*@
+                            </div>
+                            @*<div class="col-md-6">*@
+                            @*<div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Year
+                                    </label>
+                                    <div class="col-md-8">
+                                        <select class="form-control" id="sltYear">
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                        </select>
+                                    </div>
+                                </div>*@
+                        </div>
+                        @*<div class="col-md-2">
+                            <div class="form-group">
+                                <button type="button" id="btnAdd" class="btn custom-button">
+                                    Add
+                                </button>
+                            </div>
+                                            </div>*@
+
+
+                        <div id="dvFullMonthly"></div>
+
+                        <div class="modal-footer">
+                            <button type="button" id="btnAdd" class="btn custom-button">
+                                Process F&F
+                            </button>
+                            <button type="button" class="btn custom-button" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $companyCom.loadYear({ id: "FullsltYear" });
+</script>
+<script src="~/Js/Trans/FullFinalSettlement.js" type="text/javascript"></script>
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+<script src="~/Js/Emp/monthlyInput.js" type="text/javascript"></script>
+<script src="~/Js/Emp/payrollHistroy.js" type="text/javascript"></script>
+
+
+@section Scripts
+        {
+    <script src="~/Js/Trans/FullFinalSettlement.js" type="text/javascript"></script>
+    <script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+    <script src="~/Js/Emp/monthlyInput.js" type="text/javascript"></script>
+    <script src="~/Js/Emp/payrollHistroy.js" type="text/javascript"></script>
+}

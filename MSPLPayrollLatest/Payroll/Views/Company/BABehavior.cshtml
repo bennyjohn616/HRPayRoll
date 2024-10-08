@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<script type="text/javascript" src="~/assets/js/dataTables.fixedColumns.min.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Select Model
+                        </label>
+                        <div class="col-md-7">
+                            <select id="BAsltEntityModel" class="form-control" autofocus></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-right">
+                <input type="button" id="BAbtnCopy" value="Copy" class="btn custom-button hide">
+                <input type="button" id="BAbtnAddNew" value="Add" class="btn custom-button">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div id="BAdvTitle">
+        </div>
+
+        <div id="BAdvDynamicEntity">
+        </div>
+    </div>
+</div>
+<div id="BAAddData" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <div id="BArenderId">
+    </div>
+</div>
+<div id="BAAddFormula" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <div id="BAformulas">
+        @Html.Partial("~/Views/Company/BAFormulaCreation.cshtml")
+    </div>
+</div>
+<script src="~/Js/Company/BABehavior.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Company/BABehavior.js" type="text/javascript"></script>
+}
+<style>
+    textarea {
+        resize: none;
+        overflow: hidden;
+        padding: 10px;
+        width: 250px;
+        font-size: 14px;
+    }
+
+
+    .word-wrap {
+        text-align: center;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+        width: 300px !important;
+    }
+</style>

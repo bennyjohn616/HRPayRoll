@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 scrol" id="dvEmpcodesettingHtml">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 scrol" id="dvEmpcodesetting">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 scrol" id="dvEmpcodesettingGrid">
+    </div>
+</div>
+<div id="EmpCodeSetting" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <div class="col-md-12 scrol" id="dvEmpcodeHtml">
+    </div>
+</div>
+<script src="../../Js/Setting/Emp_CodeSetting.js" type="text/javascript"></script>
+<script src="~/Js/DataWizard/Payslipsetting.js"></script>
+@section Scripts
+{
+    <script src="~/Js/DataWizard/Payslipsetting.js"></script>
+    <script src="../../Js/Setting/Emp_CodeSetting.js" type="text/javascript"></script>
+}

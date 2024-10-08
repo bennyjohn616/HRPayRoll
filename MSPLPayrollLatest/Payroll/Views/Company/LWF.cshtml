@@ -1,0 +1,78 @@
+﻿
+
+<h1 class="title">LWF Setting</h1>
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-sm-8">
+           <div class="col-sm-12">
+               <div class="form-group">
+                   <label class="control-label col-sm-4">
+                       <label>Location</label>
+                   </label>
+                   <div class="col-sm-8">
+                       <select id="ddLocation" onchange="$lwf.get()" class="form-control"></select>
+                   </div>
+               </div>
+
+           </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label col-sm-4">
+                        <label>Apply Month</label>
+                    </label>
+                    <div class="col-sm-8">
+                        <select id="ddMonth" class="form-control">
+                            <option value="0">--Select--</option>
+                            <option value="1">JAN</option>
+                            <option value="2">FEB</option>
+                            <option value="3">MAR</option>
+                            <option value="4">APR</option>
+                            <option value="5">MAY</option>
+                            <option value="6">JUN</option>
+                            <option value="7">JUL</option>
+                            <option value="8">AUG</option>
+                            <option value="9">SEP</option>
+                            <option value="10">OCT</option>
+                            <option value="11">NOV</option>
+                            <option value="12">DEC</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label col-sm-4">
+                        <label>Employer Amount</label>
+                    </label>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtEmployerAmt" onkeypress="return $validator.checkDecimal(event, 2)"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label col-sm-4">
+                        <label>Employee Amount</label>
+                    </label>
+                    <div class="col-sm-8">
+                        <input type="text" id="txtEmployeeAmt" onkeypress="return $validator.checkDecimal(event, 2)" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label col-sm-4">
+                      
+                    </label>
+                    <div class="col-sm-8">
+                        <input type="button"  id="btnSave" value="Save" onclick="$lwf.save()" class="btn custom-button"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Company/lwfSetting.js"></script>

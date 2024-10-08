@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>
+   Single Import
+</h2>
+<div class="row">
+    <div class="col-md-12">
+       
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-2">
+                        Select File <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-10">
+                        <div class="col-md-6">
+                            <input type="file" id="fUpload" class="form-control" placeholder="Select the file"
+                                   required />
+                        </div>
+                        <div class="col-md-4">
+                            <button id="btnUpload" class="btn custom-button hide"> Upload</button>
+                            <button type="button" id="btnImport" class="btn custom-button">Import </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                  
+                        <label class="control-label col-md-2">
+                            Range From:
+                        </label>
+                        <div class="col-md-10">
+                            <div class="col-md-2">
+                                <input type="text" id="rangeFrom" class="form-control" placeholder="Range From" style="text-transform:uppercase"
+                                       required />
+                                </div>
+                                <label class="control-label col-md-2">
+                                    Range To:
+                                </label>
+                                <div class="col-md-2">
+                                    <input type="text" id="rangeTo" class="form-control" placeholder="Range To" style="text-transform:uppercase"
+                                           required />
+                                </div>
+                            </div>
+                </div>
+                <div class="form-group hide" id="dvTemplate">
+                    <label class="control-label col-md-2">
+                        Template
+                    </label>
+                    <div class="col-md-10">
+                        <div class="col-md-6">
+                            <select id="sltImportTemplate" class="form-control"></select>
+                        </div>
+                        <div class="col-md-5">
+                            <button id="btnAddNew" class="btn custom-button" data-toggle="modal" data-target="#AddTemplate"> Add</button>
+                            <button id="btnEdit" class="btn custom-button" data-toggle="modal" data-target="#AddTemplate">Edit</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="col-sm-10">
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" value="chkAmendment" name="IsAmendment">Amendment Entries
+                                        </div>
+                                    <div class="col-sm-3">
+                                        <input type="checkbox" value="Add Master Entries" name="AddMasterValue">Add Master Data
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+   
+    <div class="col-md-12">
+        <div class="col-md-3">
+            <div>
+                <h3>
+                    Tables
+                </h3>
+                <label>Search:</label>
+                <input name="searchTables" id="Tablessearch" placeholder="Filter...">
+                <button id="btnResetSearchTables" class="btn custom-button">&times;</button>
+                <label for="hideModeTable">
+                    <input type="checkbox" id="hideModeTables" checked="checked">
+                    Hide unmatches
+                </label>
+            </div>
+            <div id="entityModeltree" style="width: 216px; height: 600px; overflow: scroll;overflow:auto">
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div>
+                <h3>
+                    Sheet
+                </h3>
+                <label>Select:</label>
+            </div>
+            <div>
+                <select id="xlSheetdrop" class="form-control" autofocus></select>
+                &nbsp;
+                <div id="dvTxtbox">
+                </div>
+                &nbsp;
+                <div id="dvColoumn">
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+
+
+    <div id="AddTemplate" class="modal fade" role="dialog">
+        <form id="frmTemplate" data-toggle="validator" role="form">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="H4">
+                            Add/Edit Template
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Name <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtTemplateName" class="form-control" placeholder="Enter the Template Name"
+                                           maxlength="20" data-error="Enter the Template Name" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Save Current setting
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="checkbox" id="chkCurrentSetting" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="btnTemplateSave" class="btn custom-button">
+                            Save
+                        </button>
+                        <button type="button" class="btn custom-button" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div id="AddRow" class="modal fade" role="dialog">
+        <form id="frmBranch" data-toggle="validator" role="form">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="H4">
+                            Add/Edit Row
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Starting Row <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtStartRow" class="form-control datepicker" placeholder="Enter the Start Row"
+                                           maxlength="20" data-error="Enter the Start Row" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Ending Row <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtEndRow" class="form-control" placeholder="Enter the End Row"
+                                           maxlength="20" data-error="Enter the End Row" required />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="btnBranchSave" class="btn custom-button">
+                            Save
+                        </button>
+                        <button type="button" class="btn custom-button" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="DvErrorPopup" class="col-md-12 hide pre-scrollable" style="border:1px solid red; max-height:500px;">
+        <div class="col-md-12">
+            <h4>Import Error</h4>
+        </div>
+        <div class="col-md-12 text-right">
+            <button type="button" class="close" data-dismiss="modal" id="btnCloseError">
+                &times;
+            </button>
+        </div>
+
+        <div id="dvErrorMsg">
+
+
+        </div>
+
+    </div>
+
+</div>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Util/Singleimport.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Util/Singleimport.js" type="text/javascript"></script>
+    <script src="~/Js/Company/CompanyCom.js"></script>
+}

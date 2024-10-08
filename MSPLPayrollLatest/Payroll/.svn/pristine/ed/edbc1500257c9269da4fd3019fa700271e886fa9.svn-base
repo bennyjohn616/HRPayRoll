@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+
+
+<table align="center">
+    <tr><td>
+            <label align="center"> Leave Approved Successfuly</label>
+        </td></tr>
+    
+    <tr>
+        <td>
+            <a href='#'> Click here to Login</a>
+        </td>
+    </tr>
+    
+</table>

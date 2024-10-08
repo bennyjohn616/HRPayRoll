@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    //Layout = "~/Views/Shared/_HomeLayout.cshtml";/* Request.IsAjaxRequest() ? null : null;*/
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<script src="~/Scripts/dataTables.fixedColumns.min.js"></script>
+<script src="~/assets/js/dataTables.autoFill.min.js"></script>
+<div class="row">
+    <div class="col-md-12">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="Input">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label col-md-12" id="lblsltEntityModel">
+                    Salary Grade
+                </label>
+                <div class="col-md-12">
+                    <select id="sltEntityModel" class="form-control" autofocus></select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label col-md-12" id="lblsltCategory">
+                    Category
+                </label>
+                <div class="col-md-12">
+                    <select id="sltCategory" class="form-control">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label col-md-12">
+                    Year
+                </label>
+                <div class="col-md-12">
+                    <select id="sltYear" class="form-control">
+                        <option selected="selected" value="0">-select-</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label class="control-label col-md-12" id="lblsltMonth">
+                    Month
+                </label>
+                <div class="col-md-12">
+                    <select id="sltMonth" class="form-control">
+                        <option selected="selected" value="0">--Select--</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <input type="button" id="btnView" value="View Data" class="btn custom-button center col-md-2" style="margin-right: 2px;">
+        <input type="button" id="btnSave" value="Save" class="btn custom-button center col-md-2 nodisp" style="margin-right: 2px;">
+        <input type="button" id="btnReset" value="ResetAll" class="btn custom-button center col-md-2 nodisp" style="margin-right: 2px;">
+        <input type="button" id="btnDelete" value="Delete" class="btn custom-button center col-md-2 nodisp" style="margin-right: 2px;">
+        <input type="button" id="btnClose" value="Close" class="btn custom-button center col-md-2 nodisp" style="margin-right: 2px;">
+    </div>
+    <div class="col-md-4">
+        <label id="mmyy-text"></label>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div id="dvTitle">
+    </div>
+    <div id="dvDynamicEntity">
+    </div>
+</div>
+
+<script src="~/Js/Emp/monthlyInput.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script>
+    window.onload = function () {
+        var a = $('.dataTables_scrollHeadInner table').first().css("margin-left");
+        var b = $('.dataTables_scrollHeadInner table').first().css("width");
+        $(".dataTables_scrollBody table").css({ 'margin-left': a, "width": b });
+    }
+</script>
+@section Scripts
+{
+    <script src="~/Js/Company/CompanyCom.js"></script>
+    <script src="~/Js/Emp/monthlyInput.js"></script>
+}
+
+
+

@@ -1,0 +1,123 @@
+﻿<h2>Declaration Report</h2>
+<form id="frmDeclarationReport">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-12">
+
+                <label class="control-label col-md-2">
+                    Effective Month
+                </label>
+                <div class="col-md-3">
+                    <select id="ddMonth" class="form-control">
+                        <option id="">--Select---</option>
+                        <option id="1" value="1">January</option>
+                        <option id="2" value="2">February</option>
+                        <option id="3" value="3">March</option>
+                        <option id="4" value="4">April</option>
+                        <option id="5" value="5">May</option>
+                        <option id="6" value="6">June</option>
+                        <option id="7" value="7">July</option>
+                        <option id="8" value="8">August</option>
+                        <option id="9" value="9">September</option>
+                        <option id="10" value="10">October</option>
+                        <option id="11" value="11">November</option>
+                        <option id="12" value="12">December</option>
+                    </select>
+                </div>
+
+
+                <label class="control-label col-md-2">
+                    Effective Year
+                </label>
+                <div class="col-md-3">
+                    <input type="text" id="txtYear" class="form-control" readonly onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter The Effective Year " maxlength="4" />
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <label class="control-label col-md-2">
+                    Select By
+                </label>
+                <div class="col-md-1">
+                    <input type="checkbox" id="allEmployee" name="vehicle" value="1">All Employee
+                </div>
+ 
+            </div>
+          
+        </div>
+        <div id ="ranegEmp" class="form-group">
+            <div class="col-md-12">
+
+                <label class="control-label col-md-2">
+                    From Employee code:
+                </label>
+                <div class="col-md-3">
+                    <select id="fromemployeeCode" class="form-control" autofocus></select>
+                </div>
+
+
+                <label class="control-label col-md-2">
+                    To Employee code:
+                </label>
+                <div class="col-md-3">
+                    <select id="toemployeeCode" class="form-control" autofocus></select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <button type="button" id="btnDeclarationReport" class="btn custom-button" onclick="$declaractionEntry.GetReport()">
+                        Get Report
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="~/Js/Tax/declaractionEntry.js"></script>
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+<script>
+    $companyCom.loadEmployee({ id: 'fromemployeeCode' });
+    $companyCom.loadEmployee({ id: 'toemployeeCode' });
+    $('#allEmployee').click(function () {
+        debugger;
+        if ($(this).is(":checked")) {
+            debugger;
+            confirm("Are you sure to download for all employees?");
+            document.getElementById("fromemployeeCode").selectedIndex = "1";
+            var a =document.getElementById("toemployeeCode").length;
+            document.getElementById("toemployeeCode").selectedIndex = a - 1;
+            $('#ranegEmp').addClass("nodisp");
+        }
+        else {
+            $("#fromemployeeCode").val('00000000-0000-0000-0000-000000000000');
+            $("#toemployeeCode").val('00000000-0000-0000-0000-000000000000');
+            $('#ranegEmp').removeClass("nodisp");
+        }
+       
+    });
+    $('#ddMonth').change(function () {
+        debugger;
+        var month = $('#ddMonth').val();
+        var sd = new Date($declaractionEntry.financeYear.startDate);
+        var ed = new Date($declaractionEntry.financeYear.EndDate);
+        if (ed.getMonth() + 1 >= month) {
+            $('#txtYear').val(ed.getFullYear());
+        }
+        else {
+            $('#txtYear').val(sd.getFullYear());
+        }
+        debugger;
+        $declaractionEntry.LoadLock();
+        return false;
+    });
+</script>

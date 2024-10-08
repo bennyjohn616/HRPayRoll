@@ -1,0 +1,388 @@
+﻿<!-- Modal -->
+<form id="frmMedicalInsurance" data-toggle="validator" role="form">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Medical Insurance Premium
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Name of the Employer
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtEmployerName" oncopy="return false" onpaste="return false" maxlength="20" class="form-control" placeholder="Employer Name" autofocus required readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Employee Name
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtEmployeeName" oncopy="return false" onpaste="return false" maxlength="20" class="form-control" placeholder="Name" required readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Financial Year:
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtFinancialyear" oncopy="return false" onpaste="return false" maxlength="20" class="form-control" placeholder="Financial year" required readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Employee Number
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtEmployeeNumber" oncopy="return false" onpaste="return false" maxlength="20" class="form-control" placeholder="Employee Code" required readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    PAN
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtPAN" oncopy="return false" onpaste="return false" maxlength="20" class="form-control" placeholder="PAN number" required readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7" style="font: bold;font-size: large;">
+                                <b>Details of Insurance Policies</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Type<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <select id="MedType" class="form-control Reqrd">
+                                                <option value="1">Medical Insurance</option>
+                                                <option value="2">CGHS contribution</option>
+                                                <option value="3">Preventive Health Check up</option>
+                                                <option value="4">Medical Expenditure</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Date of Commencement of policy or Date paid <label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="txtmedloandate" class="form-control datepicker Reqrd" placeholder="Policy Date" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Relationship of the Insured person with the employee<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <select id="medRelationship" class="form-control Reqrd">
+                                                <option value="1">Self Spouse & Child</option>
+                                                <option value="2">Parent(s)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Whether expense incurred in respect of Very Senior citizen(More than 80 years age) and no insurance has been taken for that person<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <select id="medExpenceincurred" class="form-control Reqrd">
+                                                <option value="1">Yes</option>
+                                                <option value="2">No</option>
+                                                <option value="3">N/A</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Pay Mode<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <select id="medcash" class="form-control Reqrd">
+                                                <option value="1">Cash</option>
+                                                <option value="2">Other than Cash</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Policy Number<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="txtPolicyNum" class="form-control Reqrd" placeholder="Policy Number" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Insured Person Name(s)<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="txtInsuredName" class="form-control Reqrd" placeholder="Person Name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Whether any of the person covered in the policy is Senior citizen <label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <select id="medSeniorcitizen" class="form-control Reqrd">
+                                                <option value="1">Senior Citizen</option>
+                                                <option value="2">Normal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Amount of premium or Expense<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="txtAmountPremium" class="form-control Reqrd" placeholder="Enter the Amount" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label class="control-label col-md-6">
+                                            Eligible Deduction for the policy/ expense<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                                        </label>
+                                        <div class="col-md-6">
+                                            <input type="text" id="txtEligibleDeduction" class="form-control Reqrd" onkeypress="return $validator.IsNumeric(event, this.id)" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button type="button" id="btnSaveMedInsurance" onclick="$medicalinsurance.Save()" class="btn custom-button">
+                                Save
+                            </button>
+                            <button type="button" id="btnClearMedInsurance" onclick="$medicalinsurance.Clear()" class="btn custom-button">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <table id="MEDPremiumtbl" class="table table-responsive table-striped table-hover table-condensed userTablehand">
+                            <thead>
+                                <tr>
+                                    <th class="nodisp">
+                                    </th>
+                                    <th>
+                                        Type
+                                    </th>
+                                    <th>
+                                        Policy Number
+                                    </th>
+                                    <th>
+                                        Date of Commencement of policy or Date paid
+                                    </th>
+                                    <th>
+                                        Insured Person Name(s)
+                                    </th>
+                                    <th>
+                                        Relationship of the Insured person with the employee
+                                    </th>
+                                    <th>
+                                        Whether any of the person covered in the policy is Senior citizen
+                                    </th>
+                                    <th>
+                                        Whether expense incurred in respect of Very Senior citizen and no insurance has been taken for that person
+                                    </th>
+                                    <th>
+                                        Amount of premium or Expense
+                                    </th>
+                                    <th>
+                                        Pay Mode
+                                    </th>
+                                    <th>
+                                        Eligible Deduction for the policy/ expense
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-10 col-md-offset-2">
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <label class="control-label col-md-6">
+                                    Total Amount
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtTotalAmount" class="form-control " placeholder="Total amount" readonly/>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="control-label col-md-6">
+                                    Total Eligible Deduction
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="txtTotalEligibleDed" class="form-control " placeholder="Total Eligible Deduction" readonly/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="form-group">
+                            <table class="table table-responsive table-striped table-hover table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Total deduction U/S 80D
+                                        </th>
+                                        <th>
+                                            Overall deduction
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Self Spouse & Child</td>
+                                        <td><label id="lblSpousechild">0</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Parent(s)</td>
+                                        <td><label id="lblparents">0</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Total deduction</label></td>
+                                        <td><label id="lblTotaldeduction">0</label></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</form>
+<style>
+    .modal-dialog {
+        width: 90%;
+    }
+</style>
+@*<script language="javascript">
+    $('.datepicker').datepicker({
+        calendarWeeks: true,
+        changeYear: true,
+        changeMonth: true,
+        autoclose: true,
+        todayHighlight: true,
+        dateFormat: 'dd/M/yy',
+        yearRange: "-120:+2",
+        beforeShowMonth: function (date) {
+            //                switch (date.getMonth()) {
+            //                    case 8:
+            //                        return false;
+            //                }
+        },
+        toggleActive: true
+    });
+    //function checkTextField(field) {
+    //    
+    //    var policyno = document.getElementById('LICPolicyno').value
+    //    for (var m = 0; m < $LICpremium.Policynolist.length; m++) {
+    //        if (policyno == $LICpremium.Policynolist[m]) {
+    //            Alert('Policyno already exist');
+    //            document.getElementById('LICPolicyno').value('');
+    //        }
+    //    }
+    //}
+</script>*@
+<script>   
+    $('.datepicker').datepicker({
+        calendarWeeks: true,
+        changeYear: true,
+        changeMonth: true,
+        autoclose: true,
+        todayHighlight: true,
+        dateFormat: 'dd/M/yy',
+        yearRange: "-120:+2",
+        beforeShowMonth: function (date) {
+            //                switch (date.getMonth()) {
+            //                    case 8:
+            //                        return false;
+            //                }
+        },
+        toggleActive: true
+    });
+    $('#txtmedloandate').datepicker({ changeMonth: true, changeYear: true, }).change(evt => {
+        var selectedDate = $('#txtmedloandate').datepicker('getDate');
+        var now = new Date();
+        now.setHours(0, 0, 0, 0);
+        if (selectedDate < now) {
+           
+        } else {
+            $('#txtmedloandate').val('');
+        }
+    });
+</script>

@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>PreviousComponentsSetting</h2>
+<form id="frmPreviousComponentsSetting">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-10">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                            Select Salary Grade
+                        </label>
+                        <div class="col-md-12">
+                            <select id="sltEntityModel" class="form-control" autofocus></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                            Select Category
+                        </label>
+                        <div class="col-md-12">
+                            <select id="sltCategory" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                        Hide
+                        </label>
+                        <div class="col-md-12">
+                            <input type="radio" id="hide" name='rdiobutton'>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                            show and edit
+                        </label>
+                        <div class="col-md-12">
+                            <input type="radio" id="se" name='rdiobutton'>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                            show and Nonedit
+                        </label>
+                        <div class="col-md-12">
+                            <input type="radio" id="sne" name='rdiobutton'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn custom-button " onclick="$PreviousComponentsSetting.save()">Save</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12" id="dvColoumn">
+                @*<table id="tblsettingColumn" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                    <thead>
+                        <tr>
+                            <th class="nodisp"></th>
+                            <th>Name</th>
+                            <th>MappedColumn</th>
+
+                        </tr>
+                    <thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                            </tr>
+                        </tbody>
+                     </table>*@
+            </div>
+
+
+        </div>
+
+</div>
+    </form>
+
+
+        <script src="~/js/Company/CompanyCom.js"></script>
+        <script src="~/Js/Setting/PreviousComponentsSetting.js"></script>
+
+        <script>
+            $companyCom.loadPreviousPayrollProcessMonthYear({ id: 'sltMonth', condi: 'Month' });
+            $companyCom.loadPreviousPayrollProcessMonthYear({ id: 'sltYear', condi: 'Year' });
+            $PreviousComponentsSetting.LoadEntityModel({ id: 'sltEntityModel' });
+            $companyCom.loadCategory({ id: 'sltCategory' });
+           
+        </script>
+
+        @section scripts
+    {
+            <script src="~/js/Company/CompanyCom.js"></script>
+            <script src="~/Js/Setting/PreviousComponentsSetting.js"></script>
+            
+        }
+

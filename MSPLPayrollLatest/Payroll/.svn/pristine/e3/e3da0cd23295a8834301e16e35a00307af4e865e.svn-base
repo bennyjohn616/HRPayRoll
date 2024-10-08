@@ -1,0 +1,37 @@
+﻿
+<form id="frmAttachmentPreview" data-toggle="validator" role="form" action="">
+    <div class="modal-dialog" style="width: 76% ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="closepreview" type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Leave Attachment preview
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                <div id="divimgid" class="nodisp">
+                    <img src="" id="idimgfile" style="align-content:center">
+                </div>
+                <div id="divpdfid" class="nodisp">
+                    <embed id="preView" src="" frameborder="0" width="100%" height=460px">
+                    <embed id="preViewSrc" class="hidden" src="" frameborder="0" width="100%" height="400px">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+        
+    </div>
+   
+</form>
+
+
+
+
+

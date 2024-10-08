@@ -1,0 +1,63 @@
+﻿
+<form id="frmMonthlyLeaveSettings" data-toggle="validator" role="form" action="javascript:$MonthlyLeaveLimit.save()">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add Leave Days Limit
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Leave Type<label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <select class="form-control" id="ddLeaveType" autofocus"></select>
+                            </div>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                No. of Days <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtNoOfDays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="No. of Days"
+                                       required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Credit Days @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtcrdays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="No. of CR Days"
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSave" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+

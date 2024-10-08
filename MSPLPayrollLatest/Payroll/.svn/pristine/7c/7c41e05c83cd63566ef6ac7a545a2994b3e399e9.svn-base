@@ -1,0 +1,32 @@
+﻿<!-- Modal -->
+<form id="frmHrComponent" data-toggle="validator" role="form" action="javascript:$HRComponent.save()">
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                &times;</button>
+            <h4 class="modal-title" id="H4">
+                Add/Edit HR Component</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        HR Component Name<label style="color:red;font-size: 13px">*</label></label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtHRComponentName" class="form-control" placeholder="Enter the Component Name"
+                         maxlength="60" autofocus  required />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" id="btnComponentSave" class="btn custom-button">
+                Save</button>
+            <button type="button" class="btn custom-button" data-dismiss="modal">
+                Close</button>
+        </div>
+    </div>
+</div>
+</form>

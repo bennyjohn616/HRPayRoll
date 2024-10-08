@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <WebPublishMethod>MSDeploy</WebPublishMethod>
+    <ADUsesOwinOrOpenIdConnect>False</ADUsesOwinOrOpenIdConnect>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <SiteUrlToLaunchAfterPublish>localhost:/site1</SiteUrlToLaunchAfterPublish>
+    <LaunchSiteAfterPublish>True</LaunchSiteAfterPublish>
+    <ExcludeApp_Data>False</ExcludeApp_Data>
+    <MSDeployServiceURL>localhost</MSDeployServiceURL>
+    <DeployIisAppPath>Site1</DeployIisAppPath>
+    <RemoteSitePhysicalPath />
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
+    <MSDeployPublishMethod>InProc</MSDeployPublishMethod>
+    <EnableMSDeployBackup>False</EnableMSDeployBackup>
+    <UserName />
+    <_SavePWD>False</_SavePWD>
+    <PublishDatabaseSettings>
+      <Objects xmlns="">
+        <ObjectGroup Name="Payroll.Models.ApplicationDbContext" Order="1" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbCodeFirst">
+            <Source Path="DBContext" DbContext="Payroll.Models.ApplicationDbContext, Payroll" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="LoginDBConnection" Order="2" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=MindspayLogin;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\LoginDBConnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=MindspayLogin;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+        <ObjectGroup Name="DefaultConnection" Order="3" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="DefaultConnection_ConnectionString" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\DefaultConnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="DefaultConnection_ConnectionString" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+        <ObjectGroup Name="DBConnection" Order="4" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=Enlighted;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\DBConnection_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=Enlighted;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+        <ObjectGroup Name="ServerCon" Order="5" Enabled="False">
+          <Destination Path="" />
+          <Object Type="DbDacFx">
+            <PreSource Path="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=Master;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" includeData="False" />
+            <Source Path="$(IntermediateOutputPath)AutoScripts\ServerCon_IncrementalSchemaOnly.dacpac" dacpacAction="Deploy" />
+          </Object>
+          <UpdateFrom Type="Web.Config">
+            <Source MatchValue="SERVER=DESKTOP-A1N289K\SQLEXPRESS;initial catalog=Master;User ID=sa;Password=erp.123;persist security info=False;packet size=4096" MatchAttributes="$(UpdateFromConnectionStringAttributes)" />
+          </UpdateFrom>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)DBConnection-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)DefaultConnection-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)LoginDBConnection-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)Payroll.Models.ApplicationDbContext-Web.config Connection String" />
+    <MSDeployParameterValue Include="$(DeployParameterPrefix)ServerCon-Web.config Connection String" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ConnectionStringsToInsert Include="Payroll.Models.ApplicationDbContext" />
+  </ItemGroup>
+</Project>

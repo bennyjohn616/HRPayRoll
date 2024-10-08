@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "SalaryView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+
+}
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h4>Payslips</h4>
+        <div id="payslipTree" style="width: 300px; height: 600px; overflow: scroll;overflow:auto">
+
+        </div>
+    </div>
+
+</div>
+<script src="~/Js/salaryView.js"></script>
+
+<script>
+    $slaryView.LoadSalaryList();
+</script>

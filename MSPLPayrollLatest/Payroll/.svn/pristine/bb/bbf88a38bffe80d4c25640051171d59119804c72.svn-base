@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>E:\WorkingFolder\Madhavan\MSPLPayrollLatest\Payroll\bin\app.publish\</_PublishTargetUrl>
+    <History>False|2023-07-11T20:56:16.8648061Z;False|2023-07-11T11:25:40.5978809-09:30;</History>
+  </PropertyGroup>
+</Project>

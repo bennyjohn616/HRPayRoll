@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Employee Basket Allowance Updation";
+}
+<style>
+    td,th{
+        padding-left:2px;
+        padding-right:2px;
+    }
+</style>
+
+<form id="frmBAupd" data-toggle="validator" role="form" action="">
+    <input type="hidden" id="hdnEmployeeId" value="@Session["EmployeeGUID"]" />
+    <input type="hidden" id="hdnEmpId" value="@Session["EmployeeId"]" />
+    <input type="hidden" id="hdnRoleName" value="@Session["RoleName"]" />
+    <div class="row">
+        <div class="col-xs-7">
+            <h4>Employee Basket Allowance Breakup Updation</h4>
+            <div class="col-xs-2">
+                <label class="control-label">
+                    Employee
+                </label>
+            </div>
+            <div class="col-xs-5">
+                <select id="EmpCode" class="form-control col-md-pull-3"></select>
+            </div>
+            <div>
+                <Input id="Select" type="button" class="col-xs-pull-1 btn-primary" style="border-style:ridge" value="Proceed" onclick="$BAupd.LoadData()" />
+            </div>
+            <div class="col-xs-5">
+                <h5>
+                    <label class="control-label col-md-pull-3" style="margin-top:5px;border:none" id="name">
+                        Name :
+                    </label>
+                </h5>
+            </div>
+        </div>
+        <div class="col-xs-pull-5 nodisp" id="data">
+            <div class="col-xs-pull-5" id="lblComp1">
+            </div>
+        </div>
+    </div>
+
+    <div id="msg" style="color:red"></div>
+
+    <div class="row nodisp" id="data1">
+        <div class="col-xs-7">
+            <label class="form-group-sm col-xs-4" id="lbltxt1">
+                ID <label style="color:red;font-size: 13px">*</label>
+            </label>
+            <label class="form-group-sm col-xs-pull-3" id="lbltxt3">
+                VALUE <label style="color:red;font-size: 13px">*</label>
+            </label>
+        </div>
+
+        <div class="col-xs-pull-5">
+            <label>Breakup Details</label>
+        </div>
+
+        <div class="col-xs-6">
+            <select id="UpdComp1" class="form-group-sm col-xs-4" style="margin-right:25px;height:28px"></select>
+            <input type="text" id="txtId1Amt" class="form-group-sm col-xs-pull-2" autocomplete="off"
+                   onpaste="return $validator.pasteNum(this);" onkeypress="return $validator.IsNumeric(event, this.id)" />
+            <input id="btn-add" type="button" class="col-xs-pull-1 btn-primary" value="ADD" onclick="$BAupd.AddTable()" />
+        </div>
+
+        <div class="col-xs-6" id="TableArea"></div>
+    </div>
+
+
+    <div class="nodisp" id="OptSave">
+        <div>
+            <button type="button" id="btnSave" class="btn btn-default" onclick="$BAupd.save()">
+                Save
+            </button>
+            <button type="button" class="col-xs-pull-1 btn-primary" id="btnClose" onclick="$BAupd.closeMsg()">
+                Close
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Emp/Emp_BAupd.js"></script>
+<script>
+    $(document).ready(function () {
+        $BAupd.serverDate = '@Session["serverDate"]';
+        $BAupd.LoadInitial();
+        $BAupd.LoadBAComponents();
+    });
+
+</script>
+

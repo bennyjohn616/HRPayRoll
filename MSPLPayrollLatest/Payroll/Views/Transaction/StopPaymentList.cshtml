@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>Stop Payment</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Employee Code
+            </label>
+            <div class="col-md-6">
+                <select id="sltEmployeelist" class="form-control" autofocus></select>
+            </div>
+        </div>
+
+
+    </div>
+   
+
+    <div class="col-md-12" id="dvstpPayment">
+      
+    </div>
+   
+</div>
+<div id="AddStopPayment" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <div id="dvStopPaymentAdd">
+
+    </div>
+  
+</div>
+<script src="~/Js/Trans/StopPayment.js" type="text/javascript"></script>
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+@section Scripts
+        {
+    <script src="~/Js/Trans/StopPayment.js" type="text/javascript"></script>
+    <script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+}
+
+

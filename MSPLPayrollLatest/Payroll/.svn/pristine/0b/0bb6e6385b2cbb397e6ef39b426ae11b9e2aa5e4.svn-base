@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-10" id="RoleTable">
+
+    </div>
+</div>
+
+
+<script src="~/Js/DataWizard/RoleForm.js"></script>
+@section scripts
+    {
+    <script src="~/Js/DataWizard/RoleForm.js"></script>
+
+}

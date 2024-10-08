@@ -1,0 +1,44 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-11">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                            Select Salary Grade
+                        </label>
+                        <div class="col-md-12">
+                            <select id="sltEntityModel" class="form-control" autofocus></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label col-md-12">
+                            Select Category
+                        </label>
+                        <div class="col-md-12">
+                            <select id="sltCategory" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1">
+                <input type="button" id="btnSave" value="Save" class="btn custom-button center">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div id="dvTitle">
+        </div>
+        <div id="dvDynamicEntity">
+        </div>
+    </div>
+</div>
+<script>
+    $multiEntryInput.LoadEntityModelDrop();
+
+
+</script>

@@ -1,0 +1,241 @@
+﻿
+@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" id="dvFromViewEmployeeGroup">
+
+            <table id="tblChallanView" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                <thead>
+                    <tr>
+
+                        <th>Challan Date</th>
+                        <th>Bank Name</th>
+                        <th>Challan Amount</th>
+                        <th>Payroll Month</th>
+                        <th>View</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<div id="challanDateList" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <form id="" data-toggle="validator" role="form" action="">
+        <div class="modal-dialog" style="width: 60%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Challan View
+                    </h4>
+
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-12">
+                                &nbsp;
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12" id="dvFromViewEmployeeTable">
+
+                                <table id="tblChallanViewList" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                                    <thead>
+                                        <tr>
+                                            <th>Employee Code</th>
+                                            <th>Name</th>
+                                            <th>Challan Amount</th>
+                                            <th>Challan No</th>
+                                            <th>Cheque/DD</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn custom-button" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+<div id="challenEntryEdit" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <form id="frmEditChallanEntry" data-toggle="validator" role="form" data-rolecmd="Payroll-Dashboard-Company">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Edit Challan entry
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Payroll Month
+                                    </label>
+                                    <div class="col-md-8">
+                                        <select id="sltCeMonth" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="1">January</option>
+                                            <option value="2">February</option>
+                                            <option value="3">March</option>
+                                            <option value="4">April</option>
+                                            <option value="5">May</option>
+                                            <option value="6">June</option>
+                                            <option value="7">July</option>
+                                            <option value="8">August</option>
+                                            <option value="9">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Challan Date
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtChallanDate" class="form-control Reqrd" placeholder="Enter Challan Date" readonly="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Challan No
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtChallanNo" class="form-control Reqrd" placeholder="Enter Challan No">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Bank Name
+                                    </label>
+                                    <div class="col-md-8">
+                                        <select id="ddBank" class="form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Cheque/DD
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtCheque" class="form-control Reqrd" placeholder="Enter Cheque/DD">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Book Entry
+                                    </label>
+                                    <div class="col-md-8">
+                                        <select id="bookEntry" class="form-control">
+                                            <option value="0">--Select--</option>
+                                            <option value="1">Yes</option>
+                                            <option value="2">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        BSR Code
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="txtBSRCode" class="form-control Reqrd" placeholder="Enter Cheque/DD">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnEditChallanEntry" class="btn custom-button">
+                        Save
+                    </button>
+                    <button type="button" class="btn custom-button" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="~/Js/company/CompanyCom.js"></script>
+<script src="~/Js/Tax/form16Challan.js"></script>
+<script type="text/javascript">
+    $form16Challan.LoadViewData();
+    $(function () {
+        $("#txtChallanDate").datepicker({
+            dateFormat: 'dd-M-yy',
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-100:+2",
+        });
+    });
+    $companyCom.loadBank({ id: "ddBank" });
+
+</script>
+

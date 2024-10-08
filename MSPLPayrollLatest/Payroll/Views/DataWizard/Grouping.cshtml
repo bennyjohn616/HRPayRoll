@@ -1,0 +1,49 @@
+﻿<form id="frmGrouping">
+
+
+    <div class="row">
+        <div class="col-sm-5 paddingBottom20">
+            @*<div class="col-lg-6">*@
+            <table id="tblGrouping" class="table table-responsive table-bordered table-hover">
+                <thead >
+                    <tr>
+                        
+                        <th>
+                            Field Name
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            @*</div>*@
+        </div>
+        <div class="2">
+            <div class="form-group">
+                <input type="button" value="Add New" onclick="$PaySheetGrouping.addRow();" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</form>
+<script src="~/Js/DataWizard/Grouping.js"></script>
+
+<script>
+    
+    $PaySheetGrouping.renderGroup();
+    
+</script>
+@section scripts
+{
+
+    <script src="~/Js/DataWizard/Grouping.js"></script>
+   
+}

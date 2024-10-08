@@ -1,0 +1,134 @@
+﻿
+    <div class="col-sm-12">
+
+        <div class="form-group" id="dvprojection">
+            <label class="control-label col-md-4">
+                Projection<label style="color:red;font-size: 13px">*</label>
+            </label>
+            <div class="col-md-8">
+                <select id="sltProjection" class="form-control">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option="">
+                </select>
+            </div>
+        </div>
+      
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <label class="control-label" id="inputTypelabel">Input Type<label style="color:red;font-size: 13px">*</label>
+                    </label>
+                </div>
+                <div class="col-sm-8">
+                    <select id="ddInputType" class="form-control" required>
+                        <option value="0">--Select--</option>
+                        <option value="6">Ceiling Examption</option>
+                        <option value="1">Master Input</option>
+                        <option value="2">Declaration entry</option>
+                        <option value="3">Percentage</option>
+                        <option value="4">Conditional</option>
+                        <option value="5">Range</option>
+                        <option value="7">Projection</option>
+                    </select>
+                </div>
+            </div>
+            <div id="dvNormalFormula" class="form-group">
+                <div class="col-sm-4">
+                    <label class="control-label">Value</label>
+                </div>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="txtFormula"  />
+                </div>
+
+            </div>
+            <div class="hide" id="dvConditionalFormula">
+                <div class="form-group">
+                    <label class="control-label col-md-2">
+                        Formula
+                    </label>
+                    <div class="nodisp col-md-10">
+                        <textarea rows="2" id="txtIfFormula" class="form-control" readonly="readonly" style="max-width:400px;max-height:60px;"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">     If Condition</h3>
+
+                        </div>
+                        <div class="panel-body">
+                            <div class=" text-right paddingcustomize col-md-12">
+                                <button id="btnIfClose" class="nodisp btn btn-primary marginbt7"> Close</button>
+                                <button id="btnIfSaveClose" class="nodisp btn btn-primary marginbt7"> Save Close</button>
+                                <button id="btnIfBuildFormula" class="nodisp btn btn-primary marginbt7"> View Formula</button>
+                                <button id="btnIfAdd" class="btn btn-primary marginbt7"> Add</button>
+                            </div>
+                            <div class="row" id="dvIfElseCondition">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-horizontal hide " id="dvRangeFormula">
+                <div class="form-group">
+                    <label class="control-label col-md-2">
+                        Base Value
+                    </label>
+                    <div class="col-md-10">
+                        <input type="hidden" id="hdnBaseValue" />
+                        <textarea rows="2" id="txtBaseValue" class="form-control" readonly="readonly"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">    Ranges</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="text-right paddingcustomize col-md-12">
+                                <button id="btnIfClose" class="nodisp btn btn-primary marginbt7"> Close</button>
+                                <button id="btnIfSaveClose" class="nodisp btn btn-primary marginbt7"> Save Close</button>
+                                <button id="btnRangeAdd" class="btn btn-primary marginbt7"> Add</button>
+                            </div>
+                            <div class="row" id="dvRanges">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="hide" id="dvMatchingComponent">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Matching Component
+                </label>
+                <div class="col-md-8">
+                    <select id="sltMatchingComponent" class="form-control"></select>
+                </div>
+            </div>
+           
+            </div>
+
+            <div class="form-group">
+                @Html.Partial("~/Views/TaxSection/TaxFormula.cshtml")
+            </div>
+
+        </div>
+
+<script src="~/Js/Company/entityModel.js" type="text/javascript"></script>
+<script src="~/Js/Company/FieldCreation.js" type="text/javascript"></script>
+<script src="~/Js/Company/formulaCreation_new.js" type="text/javascript"></script>
+<script src="~/Js/Tax/taxBehavior.js" type="text/javascript"></script>
+<script src="~/Js/Tax/txMatching.js" type="text/javascript"></script>
+@*<script src="~/Js/Tax/taxBehavior.js" type="text/javascript"></script>*@
+
+<script>
+    $taxBehavior.loadInitial();
+    $formulaCreation.formulaFocusedElemt = 'txtFormula';
+    $formulaCreation.type = 3;
+    $formulaCreation.attributeCode = '0';
+   
+
+</script>
+

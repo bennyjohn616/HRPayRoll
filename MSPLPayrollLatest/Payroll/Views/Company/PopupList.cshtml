@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Popup List";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>
+    Popup
+</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Component
+                </label>
+                <div class="col-md-7">
+                    <select class="form-control" id="ddcomponent" autofocus>
+                        <option value="0">--Select--</option>
+                        <option value="branch">Branch</option>
+                        <option value="designation">Designation</option>
+                        <option value="costCentre">Cost Centre</option>
+                        <option value="esiLocation">ESI Location</option>
+                        <option value="grade">Grade</option>
+                        <option value="esiDespensary">ESI Dispensary</option>
+                        <option value="department">Department</option>
+                        <option value="location">Location</option>
+                        <option value="ptlocation">PT Location</option>
+                        <option value="bank">Bank</option>
+                        <option value="leaveType">Leave Type</option>
+                        <option value="languagesknown">Languages Known</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 text-right">
+        <input type="button" id="btnAddPopup" value="Add" class="btn custom-button marginbt7"
+               data-toggle="modal" data-target="#AddPopup" onclick="$comPopup.AddInitialize();">
+    </div>
+    <div class="col-md-12">
+        <div id="dvPopupRender" class="table-responsive"></div>
+
+    </div>
+    <div id="AddPopup" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/Company/Popup.cshtml")
+    </div>
+</div>
+<script src="~/Js/Company/popup.js" type="text/javascript"></script>
+@section Scripts
+{    <script src="~/Js/Company/popup.js" type="text/javascript"></script>
+}

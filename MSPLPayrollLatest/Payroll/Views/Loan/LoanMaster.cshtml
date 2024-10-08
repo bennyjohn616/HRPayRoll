@@ -1,0 +1,218 @@
+﻿<!-- Modal -->
+
+<form id="frmLoanMaster" data-toggle="validator" role="form" action="javascript:$LoanMaster.save()">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class=" modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add/Edit Loan Master
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Loan Code <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtLoanCode" class="form-control" placeholder="Enter the Loan Code"
+                                 maxlength="20" autofocus required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Loan Desc <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtLoanDesc" class="form-control" placeholder="Enter the Loan Desc"
+                                 maxlength="100"  required />
+                        </div>
+                    </div>
+                  
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Is Interest
+                        </label>
+                        <div class="col-md-7">
+                            <label class="radio-inline">
+                                <input type="radio" id="rbtnIsInterestYes" name="IsInterest" onchange="IntrRadButChecking()" />Yes
+                            </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label class="radio-inline">
+                                <input type="radio" id="rbtnIsInterestNo" name="IsInterest" onchange="IntrRadButChecking()" checked="checked" />No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group nodisp" id="divtxtIntPerc">
+                        <label class="control-label col-md-4">
+                            Interest Percent <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtInterestPercent" onkeypress="return $validator.checkDecimal(event, 2)" oncopy="return false" onpaste="return false" class="form-control" placeholder="Enter the Interest Percent"
+                                   required />
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                        <label class="control-label col-md-4">
+                           Eligibility Flow
+                        </label>
+                        <div class="col-md-7">
+                            <label class="radio-inline">
+                                <input type="radio" id="rbtnEFCat" name="EligFlow" onchange="EligFlowRadButChecking()" checked="checked" />Category
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" id="rbtnEFPD" name="EligFlow" onchange="EligFlowRadButChecking()" />Popup Data
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="divsltCat">
+                        <label class="control-label col-md-4">
+                            Category
+                        </label>
+                        <div class="col-md-7">
+                            <select id="sltCategory" class="form-control"></select>
+                        </div>
+                    </div>
+                   
+                        <div class="form-group nodisp" id="divsltPopup">
+                            <label class="control-label col-md-4">
+                                Popup Data
+                            </label>
+                            <div class="col-md-7">
+                                <select id="sltPopupData" class="form-control" onchange="sltPopupChange()">
+                                    <option value="0">--Select--</option>
+                                    <option value="branch">Branch</option>
+                                    <option value="designation">Designation</option>
+                                    <option value="costCentre">Cost Centre</option>
+                                    <option value="esiLocation">ESI Location</option>
+                                    <option value="grade">Grade</option>
+                                    <option value="esiDespensary">ESI Dispensary</option>
+                                    <option value="department">Department</option>
+                                    <option value="location">Location</option>
+                                    <option value="ptlocation">PT Location</option>
+                                    <option value="bank">Bank</option>
+                                    <option value="leaveType">Leave Type</option>
+                                    <option value="languagesknown">Languages Known</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group nodisp" id="divsltSelectedPopup">
+                            <label class="control-label col-md-4" id="lblSelectedPopupData"></label>
+                            <div class="col-md-7">
+                                <select id="sltPopupSelectedData" class="form-control" ></select>
+                            </div>
+                        </div>*@
+                    <div class="form-group" id="divsltEligComponent">
+                        <label class="control-label col-md-4" >Eligibilty Component</label>
+                        <div class="col-md-7">
+                            <select id="sltEligComponent" class="form-control"></select>
+                        </div>
+                    </div>
+                  
+                    @*<div class="form-group">
+                        <label class="control-label col-md-4">
+                            Type
+                        </label>
+                        <div class="col-md-7">
+                            <select id="sltEligibilityType" class="form-control">
+                                <option value="1">Master Input</option>
+                                <option value="2">Percentage</option>
+                                <option value="3">Conditional</option>
+                                <option value="4">Range</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="dvFormulaCreationAttribute">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                Operator
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn custom-button operator "><i>+</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>-</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>*</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>/</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>(</i></button>
+                                        <button type="button" class="btn custom-button operator"><i>)</i></button>
+                                        <button type="button" class="btn custom-button remove"><i><--</i></button>
+                                        <button type="button" class="btn custom-button enternumber marginbt7">Enter Number</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label>Search:</label>
+                            <input name="searchF" id="salsearch" placeholder="Filter...">
+                            <button id="btnResetSearch" class="btn custom-button">&times;</button>
+                            <label for="hideMode">
+                                <input type="checkbox" id="hideMode" checked="checked">
+                                Hide unmatchs
+                            </label>
+                        </div>
+                        <div id="attributeModeltree">
+                        </div>
+                    </div>*@
+                   
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnLoanMasterSave" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="~/Js/Loan/LoanMaster.js"></script>
+<script src="~/Js/Company/formulaCreation_new.js"></script>
+<script language="javascript">
+    $LoanMaster.LoadEligComponent({ id: 'sltEligComponent' })
+    //$companyCom.loadCategory({ id: 'sltCategory' });
+    //$formulaCreation.loadAttributeModelList();
+   function IntrRadButChecking() {
+       debugger;
+       if (document.getElementById('rbtnIsInterestYes').checked) {
+           $('#divtxtIntPerc').removeClass('nodisp');
+       }
+       if (document.getElementById('rbtnIsInterestNo').checked) {
+           $('#divtxtIntPerc').addClass('nodisp');
+       }
+   };
+   //function EligFlowRadButChecking() {
+   //    debugger;
+   //    if (document.getElementById('rbtnEFCat').checked) {
+           
+   //        $('#divsltCat').removeClass('nodisp');
+   //        $('#divsltPopup').addClass('nodisp');
+   //        $('#divsltSelectedPopup').addClass('nodisp');
+   //        $companyCom.loadCategory({ id: 'sltCategory' });
+   //    }
+   //    if (document.getElementById('rbtnEFPD').checked) {
+   //        $('#divsltPopup').removeClass('nodisp');
+   //        $('#divsltCat').addClass('nodisp');
+          
+   //    }
+   //};
+   //function sltPopupChange() {
+   //    debugger;
+   //    if ($('#sltPopupData').val() != 0) {
+   //        $('#divsltSelectedPopup').removeClass('nodisp');
+   //        $LoanMaster.LoadDynamicPopupDataJS({ id: 'sltPopupSelectedData' }, $('#sltPopupData').val(), $("option:selected", '#sltPopupData').text());
+   //    }
+   //    else {
+   //        $('#divsltSelectedPopup').addClass('nodisp');
+   //        alert("Kindly select Any Popup Data");
+   //    }
+   //};
+
+</script>

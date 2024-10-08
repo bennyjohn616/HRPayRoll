@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Entity";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2></h2>
+
+<div class="row" id="dvEntityModel">
+    <div class="nodisp col-md-4">
+        <div>
+            <h3>
+                Tables
+            </h3>
+        </div>
+        <div id="entityModeltree">
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div>
+            <h3>
+                Tax Fields
+            </h3>
+            <label>Search:</label>
+            <input name="search" placeholder="Filter...">
+            <button id="btnResetSearch" class="btn custom-button">&times;</button>
+            <label for="hideMode">
+                <input type="checkbox" id="hideMode">
+                Hide unmatchs
+            </label>
+        </div>
+        <div id="attributeModeltree">
+        </div>
+    </div>
+</div>
+<div id="AddField" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/Company/Field.cshtml")
+</div>
+
+
+<script src="~/Js/Company/entityModel.js" type="text/javascript"></script>
+<script src="~/Js/Company/FieldCreation.js" type="text/javascript"></script>
+<script>
+    $entitymodel.selectedType = "Tax";
+    $entitymodel.loadTableCategory();
+  
+</script>

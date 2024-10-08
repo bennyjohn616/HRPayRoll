@@ -1,0 +1,209 @@
+﻿@model Payroll.Controllers.UserMenu
+<header class="siteHeader strip">
+    <div class='page-topbar'>
+        <div class="wrapper">
+            <!-- Logo -->
+            <a class="branding"><img src="assets/images/logo.png" alt="MindsPay"></a>
+           
+            <!-- Primary site Nav
+            <a href="#siteNav" class="hamburger  js-menuLink">
+                <span class="hamburger-bun  hamburger-bun--top"></span>
+                <span class="hamburger-patty"></span>
+                <span class="hamburger-bun  hamburger-bun--btm"></span>
+            </a>
+ -->
+           
+            <nav class="headerNav pull-right">
+                
+                <ul class="info-menu right-links list-inline list-unstyled">
+                    <li class="profile">
+                        <a href="#" data-toggle="dropdown" class="toggle">
+                            
+                            @*<span> Welcome  @Session["EmployeeName"]</span> </a>*@
+                </ul>
+</nav>
+        </div>
+    </div>
+</header>
+
+<style type="text/css">
+    .siteHeader {
+        min-height: 50px;
+        height: 50px;
+        overflow: visible;
+        background-color: #00655f;
+        color: #f4f4f4;
+        position: relative;
+        z-index: 10000;
+    }
+
+    .strip {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .siteHeader .wrapper {
+        max-width: 1220px;
+        padding-left: 20px;
+        background-color: #282B2D;
+    }
+
+    .branding {
+        float: left;
+        display: inline-block;
+        margin: 5px 0 0;
+    }
+
+    .siteHeader a {
+        outline: 0;
+    }
+
+    .primaryNav {
+        float: left;
+        margin-top: 0;
+        margin-left: 45px;
+    }
+
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .primaryNav-list {
+        margin: 0;
+        padding: 0;
+        height: 75px;
+    }
+
+    .primaryNav .navItem {
+        float: left;
+        position: relative;
+    }
+
+    .navItem a, .primaryNav .navItem {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .flag--bottom .flag-body, .flag--bottom .flag-media, .primaryNav .navItem {
+        vertical-align: bottom;
+    }
+
+    .navItem a {
+        color: #20401a;
+        letter-spacing: 1px;
+        text-decoration: none;
+        vertical-align: middle;
+        line-height: 75px;
+        padding: 0 30px 0 20px;
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        -ms-transition: all .1s linear;
+        transition: all .1s linear;
+    }
+
+    .navItem a, .primaryNav .navItem {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .navItem a, .navItem--new:after {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .navDropdown li:last-child, .primaryNav .navItem:last-child {
+        margin-right: 0;
+    }
+
+    .primaryNav .navItem {
+        float: left;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .navItem a, .primaryNav .navItem {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .flag--bottom .flag-body, .flag--bottom .flag-media, .primaryNav .navItem {
+        vertical-align: bottom;
+    }
+
+    .navDropdown {
+        overflow: hidden;
+        position: absolute;
+        z-index: 100;
+        top: 75px;
+        left: 0;
+        width: 250px;
+        margin: 0;
+        background-color: #1C1C1E;
+        height: 0;
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+        opacity: 0;
+        -webkit-transition: opacity .2s linear;
+        -moz-transition: opacity .2s linear;
+        -o-transition: opacity .2s linear;
+        -ms-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+    }
+
+        .navDropdown .nav {
+            padding: 10px 0;
+        }
+
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .u-pullRight {
+        float: right !important;
+    }
+
+    .headerNav {
+        margin: 0;
+    }
+
+        .headerNav img {
+            height: 10%;
+            width: 12%;
+        }
+
+        .headerNav li {
+            margin-left: 20px;
+            letter-spacing: 1px;
+            line-height: 75px;
+        }
+
+        .headerNav li, .headerUtils .loginBtn {
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .headerNav .nav > li, .nav > li > a {
+            display: inline-block;
+            zoom: 1;
+        }
+
+        .headerNav .nav > li, .nav > li > a {
+            display: inline-block;
+            zoom: 1;
+        }
+
+        .headerNav a {
+            color: #20401a;
+        }
+
+    .siteHeader a {
+        outline: 0;
+    }
+</style>

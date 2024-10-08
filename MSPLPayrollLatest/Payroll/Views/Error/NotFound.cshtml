@@ -1,0 +1,32 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Not Found";
+    if (Session["UserId"] == null)
+    {
+        Layout = "~/Views/Shared/_UserMaster.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_HomeLayout.cshtml";
+    }
+}
+<div class="main-container">
+    <div class="marginleft25">
+        <div class="title">
+            <h1 class="text-danger">Page not found.</h1>
+        </div>
+
+        <img width="25%" height="25%" src="~/assets/images/404Error.jpg" />
+        <div class="sub">
+            @if (Session["UserId"] == null)
+            {
+                @Html.RouteLink("Back to login", new { action = "Index", controller = "Login" });
+            }
+            else
+            {
+                @Html.RouteLink("Back to Home", new { action = "Index", controller = "Home" });
+            }
+        </div>
+    </div>
+</div>

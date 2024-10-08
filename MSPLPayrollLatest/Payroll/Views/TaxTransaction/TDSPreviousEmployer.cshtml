@@ -1,0 +1,82 @@
+﻿
+
+<div class="col-md-12">
+    <div class="form-group">
+        <label class="control-label col-md-6">
+            Previous Employer TDS
+        </label>
+
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="form-group">
+        <button id="btnExport" class="btn custom-button " onclick="fnExcelReport();"> EXPORT </button>
+        </div>
+    </div>
+<div class="col-md-12">
+
+    <div class="form-group">
+       
+            <div id="TDSPreviousEmployer" class="col-md-12 ">
+                <table id="tableTDSPreviousEmployer" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                    <thead>
+                        <tr>
+
+                            <th>EmployeeCode</th>
+                            <th>Name</th>
+                            <th>DtaeOfJoining</th>
+                            <th>Tax</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+</div>
+<script src="~/Js/Tax/TDSPreviousEmployer.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script>
+    $TDSPreviousEmployer.LoadData();
+    function fnExcelReport() {
+        debugger;
+        var tab_text = "<table border='2px'><tr>";
+        var textRange; var j = 0;
+        tab = document.getElementById('tableTDSPreviousEmployer'); // id of table
+
+        for (j = 0 ; j < tab.rows.length ; j++) {
+            tab_text = tab_text + tab.rows[j].innerHTML + "</tr>";
+            //tab_text=tab_text+"</tr>";
+        }
+
+        tab_text = tab_text + "</table>";
+        tab_text = tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+        tab_text = tab_text.replace(/<img[^>]*>/gi, ""); // remove if u want images in your table
+        tab_text = tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+        {
+            txtArea1.document.open("txt/html", "replace");
+            txtArea1.document.write(tab_text);
+            txtArea1.document.close();
+            txtArea1.focus();
+            sa = txtArea1.document.execCommand("SaveAs", true, "Say Thanks to Sumit.xls");
+        }
+        else                 //other browser not tested on IE 11
+            sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));
+
+        return (sa);
+    }
+</script>

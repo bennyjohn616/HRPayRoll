@@ -1,0 +1,222 @@
+﻿<h1 class="title">Separation</h1>
+<div class="row">
+    @*<form role="form" id="Separation" action="javascript:$Separation.save()">*@
+    <form role="form" id="Separation" action="javascript:$Separation.CheckPayrollProcees()">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Add/Edit Separation
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Category
+                                </label>
+                                <div class="col-md-6">
+                                    <select id="sltCategorylist" class="form-control" autofocus></select>
+                                </div>
+                            </div>
+
+                            <div class="nodisp" id="dvemp">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Employee Code
+                                    </label>
+                                    <div class="col-md-6">
+                                        <select id="sltEmployeelist" class="form-control"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nodisp" id="dvdetails">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Employee Name
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtEmpName" class="form-control" readonly placeholder="Employee Name"
+                                               required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Date of Joining <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtDOJ" class="form-control datepicker" readonly placeholder="Enter the Date of Joining"
+                                               required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Type Of Separation
+                                    </label>
+                                    <div class="col-md-6">
+                                        <select id="sltTypeOfSeparation" class="form-control"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Last Working Date <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtLastWorkingDate" class="form-control datepicker" placeholder="Enter the Last Working Date"
+                                               readonly required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-4">
+                                        Reason <label style="color:red;font-size: 13px">*</label>
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtReason" class="form-control" placeholder="Enter the Reason"
+                                               maxlength="60" data-error="Enter the Location" required />
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="display:none">
+                                    <div>
+                                        <input type="text" id="txtMonthlyLast" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                    <div>
+                                        <input type="text" id="txtPayrollLast" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display:none">
+                                    <div>
+                                        <input type="text" id="txtMonthly" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                    <div>
+                                        <input type="text" id="txtPayroll" class="form-control"
+                                               maxlength="60" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="col-sm-10">
+                                        <div class="form-group pull-right">
+                                            <button type="submit" id="btnSave" class="btn custom-button"> Save</button>
+                                            <button type="button" class="btn custom-button" data-dismiss="modal">Close</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+@*<script>
+
+
+
+        $("#txtLastWorkingDate,#txtDOJ").change(function () {
+
+            var datefrom = new Date($("#txtDOJ").val());
+            var dateto = new Date($("#txtLastWorkingDate").val());
+            var dateMonthlyInput = new Date($("#txtMonthlyLast").val());
+            var datePayrollInput = new Date($("#txtPayrollLast").val());
+
+            var dateMonthlyInputAdd = new Date($("#txtMonthly").val());
+            var datePayrollInputAdd = new Date($("#txtPayroll").val());
+
+            var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+            var MonthlyInput = dateMonthlyInput.getDate() + "/" + monthNames[(dateMonthlyInput.getMonth())] + "/" + dateMonthlyInput.getFullYear();
+            var PayrollInput = datePayrollInput.getDate() + "/" + monthNames[(datePayrollInput.getMonth())] + "/" + datePayrollInput.getFullYear();
+            var MonthlyInputAdd = dateMonthlyInputAdd.getDate() + "/" + monthNames[(dateMonthlyInputAdd.getMonth())] + "/" + dateMonthlyInputAdd.getFullYear();
+            var PayrollInputAdd = datePayrollInputAdd.getDate() + "/" + monthNames[(datePayrollInputAdd.getMonth())] + "/" + datePayrollInputAdd.getFullYear();
+
+
+            if ($("#txtDOJ").val() != '' && $("#txtLastWorkingDate").val() != '' && $("#txtMonthlyLast").val() != '' && $("#txtPayrollLast").val() != '') {
+                if (dateto < datefrom) {
+                    $app.showAlert('Last Working Date should not be less than Date of Joining !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateto < dateMonthlyInputAdd) {
+                    $app.showAlert('Last Working Date should not be less than Monthly Input !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateto < datePayrollInputAdd) {
+                    $app.showAlert('Last Working Date should not be less than Payroll Process !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateMonthlyInput < dateto) {
+                    $app.showAlert('Last Working Date should between' + ' ' + '"' + MonthlyInputAdd + '"' + ' ' + "to" + ' ' + '"' + MonthlyInput + '"', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (datePayrollInput < dateto) {
+                    $app.showAlert('Last Working Date should between' + ' ' + '"' + PayrollInputAdd + '"' + ' ' + "to" + ' ' + '"' + PayrollInput + '"', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+            }
+            else if ($("#txtDOJ").val() != '' && $("#txtLastWorkingDate").val() != '' && $("#txtMonthlyLast").val() != '') {
+                if (dateto < datefrom) {
+                    $app.showAlert('Last Working Date should not be less than Date of Joining !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateto < dateMonthlyInputAdd) {
+                    $app.showAlert('Last Working Date should not be less than Monthly Input !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateto < datePayrollInputAdd) {
+                    $app.showAlert('Last Working Date should not be less than Payroll Process !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateMonthlyInput < dateto) {
+                    $app.showAlert('Last Working Date should between' + ' ' + '"' + MonthlyInputAdd + '"' + ' ' + "to" + ' ' + '"' + MonthlyInput + '"', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (datePayrollInput < dateto) {
+                    $app.showAlert('Last Working Date should between' + ' ' + '"' + PayrollInputAdd + '"' + ' ' + "to" + ' ' + '"' + PayrollInput + '"', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+            }
+            else if ($("#txtDOJ").val() != '' && $("#txtLastWorkingDate").val() != '' && $("#txtPayrollLast").val() != '') {
+                if (dateto < datefrom) {
+                    $app.showAlert('Last Working Date should not be less than Date of Joining !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateto < dateMonthlyInputAdd) {
+                    $app.showAlert('Last Working Date should not be less than Monthly Input !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateto < datePayrollInputAdd) {
+                    $app.showAlert('Last Working Date should not be less than Payroll Process !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (dateMonthlyInput < dateto) {
+                    $app.showAlert('Last Working Date should between' + ' ' + '"' + MonthlyInputAdd + '"' + ' ' + "to" + ' ' + '"' + MonthlyInput + '"', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+                else if (datePayrollInput < dateto) {
+                    $app.showAlert('Last Working Date should between' + ' ' + '"' + PayrollInputAdd + '"' + ' ' + "to" + ' ' + '"' + PayrollInput + '"', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+            }
+            else if ($("#txtDOJ").val() != '' && $("#txtLastWorkingDate").val() != '') {
+                if (dateto < datefrom) {
+                    $app.showAlert('Last Working Date should not be less than Date of Joining !', 4);
+                    $("#txtLastWorkingDate").val('');
+                }
+            }
+        });
+
+
+
+
+    </script>*@

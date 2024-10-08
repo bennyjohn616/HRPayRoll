@@ -1,0 +1,189 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<iframe src="~/StretchSession.aspx" width="0" height="0" style="display:none;" />
+
+<div class="row">
+    <input type="hidden" id="hdnRoleName" value="@Session["RoleName"]" />
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                Process Type
+            </label>
+            <div class="col-md-6">
+                <select id="sltPayrollType" class="form-control" autofocus>
+                    @*<option value="Cat">Category</option>
+                        @*<option value="Cost">CostCentre</option>
+                        <option value="Grd">Grade</option>
+                        <option value="SEMP">Single Employee</option>
+                        <option value="AEMP">All Employees</option>*@
+                </select>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div id="dvPayrollprocess" class="nodisp">
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <label class="control-label col-md-4">
+                            Month
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltMonth" class="form-control">
+                                <option value="0">--Select---</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Year
+                            </label>
+                            <div class="col-md-8">
+                                <select id="sltYear" class="form-control"></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id="dvCat">
+
+                        <label class="control-label col-md-4" id="lblPayrollprocess">
+                            Select Category
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltCategory" class="form-control" autofocus></select>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="control-label col-md-4" id="chkIncomeTax">
+                            Include Tax Process
+                        </label>
+                        <div class="col-md-8">
+                            <input type="checkbox" id="chkincludeTax" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="pull-right">
+                                <input type="button" id="btnSave" value="Process Payroll" class="btn custom-button ">
+
+                                <input type="button" id="btnDelete" value="Delete Payroll" class="btn custom-button ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div id="dvTitle">
+            </div>
+            <div id="dvDynamicEntity" class="table-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dvError" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Payroll Error
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal" id="dvErrorMsg">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="dynamicProcessForm" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    <iframe id='downloadfileIframe' src="~/Entity/DownLoad"></iframe>
+</div>
+
+
+
+<script src="~/js/emp/payrollhistroy.js"></script>
+<script src="~/Js/Tax/txProcess.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Scripts/SignalRJs.js"></script>
+<script src="~/Scripts/jquery.signalR-2.4.0.min.js"></script>
+<script src="~/signalr/hubs"></script>
+<script>
+    $(function () {
+        debugger;
+        // Reference the auto-generated proxy for the hub.
+        debugger;
+        var role = '@Session["RoleName"]';
+        if (role.toUpperCase() == "ADMIN") {
+            var progress = $.connection.progressHub;
+            console.log(progress);
+
+            // Create a function that the hub can call back to display messages.
+            progress.client.AddProgress = function (message, percentage) {
+                ProgressBarModal("show", message + " " + percentage);
+                $('#ProgressMessage').width(percentage);
+                if (percentage == "100%") {
+                    ProgressBarModal();
+                }
+            }
+
+            debugger;
+            var username = '@Session["username"]';
+            $.connection.hub.start().done(function () {
+                var connectionId = $.connection.hub.id;
+                progress.server.addUser(username);
+                console.log(connectionId);
+
+
+
+            });
+        }
+    });
+</script>
+
+            @section Scripts
+{
+                <script src="~/Js/Emp/payrollHistroy.js"></script>
+                <script src="~/Js/Company/CompanyCom.js"></script>
+            }
+

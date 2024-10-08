@@ -1,0 +1,213 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <form id="premiumsetting">
+            <ul class="nav nav-tabs" id="settingTab">
+                <li class="active">
+                    <a href="#LopCreditSetting" data-toggle="tab" class="empTab">
+                        LOP Credit Setting
+                    </a>
+                </li>
+                <li>
+                    <a href="#SupplementarySetting" data-toggle="tab" class="empTab">
+                        Supplementary Setting
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content" id="tabcontentPremium">
+                <div id="LopCreditSetting" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs" id="SettingTAB">
+                                <li>
+                                <a href="#step3" data-toggle="tab" id="lopdaysmatching" class="empTab">
+                                    Days Matching
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="#step2" data-toggle="tab" id="lopcomponentmatching" class="empTab">
+                                    Component Matching 
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="tabcontentLopCredit">
+                                <div id="step3" class="tab-pane fade in active">
+                                    <div class="row">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12" id="lopcreditbackmonth">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">
+                                                        LOP Credit Days Component
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control" id="sltlopcreditdays" autofocus></select>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">
+                                                        Back Month
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="text" id="txtBackMonth" class="form-control" placeholder="Enter the Back Month"
+                                                               maxlength="20" autofocus required />
+                                                    </div>
+                                                </div>
+                                                <div cclass="col-md-6">
+                                                    <input type="button" id="btnlopSave" onclick="$PremiumSetting.savelopdays()" value="Save" class="btn custom-button ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step2" class="tab-pane fade">
+                                    <div class="row">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12" id="Componentmatching">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3">
+                                                        Category
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control" id="sltlopcategory" autofocus></select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6" id="dvlopcategorygrid" align="center" style="height: 350px; overflow: auto;">
+                                                        <table id="tbllopcategorygrid" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="nodisp">
+                                                                    </th>
+                                                                    <th>
+
+                                                                    </th>
+                                                                    <th>
+                                                                        Display As
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                </div>
+                                                <div cclass="col-md-6">
+                                                    <input type="button" id="btnlopSaveCategory" onclick="$PremiumSetting.SaveComponent()" value="Save" class="btn custom-button ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="SupplementarySetting" class="tab-pane fade in">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs">
+                                <li><a href="#step4" data-toggle="tab" id="splmntrydaysmatching">Days Matching</a></li>
+                                <li>
+                                    <a href="#step5" data-toggle="tab" id="splmntrycomponentmatching">Component Matching </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="tabcontentSupplementary">
+                                <div id="step4" class="tab-pane fade in active">
+                                    <div class="row">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12" id="splmntrybackmonth">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">
+                                                        Supplementary Days
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control" id="sltsplmntrydays" autofocus></select>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-4">
+                                                        Back Month
+                                                    </label>
+                                                    <div class="col-md-3">
+                                                        <input type="text" id="txtBackMonthsplmntry" class="form-control" placeholder="Enter the Back Month"
+                                                               maxlength="20" autofocus required />
+                                                    </div>
+                                                </div>
+                                                <div cclass="col-md-6">
+                                                    <input type="button" id="btnsplmntrySave" onclick="$PremiumSetting.savesupdays()" value="Save" class="btn custom-button ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step5" class="tab-pane fade in  ">
+                                    <div class="row">
+                                        <div class="form-horizontal">
+                                            <div class="col-md-12" id="Componentmatching">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3">
+                                                        Category
+                                                    </label>
+                                                    <div class="col-md-4">
+                                                        <select class="form-control" id="sltsplmntrycategory" autofocus></select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 table-responsive" id="dvsplmtrycategorygrid" style="height: 350px; overflow: auto;">
+                                                        <table id="tblsplmtrycategorygrid" style="height: 300px; overflow: auto;" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="nodisp">
+                                                                    </th>
+                                                                    <th>
+
+                                                                    </th>
+                                                                    <th>
+                                                                        Display As
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div cclass="col-md-6">
+                                                    <input type="button" id="btnsplmntrySaveCategory" onclick="$PremiumSetting.SaveComponent()" value="Save" class="btn custom-button ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="~/Js/Setting/PremiumSetting.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+@section Scripts
+{
+    <script src="~/Js/Setting/PremiumSetting.js"></script>
+    <script src="~/Js/Setting/Setting.js" type="text/javascript"></script>
+    <script src="~/Js/Company/CompanyCom.js"></script>
+}

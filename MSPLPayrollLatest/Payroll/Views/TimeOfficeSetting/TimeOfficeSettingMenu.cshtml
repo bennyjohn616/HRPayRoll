@@ -1,0 +1,39 @@
+﻿<style>
+    .ui-menu {
+        width: 150px;
+    }
+</style>
+<h2>Time Office Setting</h2>
+<div class="row" id="TimeOfficeSettingMenu">
+    <div class="col-md-3">
+        <ul id="menu">
+            <li class="ui-state-disabled"><div>Select Menu</div></li>
+            <li><div>Late</div></li>
+            <li><div>Permission</div></li>
+            <li><div>OT</div></li>
+            <li><div>EarlyGoing</div></li>
+            <li><div>Lunch</div></li>
+            <li><div>Half Day</div></li>
+            <li><div>Compensatory Off</div></li>
+            <li><div>User Rights</div></li>
+            <li><div>Configuration</div></li>
+            <li><div>Auto Shift</div></li>
+            <li><div>Work Hour</div></li>
+            <li><div>late wise Leave</div></li>
+            <li><div>Paid Holiday</div></li>
+            <li><div>paid Week Off</div></li>
+            <li><div>Report Components</div></li>
+            <li><div>Import</div></li>
+            <li><div>Import Time</div></li>
+            <li><div>Payroll Components</div></li>
+        </ul>
+    </div>
+    <div class="col-md-8 form-horizontal">
+        @Html.Partial("~/Views/TimeOfficeSetting/EarlyGoing.cshtml")
+    </div>
+</div>
+<script>
+  $( function() {
+    $( "#menu" ).menu();
+  } );
+</script>

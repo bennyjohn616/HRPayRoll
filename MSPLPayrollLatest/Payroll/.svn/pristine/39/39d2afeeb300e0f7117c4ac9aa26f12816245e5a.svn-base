@@ -1,0 +1,271 @@
+﻿@{
+    ViewBag.Title = "logoView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<form name="Form1" method="post" action="./" id="Form1">
+   
+    <center style="height: 553px">
+        &nbsp;<br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        @*<img src="/assets/images/Company_logo.jpg" id="companyLogo" alt="Company" style="width: auto; height: auto" class="btn-success" />*@
+        <br />
+        <br />
+        
+    </center>
+</form>
+
+<script src="~/assets/libraries/RGraph.common.core.js"></script>
+<script src="~/assets/libraries/RGraph.bar.js"></script>
+<script src="~/assets/libraries/RGraph.common.dynamic.js"></script>
+<script src="~/assets/libraries/RGraph.common.tooltips.js"></script>
+<script src="~/assets/libraries/RGraph.pie.js"></script>
+<script src="~/assets/libraries/RGraph.line.js"></script>
+<script src="~/assets/libraries/RGraph.common.tooltips.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        $compView.loadInitial();
+    });
+    $compView = {
+        loadInitial: function () {
+
+            $compView.disableInput();
+            $compView.GetCompanyData();
+        },
+        disableInput: function () {
+
+            $('#frmCompany .form-control').each(function () {
+                $(this).prop('readonly', true);
+
+            });
+        },
+        GetCompanyData: function () {
+
+            $.ajax({
+                url: $app.baseUrl + "Company/GetCompanyData",
+                data: JSON.stringify({ id: 0 }),
+                dataType: "json",
+                contentType: "application/json",
+                type: "POST",
+                success: function (jsonResult) {
+
+                    $app.clearSession(jsonResult);
+                    switch (jsonResult.Status) {
+                        case true:
+                            var p = jsonResult.result;
+                            $compView.GetChartsData(p);
+
+                            //$compView.RenderCompany(p);
+
+                            break;
+                        case false:
+                            $app.showAlert(jsonResult.Message, 4);
+                            //alert(jsonResult.Message);
+                            break;
+                    }
+                },
+                complete: function () {
+
+                }
+            });
+
+        },
+
+        GetChartsData: function (companydetails) {
+
+            $.ajax({
+                url: $app.baseUrl + "Company/GetChartsData",
+                data: JSON.stringify({ id: 0 }),
+                dataType: "json",
+                contentType: "application/json",
+                type: "POST",
+                success: function (jsonResult) {
+
+                    $app.clearSession(jsonResult);
+                    switch (jsonResult.Status) {
+                        case true:
+                            jQuery("label[for='myalue']").html(companydetails.CompanyName);
+                            var chartResult = jsonResult.result;
+                            $compView.RenderCompany(companydetails, chartResult);
+                            chart(chartResult);
+                            piechart(chartResult);
+                            linechart(chartResult);
+                            break;
+                        case false:
+                            $app.showAlert(jsonResult.Message, 4);
+                            //alert(jsonResult.Message);
+                            break;
+                    }
+                },
+                complete: function () {
+
+                }
+            });
+
+        },
+        RenderCompany: function (data, chartResult) {
+            var formData = document.forms["frmCompany"];
+            formData.elements["txtCompanyname"].value = data.CompanyName;
+            formData.elements["txtAddressline1"].value = data.AddressLine1;
+            formData.elements["txtAdressline2"].value = data.AddressLine2;
+            formData.elements["txtCity"].value = data.City;
+            formData.elements["txtState"].value = data.State;
+            formData.elements["txtCountry"].value = data.Country;
+            formData.elements["txtPinCode"].value = data.PinCode;
+            formData.elements["txtPhone"].value = data.Phone;
+            formData.elements["txtEMail"].value = data.EMail;
+        }
+    };
+
+    var chart = function (chartResult) {
+        debugger;
+        var columnchart = [];
+        var ActiveEmployee = [];
+        var ActiveEmployeeYear = [];
+        var columnchartTooltip = [];
+        columnchart = chartResult[0];
+        for (var i = 0 ; i < columnchart.length ; i++) {
+            ActiveEmployee.push(columnchart[i]['Count']);
+        }
+        for (var i = 0 ; i < columnchart.length ; i++) {
+            ActiveEmployeeYear.push(columnchart[i]['Year']);
+        }
+        for (var i = 0 ; i < columnchart.length ; i++) {
+            columnchartTooltip.push(columnchart[i]['Year'] + ' : ' + columnchart[i]['Count']);
+        }
+        var colors = ['#0f0']
+        var bar = new RGraph.Bar({
+            id: 'cvs2',
+            data: ActiveEmployee,
+            options: {
+                labels: ActiveEmployeeYear,
+                hmargin: 25,
+                tooltips: columnchartTooltip,
+                tooltipsEvent: 'mousemove',
+                tooltipsHighlight: false,
+                shadow: false,
+                hmarginGrouped: 3,
+                shadowOffsetx: 2,
+                shadowOffsety: 2,
+                shadowBlur: 2,
+                colorsSequential: true,
+                textAccessible: true
+            }
+        })
+        .draw().on('tooltip', function (obj) {
+            var co = obj.context,
+                tooltip = RGraph.Registry.get('chart.tooltip'),
+                index = tooltip.__index__,
+                //shape = obj.angles[index],
+                color = colors[index]
+
+            RGraph.path2(co, 'b a % % % % % false a % % % % % true f %',
+                shape[2], shape[3], obj.radius, shape[0], shape[1],
+                shape[2], shape[3], obj.radius + 5, shape[1], shape[0],
+                color
+            );
+
+            RGraph.path2(co, 'lc butt lw 3 b a % % % % % false s white',
+                shape[2], shape[3], obj.radius, shape[0], shape[1]
+            );
+
+            // Set some CSS on the tooltip
+            tooltip.style.border = '3px ' + color + ' solid';
+            tooltip.style.padding = '3px';
+        });
+    };
+
+    // Create the Pie chart
+    var piechart = function (chartResult) {
+        debugger;
+        var piechart = [];
+        var MaleFemaleCount = [];
+        piechart = chartResult[2];
+        if (piechart[0]['GenderCount'] > 0 && piechart[1]['GenderCount'] > 0) {
+            var colors = ['#d3e8e4', '#0f0']
+            labels = ['Male', 'Female']
+        }
+        else if (piechart[0]['GenderCount'] > 0) {
+            var colors = ['#d3e8e4']
+            labels = ['Male']
+        }
+        else {
+            var colors = ['#0f0']
+            labels = ['Female']
+        }
+        for (var i = 0 ; i < piechart.length ; i++) {
+            MaleFemaleCount.push(piechart[i]['Gender'] + ' : ' + piechart[i]['GenderCount']);
+        }
+        var pie = new RGraph.Pie({
+            id: 'cvs',
+            data: [piechart[0]['GenderCount'], piechart[1]['GenderCount']],
+            options: {
+                labels: labels,
+                tooltips: MaleFemaleCount,
+                tooltipsEvent: 'mousemove',
+                tooltipsHighlight: false,
+                textColor: '#aaa',
+                strokestyle: 'rgba(192,192,192,0.3)',
+                exploded: [, 25],
+                textAccessible: true,
+                labelsSticksList: true,
+                labelsSticksColors: RGraph.arrayPad([], labels.length, 'gray'),
+                labelsSticksLinewidth: 1
+            }
+        }).draw().on('tooltip', function (obj) {
+            var co = obj.context,
+                tooltip = RGraph.Registry.get('chart.tooltip'),
+                index = tooltip.__index__,
+                shape = obj.angles[index],
+                color = colors[index]
+
+            RGraph.path2(co, 'b a % % % % % false a % % % % % true f %',
+                shape[2], shape[3], obj.radius, shape[0], shape[1],
+                shape[2], shape[3], obj.radius + 5, shape[1], shape[0],
+                color
+            );
+
+            RGraph.path2(co, 'lc butt lw 3 b a % % % % % false s white',
+                shape[2], shape[3], obj.radius, shape[0], shape[1]
+            );
+
+            // Set some CSS on the tooltip
+            tooltip.style.border = '3px ' + color + ' solid';
+            tooltip.style.padding = '3px';
+        });
+    };
+    var linechart = function (chartResult) {
+        debugger;
+        var splinechart = [];
+        splinechart = chartResult[1];
+        var splineInactiveEmployee = [];
+        var splineInActiveEmployeeYear = [];
+        var splineTooltip = [];
+        for (var i = 0 ; i < splinechart.length ; i++) {
+            splineInactiveEmployee.push(splinechart[i]['Count']);
+        }
+        for (var i = 0 ; i < splinechart.length ; i++) {
+            splineInActiveEmployeeYear.push(splinechart[i]['Year']);
+        }
+        for (var i = 0 ; i < splinechart.length ; i++) {
+            splineTooltip.push(splinechart[i]['Year'] + ' : '+ splinechart[i]['Count']);
+        }
+        if (splinechart.length > 0) {
+            var line = new RGraph.Line({
+                id: 'cvs1',
+                data: splineInactiveEmployee,
+                options: {
+                    labels: splineInActiveEmployeeYear,
+                    tooltips: splineTooltip,
+                    textAccessible: true
+                }
+            }).draw()
+        }
+    };
+</script>

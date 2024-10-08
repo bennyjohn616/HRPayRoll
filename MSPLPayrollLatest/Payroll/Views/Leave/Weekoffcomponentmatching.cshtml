@@ -1,0 +1,89 @@
+﻿<h2>Weekoff Component Matching</h2>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active clearfix" id="employees">
+        <div class="row">
+            <div class="col-md-5 text-left">
+                <label class="control-label col-md-5">
+                    Leave Category
+                </label>
+                <div class="col-md-7">
+                    <select class="form-control" id="ddLeavecategory" autofocus"></select>
+                </div>             
+            </div>
+            <div class="col-md-6">
+                <label class="control-label col-md-4">
+                    Leave Component
+                </label>
+                <div class="col-md-6">                    
+                    <select class="form-control" id="ddLeavecomponent" autofocus>
+                        <option value="0">--Select--</option>
+                        <option value="branch">Branch</option>
+                        <option value="designation">Designation</option>
+                        <option value="costcentre">Cost Centre</option>
+                        <option value="esilocation">ESI Location</option>
+                        <option value="grade">Grade</option>
+                        <option value="esidispensary">ESI Dispensary</option>
+                        <option value="department">Department</option>
+                        <option value="location">Location</option>
+                        <option value="ptlocation">PT Location</option>
+                        <option value="bank">Bank</option>                        
+                    </select>
+                </div>&nbsp;
+                <input type="submit" id="btnSavecmpntmtchng" value="save" class="btn custom-button marginbt7 ">   
+            </div>
+                          
+        </div>
+
+    </div>
+</div>
+
+
+<div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane active clearfix">
+        <div class="row">
+
+            <div class="col-md-12 nodisp text-right">
+                <input type="text" id="txtSearch" class="" placeholder="Search...">
+            </div>
+
+            <div class="col-md-12">
+                <table id="tblcmpntmtchng" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                    <thead>
+                        <tr>
+                            <th class="nodisp">
+                            </th>
+                            <th>
+                                Leave Category
+                            </th>
+                            <th>
+                                Leave Component
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            @*<td></td>*@
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var table = $('#tblcmpntmtchng').DataTable();
+</script>
+<script src="~/Js/Leave/weekoffcmpntmatching.js"></script>
+<script type="text/javascript">    
+    $wkoffcmpntmatching.LoadData();
+</script>

@@ -1,0 +1,49 @@
+﻿<meta http-equiv=“Pragma” content=”no-cache, no-store, must-revalidate”>
+<meta http-equiv=“Expires” content=”0″>
+<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<html>
+<body>
+    <form id="frmRentPai" data-toggle="validator" role="form" action="">
+        <div class="modal-dialog" style="width: 76% ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button id="closepreview" type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="H4">
+                        Worksheet preview
+                    </h4>
+
+                </div>
+                <div class="modal-body">
+                    <!--<embed id="preView" src="" frameborder="0" width="100%" height=460px">
+    <embed id="preViewSrc" class="hidden" src="" frameborder="0" width="100%" height="400px">
+                        -->
+                    <iframe id="preView" src="" type="application/pdf"></iframe>
+                    
+                    <!--
+    <embed id="preViewSrc" class="hidden" src="" frameborder="0" width="100%" height="400px" type="application/pdf">
+        -->
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
+<script>
+    debugger;
+
+</script>
+<style>
+    iframe {
+        border: 6px solid blue;
+        margin:0;
+        padding:0;
+        width: 100%;
+        height: 500px;
+        display: block;
+    }
+
+</style>

@@ -1,0 +1,166 @@
+﻿@model Payroll.Controllers.UserMenu
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+          type="text/css" />
+    <script src="~/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/assets/plugins/ModalPopups.js"></script>
+    @* <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>*@
+    <script type="text/javascript" src="~/Js/Login.js"></script>
+    <script type="text/javascript" language="javascript">
+        $rootUrl = "@Url.Content("~/")";
+        //alert($rootUrl);
+    </script>
+</head>
+<body class="body-border" style="background: linear-gradient(rgb(173, 232, 189), #6d986e);">
+    <div class="col-md-12">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="logo-back"></li>
+        </ul>
+    </div>
+    <div class="container login-box" style="background-color:white;margin-top:25px; box-shadow: 3px 3px 5px 6px #0b2a0f; margin-top:100px;">
+
+
+      
+        <div class="form-horizontal">
+            <form id="frmUserReg">
+                <span style="font-size:30px;color:darkgreen" class="glyphicon glyphicon-hand-right"></span>  <label style="font-size:30px; padding-left: 10px;margin-bottom: 30px">  User Registration Page </label> 
+
+                <div class="col-md-12">
+                    <div class="col-md-7" style="padding-left: 0px;">
+                        @Html.HiddenFor(model => model.empproperty.Id, new { id = "hdnid", name = "hdnname" })
+                        @Html.HiddenFor(model => model.empproperty.CompanyId, new { id = "hdnCompId", name = "hdnCompName" })
+
+                        <div class="form-group">
+
+                            <label class="control-label col-md-3">
+                                EmployeeName:
+                            </label>
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(model => model.empproperty.FirstName, new { id = "fnameid", name = "fname", @readonly = "readonly", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">
+                                EmployeeCode:
+                            </label>
+                            <div class="col-md-9">
+
+                                @Html.TextBoxFor(model => model.empproperty.EmployeeCode, new { id = "empcodeid", name = "empcodename", @readonly = "readonly", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5" style="padding-left: 0px;">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                DesignationName:
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(model => model.empproperty.DesignationName, new { id = "designid", name = "designname", @readonly = "readonly", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                BranchName:
+                            </label>
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(model => model.empproperty.BranchName, new { id = "branchid", name = "branchname", @readonly = "readonly", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-top:10px;">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">
+                            User Name: <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-5">
+                            @Html.TextBoxFor(model => model.empproperty.Email, new { id = "txtUsername", name = "Username", @readonly = "readonly", @class = "form-control" })
+                            @*<input type="text" id="txtUsername" class="form-control Reqrd" placeholder="Enter the User Name"
+                                maxlength="25" required />*@
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">
+                            Password <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-5">
+                            <input type="password" id="txtPassword" class="form-control Reqrd" placeholder="Enter the Password"
+                                   maxlength="25" required />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">
+                            Confirm Password <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-5">
+                            <input type="password" id="txtCNFPassword" class="form-control Reqrd" placeholder="Enter the Password to Confirm"
+                                   maxlength="25" required />
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">
+                            Phone <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-5">
+                            <input type="text" id="txtPhone" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="10" class="form-control Reqrd" placeholder="Enter the Phone No"
+                                   required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">
+                            Profile Image
+                        </label>
+                        <div class="col-md-5">
+                            <input type="file" id="txtprofile" name="File1" accept="image/*" class="form-control" placeholder="Select Profile Picture" onchange="$User.imageChange(event)" />
+                            @*<img id="imgUserProfileView" src="" class="img-circle img-inline" style="max-height:200px;max-width:200px;" />*@
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="form-group">
+                    <center>
+                        <button type="button" id="btnSave" class="btn custom-button">
+                            Register
+                        </button>
+                        <!--<button type="button" class="btn custom-button" data-dismiss="modal">
+                             Cancel
+                         </button> -->
+                    </center>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="~/Js/application.js" type="text/javascript"></script>
+    <script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+    <script src="~/Js/Login.js" type="text/javascript"></script>
+    <script src="~/Js/Admin/User.js" type="text/javascript"></script>
+    <script>
+        //$companyCom.loadCompany({ id: 'sltCompanyList' });
+        $login.formload();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>
+    Leave Opening Import
+</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <label class="control-label col-md-3">
+                            Leave Type
+                        </label>
+                        <div class="col-md-7">
+                            <select class="form-control" id="ddLeaveType" autofocus"></select>
+                        </div>
+                        <input type="button" id="btnAddempHide" class="nodisp marginbt7" data-target="#AddEmployee" aria-controls="new"
+                               role="tab" data-toggle="tab" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <label class="control-label col-md-3">
+                            Select File <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="file" id="fUploadLevOpeningsLevOpenings" class="form-control" placeholder="Select the file" required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6 text-right">
+                        <div class="col-md-2">
+                            <button id="btnTemplateLevOpen" class="btn custom-button"> Template</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button id="btnUploadLevOpenings" class="btn custom-button hide"> Upload</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" id="btnLeaveImport" class="btn custom-button hide">Import </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Js/Leave/leaveOpening.js"></script>
+<script src="~/Js/Emp/EmployeeDetails.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Leave/LeaveImport.js"></script>
+<script src="~/Js/Company/joiningDoc.js"></script>
+<script>
+    $Leaveimport.LoadData();
+</script>
+@section Scripts
+{
+    <script src="~/Js/Leave/leaveOpening.js"></script>
+    <script src="~/Js/Emp/EmployeeDetails.js"></script>
+    <script src="~/Js/Leave/LeaveImport.js"></script>
+    <script src="~/Js/Company/joiningDoc.js"></script>
+}

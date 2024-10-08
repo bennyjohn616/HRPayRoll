@@ -1,0 +1,315 @@
+﻿<form id="frmRentPaid" data-toggle="validator" role="form" action="">
+    <div class="modal-dialog"style="width: 60% ;height:85%">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Actual Rent Paid<span id="fYear">blue</span>
+                </h4>
+
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12">
+                    <div class="form-horizontal">
+                        <div class="form-group text-right">
+                            <div class="col-md-4">
+                                <label class="control-label text-right">
+                                    Name Of The Landlord :
+                                </label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" id="landLordName" class="form-control" maxlength="300" />
+                            </div>
+                        </div>
+                        <div class="form-group text-right">
+                            <div class="col-md-4">
+                                <label class="control-label text-right">
+                                    Address Of The Landlord :
+                                </label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" id="landLordAddress" class="form-control" maxlength="300" />
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-12 text-center">
+                                <label class="control-label ">
+                                    [InCase Of Multiple Landlords, Enter Seperated By Semi Colon (;)]
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Month Name:
+                            </label>
+                            <label class="control-label col-md-4">
+                                Metro Rent Paid:
+                            </label>
+
+                            <label class="control-label col-md-4">
+                                Non-metro Rent Paid:
+                            </label>
+                        </div>
+
+                        <div class="form-group months">
+                            <label class="control-label col-md-4">
+                                April
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="4" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="4" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                May
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="5" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="5" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                June
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="6" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="6" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                July
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="7" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="7" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                August
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="8" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="8" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                September
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="9" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="9" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                October
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="10" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="10" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                November
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="11" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="11" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                December
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="12" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="12" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                January
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="1" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="1" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                February
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="2" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="2" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                March
+                            </label>
+                            <div class="col-md-4">
+                                <input type="text" id="3" class="invent metro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" id="3" class="invent nonmetro form-control" placeholder="Enter the Value" maxlength="20" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <div class="col-md-6">
+                                <label class="control-label ">
+                                    Total:
+                                </label>
+                                <input type="text" id="totalRent" class="form-control" maxlength="20" disabled />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="control-label ">
+                                    Eligible Rent:
+                                </label>
+                                <input type="text" id="eligibleRent" class="form-control" maxlength="20" disabled />
+                            </div>
+                        </div>
+                        <div id="moreThanOneLakh" class="row">
+                            <div class="form-group text-right">
+                                <div class="col-md-7">
+                                    <label class="control-label ">
+                                        whether PAN of the Land Lord Available:
+                                    </label>
+
+                                </div>
+                                <div class="col-md-4 text-left">
+                                    <input type="radio" id="rd1" class="radioButton" name="pan" value="true">Yes
+
+                                    <input type="radio" id="rd2" class="radioButton" name="pan" value="false">No
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <div class="col-md-7">
+                                    <label class="control-label text-right" id="lblpan1">
+                                        If Yes PAN 1:
+                                    </label>
+
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" id="pan1" name="pannum" class="form-control" maxlength="20" placeholder="enter pan 1 number" onchange="$declaractionEntry.alreadyExistPan(this)" onblur=" $validator.fnValidatePAN(this)" />
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <div class="col-md-7">
+                                    <label class="control-label text-right" id="lblpan2">
+                                        If Yes PAN 2:
+                                    </label>
+
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" id="pan2" name="pannum" class="form-control" maxlength="20" placeholder="enter pan 2 number" onchange="$declaractionEntry.alreadyExistPan(this)" onblur=" $validator.fnValidatePAN(this)" />
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <div class="col-md-7">
+                                    <label class="control-label text-right" id="lblpan3">
+                                        If Yes PAN 3:
+                                    </label>
+
+                                </div>
+                                <div class="col-md-5">
+                                    <input type="text" id="pan3" name="pannum" class="form-control" maxlength="20" placeholder="enter pan 3 number" onchange="$declaractionEntry.alreadyExistPan(this)" onblur=" $validator.fnValidatePAN(this)" />
+                                </div>
+                            </div>
+
+                            <!-- For accepting aadhar number -->
+
+
+                            <div class="col-md-4 text-left nodisp">
+                                <input type="radio" id="rd3" class="radioButton nodisp" name="declaration" value="true">Yes
+
+                                <input type="radio" id="rd4" class="radioButton nodisp" name="declaration" value="false">No
+                            </div>
+
+
+                            <div id="noPan" class="form-group text-right nodisp">
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label" id="lblaadhar1">
+                                            AADHAR No.1:
+                                        </label>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="aadhar1" name="aadharnum" class="form-control font-style-big"  maxlength="12" placeholder="Aadhar number 1" onchange="$declaractionEntry.alreadyExistaadhar(this)" onkeypress="return $validator.IsNumeric(event, this.id)" onblur="$declaractionEntry.fnValidateAADHAR(this)" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label" id="lblaadhar2">
+                                            AADHAR No.2:
+                                        </label>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="aadhar2" name="aadharnum" class="form-control font-style-big" maxlength="12" placeholder="Aadhar number 2" onchange="$declaractionEntry.alreadyExistaadhar(this)" onkeypress="return $validator.IsNumeric(event, this.id)" onblur="$declaractionEntry.fnValidateAADHAR(this)" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label" id="lblaadhar3">
+                                            AADHAR No.3:
+                                        </label>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" id="aadhar3" name="aadharnum" class="form-control font-style-big" maxlength="12" placeholder="Aadhar number 3" onchange="$declaractionEntry.alreadyExistaadhar(this)" onkeypress="return $validator.IsNumeric(event, this.id)" onblur="$declaractionEntry.fnValidateAADHAR(this)" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" id="btnSave" class="btn custom-button" onclick="$declaractionEntry.submitRent()">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+       </div>
+</form>

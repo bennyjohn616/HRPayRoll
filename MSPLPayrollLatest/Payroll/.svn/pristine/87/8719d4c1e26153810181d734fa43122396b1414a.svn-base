@@ -1,0 +1,29 @@
+﻿<h3>Manager Eligiblity</h3>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="col-sm-12">
+            <label class="control-label col-sm-12">
+                Role
+            </label>
+            <div class="row">
+                <div class="form-horizontal">
+                    @Html.Partial("~/Views/Company/Role.cshtml")
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <input type="button" id="BtnSaveManagerEligiblity" value="Save" class="btn custom-button" onclick="$ManagerEligiblity.save()">
+        </div>
+    </div>
+</div>
+<script src="~/Js/Leave/ManagerEligiblity.js"></script>
+<script src="~/Js/DataWizard/RoleForm.js"></script>
+<script>
+    $ManagerEligiblity.loadinitilaize();
+   // $ManagerEligiblity.GetManagerEligiblity();  
+</script>
+@section scripts
+    {
+<script src="~/Js/Leave/ManagerEligiblity.js"></script>
+<script src="~/Js/DataWizard/RoleForm.js"></script>
+}

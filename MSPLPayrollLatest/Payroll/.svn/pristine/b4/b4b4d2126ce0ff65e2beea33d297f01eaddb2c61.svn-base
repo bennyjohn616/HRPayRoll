@@ -1,0 +1,379 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<form id="frmCompany">
+    <div class="form-horizontal" >
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Company Name
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtCompanyname" class="form-control" placeholder="Enter the Company Name"
+                       maxlength="30" autofocus required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Address Line 1
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtAddressline1" class="form-control" placeholder="Enter the Company Address"
+                       maxlength="100" data-error="Enter the Company Address" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Address Line 2
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtAdressline2" class="form-control" placeholder="Enter the Company Address"
+                       maxlength="100" data-error="Enter the Company Address" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                City
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtCity" class="form-control" placeholder="Enter the City"
+                       maxlength="20" onkeypress="return $validator.alphaonly(event, this.id)" data-error="Enter the City" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                State
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtState" class="form-control" placeholder="Enter the State"
+                       maxlength="20" onkeypress="return $validator.alphaonly(event, this.id)" data-error="Enter the State" />
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Country
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtCountry" class="form-control" placeholder="Enter the Country" onkeypress="return $validator.alphaonly(event, this.id)"
+                       maxlength="20" data-error="Enter the Country" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Pin Code
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtPinCode" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="6" class="form-control" placeholder="Enter the Pin Code"
+                       data-error="Enter the Pin Code" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                Phone
+            </label>
+            <div class="col-md-7">
+                <input type="text" id="txtPhone" onkeypress="return $validator.IsPhone(event, this.id)" oncopy=" return false" onpaste=" return false" maxlength="12" class="form-control" placeholder="Enter the Phone Number"
+                       data-error="Enter the Phone Number" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-4">
+                E-Mail
+            </label>
+            <div class="col-md-7">
+                <input type="email" id="txtEMail" oncopy="return false" onpaste="return false" class="form-control" placeholder="Enter the E-Mail Id" maxlength="100"
+                       data-error="Enter the E-Mail Id" required />
+            </div>
+        </div>
+    </div>
+    <h2 id="header" style="display: none;">
+        <strong>Employee's(Test)</strong>
+    </h2>
+    <div class="row m-b-1" style="display: none;">
+        <div class="col-xs-12">
+            <div class="card shadow">
+                <h4 class="card-header">Active Employee's by year </h4>
+                <div class="card-block">
+                    <canvas id="cvs2" width="1020" height="250">[No canvas support]</canvas>
+                </div>
+            </div>
+        </div>
+    </div> <!-- row -->
+
+    <div class="row m-b-1" style="display: none;">
+        <div class="col-lg-6">
+            <div class="card shadow">
+                <h4 class="card-header">Employee's</h4>
+                <div class="card-block">
+                    <canvas id="cvs" width="450" height="300">[No canvas support]</canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6" style="display: none;">
+            <div class="card shadow">
+                <h4 class="card-header">Inactive Employee's by year</h4>
+                <div class="card-block">
+                    <canvas id="cvs1" width="500" height="250">[No canvas support]</canvas>
+                </div>
+            </div>
+        </div>
+    </div> <!-- row -->
+</form>
+<script src="~/assets/libraries/RGraph.common.core.js"></script>
+<script src="~/assets/libraries/RGraph.bar.js"></script>
+<script src="~/assets/libraries/RGraph.common.dynamic.js"></script>
+<script src="~/assets/libraries/RGraph.common.tooltips.js"></script>
+<script src="~/assets/libraries/RGraph.pie.js"></script>
+<script src="~/assets/libraries/RGraph.line.js"></script>
+<script src="~/assets/libraries/RGraph.common.tooltips.js"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        $compView.loadInitial();
+    });
+    $compView = {
+        loadInitial: function () {
+
+            $compView.disableInput();
+            $compView.GetCompanyData();
+        },
+        disableInput: function () {
+
+            $('#frmCompany .form-control').each(function () {
+                $(this).prop('readonly', true);
+
+            });
+        },
+        GetCompanyData: function () {
+            
+            $.ajax({
+                url: $app.baseUrl + "Company/GetCompanyData",
+                data: JSON.stringify({ id: 0 }),
+                dataType: "json",
+                contentType: "application/json",
+                type: "POST",
+                success: function (jsonResult) {
+
+                    $app.clearSession(jsonResult);
+                    switch (jsonResult.Status) {
+                        case true:
+                            var p = jsonResult.result;
+                            //$compView.GetChartsData(p);
+                            $compView.RenderCompany(p);
+
+                            break;
+                        case false:
+                            $app.showAlert(jsonResult.Message, 4);
+                            //alert(jsonResult.Message);
+                            break;
+                    }
+                },
+                complete: function () {
+
+                }
+            });
+
+        },
+
+        GetChartsData: function (companydetails) {
+
+            $.ajax({
+                url: $app.baseUrl + "Company/GetChartsData",
+                data: JSON.stringify({ id: 0 }),
+                dataType: "json",
+                contentType: "application/json",
+                type: "POST",
+                success: function (jsonResult) {
+
+                    $app.clearSession(jsonResult);
+                    switch (jsonResult.Status) {
+                        case true:
+                            jQuery("label[for='myalue']").html(companydetails.CompanyName);
+                            var chartResult = jsonResult.result;
+                            $compView.RenderCompany(companydetails, chartResult);
+                            chart(chartResult);
+                            piechart(chartResult);
+                            linechart(chartResult);
+                            break;
+                        case false:
+                            $app.showAlert(jsonResult.Message, 4);
+                            //alert(jsonResult.Message);
+                            break;
+                    }
+                },
+                complete: function () {
+
+                }
+            });
+
+        },
+
+        RenderCompany: function (data, chartResult) {
+            var formData = document.forms["frmCompany"];
+            formData.elements["txtCompanyname"].value = data.CompanyName;
+            formData.elements["txtAddressline1"].value = data.AddressLine1;
+            formData.elements["txtAdressline2"].value = data.AddressLine2;
+            formData.elements["txtCity"].value = data.City;
+            formData.elements["txtState"].value = data.State;
+            formData.elements["txtCountry"].value = data.Country;
+            formData.elements["txtPinCode"].value = data.PinCode;
+            formData.elements["txtPhone"].value = data.Phone;
+            formData.elements["txtEMail"].value = data.EMail;
+            formData.elements["cutoffdate"].value = data.cutoffdate;
+            //if(data.Companylogo!=null || data.Companylogo !="")
+            //{
+            //    $('#C_Companylogo').attr('src', data.Companylogo.replace('~/', '')).width(120).height(45)
+            //}
+        }
+    };
+
+    var chart = function (chartResult) {
+        
+        var columnchart = [];
+        var ActiveEmployee = [];
+        var ActiveEmployeeYear = [];
+        var columnchartTooltip = [];
+        columnchart = chartResult[0];
+        for (var i = 0 ; i < columnchart.length ; i++) {
+            ActiveEmployee.push(columnchart[i]['Count']);
+        }
+        for (var i = 0 ; i < columnchart.length ; i++) {
+            ActiveEmployeeYear.push(columnchart[i]['Year']);
+        }
+        for (var i = 0 ; i < columnchart.length ; i++) {
+            columnchartTooltip.push(columnchart[i]['Year'] + ' : ' + columnchart[i]['Count']);
+        }
+        var colors = ['#0f0']
+        var bar = new RGraph.Bar({
+            id: 'cvs2',
+            data: ActiveEmployee,
+            options: {
+                labels: ActiveEmployeeYear,
+                hmargin: 25,
+                tooltips: columnchartTooltip,
+                tooltipsEvent: 'mousemove',
+                tooltipsHighlight: false,
+                shadow: false,
+                hmarginGrouped: 3,
+                shadowOffsetx: 2,
+                shadowOffsety: 2,
+                shadowBlur: 2,
+                colorsSequential: true,
+                textAccessible: true
+            }
+        })
+        .draw().on('tooltip', function (obj) {
+            var co = obj.context,
+                tooltip = RGraph.Registry.get('chart.tooltip'),
+                index = tooltip.__index__,
+                //shape = obj.angles[index],
+                color = colors[index]
+
+            RGraph.path2(co, 'b a % % % % % false a % % % % % true f %',
+                shape[2], shape[3], obj.radius, shape[0], shape[1],
+                shape[2], shape[3], obj.radius + 5, shape[1], shape[0],
+                color
+            );
+
+            RGraph.path2(co, 'lc butt lw 3 b a % % % % % false s white',
+                shape[2], shape[3], obj.radius, shape[0], shape[1]
+            );
+
+            // Set some CSS on the tooltip
+            tooltip.style.border = '3px ' + color + ' solid';
+            tooltip.style.padding = '3px';
+        });
+    };
+
+    // Create the Pie chart
+    var piechart = function (chartResult) {
+        
+        var piechart = [];
+        var MaleFemaleCount = [];
+        piechart = chartResult[2];
+        if (piechart[0]['GenderCount'] > 0 && piechart[1]['GenderCount'] > 0) {
+            var colors = ['#d3e8e4', '#0f0']
+            labels = ['Male', 'Female']
+        }
+        else if (piechart[0]['GenderCount'] > 0) {
+            var colors = ['#d3e8e4']
+            labels = ['Male']
+        }
+        else {
+            var colors = ['#0f0']
+            labels = ['Female']
+        }
+        for (var i = 0 ; i < piechart.length ; i++) {
+            MaleFemaleCount.push(piechart[i]['Gender'] + ' : ' + piechart[i]['GenderCount']);
+        }
+        var pie = new RGraph.Pie({
+            id: 'cvs',
+            data: [piechart[0]['GenderCount'], piechart[1]['GenderCount']],
+            options: {
+                labels: labels,
+                tooltips: MaleFemaleCount,
+                tooltipsEvent: 'mousemove',
+                tooltipsHighlight: false,
+                textColor: '#aaa',
+                strokestyle: 'rgba(192,192,192,0.3)',
+                exploded: [, 25],
+                textAccessible: true,
+                labelsSticksList: true,
+                labelsSticksColors: RGraph.arrayPad([], labels.length, 'gray'),
+                labelsSticksLinewidth: 1
+            }
+        }).draw().on('tooltip', function (obj) {
+            var co = obj.context,
+                tooltip = RGraph.Registry.get('chart.tooltip'),
+                index = tooltip.__index__,
+                shape = obj.angles[index],
+                color = colors[index]
+
+            RGraph.path2(co, 'b a % % % % % false a % % % % % true f %',
+                shape[2], shape[3], obj.radius, shape[0], shape[1],
+                shape[2], shape[3], obj.radius + 5, shape[1], shape[0],
+                color
+            );
+
+            RGraph.path2(co, 'lc butt lw 3 b a % % % % % false s white',
+                shape[2], shape[3], obj.radius, shape[0], shape[1]
+            );
+
+            // Set some CSS on the tooltip
+            tooltip.style.border = '3px ' + color + ' solid';
+            tooltip.style.padding = '3px';
+        });
+    };
+    var linechart = function (chartResult) {
+        
+        var splinechart = [];
+        splinechart = chartResult[1];
+        var splineInactiveEmployee = [];
+        var splineInActiveEmployeeYear = [];
+        var splineTooltip = [];
+        for (var i = 0 ; i < splinechart.length ; i++) {
+            splineInactiveEmployee.push(splinechart[i]['Count']);
+        }
+        for (var i = 0 ; i < splinechart.length ; i++) {
+            splineInActiveEmployeeYear.push(splinechart[i]['Year']);
+        }
+        for (var i = 0 ; i < splinechart.length ; i++) {
+            splineTooltip.push(splinechart[i]['Year'] + ' : '+ splinechart[i]['Count']);
+        }
+        if (splinechart.length > 0) {
+            var line = new RGraph.Line({
+                id: 'cvs1',
+                data: splineInactiveEmployee,
+                options: {
+                    labels: splineInActiveEmployeeYear,
+                    tooltips: splineTooltip,
+                    textAccessible: true
+                }
+            }).draw()
+        }
+    };
+</script>

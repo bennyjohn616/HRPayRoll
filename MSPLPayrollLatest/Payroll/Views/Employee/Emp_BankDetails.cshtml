@@ -1,0 +1,435 @@
+﻿<form id="frmEmpBank">
+   
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-md-6">
+                <h4>Personal Information</h4>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="submit" id="btnSend" class="btn custom-button pull-right" onclick="$empbank.save();">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-horizontal">
+            <div class="col-md-6">
+
+
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPersonalMobileNo">
+
+                        Personal Mobile No @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPersonalMobileNo" class="form-control" onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter the Personal Mobile No"
+                               maxlength="10" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtOfficeMobileNo">
+
+                        Office No @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtOfficeMobileNo" class="form-control" onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter the Office No"
+                               maxlength="10" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtExtensionNo">
+
+                        Extension No@*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">  <!-- Modified By keerthika on 13/04/2017-->
+                        <input type="text" id="txtExtensionNo" class="form-control" onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter the Extension No"
+                               maxlength="10" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPersonalEmail">
+
+                        Personal E-Mail @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="email" id="txtPersonalEmail" class="form-control"  placeholder="Enter the  Personal EMail" />
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtOfficeEmail">
+
+                        Official E-Mail @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="email" id="txtOfficeEmail" class="form-control"  placeholder="Enter the  Office EMail" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lblchkIsSeniorCitizen">
+
+                        Is Senior Citizen @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="checkbox" id="chkIsSeniorCitizen" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lblchkIsDisable">
+
+                        Is Disable @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="checkbox" id="chkIsDisable" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lblchkPrintCheque">
+
+                        Is Print Cheque @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="checkbox" id="chkPrintCheque"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPaySlipRemarks">
+
+                        Payslip Remarks@*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPaySlipRemarks" class="form-control" placeholder="Enter the  Paylip Remarks"
+                               maxlength="20" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lblddBloodGroup">
+
+                        Blood Group @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <select id="ddBloodGroup" class="form-control">
+                            <option value="0" selected="selected">--Select-- </option>
+                            <option value="1">A+ </option>
+                            <option value="2">A- </option>
+                            <option value="3">B+ </option>
+                            <option value="4">B- </option>
+                            <option value="5">AB+ </option>
+                            <option value="6">AB- </option>
+                            <option value="7">O+ </option>
+                            <option value="8">O- </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Pension Eligibility
+                    </label>
+                    <div class="col-md-7">
+                        <input type="radio" name="txtPensionElig" id="rbtPensionEligY" value="1" checked />Yes
+                        <input type="radio" name="txtPensionElig" id="rbtPensionEligN" value="2" />No
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtFatherName">
+
+                        Father's Name @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtFatherName" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the Father Name"
+                               maxlength="80" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtMaritalStatus">
+                        Marital Status @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        @*<input type="text" id="txtMaritalStatus" maxlength="20" class="form-control" placeholder="Enter Marital Status" />*@
+                        <select id="txtMaritalStatus" class="form-control">
+                            <option value="0">--Select--</option>
+                            <option value="Married">Married </option>
+                            <option value="Single">Single </option>
+                            <option value="Divorced">Divorced </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtSpouseName">
+
+                        Spouse Name @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtSpouseName" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the Spouse Name"
+                               maxlength="80" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtNoOfChildren">
+                        No Of Children@*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtNoOfChildren" onkeypress="return $validator.IsNumeric(event, this.id)" class="form-control" placeholder="Enter the Children"
+                               maxlength="1" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPFNumber">
+                        PF Number @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPFNumber" maxlength="30" class="form-control"  placeholder="Enter the PF Number" />
+                        @*onkeypress="return $validator.IsNumeric(event, this.id)"*@
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPFCofirmationDate">
+                        PF Confirmation Date @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPFCofirmationDate" class="form-control datepicker" placeholder="Enter the PF Confirmaton Date"
+                               readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPFUAN">
+                        PF UAN @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPFUAN" minlength="12" maxlength="12" onblur="fnChecklength(this,12)"
+                               onpaste="return false" class="form-control" onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter the PF UAN" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPANNumber">
+                        PAN @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPANNumber" class="form-control" placeholder="Enter the PAN "
+                               maxlength="10" onblur="$validator.fnValidatePAN(this)" />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtESINumber">
+                        ESI Number @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtESINumber" class="form-control" onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter the ESI Number"
+                               maxlength="10" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtAdharNumber">
+                        AADHAR Number @*<label style="color:red;font-size: 13px">*</label>*@
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtAdharNumber" minlength="12" @*oncopy="return false"*@ onpaste="return false" onblur=" fnChecklength(this, 12)" onkeypress="    return $validator.IsNumeric(event, this.id)" class="form-control" placeholder="Enter the Aadhar Number"
+                               maxlength="12" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="text-align:center"> Bank Detail </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4" style="text-align:left" id="lblddBank">Bank</label>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <select id="ddBank" class="form-control" required></select>
+                                    <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('bank','Bank'); $comPopup.AddInitialize();">+</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" style="text-align:left" id="lbltxtIFSC">
+                                IFSC @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtIFSC" class="form-control" onkeypress="return $validator.alphanumericonly(event, this.id)" placeholder="Enter the IFSC"
+                                       onblur="fnChecklength(this,11)" minlength="11" maxlength="11"  />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" style="text-align:left" id="lbltxtAcctNo">
+                                Account No @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtAcctNo" onkeypress="return $validator.alphanumericonly(event, this.id)" oncopy="return false" onpaste="return false" class="form-control" placeholder="Enter the Account No"
+                                       maxlength="20" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4" id="lbltxtAddress">
+                                Branch Name 
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtBranchName"  onkeypress="return $validator.alphaonly(event, this.id)"class="form-control" placeholder="Enter the Bank Branch" />
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" id="lbltxtAddress">
+                                Address @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtAddress" class="form-control" placeholder="Enter the Address"
+                                        />
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4" id="lbltxtCity">
+                                City @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtCity" class="form-control" placeholder="Enter the City"
+                                       maxlength="20"  />
+                            </div>
+                        </div>
+                        <div class="form-group hide">
+                            <label class="control-label col-md-4" id="lbltxtState">
+                                State @*<label style="color:red;font-size: 13px">*</label>*@
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtState" class="form-control" placeholder="Enter the State"
+                                       maxlength="20"  />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="row">
+            <div class="form-horizontal">
+                <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-md-6" style="text-align:left">
+                                Bank Detail
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Bank <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <select id="ddBank" class="form-control" required></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                IFSC <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtIFSC" class="form-control" onkeypress="return $validator.alphanumericonly(event, this.id)" placeholder="Enter the IFSC"
+                                       maxlength="11" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Account No <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtAcctNo" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" class="form-control" placeholder="Enter the Account No"
+                                       maxlength="20" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                BranchName <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtBranchName" class="form-control" placeholder="Enter the Branch Name"
+                                       maxlength="20" required />
+                            </div>
+                        </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Address <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtAddress" class="form-control" placeholder="Enter the Address"
+                                   required />
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            City <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtCity" class="form-control" placeholder="Enter the City"
+                                   maxlength="20" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            State <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtState" class="form-control" placeholder="Enter the State"
+                                   maxlength="20" required />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>*@
+
+
+
+   
+</form>
+
+<script src="~/Js/Emp/bankDetails.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Emp/bankDetails.js" type="text/javascript"></script>
+}
+<script>
+    $("#txtOfficeEmail").change(function () {
+        var temp=$("#txtOfficeEmail").val()  
+        if(temp==null){
+           
+        }
+        else {
+            $validator.checkEmail('txtOfficeEmail')
+        }
+    });
+    $("#txtPersonalEmail").change(function () {
+        var temp = $("#txtPersonalEmail").val()
+        if (temp == null) {
+
+        }
+        else {
+            $validator.checkEmail('txtPersonalEmail')
+        }
+    });
+</script>
+
+

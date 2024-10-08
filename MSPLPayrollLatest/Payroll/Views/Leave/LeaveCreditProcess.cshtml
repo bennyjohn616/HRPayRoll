@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+}
+
+
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+<script src="~/Js/Leave/leaveOpening.js" type="text/javascript"></script>
+<script src="~/Js/Leave/leaveCreditsettings.js"></script>
+<h2>Leave Credit Process</h2>
+<div class="row">
+    <form id="leaveCreditProcess" data-toggle="validator" role="form" action="" >
+        <div class="col-md-8">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Category <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-6">
+                        <select id="sltRCategorylist" class="form-control" autofocus></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Leave Type <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-6">
+                        <select class="form-control" id="ddLeaveTypeCP" autofocus"></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                      Last  Process Date
+                    </label>
+                    <div class="col-md-6">
+                        <input type="text" id="txtLastProcessDate" class="form-control" placeholder="Last Process Date" size="10" readonly="readonly"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Next  Process Date
+                    </label>
+                    <div class="col-md-6">
+                        <input type="text" id="NextProcessDate" class="form-control" placeholder="Next Process Date" size="10" readonly="readonly" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Process Date <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-6">
+                        <input type="text" id="txtProcessDate" class="datepicker form-control Reqrd" placeholder="Process Date" size="10"
+                               readonly="readonly" required /><span>(can't select future date)</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnProcess" class="btn custom-button">
+                        Process
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    $LeaveCreditsettings.loadCategory({ id: 'sltRCategorylist' });
+   
+    $('.datepicker').datepicker({
+        calendarWeeks: true,
+        changeYear: true,
+        changeMonth: true,
+        autoclose: true,
+        todayHighlight: true,
+        maxDate: 0 ,
+        dateFormat: 'dd/M/yy',
+        yearRange: "-120:+2",
+        toggleActive: true
+    });
+    $("#sltRCategorylist").change(function () {
+        debugger;
+        if ($('#sltRCategorylist').val() == "00000000-0000-0000-0000-000000000000") {
+            //$('#ddLeaveTypeCP').val('00000000-0000-0000-0000-000000000000');
+            document.getElementById('ddLeaveTypeCP').innerHTML = "";
+            $('#txtLastProcessDate').val('');
+            $('#NextProcessDate').val('');
+        }
+        else {
+            $LeaveCreditsettings.loadLeaveType({ id: 'ddLeaveTypeCP' });
+        }
+
+
+    });
+    $("#ddLeaveTypeCP").change(function () {
+        debugger;
+        if ($('#ddLeaveTypeCP').val() == "00000000-0000-0000-0000-000000000000") {
+            $('#txtLastProcessDate').val('');
+            $('#NextProcessDate').val('');
+        }
+        else {
+            $LeaveCreditsettings.loadCreditprocessDates($('#sltRCategorylist').val(), $('#ddLeaveTypeCP').val());
+        }
+
+
+    });
+</script>
+
+
+
+
+@section Scripts{
+    <script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+    <script src="~/Js/Leave/leaveOpening.js" type="text/javascript"></script>
+<script src="~/Js/Leave/leaveCreditsettings.js"></script>
+
+}
+

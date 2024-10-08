@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="control-label col-md-2">
+               Arrear View
+            </label>
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <div id="dvPayrollprocess">
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12">
+                 
+                    <div class="col-md-4" id="dvCat">
+
+                        <label class="control-label col-md-4" id="lblPayrollprocess">
+                            Select Category
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltCategory" class="form-control" autofocus></select>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-6 nodisp" id="periodDisplay" >
+
+                        <label class="control-label col-md-4">
+                            Arrear Calculation For The Period
+                        </label>
+                        <div class="col-md-6 ">
+                            <select id="Period" class="form-control">
+                                
+                            </select>
+
+                        </div>
+                    </div>
+                   
+
+
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="form-group">
+                            <div class="pull-right">
+                               
+                                <input type="button" id="preView" value="Preview" class="btn custom-button ">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <div id="tabletds" class="table-responsive col-md-12">
+           
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<script src="~/Js/Trans/ArrearView.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script>
+    $companyCom.loadCategory({ id: 'sltCategory' });
+    $companyCom.loadYear({ id: "sltYear" });
+    function fnExcelReport() {
+        debugger;
+        var tab_text = "<table border='2px'><tr>";
+        var textRange; var j = 0;
+        tab = document.getElementById('tblTdsReport'); // id of table
+
+        for (j = 0 ; j < tab.rows.length ; j++) {
+            tab_text = tab_text + tab.rows[j].innerHTML + "</tr>";
+            //tab_text=tab_text+"</tr>";
+        }
+
+        tab_text = tab_text + "</table>";
+        tab_text = tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+        tab_text = tab_text.replace(/<img[^>]*>/gi, ""); // remove if u want images in your table
+        tab_text = tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+        {
+            txtArea1.document.open("txt/html", "replace");
+            txtArea1.document.write(tab_text);
+            txtArea1.document.close();
+            txtArea1.focus();
+            sa = txtArea1.document.execCommand("SaveAs", true, "Say Thanks to Sumit.xls");
+        }
+        else                 //other browser not tested on IE 11
+            sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));
+
+        return (sa);
+    }
+</script>
+
+
+

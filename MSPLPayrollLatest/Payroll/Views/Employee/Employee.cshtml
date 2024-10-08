@@ -1,0 +1,574 @@
+﻿<!-- Modal -->
+<div class="form-horizontal">
+
+    <ul class="nav nav-tabs" id="empNavtabs">
+        @*tabs-left*@
+        <li class="active">
+            <a href="#employee" data-toggle="tab" class="empTab" id="empDetails">
+                Employee
+            </a>
+        </li>
+        <li><a href="#empAddres" data-toggle="tab" class="empTab" id="emp_Address">Address</a></li>
+        <li><a href="#empFamily" data-toggle="tab" class="empTab" id="emp_family">Family</a></li>
+        <li><a href="#empAcademic" data-toggle="tab" class="empTab" id="emp_academic">Academic</a></li>
+        <li><a href="#empEmployeement" data-toggle="tab" class="empTab" id="emp_employeement">Employment</a></li>
+        <li><a href="#empTraining" data-toggle="tab" class="empTab" id="emp_Training">Training</a></li>
+        <li><a href="#empNominee" data-toggle="tab" class="empTab" id="emp_Nominee">Nominee</a></li>
+        <li><a href="#empBenefitComponent" data-toggle="tab" class="empTab" id="emp_Benefit">Benefit Component</a></li>
+        <li>
+            <a href="#empEmergencyContact" data-toggle="tab" class="empTab" id="emp_EmergencyCon">Emergency Contact</a>
+        </li>
+        <li>
+            <a href="#empLanguageKnown" data-toggle="tab" class="empTab" id="emp_Language">
+                Language Known
+            </a>
+        </li>
+        <li>
+            <a href="#empHRcomponent" data-toggle="tab" class="empTab" id="emp_HRcomponent">
+                HR Component
+            </a>
+        </li>
+        <li>
+            <a href="#empjoiningdocument" data-toggle="tab" class="empTab" id="emp_joiningdocument">
+                Joining Document
+            </a>
+        </li>
+        <li>
+            <a href="#empContractDetails" data-toggle="tab" class="empTab" id="emp_ContractDetails">Contract Details</a>
+        </li>
+
+        <li>
+            <a href="#empBankDetails" data-toggle="tab" class="empTab" id="emp_bankdetails">
+                Personal Details
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="tabcontent">
+        <div id="employee" class="tab-pane fade in active">
+            <div class="row">
+                <form id="frmEmployeeSave">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="hidden" id="empid" />
+                                <label class="control-label col-md-4">
+                                    Employee Code <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtEmpCode" class="form-control" placeholder="Enter the  Code"
+                                           autofocus required />
+                                    <input type="hidden" id="Rollid" value="@Session["UserRole"]" disabled />
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtFirstName">
+                                    First Name
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtFirstName" class="form-control Reqrd" placeholder="Enter the First Name"
+                                           maxlength="40" onkeypress="return $validator.alphaonly(event, this.id)" autofocus required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtLastName">
+                                    Last Name
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtLastName" class="form-control" placeholder="Enter the Last Name"
+                                           onkeypress="return $validator.alphaonly(event, this.id)" maxlength="40" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddCategory">
+                                    Category
+                                </label>
+                                <div class="col-md-7">
+                                    <select id="ddCategory" class="form-control Reqrd" onchange="$employee.getAppSetting('Employee Code')" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddDesignation">
+                                    Designation
+                                </label>
+                                <div class="col-sm-7">
+                                    <div class="input-group">
+                                        <select id="ddDesignation" class="form-control "></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('designation', 'Designation'); $comPopup.AddInitialize(); ">+</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblempGender">
+                                    Gender
+                                </label>
+                                <div class="col-md-7">
+                                    <select id="empGender" class="form-control Reqrd" required>
+                                        <option value="0">--Select--</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddDepartment">
+                                    Department
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddDepartment" class="form-control"></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="$comPopup.AddInitialize(); javascript: LoadFields('department', 'Department'); ">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddBranch">
+                                    Branch
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddBranch" class="form-control"></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('branch', 'Branch'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddLocation">
+                                    Location
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddLocation" class="form-control"></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('location', 'Location'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddPTLocation">
+                                    PT Location
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddPTLocation" class="form-control Reqrd" required></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('ptlocation', 'PT Location'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddESILocation">
+                                    ESI Location
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddESILocation" class="form-control Reqrd"></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('esiLocation', 'ESI Location'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddESIDispensary">
+                                    ESI Dispensary
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddESIDispensary" class="form-control "></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('esiDespensary', 'ESI Dispensary'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddGrade">
+                                    Grade
+                                </label>
+
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddGrade" class="form-control"></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('grade', 'Grade'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lblddCostCentre">
+                                    Cost Centre
+                                </label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <select id="ddCostCentre" class="form-control"></select>
+                                        <span class="input-group-addon" data-toggle="modal" data-target="#AddPopup" title="Add New" onclick="javascript: LoadFields('costCentre', 'Cost Centre'); $comPopup.AddInitialize();">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtEmail">
+                                    E-mail
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="email" id="txtEmail" class="form-control" placeholder="Enter the Email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Password Mail sent <label style="color:red;font-size: 13px"></label>
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="checkbox" id="chkIsMailsend" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group" action="myform.cgi">
+                                <label class="control-label col-md-4">
+                                    Employee Image
+                                </label>
+                                <div class="col-md-5 nodisp">
+                                    <input type="file" name="fileupload" accept="image/x-png,image/gif,image/jpeg" value="fileupload" id="fileupload" onchange="readURL(event);">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="button" id="btnEmpImgUpl" accept="image/x-png,image/gif,image/jpeg" class="btn custom-button" onclick="triggerEmpImg()" value="Upload">
+                                </div>
+                                <div class="col-md-3">
+                                    <label id="lblEmpImgName" for="myEmpImgName" style="cursor:pointer">
+
+                                    </label>
+                                </div>
+                                <div class="col-md-1">
+                                    <img id="EMPimg" src="~/assets/images/profile.png" alt="user-image" style="width:60px;height:60px" class="img-circle img-inline">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtPhone">
+                                    Phone
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtPhone" oncopy="return false" onpaste="return $validator.pastePhoneNum(this);" onkeypress="return $validator.IsPhone(event, this.id)" maxlength="12" class="form-control" placeholder="Enter the Phone" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtDOB">
+                                    Date of Birth
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtDOB" class="form-control datepickerDOB" placeholder="Enter the Date of Birth"
+                                           readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtAge">
+                                    Age
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtAge" class="form-control " placeholder="Enter the Age"
+                                           readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtDOJ">
+                                    Date of Joining
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtDOJ" class="form-control datepicker Reqrd" placeholder="Enter the Date of Joining"
+                                           readonly required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtDOW">
+                                    Date of Wedding
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtDOW" class="form-control datepicker" placeholder="Enter the Date of Wedding"
+                                           readonly data-error="Enter the Date of Wedding" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtConfirmationPeriod">
+                                    Confirmation Period
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtConfirmationPeriod" onpaste="return $validator.pasteNum(this);" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" maxlength="2" class="form-control" placeholder="Enter the Confirmation Period"
+                                           data-error="Enter the Confirmation Period" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtConfirmationDate">
+                                    Confirmation Date
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtConfirmationDate" class="form-control datepicker" readonly placeholder="Enter the Confirmation Date"
+                                           data-error="Enter the Confirmation Date" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtSeparationDate">
+                                    Separation Date
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtSeparationDate" class="form-control datepicker" readonly placeholder="Enter the Separation Date"
+                                           data-error="Enter the Separation Date" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtRetirementYears">
+                                    Retirement Years
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtRetirementYears" onpaste="return $validator.pasteNum(this);" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" maxlength="2" class="form-control" placeholder="Enter the Retirement Years"
+                                           data-error="Enter the Retirement Years" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" id="lbltxtRetirementDate">
+                                    Retirement Date
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="text" id="txtRetirementDate" class="form-control datepicker" readonly placeholder="Enter the Retirement Date"
+                                           data-error="Enter the Retirement Date" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Metro
+                                </label>@*check box*@
+                                <div class="col-md-7">
+                                    <input type="radio" name="txtIsMetro" id="rbtnIsMetroYes" value="1" />Yes
+                                    <input type="radio" name="txtIsMetro" id="rbtnIsMetroNo" value="2" />No
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Stop Payment
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="radio" name="txtStopPayment" id="rbtnStopPaymentYes" value="1" />Yes
+                                    <input type="radio" name="txtStopPayment" id="rbtnStopPaymentNo" value="2" />No
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Payroll Process
+                                </label>
+                                <div class="col-md-7">
+                                    <input type="radio" name="txtPayrollProcess" id="rbtnPayrollProcessYes" value="1" />Yes
+                                    <input type="radio" name="txtPayrollProcess" id="rbtnPayrollProcessNo" value="2" />No
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Status
+                                </label>
+                                <div class="col-md-7">
+                                    <select id="ddStatus" class="form-control" disabled>
+                                        <option value="1" selected="selected">Active </option>
+                                        <option value="0">Inactive </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <button type="submit" id="btnSend" class="btn custom-button">
+                                Save
+                            </button>
+                            <button type="button" class="btn custom-button nodisp" data-dismiss="modal">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="empAddres" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_Address.cshtml")
+        </div>
+        <div id="empFamily" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_FamilyList.cshtml")
+        </div>
+        <div id="empAcademic" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_AcademicList.cshtml")
+        </div>
+        <div id="empEmployeement" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/EmployeementList.cshtml")
+        </div>
+        <div id="empTraining" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_TrainingList.cshtml")
+        </div>
+        <div id="empNominee" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_NomineeList.cshtml")
+        </div>
+        <div id="empBenefitComponent" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_BenefitComponentList.cshtml")
+        </div>
+        <div id="empEmergencyContact" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_EmergencyContactList.cshtml")
+        </div>
+        <div id="empBankDetails" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_BankDetails.cshtml")
+        </div>
+        <div id="empLanguageKnown" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_LanguageKnownList.cshtml")
+        </div>
+        <div id="empjoiningdocument" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_JoiningDocumentList.cshtml")
+        </div>
+        <div id="empContractDetails" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/EmployeeContractDetails.cshtml")
+        </div>
+        <div id="empHRcomponent" class="tab-pane fade">
+            @Html.Partial("~/Views/Employee/Emp_HRComponentList.cshtml")
+        </div>
+        <div id="empOthers" class="tab-pane fade">
+
+        </div>
+
+    </div>
+    <div id="AddPopup" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/Company/Popup.cshtml")
+    </div>
+</div>
+<script src="~/Js/Company/popup.js" type="text/javascript"></script>
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+<script src="~/Js/application.js" type="text/javascript"> </script>
+
+
+
+<script>
+    $app.secureFormRightsView();
+    $(document).ready(function () {
+        debugger;
+        $.ajax({
+            url: $app.baseUrl + "Employee/GetFormData",
+            data: JSON.stringify({ type: "Control" }),
+            dataType: "json",
+            type: "POST",
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (jsonResult) {
+                debugger;
+                console.log(jsonResult.result);
+                switch (jsonResult.Status) {
+                    case true:
+                        var data = jsonResult.result;
+                        $.each(data, function (da, t) {
+                            debugger;
+                            $('#' + t.CommandName).prop("required", true);
+                            $('#lbl' + t.CommandName).addClass('mandatoryrequired');
+                        });
+                        debugger;
+                        break;
+                    case false:
+                        $app.hideProgressModel();
+                        $app.showAlert(jsonResult.message[0], "warning");
+                        break;
+                }
+
+            }
+        });
+        });
+ 
+    function fnValidatePAN(Obj) {
+        if (Obj == null) Obj = window.event.srcElement;
+        if (Obj.value != "") {
+            ObjVal = Obj.value;
+            var panPat = /^([a-zA-Z]{5})(\d{4})([a-zA-Z]{1})$/;
+            var code = /([C,P,H,F,A,T,B,L,J,G])/;
+            var code_chk = ObjVal.substring(3, 4);
+            if (ObjVal.search(panPat) == -1) {
+                alert("Invalid Pan No");
+                Obj.focus();
+                return false;
+            }
+            if (code.test(code_chk) == false) {
+                $app.showAlert("Invaild PAN Card No.", 4);
+                return false;
+            }
+        }
+    }
+    function fnChecklength(obj, min) {
+        if (obj.value != "") {
+            txt = obj.value.length;
+            if (txt == min) {
+                return true
+            } else {
+                $app.showAlert("Input not Valid, Please enter exact " + min + " Digits", 4);
+                //alert("Input not Valid");
+                return false
+            }
+        }
+    }
+    function triggerEmpImg() {
+
+        $("#fileupload").click();
+
+    }
+    function readURL(input) {
+        debugger;
+        var files = input.target.files;
+        if (files.length > 0) {
+            var ext = files[0].name.split('.').pop().toLowerCase();
+            if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+                $app.showAlert('invalid Image Format!', 4);
+                return false;
+            }
+            var file = files[0];
+            fileName = file.name;
+            size = file.size;
+            type = file.type;
+            if (window.FormData !== undefined) {
+                var data = new FormData();
+                for (var x = 0; x < files.length; x++) {
+                    data.append(files[x].name, files[x]);
+                }
+                console.log(data);
+                $.ajax({
+                    url: $app.baseUrl + "Employee/UploadFile",
+                    data: data,
+                    dataType: "json",
+                    type: "POST",
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+
+                    success: function (jsonResult) {
+                        debugger;
+                        console.log(jsonResult);
+                        $app.clearSession(jsonResult);
+
+                        switch (jsonResult.Status) {
+                            case true:
+                                debugger;
+                                $employee.fileUploadData = jsonResult.result;
+                                $('#EMPimg').removeClass('hide')
+                                $('#EMPimg').attr('src', jsonResult.result.replace("~/", " "));
+
+                                $('#imgEmp').attr('src', jsonResult.result.replace("~/", " "));
+                                jQuery("label[for='myEmpImgName']").html(fileName.substring(0, 10) + '...');
+                                $('#lblEmpImgName').val(fileName);
+                                //alert("File Uploaded Successfully");
+
+                                break;
+                            case false:
+                                $app.hideProgressModel();
+                                $app.showAlert(jsonResult.message[0], "warning");
+                                break;
+                        }
+
+                    }
+                });
+            }
+            else {
+                $app.showAlert("This browser doesn't support HTML5 file uploads!", 3);
+                return false;
+            }
+        }
+    }
+</script>

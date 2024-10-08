@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="form-horizontal">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">
+                            <label>Description</label>
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtDescription" class="form-control" placeholder="Description" style="display:none" value="" required />
+                            <select id="sltconfiguration" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 ">
+                    <div class="form-group  pull-right">
+                        <input type="button" id="btnPSSaveSetting" value="Save" onclick="$Payslipsetting.saveSettings()" class="btn custom-button ">
+                        <input type="button" id="btnCancelSetting" value="Cancel" onclick="$Payslipsetting.cancelSetting()" class="btn custom-button ">
+                        <input type="button" id="btNewSetting" value="New" onclick="$Payslipsetting.newPSSetting()" class="btn custom-button ">
+                        <input type="button" id="btDeleteSetting" value="Delete" onclick="$Payslipsetting.deleteSettings()" class="btn custom-button ">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">
+                            <label>Title</label>
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="text" id="txtTitle" class="form-control" placeholder="Title" value="" required />
+                        </div>
+                    </div>
+                </div>
+                @*<div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">
+                                <label>Cumulative Month</label>
+                            </label>
+                            <div class="col-sm-6">
+                                <select id="sltCumlativeMonth" class="form-control">
+                                    <option value="0">None</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-horizontal">
+
+    <ul class="nav nav-tabs" id="empNavtabs">
+        @*tabs-left*@
+        @*<li class="active">
+                <a href="#step1" data-toggle="tab" class="wizard" id="wizardStep1">
+                    Data Wizard
+                </a>
+            </li>*@
+        <li class="active"><a href="#step1" data-toggle="tab" class="wizard" id="wizardStep4">Categories</a></li>
+        <li><a href="#step2" data-toggle="tab" class="wizard" id="wizardStep2"> Master Fields</a></li>
+        <li><a href="#step3" data-toggle="tab" class="wizard" id="wizardStep3">Earnings & Deductions</a></li>
+        <li><a href="#step6" data-toggle="tab" class="wizard" id="HeaderEdit">Header Content</a></li>
+        <li><a href="#step6" data-toggle="tab" class="wizard" id="FooterEdit">Footer Content</a></li>
+        <li><a href="#step5" data-toggle="tab" class="wizard" id="Matching">Matching</a></li>
+        @*<li><a href="#step5" data-toggle="tab" class="wizard" id="wizardStep5">Report Settings</a></li>*@
+
+    </ul>
+
+    <div class="tab-content" id="tabcontent">
+        <div id="step1" class="tab-pane fade in active">
+            @Html.Partial("~/Views/DataWizard/Category.cshtml")
+        </div>
+        <div id="step2" class="tab-pane fade">
+            @Html.Partial("~/Views/DataWizard/CatMasterField.cshtml")
+        </div>
+        <div id="step3" class="tab-pane fade">
+
+            @Html.Partial("~/Views/DataWizard/Earning.cshtml")
+
+            @Html.Partial("~/Views/DataWizard/Deduction.cshtml")
+
+        </div>
+        <div id="step5" class="tab-pane fade">
+            @Html.Partial("~/Views/DataWizard/Settings.cshtml")
+        </div>
+        <div id="step6" class="tab-pane fade">
+            @Html.Partial("~/Views/DataWizard/ContentEditor.cshtml")
+        </div>
+
+
+    </div>
+
+</div>
+<script src="~/js/Company/CompanyCom.js"></script>
+<script src="~/Js/DataWizard/Payslipsetting.js"></script>
+<script src="~/Js/DataWizard/Grouping.js"></script>
+<script src="~/Js/DataWizard/Filter.js"></script>
+<script src="~/Js/DataWizard/PayslipMatching.js"></script>
+@section scripts
+    {
+    <script src="~/Js/DataWizard/Payslipsetting.js"></script>
+    <script src="~/js/Company/CompanyCom.js"></script>
+    <script src="~/Js/DataWizard/PayslipMatching.js"></script>
+}
+
+<script>
+
+    $('#empNavtabs a').on("click", function (e) {
+        debugger;
+        EditContent(this);
+    });
+    function EditContent(e) {
+        if (e.id == "HeaderEdit") {
+            $('#ModalCTitle').text('Header Content');
+            CKEDITOR.instances.editor.setData($Payslipsetting.HeaderContent);
+            return true;
+        }
+        else if (e.id == "FooterEdit") {
+            $('#ModalCTitle').text('Footer Content');
+            CKEDITOR.instances.editor.setData($Payslipsetting.FooterContent);
+            return true;
+        }
+        else if (e.id == "Matching") {
+            $payslipMatching.renderFieldGrid();
+            $payslipMatching.LoadAttributeModels();
+        }
+    }
+
+
+</script>

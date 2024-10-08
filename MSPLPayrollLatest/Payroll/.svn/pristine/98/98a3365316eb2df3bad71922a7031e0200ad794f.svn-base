@@ -1,0 +1,13 @@
+31/03/2021 11:30:37
+Log
+ReOrder
+Object reference not set to an instance of an object.
+Parameter name: Error in PF
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================

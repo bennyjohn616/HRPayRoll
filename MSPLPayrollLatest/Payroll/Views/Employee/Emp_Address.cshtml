@@ -1,0 +1,172 @@
+﻿<form id="frmEmpAddress">
+
+    <div class="col-md-12">
+        <div class="col-md-6">
+
+            <h4>Address</h4>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <button type="submit" id="btnSend" class="btn custom-button pull-right">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-6">
+                        Permanent Address
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerAddressline1">
+                        Address Line 1
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerAddressline1" class="form-control" placeholder="Enter the Address Line 1"
+                               maxlength="80" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerAddressLine2">
+                        Address Line 2
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerAddressLine2" class="form-control" placeholder="Enter the Address Line 2"
+                               maxlength="80" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerCity">
+                        City
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerCity" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the City"
+                               maxlength="20" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerState">
+                        State
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerState" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the State"
+                               maxlength="20" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerPinCode">
+                        Pin Code
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerPinCode" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="6" class="form-control" placeholder="Enter the Pin Code" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerCountry">
+                        Country
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerCountry" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the Country"
+                               maxlength="20" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtPerPhoneNumber">
+                        Phone Number
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtPerPhoneNumber" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="10" class="form-control" placeholder="Enter the Phone Number" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-6" id="lblchkSamePermanant">
+                        Communication Address
+                    </label>
+                    <div class="col-md-6">
+                        <input type="checkbox" id="chkSamePermanant" />
+                        <label>
+                            Same as Permanent
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComAddressline1">
+                        Address Line 1
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComAddressline1" class="form-control" placeholder="Enter the Address Line 1"
+                               maxlength="80" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComAddressLine2">
+                        Address Line 2
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComAddressLine2" class="form-control" placeholder="Enter the Address Line 2"
+                               maxlength="80" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComCity">
+                        City
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComCity" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the City"
+                               maxlength="20" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComState">
+                        State
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComState" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the State"
+                               maxlength="20" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComPinCode">
+                        Pin Code
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComPinCode" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="6" class="form-control" placeholder="Enter the Pin Code" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComCountry">
+                        Country
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComCountry" onkeypress="return $validator.alphaonly(event)" class="form-control" placeholder="Enter the Country"
+                               maxlength="25" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" id="lbltxtComPhoneNumber">
+                        Phone Number
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtComPhoneNumber" onkeypress="return $validator.IsNumeric(event, this.id)" oncopy="return false" onpaste="return false" maxlength="10" class="form-control" placeholder="Enter the Phone Number" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+<script src="~/Js/Emp/address.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Emp/address.js" type="text/javascript"></script>
+}

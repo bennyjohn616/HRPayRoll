@@ -1,0 +1,185 @@
+﻿
+<form>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Shift Name</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Grace Time</label>
+            </div>
+            <div class="col-md-6">
+                <input type='time' class="form-control" value='' />
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label" >Deduction</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Deduction From 1st Minute</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Allowed Flex Time</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Lunch Late Need to Include in Late  Report</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Late Time Adjusted as excess work hours</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Early Going Not Add To Late</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">late Rounding Type</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Late Rounding</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Rounding Used For</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Late Linked Permission</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+                <label class="control-label">Consider Weekly Off Late</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-6">
+                <label class="control-label"><input type="checkbox"> Apply The Setting For All Shift</label>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>

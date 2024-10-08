@@ -1,0 +1,756 @@
+19/03/2021 14:07:30
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:07:43
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:08:58
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:09:18
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:41:00
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:44:09
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:44:29
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:48:16
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:51:33
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 14:59:59
+Log
+ReOrder
+Undefined symbol "EG" (column 1)
+Parameter name: Error in PTG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:01:51
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:04:19
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:04:28
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:10:46
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:12:14
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:13:46
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:16:14
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:18:48
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 15:19:54
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 16:04:14
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 16:07:28
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 16:09:26
+Log
+OnError
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_EntityAttributeModel_EntityModel". The conflict occurred in database "G2G", table "dbo.EntityModel", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at SQLDBOperation.DBOperation.SaveData(SqlCommand sqlCommand, String& outPut, String outPutParam) in E:\Mindspay_NewTax\SQLDBperation\DBOperation.cs:line 79
+=======================================================================
+
+=======================================================================
+19/03/2021 16:16:18
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 16:52:21
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 16:57:49
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:00:18
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:01:52
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:02:14
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:07:41
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:13:31
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:36:32
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:45:01
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:47:15
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:52:48
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:52:51
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:52:55
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:53:44
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 17:59:11
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:09:01
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:12:59
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:25:50
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:28:58
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:39:46
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:39:58
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:42:15
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:45:04
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:46:09
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:49:54
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================
+19/03/2021 18:51:17
+Log
+ReOrder
+Undefined symbol "NaN" (column 4)
+Parameter name: Error in EG
+   at PayrollBO.FormulaRecursive.ReOrder(TaxComputationInfo taxInfo, Employee employee, List`1 lstCollection, FormulaRecursive inp, Entity entity, IncrementList increment, Boolean ffFlag, Boolean calcAttr) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\FormulaRecursive.cs:line 823
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__0(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3209
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3126
+   at PayrollBO.PayrollHistory.<>c__DisplayClass95_0.<recursive>b__1(FormulaRecursive u) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3215
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at PayrollBO.PayrollHistory.recursive(TaxComputationInfo taxInfo, Employee employee, List`1 lstFormulaRecursive, Entity entity, IncrementList increment, Boolean ffFlag) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 3211
+   at PayrollBO.PayrollHistory.ExecuteProcessTemp(Int32 companyId, Guid employeeId, Int32 year, Int32 month, Guid entityId, Guid entityModelId, List`1& errors) in E:\Mindspay_NewTax\PayrollBO\DynamicEntity\PayrollHistory.cs:line 1246
+=======================================================================
+
+=======================================================================

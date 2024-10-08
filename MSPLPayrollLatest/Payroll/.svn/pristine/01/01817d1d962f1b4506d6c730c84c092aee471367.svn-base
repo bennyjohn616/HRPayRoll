@@ -1,0 +1,28 @@
+﻿
+
+
+<h2>Tax Section</h2>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="button" id="btnAddSection" value="Add" class="btn custom-button btnRight marginbt7"
+               data-toggle="modal" data-target="#AddSection" onclick="$txSection.addInitializeSection();">
+    </div>
+    <div id="dvSection" class="col-md-12 table-responsive">
+     
+    </div>
+    <div id="AddSection" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/TaxSection/TaxSection.cshtml")
+    </div>
+</div>
+<script type="text/javascript" src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Tax/txSection.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Tax/txSection.js" type="text/javascript"></script>
+}
+<script>
+    $txSection.loadInitial();
+</script>

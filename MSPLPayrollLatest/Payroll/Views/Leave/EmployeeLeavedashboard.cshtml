@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeLeavedashboard";
+}
+
+
+
+<script src="~/assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="~/assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="~/assets/js/jquery.dataTables.js" type="text/javascript"></script>
+
+<script src="~/assets/plugins/TableTools-master/js/dataTables.tableTools.js"
+        type="text/javascript"></script>
+@*<script src="~/Js/application.js"></script>*@
+
+<div>
+    <h2>DASHBOARD</h2>
+</div>
+<script src="~/Js/application.js"></script>
+<script src="~/Js/Leave/Calendar.js"></script>
+@*<script src="~/Js/Emp/Employee.js"></script>*@
+<div class="form-horizontal">
+    <form id="frmEmpLevDetails">
+
+
+        <div id="accordion">
+
+
+            <h4 class="accordion-toggle" style="cursor: pointer;  width:100%; padding:8px;display:inline-block; border-bottom:1px solid #1a1a1a;background:#5ebab4; transition:all linear 0.15s;font-size:1.200em;text-shadow:0px 1px 0px #1a1a1a;color:#1a1a1a;">
+
+                <label id="lblLevTitle" for="myvalue" style="vertical-align: middle"></label>
+            </h4>
+            <div class="accordion-content default">
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <table id="tblEmpLevDetails" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>
+                                        Leave Type
+                                    </th>
+                                    <th>
+                                        Total Leave
+                                    </th>
+                                    <th>
+                                        Leave Used
+                                    </th>
+                                    @*<th>
+                                        Debit Days
+                                    </th>*@
+                                    <th>
+                                        Leave Available
+                                    </th>
+                                    
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    @*<td></td>*@
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+</div>
+           
+
+    </form>
+</div>
+
+
+<script>
+
+    
+
+        
+
+    $Calendar.LoadEmployeeLeaveDashboard();
+
+</script>
+
+
+<script>
+    //   $(function() {
+    //        $( "#accordion-1" ).accordion();
+    //});
+    $(document).ready(function ($) {
+        $('#accordion').find('.accordion-toggle').click(function () {
+
+            //Expand or collapse this panel
+            $(this).next().slideToggle('fast');
+
+            //Hide the other panels
+            $(".accordion-content").not($(this).next()).slideUp('fast');
+
+        });
+    });
+</script>

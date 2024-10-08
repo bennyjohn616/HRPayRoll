@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "RoleList";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<h2>
+    Role
+</h2>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="col-md-12 ">
+                <div class="form-group">
+                    <input type="button" id="btnSaveUser" value="Add" class="btn custom-button btnRight"
+                           data-toggle="modal" data-target="#AddRole" onclick="$Role.AddInitialize();">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12  ">
+            <div class="col-md-12 ">
+                <div class="form-group table-responsive">
+                    <table id="tblRole" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                        <thead>
+                            <tr>
+                                <th class="nodisp">
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Display As
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="AddRole" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/Admin/Role.cshtml")
+    </div>
+</div>
+
+<script src="~/Js/Admin/Role.js"></script>
+@section Scripts
+{
+    <script src="~/Js/Admin/Role.js"></script>
+}
+
+
+
+

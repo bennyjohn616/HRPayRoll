@@ -1,0 +1,252 @@
+﻿<!-- Modal -->
+<form id="frmLICEntry" data-toggle="validator" role="form">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    LIC Premium
+                </h4>             
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Policy Number <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="LICPolicyno" oncopy="return false" onpaste="return false" maxlength="20" class="form-control" placeholder="Enter the policy number" autofocus required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Insured Person Name <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="LIcpersonname"  oncopy="return false" onpaste="return false" onkeypress="return $validator.alphaonly(event)" maxlength="20" class="form-control" placeholder="Enter the name" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Sum Assured <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="LIcsumassured" oncopy="return false" onkeypress="return $validator.checkDecimal(event, 2)" onpaste="return false" maxlength="20" class="form-control" placeholder="Enter the amount" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Premium amount for which proofs attached now <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-6">
+                                    @*<div class='simple_link'>
+                                        <a href='javascript:void(0);' onclick='LICPolicypremium()' data-target='#AddLICFormPremium'>
+
+                                            <input type="text" id="LIcprimiumamt" class="form-control" readonly required />
+                                        </a>
+                                    </div>*@
+                                    <input type="text" id="LIcprimiumamt" oncopy="return false" onkeypress="return $validator.checkDecimal(event, 2)" onpaste="return false" maxlength="20" class="form-control"  placeholder="Enter the amount" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-6">
+                                    Premium amount falling due in Feb/Mar <span id="PremiumfallingYear"> </span> <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-6">
+                                    <input type="text" id="LIcamount" oncopy="return false" onkeypress="return $validator.checkDecimal(event, 2)" onpaste="return false" maxlength="20" class="form-control" placeholder="Enter the amount" required /> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-8">
+                                    Date of Commencement of policy <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-4">
+                                    <input type="text" id="LICDateofpolicy" class="form-control datepicker required"  placeholder="Enter the Date" readonly required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-8">
+                                    Relationship  <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-4">
+                                    <select id="LICrelation" class="form-control required">
+                                        <option value="Self">Self</option>
+                                        <option value="Child">Child</option>
+                                        <option value="Spouse">Spouse</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-8">
+                                    Does the Insured person undergo treatment for specified diseases under 80DDB? <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-4">
+                                    <select id="LICtreatment" class="form-control required">
+                                        <option value="0">Yes</option>
+                                        <option value="1">No</option>
+                                        <option value="2">NA</option>
+                                    </select>
+                                </div>
+                            </div>
+                             
+                            <div class="form-group">
+                                <label class="control-label col-md-8">
+                                    Does the Insured person have disability under 80U? <label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-4">
+                                    <select id="LICdisability" class="form-control required">
+                                        <option value="0">Yes</option>
+                                        <option value="1">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <input type="text" id="hiddenLICid" hidden="hidden"/>
+                                </div>
+                            </div>
+                      </div>
+                        </div>
+
+                    <div class="col-md-12 form-group">
+                        <table id="LICPremiumtbl" class="table table-responsive table-striped table-hover table-condensed userTablehand">
+                            <thead>
+                                <tr>
+                                    <th class="nodisp">
+                                    </th>
+                                    <th>
+                                        Policy Number
+                                    </th>
+                                    <th>
+                                        Commencement date
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Relationship
+                                    </th>
+                                    <th>
+                                        sum assured
+                                    </th>
+                                    <th>
+                                        premium amount
+                                    </th>
+                                    <th>
+                                        premium due
+                                    </th>
+                                    <th>
+                                        Annual Premium during <span id="PremiumYear"> </span>
+                                    </th>
+                                    <th>
+                                       Premium considered for deduction
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" onclick="$LICpremium.save()" id="btnLICPremiumsave" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+            
+    </div>
+        </div>
+</form>
+
+<div id="AddLICFormPremium" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    @Html.Partial("~/Views/TaxTransaction/LICpremiumform.cshtml")
+</div>
+
+<style>
+   .modal-dialog{
+       width:80%
+   }
+</style>
+<script type="text/javascript" src="~/Js/Tax/declaractionEntry.js"></script>
+<script type="text/javascript" src="~/Js/Tax/LICPremium.js"></script>
+
+<script language="javascript">
+    
+    
+    $("#PremiumfallingYear").text(new Date($declaractionEntry.financeYear.EndDate).getFullYear().toString());
+    $("#PremiumYear").text($declaractionEntry.financeYearDuration());
+    $('.datepicker').datepicker({
+        calendarWeeks: true,
+        changeYear: true,
+        changeMonth: true,
+        autoclose: true,
+        todayHighlight: true,
+        dateFormat: 'dd/M/yy',
+        yearRange: "-120:+2",
+        beforeShowMonth: function (date) {
+            //                switch (date.getMonth()) {
+            //                    case 8:
+            //                        return false;
+            //                }
+        },
+        toggleActive: true
+    });
+</script>
+<script language="javascript">
+    function LICPolicypremium() {
+        
+        if ($('#LICDateofpolicy').val() != "") {
+            $LICpremium.FinancialyrId = $declaractionEntry.LICData.financialYearId;
+            $LICpremium.LICSectionId = $declaractionEntry.LICData.id;
+            $LICpremium.selectedEmployeeId = $('#ddlEmployee').val();
+            $LICpremium.AddpremiumformInitialize();
+            $LICpremium.BindLICPremiumdetails();
+        }
+        else
+        {
+            $app.showAlert('Please Select Commencement Date first', 3);
+            $('#AddLICFormPremium').modal('hide');
+        }
+    }
+    $('a[data-target=#AddLICFormPremium]').on('click', function (ev) {
+        
+        if ($('#LICDateofpolicy').val() == ""|| $('#LICPolicyno').val()=="") {
+            $('#AddLICFormPremium').modal('hide');
+        }
+        else {
+            $('#AddLICFormPremium').modal('show');
+        }
+    });
+</script>

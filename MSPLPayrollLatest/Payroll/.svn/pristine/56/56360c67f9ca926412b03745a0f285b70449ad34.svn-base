@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="row" id="transHtml">
+
+
+</div>
+<script src="~/Js/Trans/increment.js"></script>
+@section Scripts
+{
+    <script src="~/Js/Trans/increment.js"></script>
+}

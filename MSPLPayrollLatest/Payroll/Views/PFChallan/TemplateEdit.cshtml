@@ -1,0 +1,214 @@
+﻿
+@{
+    ViewBag.Title = "TemplateEdit";
+}
+<div class="form-horizontal">
+    <ul class="nav nav-tabs" id="empNavtabs">
+        @*tabs-left*@
+        <li class="active">
+            <a href="#step1" data-toggle="tab" class="wizard" id="wizardStep1">
+                PF Challan
+            </a>
+        </li>
+        <li><a href="#step2" data-toggle="tab" class="wizard" id="wizardStep2">PF Challan Template</a></li>
+
+
+
+    </ul>
+    <div class="tab-content" id="tabcontent">
+        <div id="step1" class="tab-pane fade in active">
+
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Table Name
+                            </label>
+                            <div class="col-md-8">
+                                @*Modified By Keerthika 0n 20/04/2017*@
+                                <select id="sltTableName" onchange="$PFTemplate.getColumns()" class="form-control">
+                                    <option value="0">--Select--</option>
+                                    <option value="Employee">Employee</option>
+                                    <option value="Emp_Bank">Employee Bank</option>
+                                    <option value="Emp_Personal">Employee Personal</option>
+                                    <option value="Salary">PayrollHistory</option>
+                                    <option value="SalaryBase">PayrollHistoryBaseValue</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Column Name
+                            </label>
+                            <div class="col-md-8">
+                                <select id="sltcolumnName" class="form-control"></select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Display As
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="txtDisplayAs" class="form-control" />
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Display Order
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text" id="txtDisplayOrder" class="form-control" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input type="button" class="btn custom-button" id="Save" onclick="$PFTemplate.Save()" value="Save" />
+                            <input type="button" class="btn custom-button" id="Cancel" onclick="$PFTemplate.Cancel()" value="Cancel" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-8 paddingBottom20 table-responsive">
+                        @*<div class="col-lg-6">*@
+                        <table id="tblPFTemplate" class="table table-responsive table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Id
+                                    </th>
+                                    <th>
+                                        Table Name
+                                    </th>
+                                    <th>
+                                        Field Name
+                                    </th>
+                                    <th>
+                                        Display As
+                                    </th>
+                                    <th>
+                                        Display Order
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        @*</div>*@
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="step2" class="tab-pane fade">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Month
+                                </label>
+                                <div class="col-md-8">
+                                    <select id="sltMonth" class="form-control">
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="4">April</option>
+                                        <option value="5">May</option>
+                                        <option value="6">June</option>
+                                        <option value="7">July</option>
+                                        <option value="8">August</option>
+                                        <option value="9">September</option>
+                                        <option value="10">October</option>
+                                        <option value="11">November</option>
+                                        <option value="12">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Year
+                                </label>
+                                <div class="col-md-8">
+                                    <select id="sltYearPfChallan" class="form-control"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <button type="button" onclick="$PFTemplate.GetPfChallan()" class="btn btn-info">
+                                    <span class="glyphicon glyphicon-file"></span> Get PF Challan(.txt)
+                                </button>
+                            </div>                           
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <button type="button" onclick="$PFTemplate.GetPfChallanXlsFormat()" class="btn btn-info">
+                                    <span class="glyphicon glyphicon-export"></span> Get PF Challan Data(.xls)
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">                             
+                                <button type="button" onclick="$PFTemplate.GetESITemplateData()" class="btn btn-info">
+                                    <span class="glyphicon glyphicon-export"></span> Get ESI  Data(.xls)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <button type="button" onclick="$PFTemplate.GetESIExtractData()" class="btn btn-info">
+                                    <span class="glyphicon glyphicon-export"></span> Get ESI Extract Data(.xls)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Js/DataWizard/PFChallan.js"></script>
+<script>
+    $companyCom.loadYear({ id: "sltYearPfChallan" });
+    $PFTemplate.renderTemplate();
+
+</script>
+
+@section scripts
+{
+    <script src="~/Js/DataWizard/PFChallan.js"></script>
+}

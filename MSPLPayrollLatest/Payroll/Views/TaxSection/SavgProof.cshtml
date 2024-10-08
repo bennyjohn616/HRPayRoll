@@ -1,0 +1,231 @@
+﻿@{
+    ViewBag.Title = "Employee Upload Savings Proof";
+}
+<style>
+    td, th {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .custom-file-input {
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .custom-file-input input[type="file"] {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+    .asterisk_input:after {
+        content: " *";
+        color: #e32;
+        position: absolute;
+        margin: 0px 0px 0px 0px;
+        font-size: 30px;
+        padding: 0 5px 0 0;
+    }
+
+    mark {
+        background-color: transparent;
+        color: darkblue;
+    }
+
+    .icon {
+        font-size: 1em;
+    }
+
+    .icon-file:before {
+        content: url('/assets/plugins/TableTools-master/images/pdf.png');
+        width: 1em;
+        font-size: 1em;
+    }
+
+    table {
+        table-layout: fixed;
+    }
+
+    .ellipses {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<form id="frmSavgProof" data-toggle="validator" role="form" action="" />
+<div id="msg1">
+
+</div>
+<input type="button" id="btn1" class="btn-group-lg col-lg-2 pull-right" value="Click to Proceed" />
+
+<div id="formarea">
+    <input type="hidden" id="hdnEmployeeId" value="@Session["EmployeeGUID"]" />
+    <input type="hidden" id="hdnEmpId" value="@Session["EmployeeId"]" />
+    <input type="hidden" id="hdnRoleName" value="@Session["RoleName"]" />
+    <input type="hidden" id="LastNo" value="0" />
+
+    <div class="row">
+        <div style="text-align:left" class="col-md-6">
+            <h4>Upload IT Proof Submission Last Date : <span id="ld" style="color:orangered"></span> </h4>
+        </div>
+        <div class="col-md-6">
+            <label class="control-label col-md-3">
+                <h4>Fin.Year</h4>
+            </label>
+            <div class="col-md-4">
+                <h4><label id="txtYear" class="control-label" autofocus disabled></label></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="col-xs-2">
+                <label class="control-label">
+                    Employee
+                </label>
+            </div>
+            <div class="col-xs-5">
+                <select id="EmpCode" class="form-control col-md-pull-3"></select>
+            </div>
+            <Input id="Select" type="button" class="col-xs-pull-1 btn-primary" style="border-style:ridge" value="Proceed" onclick="$SavgProof.LoadData()" />
+        </div>
+        <div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="row">
+            <h5>
+                <label class="control-label col-md-pull-3" style="margin-top:5px;border:none" id="name">
+                    Name :
+                </label>
+            </h5>
+        </div>
+    </div>
+
+    <div id="msg" style="color:red"></div>
+
+    <div id="data" class="nodisp">
+        <div class="col-md-12">
+            <div class="form-group">
+                Select File : <span class="asterisk_input">  </span>
+                <input type="file" id="DocUpload" class="custom-file-input" required />
+                <span class="highlight"><mark>Single File Size Should not be more than 10MB. Allowed File types (jpg, jpeg, pdf)</mark></span>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+
+                Description: <span class="asterisk_input">  </span>
+                <input id="Description" class="form-control" autofocus required autocomplete="off" maxlength="200"></input>
+
+            </div>
+        </div>
+
+
+        <div>
+            <button type="button" id="btnSave" class="btn custom-button">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <div id="table-disp" class="nodisp">
+        <div class="col-md-12 table-responsive" id="dvSavgProof">
+            <table id="tblSavgDoc" class="table table-fixed table-striped table-hover table-condensed userTablehand dataTable no-footer">
+                <thead>
+                    <tr>
+                        <th>
+                            Serial No.
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th class="nodisp">
+                            FileRef
+                        </th>
+                        <th>
+                            File
+                        </th>
+                        <th>
+                            Upload Date
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Remarks
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td class="nodisp">
+                        </td>
+                        <td width="10px">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td style="width:10px">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+    </form>
+
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Tax/SavgProof.js"></script>
+<script src="~/assets/js/jquery-confirm.js"></script>
+<script>
+    debugger;
+    $('#formarea').hide();
+    $('#btn1').hide();
+    $(document).ready(function () {
+        $SavgProof.serverDate = '@Session["serverDate"]';
+        $SavgProof.DbConnection = '@Session["DBConnectionId"]';
+        if ($SavgProof.DbConnection != "2039" && $SavgProof.DbConnection != "2041" ) {
+            $('#msg1').load($app.baseUrl + 'images/proof-submission.htm');
+            $('#btn1').show();
+        }
+        else {
+            $('#formarea').show();
+            $SavgProof.LoadComponents();
+        }
+    });
+
+    $('#btn1').click(function (e) {
+        e.preventDefault();
+        $('#msg1').hide();
+        $('#btn1').hide();
+        $('#formarea').show();
+        $SavgProof.LoadComponents();
+    })
+
+</script>

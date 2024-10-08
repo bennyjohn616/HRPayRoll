@@ -1,0 +1,648 @@
+﻿<style>
+    .icon-background2 {
+    color: #01978e;
+}
+.fa-info {
+  color:red;
+}
+</style>
+
+<div class="col-md-12" id="levconfigalert">
+    <span class="fa-stack fa-2x">
+        <i class="fa fa-circle fa-stack-2x icon-background2"></i>
+        <i class="fa fa-info fa-stack-1x"></i>
+    </span>
+    <span style="font-size:20px;color:red">Please Enter the Master Settings Before Entering the Leave Configuration!!!</span>
+    
+</div>
+<div class="nodisp" id="levconfigdetails">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <h2>Leave Configuration</h2>
+        </div>
+        <div class="col-md-6" style="text-align:right">
+            <button type="button" id="btnSaveLeaveconfigSettings" class="btn custom-button">
+                Save
+            </button>
+            <label class="control-label col-md-6 nodisp" id="lblhiddenparameter"></label>
+        </div>
+    </div>
+    <div class="form-horizontal">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label col-md-6">
+                        Leave Type: <label style="color:red;font-size: 13px"></label>
+                    </label>
+                    <div class="col-md-6">
+                        <select class="form-control" id="ddLCLeaveType" autofocus"></select>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Financial Details</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Financial Starting Date:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="DPLCfinstartdate" class="form-control" size="10"
+                                       readonly="readonly" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Financial Ending Date:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="DPLCfinenddate" class="form-control" size="10"
+                                       readonly="readonly" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Entry Effective From:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="DPLCEffdate" class="datepicker form-control Reqrd datepickerholiday" placeholder="Effective Date" size="10"
+                                       readonly="readonly" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Monthly Eligibility</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Days [Max. in a month]:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtLCMaxMonthDays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="Maximum Consider date"
+                                       required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Allow deviation if in previous months Leave is not used upto:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <select id="ddlLCMonthDeviation" class="form-control">
+                                    <option value="select">--Select--</option>
+                                    <option value="Y">Yes</option>
+                                    <option value="N">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary" id="dividminormaxsettingtab">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Min and Max value Settings</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="form-group">
+
+                            <label class="control-label col-md-6">
+                                Set min and max value :  <label style="color:red;font-size: 13px"></label>
+                            </label>
+
+                            <div class="col-md-6">
+                                <select id="ddlPminmaxval" class="form-control">
+                                    <option value="P">Particular Leave Type</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group" id="idPchkmaxmin">
+
+                            <div class="col-md-6">
+                                <label><input type="checkbox" id="IdPMaxValue" name="NamMaxValue" class="MaxValue" value="MaxValue">Max Value</label><br>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <label><input type="checkbox" id="IdPMinValue" name="NamMinValue" class="MinValue" value="MinValue">Min Value</label><br>
+                            </div>
+
+                        </div>
+
+
+                        <div class="panel panel-primary nodisp" id="divPminid">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"> Minimum value Settings</h3>
+                            </div>
+                            <div class="panel-body">
+
+                                <div id="idPmindays">
+                                    <div class="col-md-6">
+                                        <label>Minimum No of Days can be taken at a time<label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6" id="idPvaluemin">
+                                        <input type="text" id="txtPMinValue" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder=""
+                                               required />
+                                    </div><br />
+                                </div><br />
+                                @* Nodisp class added in order to hide the below concept *@
+                                <div id="idPmaxtimesallowinmin" class="nodisp">
+                                    <div class="col-md-6">
+                                        <label>Maximum Times Allowed<label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtPMinTimes" multiple class="form-control Reqrd" maxlength="12" onkeypress="return $validator.IsPhone(event, this.id)" />
+                                    </div><br />
+                                </div><br />
+                                @* Nodisp class added in order to hide the below concept *@
+                                <div id="idPmaxtimesallowinminperiod" class="nodisp">
+                                    <div class="col-md-6">
+                                        <label>Minimum setting period<label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6">
+                                        <select id="ddlPMinsetperiod" class="form-control" onchange="minperiodchange()">
+                                            <option value="0">Select</option>
+                                            <option value="M">Monthly</option>
+                                            <option value="Y">Yearly</option>
+                                        </select>
+                                    </div><br />
+                                </div><br />
+                                <div id="idPmintimesallowdeviation" class="nodisp">
+                                    <div class="col-md-6">
+                                        <label>Allow deviation in previous months quota not used <label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6">
+                                        <select id="ddlPMindeviation" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="Y">Yes</option>
+                                            <option value="N">No</option>
+                                        </select>
+                                    </div><br />
+                                </div><br />
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-primary nodisp" id="divPmaxid">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"> Maximum value Settings</h3>
+                            </div>
+                            <div class="panel-body">
+
+                                <div id="idPmaxdays">
+                                    <div class="col-md-6">
+                                        <label>Maximun No of Days can be taken at a time<label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6" id="idPvaluemax">
+                                        <input type="text" id="txtPMaxValue" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder=""
+                                               required />
+
+                                    </div><br />
+                                </div><br />
+                                @* Nodisp class added in order to hide the below concept *@
+                                <div id="idmaxtimesallowinmax" class="nodisp">
+                                    <div class="col-md-6">
+                                        <label>Maximum Times Allowed<label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6">
+                                        <input type="text" id="txtPMaxTimes" multiple class="form-control Reqrd" maxlength="2" onkeypress="return $validator.IsPhone(event, this.id)" />
+
+                                    </div><br />
+                                </div><br />
+                                @* Nodisp class added in order to hide the below concept *@
+                                <div id="idmaxtimesallowinmaxperiod" class="nodisp">
+                                    <div class="col-md-6">
+                                        <label>Maximum setting period<label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6">
+                                        <select id="ddlPMaxsetperiod" class="form-control" onchange="maxperiodchange()">
+                                            <option value="0">Select</option>
+                                            <option value="M">Monthly</option>
+                                            <option value="Y">Yearly</option>
+                                        </select>
+                                    </div><br />
+                                </div><br />
+                                <div id="idPmaxtimesallowdeviation" class="nodisp">
+                                    <div class="col-md-6">
+                                        <label>Allow deviation in previous months quota not used <label style="color:red;font-size: 13px"></label></label>
+                                    </div><br />
+                                    <div class="col-md-6">
+                                        <select id="ddlPMaxdeviation" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option value="Y">Yes</option>
+                                            <option value="N">No</option>
+                                        </select>
+                                    </div><br />
+                                </div><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group" id="divLCdynamicload">
+                    <label class="control-label col-md-6" id="lblLCdynamic">
+                        Dynamic Load: <label style="color:red;font-size: 13px"></label>
+                    </label>
+                    <div class="col-md-6">
+                        <select id="ddlLCDynamic" class="form-control"></select>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Specified Settings</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Maximum (Openings + Credits):  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+
+                                <input type="text" id="txtLCMaxdays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="Maximum Consider date"
+                                       required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Carry Forward Limit:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+
+                                <input type="text" id="txtLCCaryFwrdLmt" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="Maximum Consider date"
+                                       required />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Compensatory off allows in between leave dates:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <select id="ddlLcCompoffAllow" class="form-control">
+                                    <option value="select">--Select--</option>
+                                    <option value="Y">Yes</option>
+                                    <option value="N">No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Intervening holidays Settings</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Intervening holidays consider as leave:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <select id="ddlLCInterVening" class="form-control" onchange="InterVeningChange()">
+                                    <option value="select">--Select--</option>
+                                    <option value="Y">Yes</option>
+                                    <option value="N">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group nodisp" id="divIntervApplic">
+                            <label class="control-label col-md-6">
+                                Intervening holidays Also Applicable For:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <select id="ddlIntervApplic" class="form-control">
+                                    <option value="0">None</option>
+                                    <option value="SD">Begining</option>
+                                    <option value="ED">End</option>
+                                    <option value="BD">Both</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Attachment Settings</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-6">
+                                Is attachment Required:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <select id="ddlLCAttachmentreq" class="form-control" onchange="AttachementChange()">
+                                    <option value="select">--Select--</option>
+                                    <option value="Y">Yes</option>
+                                    <option value="N">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group nodisp" id="divAttachNoofdays">
+                            <label class="control-label col-md-6">
+                                Attachment required for maximum No of days:  <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-6">
+                                <input type="text" id="txtLCAttachreqdays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control "
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            @*<div class="col-md-12">
+            <div class="form-group">
+            <button type="submit" id="btnsaveCMPSET" class="btn custom-button">
+            Save
+            </button>
+            </div>
+            </div>*@
+        </div>
+    </div>
+</div>
+
+    <script src="~/Js/Company/CompanyCom.js"></script>
+    <script src="~/Js/Leave/MailConfiguration.js" type="text/javascript"></script>
+    <script src="~/Js/Leave/leaveCreditsettings.js"></script>
+    <script>
+       
+
+        $('#btnSaveLeaveconfigSettings').on("click", function (e) {
+            debugger;
+            var LCSaveflag = true;
+
+
+            if ($("#ddLCLeaveType").val() == "00000000-0000-0000-0000-000000000000") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select the leaveType", 4);
+            }
+            if (!$('#divLCdynamicload').hasClass("nodisp")) {
+                if ($("#ddlLCDynamic").val() == "select") {
+                    LCSaveflag = false;
+                    $app.showAlert("Please Select the " + $("#lblLCdynamic").text(), 4);
+                }
+            }
+            if ($("#DPLCEffdate").val() == "") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select the Entry Effective From", 4);
+            }
+            if ($("#ddlLcOBPayrollMatch").val() == "select") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select the Opening Balance Component Matching", 4);
+            }
+            if ($("#ddlLcCBPayrollMatch").val() == "select") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select the Current Balance Component Matching", 4);
+            }
+            if ($("#ddlLcULPayrollMatch").val() == "select") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select the Used Leave Component Matching", 4);
+            }
+
+
+
+            if ($("#ddlLCInterVening").val() == "select") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select the Intervening holidays consider as leave", 4);
+            }
+
+            if ($("#ddlLCAttachmentreq").val() == "select") {
+                LCSaveflag = false;
+                $app.showAlert("Please Select attachment required", 4);
+            }
+            else {
+                if ($("#ddlLCAttachmentreq").val() == "Y") {
+                    if ($("txtLCAttachreqdays").val() == "") {
+                        LCSaveflag = false;
+                        $app.showAlert("Please enter the Attachment required for maximum No of days", 4);
+                    }
+                    if (parseInt($("txtLCAttachreqdays").val()) == 0) {
+                        LCSaveflag = false;
+                        $app.showAlert(" Please enter a valid number for Attachment required for maximum No of days - Zero(0) is invalid", 4);
+                    }
+                }
+            }
+            if (!$('#dividminormaxsettingtab').hasClass("nodisp")) {
+                debugger;
+                var leavemastersaveflagMax = true;
+                var leavemastersaveflagMin = true;
+                var checkval = $("#ddlPminmaxval").val();
+                if (checkval == "P") {
+                    if ($('#IdPMaxValue').prop('checked')) {
+                        leavemastersaveflagMax = false;
+                        if ($("#txtPMaxValue").val() != "") {
+                            if (parseFloat($("#txtPMaxValue").val()) != 0) {
+                                if ($("#txtPMaxTimes").val() != "") {
+                                    if (parseFloat($("#txtPMaxTimes").val()) != 0) {
+                                        if ($("#ddlPMaxsetperiod").val() == 0) {
+                                            leavemastersaveflagMax = false;
+                                            $app.showAlert("Please select Maximum setting period", 4);
+                                        }
+                                        else {
+                                            if ($("#ddlPMaxsetperiod").val() == "M") {
+                                                if ($("#ddlPMaxdeviation").val() == 0) {
+                                                    $app.showAlert("Please select Allow deviation in previous months quota not used ", 4);
+                                                }
+                                                else {
+                                                    leavemastersaveflagMax = true;
+                                                }
+                                            }
+                                            else {
+                                                leavemastersaveflagMax = true;
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        leavemastersaveflagMax = false;
+                                        $app.showAlert("Maximun : Maximum Times Allowed value cannot be Zero(0)", 4);
+                                        $("#txtPMaxTimes").val("");
+                                    }
+                                }
+                                else {
+                                    if ($("#ddlPMaxsetperiod").val() == 0 && $("#ddlPMaxdeviation").val() == 0) {
+                                        leavemastersaveflagMax = true;
+                                    }
+                                    else {
+
+                                        $app.showAlert("You can't select Maximum setting period and deviations with out entering Maximum Times Allowed", 4);
+                                        leavemastersaveflagMax = false;
+                                    }
+
+                                }
+                            }
+                            else {
+                                leavemastersaveflagMax = false;
+                                $app.showAlert("Maximun No of Days can be taken at a time value cannot be Zero(0)", 4);
+                                $("#txtPMaxValue").val("");
+                            }
+                        }
+                        else {
+                            leavemastersaveflagMax = false;
+                            $app.showAlert("Please enter Maximun No of Days can be taken at a time", 4);
+                        }
+
+                    }
+                    if ($('#IdPMinValue').prop('checked')) {
+                        leavemastersaveflagMin = false;
+                        if ($("#txtPMinValue").val() != "") {
+                            if (parseFloat($("#txtPMinValue").val()) != 0) {
+                                if ($("#txtPMinTimes").val() != "") {
+                                    if (parseFloat($("#txtPMinTimes").val()) != 0) {
+                                        if ($("#ddlPMinsetperiod").val() == 0) {
+                                            leavemastersaveflagMin = false;
+                                            $app.showAlert("Please select Minimum setting period", 4);
+                                        }
+                                        else {
+                                            if ($("#ddlPMinsetperiod").val() == "M") {
+                                                if ($("#ddlMindeviation").val() == 0) {
+                                                    $app.showAlert("Please select Allow deviation in previous months quota not used ", 4);
+                                                }
+                                                else {
+                                                    leavemastersaveflagMin = true;
+                                                }
+                                            }
+                                            else {
+                                                leavemastersaveflagMin = true;
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        leavemastersaveflagMin = false;
+                                        $app.showAlert("Minimum : Maximum Times Allowed value cannot be Zero(0)", 4);
+                                        $("#txtPMinTimes").val("");
+                                    }
+                                }
+                                else {
+                                    if ($("#ddlPMinsetperiod").val() != 0 && $("#ddlPMindeviation").val() != 0) {
+                                        $app.showAlert("You can't select Maximum setting period and deviations with out entering Maximum Times Allowed", 4);
+                                        leavemastersaveflagMin = false;
+                                    }
+                                    else {
+                                        leavemastersaveflagMin = true;
+                                    }
+                                }
+                            }
+                            else {
+                                leavemastersaveflagMin = false;
+                                $app.showAlert("Maximun No of Days can be taken at a time value cannot be Zero(0)", 4);
+                                $("#txtPMinValue").val("");
+                            }
+                        }
+                        else {
+                            leavemastersaveflagMin = false;
+                            $app.showAlert("Please enter Maximun No of Days can be taken at a time", 4);
+                        }
+                    }
+                }
+            }
+            var minmaxsetsave;
+            if (!$('#dividminormaxsettingtab').hasClass("nodisp")) {
+                if (leavemastersaveflagMax == true && leavemastersaveflagMin == true) {
+                    minmaxsetsave = true;
+                }
+                else {
+                    minmaxsetsave = false;
+                }
+            }
+            else {
+                minmaxsetsave = true;
+            }
+            if (LCSaveflag == true && minmaxsetsave == true) {
+                if (confirm('Do you want to Save this Settings?,Saved data cannot be Change for this Leave Financial year!!!')) {
+                    $leaveSettings.SaveLeaveConfiguration();
+                }
+            }
+        });
+        function InterVeningChange() {
+            debugger;
+            if ($('#ddlLCInterVening').val() == "Y") {
+                $('#divIntervApplic').removeClass('nodisp');
+            }
+            else {
+                $('#divIntervApplic').addClass('nodisp');
+            }
+        };
+        function AttachementChange() {
+            debugger;
+            if ($('#ddlLCAttachmentreq').val() == "Y") {
+                $('#divAttachNoofdays').removeClass('nodisp');
+            }
+            else {
+                $('#divAttachNoofdays').addClass('nodisp');
+            }
+        };
+        function maxperiodchange() {
+            debugger;
+            if ($('#ddlPMaxsetperiod').val() == "M") {
+                $('#idPmaxtimesallowdeviation').removeClass('nodisp');
+            }
+            else {
+                $('#idPmaxtimesallowdeviation').addClass('nodisp');
+            }
+        };
+        function minperiodchange() {
+            debugger;
+            if ($('#ddlPMinsetperiod').val() == "M") {
+                $('#idPmintimesallowdeviation').removeClass('nodisp');
+            }
+            else {
+                $('#idPmintimesallowdeviation').addClass('nodisp');
+            }
+        };
+        $(":checkbox").on("click", function (e) {
+            debugger;
+            if (this.id == "IdPMaxValue") {
+
+                if (this.checked) {
+                    $("#divPmaxid").removeClass("nodisp");
+                }
+                else {
+
+                    $("#divPmaxid").addClass("nodisp");
+                }
+            }
+            else {
+
+                if (this.checked) {
+                    $("#divPminid").removeClass("nodisp");
+
+                }
+                else {
+                    $("#divPminid").addClass("nodisp");
+
+                }
+            }
+        });
+        $("#ddLCLeaveType").change(function () {
+            debugger;
+            if ($('#divLCdynamicload').hasClass("nodisp")) {
+                debugger;
+                $LeaveCreditsettings.LoadLeaveconfigdetails($("#ddLCLeaveType").val(), "00000000-0000-0000-0000-000000000000");
+            }
+            else {
+                debugger;
+                if ($("#ddlLCDynamic").val() != "select") {
+                    $LeaveCreditsettings.LoadLeaveconfigdetails($("#ddLCLeaveType").val(), $("#ddlLCDynamic").val());
+                }
+            }
+        });
+
+        $("#ddlLCDynamic").change(function () {
+            debugger;
+            $LeaveCreditsettings.LoadLeaveconfigdetails($("#ddLCLeaveType").val(), $("#ddlLCDynamic").val());
+        });
+    </script>
+
+

@@ -1,0 +1,63 @@
+﻿<!-- Modal -->
+<form id="frmEmpHRComponent" data-toggle="validator" role="form" action="javascript:$HRComponent.saveEmpHRComponent();">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Add/Edit Employee HR Component
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-md-4" id="lblsltempHRComponent">
+                            HR Component @*<label style="color:red;font-size: 13px">*</label>*@
+                        </label>
+                        <div class="col-md-7">
+                            <select id="sltempHRComponent" class="form-control" autofocus required></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" id="lbltxtEffDate">
+                            Effective From  @*<label style="color:red;font-size: 13px">*</label>*@
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtEffDate" class="form-control datepicker" placeholder="Enter the Effective From"
+                                   readonly required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" id="lbltxtEndDate">
+                            End Date
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtEndDate" class="form-control datepicker" placeholder="Enter the End Date"
+                                   readonly  />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4" id="lbltxtComments">
+                            Comments @*<label style="color:red;font-size: 13px">*</label>*@
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="txtComments" class="form-control" placeholder="Enter the Comments"
+                                    required />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="btnSend" class="btn btn-default">
+                    Save
+                </button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,187 @@
+﻿<h2 id="pgeTitle">Employee Expense</h2>
+<div id="EntryScreen" class="form-horizontal">
+    <label id="lblhiddenNavtab" class="control-label nodisp"></label>
+    <div class="col-sm-12">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Employee Code <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <select class="form-control" id="sltEmpCode" onchange=""></select>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Cost Center <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7 ">
+                    <input type="text" class="form-control" placeholder="Enter Your Cost Center" id="txtCostCenter" />
+                </div>
+                <input id="hdnEmpId"
+                       name="hiddenId"
+                       type="hidden"
+                       value="@Session["EmployeeId"]" />
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Purpose For Expense <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7  ">
+                    <textarea placeholder="Enter Value Here" class="form-control" id="txtPurpose">  </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Date of Expense Item <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input type="text" class="datepicker form-control Reqrd" id="txtItemDate" placeholder="Enter The Expense Item Date" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Cost of Expense <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control    " id="txtCostExpense" placeholder="Enter The Number" />
+                </div>
+            </div>
+            <!--<div class="form-group">
+                <label class="control-label col-md-4">
+                    1st Level Contact <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7 nodisp">
+                    <input type="text" id="txt1stLevel" class="form-control" readonly disabled="disabled" />
+                </div>
+                <div class="col-md-7">
+                    <input type="text" id="txt1stlvlData" class="form-control" readonly disabled="disabled" />
+                </div>-->
+                <!-- <div class="col-md-7">
+            <input type="text" id="txt1stLevel" class="form-control" readonly disabled="disabled" />
+        </div>-->
+            <!--</div>-->
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Cost Center Manager <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7 nodisp">
+                    <input type="text" id="txt1stLevel" class="form-control" readonly disabled="disabled" />
+                </div>
+                <div class="col-md-7">
+                    <input type="text" id="txt1stlvlData" class="form-control" readonly disabled="disabled" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Category  Of Expense<label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input class="form-control" placeholder="Select The Category of Your Expenes " id="txtCategory" />
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Description of Expense <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <textarea placeholder="Enter Value Here" style="height:200px" rows="6" class="form-control" id="txtDescrip">  </textarea>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-md-4">
+                    Date Submitted <label style="color:red;font-size: 13px">*</label>
+                </label>
+                <div class="col-md-7">
+                    <input type="text" class="datepicker form-control Reqrd" id="txtSubmitDate" placeholder="Select Today's Team And Submitted" />
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-4">Attchment</label>
+                <div class="col-md-7">
+                    <input type="file" class="form-control " id="txtfile" placeholder="Add Attchment" />
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        <div class="col-md-2">
+            <input type="button" id="btnadd" value="Add" class="btn custom-button pull-right nodisp ">
+        </div>
+        <div class="col-md-2">
+            <input type="button" id="btnsave" onclick="$empExpens.save()" value="Confirm" class="btn custom-button pull-right ">
+        </div>
+        <div class="col-md-2">
+            <input type="button" value="Clear" onclick="$empExpens.clear()" class="btn custom-button pull-right ">
+        </div>
+
+    </div>
+</div>
+@Html.Partial("~/Views/Employee/Emp_ExpenseTable.cshtml")
+<div class="modal fade" id="empExpensesReason" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <form id="frmRejectReason" data-toggle="validator" action="javascript:$empExpens.rejectExpense()" role="form">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="H4">Reason For Reject/Cancel </h4>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <br><label class="control-label col-md-4">Reason <label style="color:red;font-size: 13px">*</label>  </label>
+                        <div class="col-md-7"><input type="text" id="txtRejreason" class="form-control " placeholder="Enter the Reason"></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><label hidden="" class="control-label col-md-4" id="hddnlbl"></label><button type="button" id="btnSave" class="btn custom-button" onclick="$leave.RejectCancel()">Save</button><button type="button" class="btn custom-button" data-dismiss="modal">Close </button> </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+    <script src="~/Js/PayrollMain.js"></script>
+    <script type="text/javascript">
+        debugger
+        var emp = $("#hdnEmpId").val();
+        $(function () {
+            $empExpens.getManager({ Email: 'txt1stLevel' });
+            $empExpens.loadEmployee({ id: 'sltEmpCode' });
+        })
+
+        $("#sltEmpCode").val($("#hdnEmpId").val()).prop('disabled', true);
+
+        $('#txtfile').on('change', function (e) {
+            debugger;
+            var files = e.target.files;
+            if (files.length > 0) {
+                var file = this.files[0];
+                fileName = file.name;
+                size = file.size;
+                type = file.type;
+                if (window.FormData !== undefined) {
+                    var data = new FormData();
+                    for (var x = 0; x < files.length; x++) {
+                        data.append(files[x].name, files[x]);
+                    }
+                    $empExpens.expenseEntry = data;
+                } else {
+                    $app.showAlert("This browser doesn't support HTML5 file uploads!", 3);
+                    $empExpens.fileData = null; // Reset file data
+                    return false;
+                }
+            }
+        });
+    </script>

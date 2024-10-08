@@ -1,0 +1,52 @@
+﻿<form id="frmHolidayRevertleave" data-toggle="validator" role="form">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Revert Approved Leave 
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <table id="tblHolidayRevert" class="table table-responsive table-striped table-hover table-condensed userTablehand dataTable">
+                        <thead>
+                            <tr>
+                               
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Employee code
+                                </th>
+                                <th>
+                                    Employee Name
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnRevert" class="btn custom-button" onclick="$Holiday.Revertfunc">
+                    Revert
+                </button>
+                <button type="button"id="btncloserevert" class="btn custom-button" data-dismiss="modal"onclick="$Holiday.Revertfunc">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

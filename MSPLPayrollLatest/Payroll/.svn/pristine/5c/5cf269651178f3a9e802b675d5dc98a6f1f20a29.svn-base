@@ -1,0 +1,239 @@
+﻿<div class="form-horizontal">
+    <ul class="nav nav-tabs" id="lveNavtabs">  
+        
+        <li class="active"><a href="#leaveReq" data-toggle="tab" class="empTab" id="leaveAprRejDetails">Leave Request</a></li>
+        <li><a href="#leaveReq" data-toggle="tab" class="empTab" id="compoffAprRejDetails">Com-Off Request</a></li>
+        <li><a href="#leaveReq" data-toggle="tab" class="empTab" id="ApprovedLevCancelAprRejDetails">Approved Leave Cancel Request</a></li>
+    </ul>
+    <center><h4> <label id="lblHederText" class="control-label" style="font-size:larger"></label></h4></center>
+    <label id="lblhiddenNavtab" class="control-label nodisp"></label>   
+</div>
+<div id="leaveReq" class="tab-pane fade">
+    <div id="approvalScreen" class="form-horizontal">
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <div class="form-group pull-right">
+                    <input type="button" value="Approve" onclick="$leave.approve()" class="btn custom-button  " />
+                    <input type="button" value="Reject" class="btn custom-button marginbt7" onclick="$leave.intializereason(data='Reject')" data-target="#AddReason" data-toggle="modal" />
+                </div>
+                <div class="form-group pull-left nodisp" id="divattachid">
+                    <label id="lblhiddenattachpath" class="control-label nodisp">
+                        
+                    </label>
+                    <label id="lblpriority" class="control-label">
+                        Attachemnt Available For Approval
+                    </label>
+                    <input type="button" value="View" style="cursor:pointer"  class="btn custom-button marginbt7" data-toggle="modal" data-target="#AppRejShowattachment" onclick="AddInitialize($('#lblhiddenattachpath').text())"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label id="lblpriority" class="control-label col-md-4 nodisp">
+                        prioritynumber <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <label id="lblASSMGR" class="control-label col-md-4 nodisp">
+                        assignmgr <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <label class="control-label col-md-4">
+                        Employee Code <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input id="txtEmpCode" class="form-control" disabled="disabled" readonly placeholder="Employee Code" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Date of Joining <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7 ">
+                        <input type="text" id="txtDateJoin" class="form-control" placeholder="Date of Joiniong"
+                               readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        EmailId <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtLevel" class="form-control" placeholder="Contact Mail Id"
+                               readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        From <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-3">
+                        <input type="text" id="txtFromDate" class="datepicker form-control" placeholder="From Date"
+                               required size="10" readonly />
+                    </div>
+
+                    <div class="col-md-4" size="10">
+                        <select class="form-control" id="FsltDay" disabled>
+                            <option value="0">Full Day</option>
+                            <option value="1">First Half</option>
+                            <option value="2">Second Half </option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Reason <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtReason" class="form-control" placeholder="Leave Reason" readonly
+                               required />
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Employee Name <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtEmpName" class="form-control" readonly placeholder=" Employee Name" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Date<label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtDate" class="form-control" placeholder="Date"
+                               readonly />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Leave Type <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <select disabled id="sltLevType" class="form-control" readonly></select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        To <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-3">
+                        <input type="text" id="txtToDate" class="datepicker form-control" placeholder="To Date" size="10" readonly />
+                    </div>
+                    <div class="col-md-4" size="10">
+                        <select class="form-control" id="TsltDay" disabled>
+                            <option value="0">Full Day</option>
+                            <option value="1">First Half</option>
+                            <option value="2">Second Half </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4">
+                        Contact <label style="color:red;font-size: 13px">*</label>
+                    </label>
+                    <div class="col-md-7">
+                        <input type="text" id="txtContact" multiple class="form-control" placeholder="Contact Number"
+                               readonly />
+                    </div>
+
+                </div>
+                <div id="AppRejShowattachment" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+                     data-keyboard="false">
+                    @Html.Partial("~/Views/Leave/ShowAttachment.cshtml")
+                </div>
+                <div id="divReason"></div>
+                @*<div id="divCancelReason"></div>*@
+                @*<div class="form-group">
+                        <label class="control-label col-md-4">
+                            Leaving Station <label style="color:red;font-size: 13px">*</label>
+                        </label>
+                        <div class="col-md-7">
+                            <select class="form-control" id="sltLeavingStation" readonly>
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>*@
+
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-12">
+                <table id="tblLeaveList">
+                    <thead>
+                        <tr>
+                            <th class="nodisp"></th>
+                            <th>EmpCode</th>
+                            <th>From Date</th>
+                            <th>From Day</th>
+                            <th>To Date</th>
+                            <th>To Day</th>
+                            <th>No Of Days</th>
+                            <th>Reason</th>
+                            <th>Action</th>
+
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Js/Company/CompanyCom.js" type="text/javascript"></script>
+<script src="~/Js/Leave/leaveRequest.js"></script>
+<script>
+    $('#lblHederText').text("Leave Request");
+    $('#lblhiddenNavtab').text("leaveReq");
+    $companyCom.loadLeaveTypeforleaverequest({ id: 'sltLevType' });
+    var dateString = new Date();
+    $("#txtDate").val(dateString.getDate() + '/' + $payroll.GetMonthName((dateString.getMonth() + 1)) + '/' + dateString.getFullYear());
+    //$leave.LeaveRequestList();
+    $("#tabcontent").removeClass('nodisp');
+    $("#leaveReq").addClass('active in')
+    $leave.LeaveRequestList("leaveReq");
+    $leave.designForm('divReason');
+    function AddInitialize(path) {
+        debugger;
+        var lastIndex = path.lastIndexOf(".")
+        var file = path.substring(lastIndex + 1); 
+        var formData = document.forms["frmAttachmentPreview"];
+       
+        if (file.toLowerCase() == "pdf")
+        {
+            $('#divimgid').addClass("nodisp");
+            $('#divpdfid').removeClass("nodisp");
+            $('#preView').prop('src', path);
+            $('#preViewSrc').prop('src', path);
+        }
+        else
+        {
+            $('#divimgid').removeClass("nodisp");
+            $('#divpdfid').addClass("nodisp");
+            $('#idimgfile').prop('src', ('..'+path));
+        }
+    }
+</script>

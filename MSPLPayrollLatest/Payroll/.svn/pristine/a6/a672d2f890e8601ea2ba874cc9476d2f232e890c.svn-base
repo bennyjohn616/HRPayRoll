@@ -1,0 +1,41 @@
+﻿<form id="frmPendingStatPopup" data-toggle="validator" role="form" action="javascript:$comPopup.save();">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    <label id="PopupTitle">Cancel Approved Leaves</label>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        
+
+                            <label class="control-label col-md-4">
+                                Cancel Reason
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtAppCanRes" class="form-control" placeholder="Enter Cancel Reason" />
+                            </div>
+                       
+                    </div>
+
+                </div>
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" id="btnAppr" class="btn custom-button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" id="btnHRapprclose" class="btn custom-button" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+            </div>
+</form>
+<script src="~/Js/application.js"></script>

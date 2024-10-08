@@ -1,0 +1,153 @@
+﻿
+<form id="frmLeaveCreditSettings" data-toggle="validator" role="form" action="javascript:$LeaveCreditsettings.save()">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    Leave Credit Settings
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12">
+                    <div class="form-horizontal">
+                        @*<div class="form-group">
+                                <label class="control-label col-md-4">
+                                   Category<label style="color:red;font-size: 13px">*</label>
+                                </label>
+                                <div class="col-md-7">
+                                    <select id="sltCategory" class="form-control"></select>
+                                </div>
+                            </div>*@
+
+                        <div class="form-group" id="divCreditParameter">
+                            <label class="control-label col-md-4" id="lblCreditParameter">
+                                Dynamic Load: <label style="color:red;font-size: 13px"></label>
+                            </label>
+                            <div class="col-md-7">
+                                <select id="ddlCreditParameter" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Leave Type<label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <select class="form-control" id="ddLeaveType" autofocus"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Credit Effective from date <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtEffectiveDate" class="datepicker form-control Reqrd datepickerholiday" placeholder="Effective Date" size="10"
+                                       readonly="readonly" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Leave Credit Type<label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <select class="form-control" id="ddLeaveCreditType" autofocus"></select>
+                            </div>
+                        </div>
+                        @*<div class="form-group">
+                            <label class="control-label col-md-4">
+                                Credit Effective from date <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                @*<input type="text" id="txtEffectiveDate" class="datepicker form-control Reqrd datepickerholiday" placeholder="Effective Date" size="10"
+                                       readonly="readonly" required />*@
+                        @*<input type="text" id="txtFromDate" class="datepicker form-control Reqrd datepickerholiday" placeholder="Holiday Date" size="10"
+                                           readonly="readonly" required />
+                                </div>
+
+                            </div>*@
+
+                        <div class="form-group hide" id="dvRotationDays">
+                            <label class="control-label col-md-4">
+                                Leave Credit calculation after(Days) <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtNoOfDays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="Rotation Days" />
+                            </div>
+                            @*<div class="form-group">
+
+                                    <label class="control-label col-md-6">
+                                        <input type="checkbox" id="chkDefaultLEVCR" />   Set As Monthly Cycle
+                                    </label>
+
+                                </div>*@
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Credit Days <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtcrdays" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="No. of CR Days"
+                                       required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Credit for employees joining in the mid of month will be calculated before <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <input type="text" id="txtmidmontdate" maxlength="4" onkeypress="return isNumberKey(event)" onblur="MonthlylimitVal()" class="form-control " placeholder="Maximum Consider date" style="margin-top:40px"
+                                       required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Credit affect from Month <label style="color:red;font-size: 13px">*</label>
+                            </label>
+                            <div class="col-md-7">
+                                <select class="form-control" id="ddLeaveCreditAffect" autofocus">
+                                    <option value="before">Before</option>
+                                    <option value="after">After</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCreditsave" class="btn custom-button">
+                    Save
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/Leave/leaveCreditsettings.js"></script>
+<script src="~/Js/Leave/LeaveSettings.js"></script>
+<script>
+    $companyCom.loadCategory({ id: 'sltCategory' });
+    $companyCom.loadLeaveType({ id: 'ddLeaveType' });
+    $("#ddLeaveCreditType").change(function () {
+        debugger;
+        $("#dvRotationDays").addClass('hide').removeClass('show');
+        if ($('#ddLeaveCreditType').val() == "0") {
+            alert('Please select one Credit type');
+        }
+        else if ($('#ddLeaveCreditType').val() == "days") {
+            $("#dvRotationDays").addClass('show').removeClass('hide');
+        }
+
+    });
+</script>

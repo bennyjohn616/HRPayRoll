@@ -1,0 +1,322 @@
+﻿@*<div class="">
+        <ul class="nav navbar-nav" id="topmenu">
+            <li  class="active"><a id="payroll" href="#">Payroll <span class="sr-only">(current)</span></a></li>
+            <li><a id="itax" href="#">Income Tax</a></li>
+
+        </ul>
+
+    </div>
+    <div class='pull-right'>
+        <ul class="info-menu right-links list-inline list-unstyled">
+            <li class="profile">
+                <a href="#" data-toggle="dropdown" class="toggle">
+                    <img src="@ViewBag.userProfileImage" alt="user-image" class="img-circle img-inline">
+                    <span>Administrator <i class="fa fa-angle-down"></i></span>
+                </a>
+                <ul class="dropdown-menu profile animated fadeIn">
+                    <li><a href="@Url.Action("Index", "Home", new { })"><i class="fa fa-building-o"></i>Company</a></li>
+                    <li><a href="#settings"><i class="fa fa-wrench"></i>Settings </a></li>
+                    <li><a href="#profile"><i class="fa fa-user"></i>Profile </a></li>
+                    <li><a href="#help"><i class="fa fa-info"></i>Help </a></li>
+                </ul>
+            </li>
+            <li class="last">
+                <a href="@Url.Action("Logout", "Login", new { actionVal = "logout" })">
+                    <i class="fa fa-lock"></i>Logout
+                </a>
+            </li>
+        </ul>
+
+    </div>*@
+<nav class="navbar navbar-inverse" style="background-color: #d2e7e3">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        @if (@Session["CompLogo"] != null)
+            {
+            <a class="branding"><img id="C_Companylogo" class="img-rounded" src="@Session["CompLogo"]" alt="MindsPay" style="width:120px;height:45px"></a>
+        }
+        else
+        {
+            <a class="branding"><img id="C_Companylogo" class="img-rounded" src="assets/images/logo.png" alt="MindsPay" style="width:120px;height:45px"></a>
+        }
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="topm navbar-nav" id="topmenu">
+            @*<li class="navItem  navItem--domains">
+                <a id="payroll"><span>Payroll</span></a>
+            </li>
+
+            <li class="navItem   navItem--domains">
+                <a id="itax" href="#"><span>Income Tax</span></a>
+
+            </li>
+            <li class="navItem  navItem--domains">
+                <a id="leave" href="#"><span>Leave</span></a>
+            </li>*@
+            @*<li class="navItem  navItem--domains">
+                <a id="timeoffice" href="#"><span>Time Office</span></a>
+            </li>*@
+        </ul>
+       
+        <ul class="topm navbar-nav navbar-right">
+            <li class="profile" id="">
+                <a href="#" data-toggle="dropdown" class="toggle" id="unameid">
+                    <img src="@ViewBag.userProfileImage" alt="user-image" style="max-width: 46px;" class="img-circle img-inline">
+                    @*<span id="userid">@Session["UserName"] <i class="fa fa-angle-down"></i></span>*@
+                    @*<span id="userid">@Session["EmployeeName"] <i class="fa fa-angle-down"></i></span>*@
+                    <span id="userid"><b>@Session["FullName"] </b><i class="fa fa-angle-down"></i></span>
+                    <!--Modified by keerthika on  04/05/201 -->
+                    <input id="hdnId"
+                           name="hiddenId"
+                           type="hidden"
+                           value="@Session["UserRole"]" />
+
+                    <input id="hdnName"
+                           name="hiddenName"
+                           type="hidden"
+                           value="@Session["RoleName"]" />
+                    <input id="hdnComName"
+                           name="hiddenComName"
+                           type="hidden"
+                           value="@Session["CompanyId"]" />
+                    <!--   <span>Administrator <i class="fa fa-angle-down"></i></span> -->
+                </a>
+                <ul class="dropdown-menu profile animated fadeIn" id="listMenu">
+                    @if (Convert.ToString(Session["RoleName"]).Trim() != "Employee")
+                    {
+                        <li><a href="@Url.Action("CompanyIndex", "Company", new { })" id="Company"><i class="fa fa-building-o"></i>Company</a></li>
+                    }
+                    @*<li><a href="" id="company"><i class="fa fa-building-o"></i>Company</a></li>*@
+                    @*<li><a href="#settings"><i class="fa fa-wrench" id="settings"></i>Settings </a></li>*@
+                    <li><a href="@Url.Action("ChangePass","Login",new { })" id="changepass"><i class="fa fa-wrench"></i>Change Password </a></li>
+                    @*<li><a href="#profile"><i class="fa fa-user" id="profile"></i>Profile </a></li>
+                <li><a href="#help"><i class="fa fa-info" id="Help"></i>Help </a></li>*@
+                </ul>
+            </li>
+            @if (Convert.ToString(@Session["DBconnectionId"]) != "2041")
+            {
+        <li>
+            <a href="~/HelpFile/MindspayHelp.pdf" id="Help">
+                <i class=""></i><b>Help</b>
+            </a>
+        </li>
+            }
+            <li>
+                <a href="~/Login/Logout?actionVal=logout" id="logoutId">
+                    <i class="fa fa-lock"></i><b>Logout</b>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style type="text/css">
+    .navbar-nav > li {
+      padding-left: 30px;
+    padding-right: 30px;
+    }
+    .navbar-inverse .navbar-nav > li > a {
+    color: #555555;
+}
+    .siteHeader {
+        min-height: 50px;
+        height: 50px;
+        overflow: visible;
+        background-color: #00655f;
+        color: #f4f4f4;
+        position: relative;
+        z-index: 10000;
+    }
+
+    .strip {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .siteHeader .wrapper {
+        max-width: 1220px;
+        padding-left: 20px;
+        background-color: #282B2D;
+    }
+
+    .branding {
+        float: left;
+        display: inline-block;
+        margin: 5px 0 0;
+    }
+
+    .siteHeader a {
+        outline: 0;
+    }
+
+    .primaryNav {
+        float: left;
+        margin-top: 0;
+        margin-left: 45px;
+    }
+
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .primaryNav-list {
+        margin: 0;
+        padding: 0;
+        height: 75px;
+    }
+
+    .primaryNav .navItem {
+        float: left;
+        position: relative;
+    }
+
+    .navItem a, .primaryNav .navItem {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .flag--bottom .flag-body, .flag--bottom .flag-media, .primaryNav .navItem {
+        vertical-align: bottom;
+    }
+
+    .navItem a {
+        color: #20401a;
+        letter-spacing: 1px;
+        text-decoration: none;
+        vertical-align: middle;
+        line-height: 75px;
+        padding: 0 30px 0 20px;
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        -ms-transition: all .1s linear;
+        transition: all .1s linear;
+    }
+
+    .navItem a, .primaryNav .navItem {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .navItem a, .navItem--new:after {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .navDropdown li:last-child, .primaryNav .navItem:last-child {
+        margin-right: 0;
+    }
+
+    .primaryNav .navItem {
+        float: left;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .navItem a, .primaryNav .navItem {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .flag--bottom .flag-body, .flag--bottom .flag-media, .primaryNav .navItem {
+        vertical-align: bottom;
+    }
+
+    .navDropdown {
+        overflow: hidden;
+        position: absolute;
+        z-index: 100;
+        top: 75px;
+        left: 0;
+        width: 250px;
+        margin: 0;
+        background-color: #1C1C1E;
+        height: 0;
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+        opacity: 0;
+        -webkit-transition: opacity .2s linear;
+        -moz-transition: opacity .2s linear;
+        -o-transition: opacity .2s linear;
+        -ms-transition: opacity .2s linear;
+        transition: opacity .2s linear;
+    }
+
+        .navDropdown .nav {
+            padding: 10px 0;
+        }
+
+    .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .u-pullRight {
+        float: right !important;
+    }
+
+    .headerNav {
+        margin: 0;
+    }
+
+        .headerNav img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+            margin-top: -20px;
+        }
+
+        .headerNav li {
+            margin-left: 20px;
+            letter-spacing: 1px;
+            line-height: 75px;
+        }
+
+        .headerNav li, .headerUtils .loginBtn {
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .headerNav .nav > li, .nav > li > a {
+            display: inline-block;
+            zoom: 1;
+        }
+
+        .headerNav .nav > li, .nav > li > a {
+            display: inline-block;
+            zoom: 1;
+        }
+
+        .headerNav a {
+            color: #20401a;
+        }
+
+    .siteHeader a {
+        outline: 0;
+    }
+</style>
+<script>
+    function myFunction() {
+        var x = document.getElementById("topmenu");
+        if (x.className === "navItem") {
+            x.className += " responsive";
+        } else {
+            x.className = "navItem";
+        }
+    }
+
+  
+</script>

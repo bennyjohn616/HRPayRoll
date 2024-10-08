@@ -1,0 +1,1732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CEA4FE66-38AA-47CA-BA1E-5E3EE57307A7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Payroll</RootNamespace>
+    <AssemblyName>Payroll</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\ThirdParty Reference\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\ThirdParty Reference\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.6.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.6.19\lib\net45\Hangfire.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.5.0, Culture=neutral, PublicKeyToken=9dea7c6e17aa31ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty Reference\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty Reference\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty Reference\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemWindowsFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ThirdParty Reference\SystemWindowsFile.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomExceptionFilter.cs" />
+    <Compile Include="App_Start\CustomJsonValueProviderFactory.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\DataWizardController.cs" />
+    <Compile Include="Controllers\DownLoadController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EntityController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\FinanceYearController.cs" />
+    <Compile Include="Controllers\HelpController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeaveController.cs" />
+    <Compile Include="Controllers\LeaveRequestController.cs" />
+    <Compile Include="Controllers\LoanController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PFChallanController.cs" />
+    <Compile Include="Controllers\PremiumSettingController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\SettingController.cs" />
+    <Compile Include="Controllers\Tax\TaxDeclarationController.cs" />
+    <Compile Include="Controllers\Tax\TaxEntityController.cs" />
+    <Compile Include="Controllers\Tax\TaxProcessController.cs" />
+    <Compile Include="Controllers\Tax\TaxSectionController.cs" />
+    <Compile Include="Controllers\Tax\TaxUtilController.cs" />
+    <Compile Include="Controllers\TransactionController.cs" />
+    <Compile Include="Controllers\UtilController.cs" />
+    <Compile Include="CustomFilter\SessionExpireAttribute.cs" />
+    <Compile Include="FileDownloadAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\ApplicationAuthorizeAttribute.cs" />
+    <Compile Include="Security\ApplyRoleSetting.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\custom.css" />
+    <Content Include="assets\css\jquery.dataTables.css" />
+    <Content Include="assets\css\jquery.dataTables_themeroller.css" />
+    <Content Include="assets\css\main.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\fonts\font-awesome\fonts\fontawesome-webfont78ce.svg" />
+    <Content Include="assets\images\403Error.jpg" />
+    <Content Include="assets\images\404Error.jpg" />
+    <Content Include="assets\images\apple-touch-icon-114-precomposed.png" />
+    <Content Include="assets\images\apple-touch-icon-144-precomposed.png" />
+    <Content Include="assets\images\apple-touch-icon-57-precomposed.png" />
+    <Content Include="assets\images\apple-touch-icon-72-precomposed.png" />
+    <Content Include="assets\images\browser_error.jpg" />
+    <Content Include="assets\images\Company_logo.jpg" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\login-bg.png" />
+    <Content Include="assets\images\login-logo.png" />
+    <Content Include="assets\images\logo-folded.png" />
+    <Content Include="assets\images\logo.png" />
+    <Content Include="assets\images\Payroll.jpg" />
+    <Content Include="assets\images\profile.png" />
+    <Content Include="assets\images\spinner.gif" />
+    <Content Include="assets\js\chart-chartjs.js" />
+    <Content Include="assets\js\chart-easypie.js" />
+    <Content Include="assets\js\chart-flot.js" />
+    <Content Include="assets\js\chart-knobs.js" />
+    <Content Include="assets\js\chart-morris.js" />
+    <Content Include="assets\js\chart-rickshaw.js" />
+    <Content Include="assets\js\chart-sparkline.js" />
+    <Content Include="assets\js\dashboard.js" />
+    <Content Include="assets\js\dataTables.autoFill.min.js" />
+    <Content Include="assets\js\dataTables.fixedColumns.min.js" />
+    <Content Include="assets\js\dataTables.select.min.js" />
+    <Content Include="assets\js\form-validation.js" />
+    <Content Include="assets\js\jquery-1.11.2.min.js" />
+    <Content Include="assets\js\jquery.dataTables.js" />
+    <Content Include="assets\js\jquery.dataTables.min.js" />
+    <Content Include="assets\js\jquery.dataTables_Natural_Sorting.js" />
+    <Content Include="assets\js\jquery.easing.min.js" />
+    <Content Include="assets\js\jquery.validationEngine.js" />
+    <Content Include="assets\js\messenger.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="assets\libraries\financial-data.js" />
+    <Content Include="assets\libraries\RGraph.bar.js" />
+    <Content Include="assets\libraries\RGraph.bipolar.js" />
+    <Content Include="assets\libraries\RGraph.common.annotate.js" />
+    <Content Include="assets\libraries\RGraph.common.context.js" />
+    <Content Include="assets\libraries\RGraph.common.core.js" />
+    <Content Include="assets\libraries\RGraph.common.deprecated.js" />
+    <Content Include="assets\libraries\RGraph.common.dynamic.js" />
+    <Content Include="assets\libraries\RGraph.common.effects.js" />
+    <Content Include="assets\libraries\RGraph.common.key.js" />
+    <Content Include="assets\libraries\RGraph.common.resizing.js" />
+    <Content Include="assets\libraries\RGraph.common.sheets.js" />
+    <Content Include="assets\libraries\RGraph.common.tooltips.js" />
+    <Content Include="assets\libraries\RGraph.common.zoom.js" />
+    <Content Include="assets\libraries\RGraph.drawing.background.js" />
+    <Content Include="assets\libraries\RGraph.drawing.circle.js" />
+    <Content Include="assets\libraries\RGraph.drawing.image.js" />
+    <Content Include="assets\libraries\RGraph.drawing.marker1.js" />
+    <Content Include="assets\libraries\RGraph.drawing.marker2.js" />
+    <Content Include="assets\libraries\RGraph.drawing.marker3.js" />
+    <Content Include="assets\libraries\RGraph.drawing.poly.js" />
+    <Content Include="assets\libraries\RGraph.drawing.rect.js" />
+    <Content Include="assets\libraries\RGraph.drawing.text.js" />
+    <Content Include="assets\libraries\RGraph.drawing.xaxis.js" />
+    <Content Include="assets\libraries\RGraph.drawing.yaxis.js" />
+    <Content Include="assets\libraries\RGraph.fuel.js" />
+    <Content Include="assets\libraries\RGraph.funnel.js" />
+    <Content Include="assets\libraries\RGraph.gantt.js" />
+    <Content Include="assets\libraries\RGraph.gauge.js" />
+    <Content Include="assets\libraries\RGraph.hbar.js" />
+    <Content Include="assets\libraries\RGraph.hprogress.js" />
+    <Content Include="assets\libraries\RGraph.line.js" />
+    <Content Include="assets\libraries\RGraph.meter.js" />
+    <Content Include="assets\libraries\RGraph.modaldialog.js" />
+    <Content Include="assets\libraries\RGraph.odo.js" />
+    <Content Include="assets\libraries\RGraph.pie.js" />
+    <Content Include="assets\libraries\RGraph.radar.js" />
+    <Content Include="assets\libraries\RGraph.rose.js" />
+    <Content Include="assets\libraries\RGraph.rscatter.js" />
+    <Content Include="assets\libraries\RGraph.scatter.js" />
+    <Content Include="assets\libraries\RGraph.semicircularprogress.js" />
+    <Content Include="assets\libraries\RGraph.svg.bar.js" />
+    <Content Include="assets\libraries\RGraph.svg.common.ajax.js" />
+    <Content Include="assets\libraries\RGraph.svg.common.core.js" />
+    <Content Include="assets\libraries\RGraph.svg.common.fx.js" />
+    <Content Include="assets\libraries\RGraph.svg.common.key.js" />
+    <Content Include="assets\libraries\RGraph.svg.common.sheets.js" />
+    <Content Include="assets\libraries\RGraph.svg.common.tooltips.js" />
+    <Content Include="assets\libraries\RGraph.svg.funnel.js" />
+    <Content Include="assets\libraries\RGraph.svg.hbar.js" />
+    <Content Include="assets\libraries\RGraph.svg.line.js" />
+    <Content Include="assets\libraries\RGraph.svg.pie.js" />
+    <Content Include="assets\libraries\RGraph.svg.radar.js" />
+    <Content Include="assets\libraries\RGraph.svg.rose.js" />
+    <Content Include="assets\libraries\RGraph.svg.scatter.js" />
+    <Content Include="assets\libraries\RGraph.svg.semicircularprogress.js" />
+    <Content Include="assets\libraries\RGraph.svg.waterfall.js" />
+    <Content Include="assets\libraries\RGraph.thermometer.js" />
+    <Content Include="assets\libraries\RGraph.vprogress.js" />
+    <Content Include="assets\libraries\RGraph.waterfall.js" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\bootstrap.vertical-tabs.css" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\bootstrap.vertical-tabs.min.css" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\demo.html" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\Gruntfile.js" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\screenshot-v.png" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\screenshot.png" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\src\tabs.css" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\src\tabs.sideways.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\column_render.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\complex_header.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\defaults.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\dom_multiple_elements.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\dom_toolbar.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\dt_events.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\events_live.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\footer_callback.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\html5-data-attributes.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\html5-data-options.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\language_file.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\length_menu.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\object_dom_read.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\row_callback.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\row_grouping.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\advanced_init\sort_direction_control.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\custom_data_flat.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\custom_data_property.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\arrays.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\arrays_custom_prop.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\arrays_subobjects.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\objects.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\objects_deep.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\objects_root_array.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\objects_subarrays.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\data\orthogonal.txt" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\deep.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\defer_render.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\null_data_source.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\objects.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\objects_subarrays.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\orthogonal-data.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\ajax\simple.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\add_row.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\api_in_init.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\counter_columns.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\form.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\highlight.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\multi_filter.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\multi_filter_select.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\regex.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\row_details.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\select_row.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\select_single_row.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\show_hide.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\api\tabs_and_scrolling.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\alt_pagination.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\comma-decimal.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\complex_header.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\dom.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\filter_only.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\flexible_width.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\hidden_columns.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\language.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\multiple_tables.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\multi_col_sort.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\scroll_x.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\scroll_xy.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\scroll_y.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\scroll_y_dynamic.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\state_save.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\table_sorting.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\basic_init\zero_configuration.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\data_sources\ajax.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\data_sources\dom.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\data_sources\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\data_sources\js_array.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\data_sources\server_side.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\plug-ins\api.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\plug-ins\dom_sort.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\plug-ins\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\plug-ins\range_filtering.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\plug-ins\sorting_auto.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\plug-ins\sorting_manual.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\demo.css" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\demo.js" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\details_close.png" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\details_open.png" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\syntax\shCore.css" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\syntax\shCore.js" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\custom_vars.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\defer_loading.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\ids.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\jsonp.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\object_data.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\pipeline.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\post.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\row_details.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\mysql.sql" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\postgres.sql" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\sqlite.sql" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\sqlserver.sql" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\select_rows.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\simple.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\bootstrap.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\cell-border.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\compact.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\display.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\foundation.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\hover.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\index.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\jqueryUI.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\no-classes.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\order-column.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\row-border.html" />
+    <Content Include="assets\plugins\DataTables-master\examples\styling\stripe.html" />
+    <Content Include="assets\plugins\DataTables-master\license.txt" />
+    <Content Include="assets\plugins\DataTables-master\media\css\dataTables.bootstrap.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\dataTables.bootstrap.min.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\dataTables.foundation.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\dataTables.foundation.min.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\dataTables.jqueryui.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\dataTables.jqueryui.min.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\jquery.dataTables.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\jquery.dataTables.min.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\jquery.dataTables.payRoll.css" />
+    <Content Include="assets\plugins\DataTables-master\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="assets\plugins\DataTables-master\media\images\favicon.ico" />
+    <Content Include="assets\plugins\DataTables-master\media\images\sort_asc.png" />
+    <Content Include="assets\plugins\DataTables-master\media\images\sort_asc_disabled.png" />
+    <Content Include="assets\plugins\DataTables-master\media\images\sort_both.png" />
+    <Content Include="assets\plugins\DataTables-master\media\images\sort_desc.png" />
+    <Content Include="assets\plugins\DataTables-master\media\images\sort_desc_disabled.png" />
+    <Content Include="assets\plugins\DataTables-master\media\js\dataTables.bootstrap.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\dataTables.bootstrap.min.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\dataTables.foundation.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\dataTables.foundation.min.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\dataTables.jqueryui.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\dataTables.jqueryui.min.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\jquery.dataTables.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\jquery.dataTables.min.js" />
+    <Content Include="assets\plugins\DataTables-master\media\js\jquery.js" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\contextmenu.html" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\css\jquery.contextMenu.css" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\cut.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\door.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\page_white_add.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\page_white_copy.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\page_white_delete.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\page_white_edit.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\images\page_white_paste.png" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\js\jquery.contextMenu-1.6.5.js" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\contextmenu\js\jquery.fancytree.contextMenu.js" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\hotkeys\hotkeys.html" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\hotkeys\js\jquery.fancytree.hotkeys.js" />
+    <Content Include="assets\plugins\fancytree-master\3rd-party\extensions\hotkeys\js\jquery.hotkeys.js" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\publish.js" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\static\styles\jsdoc-default.css" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\static\styles\node-dark.css" />
+    <Content Include="assets\plugins\fancytree-master\bin\release-sample.js" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-sub.xml" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree.xml" />
+    <Content Include="assets\plugins\fancytree-master\demo\fancytree-server.js" />
+    <Content Include="assets\plugins\fancytree-master\demo\index.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\nav.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\nav_bg.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-3rd-contextmenu-abs.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-3rd-ui-contextmenu.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-accordion.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-api.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-configurator.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-default.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-events.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-awesome-3.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-awesome.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-bootstrap.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-childcounter.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-clones.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-columnview.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-dnd.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-edit.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-filter.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-menu-deprecated.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-menu.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-persist.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-table.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-themeroller.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-ext-wide.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-form.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-iframe-1.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-iframe.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-json.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-keyboard.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-load-errors.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-load-errors2.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-load-xml.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-multi-dnd.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-multi-ext.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-multiline.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-rtl.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-scroll.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-select.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-source.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-theming.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-tooltip.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample-xxl.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample.css" />
+    <Content Include="assets\plugins\fancytree-master\demo\sample.js" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\accept.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\arrow_right.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\bug.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\cancel.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\custom.css" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\customDoc1.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\customDoc2.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\customFolder1.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\doc_with_children.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\emoticon_smile.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\emoticon_unhappy.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\error.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\exclamation.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\eye.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\flag_red.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\folder_bug.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\folder_docs.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\folder_images.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\folder_page.gif" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\help.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\key.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\new.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\note.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\page_white_lightning.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\skin-custom\page_white_star.png" />
+    <Content Include="assets\plugins\fancytree-master\demo\top.html" />
+    <Content Include="assets\plugins\fancytree-master\demo\welcome.html" />
+    <Content Include="assets\plugins\fancytree-master\dist\jquery.fancytree-all.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\jquery.fancytree-all.min.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\jquery.fancytree.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\jquery.fancytree.min.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-awesome\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-awesome\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-bootstrap-n\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-bootstrap-n\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-bootstrap\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-bootstrap\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-lion\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-lion\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-lion\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-lion\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-themeroller\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-themeroller\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-themeroller\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-themeroller\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-vista\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-vista\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-vista\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-vista\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win7\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win7\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win7\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win7\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-n\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-n\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-n\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-n\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-xxl\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-xxl\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-xxl\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-xxl\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\icons-rtl.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\ui.fancytree.min.css" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\vline-rtl.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\vline.gif" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.childcounter.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.clones.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.columnview.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.debug.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.dnd.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.edit.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.filter.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.glyph.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.gridnav.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.menu.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.persist.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.table.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.themeroller.js" />
+    <Content Include="assets\plugins\fancytree-master\dist\src\jquery.fancytree.wide.js" />
+    <Content Include="assets\plugins\fancytree-master\doc\iconInfo_32x32.png" />
+    <Content Include="assets\plugins\fancytree-master\doc\index.html" />
+    <Content Include="assets\plugins\fancytree-master\doc\jsdoctest.js" />
+    <Content Include="assets\plugins\fancytree-master\doc\logo.png" />
+    <Content Include="assets\plugins\fancytree-master\doc\teaser1.png" />
+    <Content Include="assets\plugins\fancytree-master\doc\teaser2.png" />
+    <Content Include="assets\plugins\fancytree-master\index.html" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\images\cut.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\images\door.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\images\page_white_copy.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\images\page_white_delete.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\images\page_white_edit.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\images\page_white_paste.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\jquery.contextMenu-custom.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\contextmenu-abs\jquery.contextMenu.css" />
+    <Content Include="assets\plugins\fancytree-master\lib\intro.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery-ui-contextmenu\jquery.ui-contextmenu.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery-ui-contextmenu\jquery.ui-contextmenu.min.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery-ui-contextmenu\MIT-LICENSE.txt" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery-ui.custom.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.configurator.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.cookie.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.jsconsole.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.planize.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.popup.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.skinswitcher.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\jquery.tmpl.min.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\outro.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\prettify.css" />
+    <Content Include="assets\plugins\fancytree-master\lib\prettify.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\qunit-composite.css" />
+    <Content Include="assets\plugins\fancytree-master\lib\qunit-composite.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\qunit.css" />
+    <Content Include="assets\plugins\fancytree-master\lib\qunit.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\buttonbg.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\icon_color_arrow.gif" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\menuhoverbg.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_black_matte.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_black_tie.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_blitzer.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_cupertino.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_dark_hive.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_dot_luv.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_eggplant.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_excite_bike.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_flick.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_hot_sneaks.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_humanity.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_le_frog.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_mint_choco.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_overcast.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_pepper_grinder.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_smoothness.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_south_street.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_start_menu.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_sunny.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_swanky_purse.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_trontastic.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_ui_dark.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_ui_light.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\images\theme_90_windoze.png" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\jquery.themeswitcher.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\jquery.themeswitcher.min.js" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\sample.htm" />
+    <Content Include="assets\plugins\fancytree-master\LICENSE.txt" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.childcounter.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.clones.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.columnview.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.debug.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.dnd.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.edit.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.filter.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.glyph.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.gridnav.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.menu.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.persist.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.table.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.themeroller.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jquery.fancytree.wide.js" />
+    <Content Include="assets\plugins\fancytree-master\src\jsdoc-globals.js" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-awesome\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-bootstrap-n\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-bootstrap\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-lion\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-lion\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-lion\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-themeroller\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-themeroller\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-themeroller\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-vista\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-vista\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-vista\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-vista\vista_colors.txt" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win7\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win7\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win7\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-n\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-n\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-n\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-xxl\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-xxl\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-xxl\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\icons-rtl.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\icons.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\loading.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\ui.fancytree.css" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\vline-rtl.gif" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\vline.gif" />
+    <Content Include="assets\plugins\fancytree-master\test\dnd-sortable\test-dnd-sortable-1.html" />
+    <Content Include="assets\plugins\fancytree-master\test\dnd-sortable\test-dnd-sortable-2.html" />
+    <Content Include="assets\plugins\fancytree-master\test\dnd-sortable\test-dnd-sortable-3.html" />
+    <Content Include="assets\plugins\fancytree-master\test\dnd-sortable\test-dnd-sortable-4.html" />
+    <Content Include="assets\plugins\fancytree-master\test\dnd-sortable\test-dnd-sortable-5.html" />
+    <Content Include="assets\plugins\fancytree-master\test\dnd-sortable\test-dnd-sortable-5.js" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\doctype-html4-loose.html" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\doctype-html4-strict.html" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\doctype-html5.html" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\doctype-none.html" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\doctype-xml-strict.html" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\doctype-xml-transitional.html" />
+    <Content Include="assets\plugins\fancytree-master\test\doctypes\index.html" />
+    <Content Include="assets\plugins\fancytree-master\test\test-css.html" />
+    <Content Include="assets\plugins\fancytree-master\test\test-ext-dnd.html" />
+    <Content Include="assets\plugins\fancytree-master\test\test-ext-keyboard.html" />
+    <Content Include="assets\plugins\fancytree-master\test\test-ext-table.html" />
+    <Content Include="assets\plugins\fancytree-master\test\test-extensions.html" />
+    <Content Include="assets\plugins\fancytree-master\test\test-fastrender-10k-nodes.html" />
+    <Content Include="assets\plugins\fancytree-master\test\triage\test-form.html" />
+    <Content Include="assets\plugins\fancytree-master\test\triage\test-issue-NNN-description.html" />
+    <Content Include="assets\plugins\fancytree-master\test\triage\test-issue-table-NNN-description.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\server.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-bench.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-bench.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-core-build.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-core.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-core.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-ext-misc.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-ext-misc.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-ext-table.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-ext-table.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery-20.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery-latest.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery-legacy.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery110-ui110.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery18-ui18.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery19-ui19.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-jQuery1x-mig-ui1x.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-leaks.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-leaks.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-regression.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-regression.js" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-suite.html" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\test-tools.js" />
+    <Content Include="assets\plugins\fancyTree\css\FancyTree.css" />
+    <Content Include="assets\plugins\fancyTree\css\icons.gif" />
+    <Content Include="assets\plugins\fancyTree\jquery.fancytree.contextMenu.js" />
+    <Content Include="assets\plugins\fancyTree\jquery.fancytree.dnd.js" />
+    <Content Include="assets\plugins\fancyTree\jquery.fancytree.edit.js" />
+    <Content Include="assets\plugins\fancyTree\jquery.fancytree.js" />
+    <Content Include="assets\plugins\fancyTree\jquery.ui-contextmenu.min.js" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="assets\plugins\gauge\gauge.min.js" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\ajaxfileupload.js" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\jquery-ui.min.css" />
+    <Content Include="assets\plugins\jquery-ui\smoothness\jquery-ui.min.js" />
+    <Content Include="assets\plugins\jquey-fileDownloader\css\jquery.gritter.css" />
+    <Content Include="assets\plugins\jquey-fileDownloader\css\shCoreDefault.css" />
+    <Content Include="assets\plugins\jquey-fileDownloader\css\Site.css" />
+    <Content Include="assets\plugins\jquey-fileDownloader\images\gritter-light.png" />
+    <Content Include="assets\plugins\jquey-fileDownloader\images\gritter-long.png" />
+    <Content Include="assets\plugins\jquey-fileDownloader\images\gritter.png" />
+    <Content Include="assets\plugins\jquey-fileDownloader\images\ie-spacer.gif" />
+    <Content Include="assets\plugins\jquey-fileDownloader\images\pbar-ani.gif" />
+    <Content Include="assets\plugins\jquey-fileDownloader\jquery.fileDownload.js" />
+    <Content Include="assets\plugins\jquey-fileDownloader\Support\jquery.gritter.min.js" />
+    <Content Include="assets\plugins\jquey-fileDownloader\Support\shBrushJScript.js" />
+    <Content Include="assets\plugins\jquey-fileDownloader\Support\shBrushXml.js" />
+    <Content Include="assets\plugins\jquey-fileDownloader\Support\shCore.js" />
+    <Content Include="assets\plugins\jsTree\demo\basic\index.html" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\New Text Document.txt" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\ajax_nodes.html" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\apple-touch-icon-precomposed.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\jstree.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\jstree.min.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\libs\jquery.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\libs\jquery.ui.touch.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\libs\require.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\themes\default\32px.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\themes\default\40px.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\themes\default\style.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\themes\default\style.min.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\dist\themes\default\throbber.gif" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\docs.css" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\docs.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\favicon.ico" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\html5.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\images\browsers.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\images\find.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\images\logo.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\images\tree.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\images\tree_icon.png" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\jquery-1.10.2.min.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\jquery.address-1.6.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\respond.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\vakata.js" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\index.html" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\file_sprite.png" />
+    <Content Include="assets\plugins\jsTree\demo\sitebrowser\data.sql" />
+    <Content Include="assets\plugins\jsTree\dist\jstree.js" />
+    <Content Include="assets\plugins\jsTree\dist\jstree.min.js" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default-dark\32px.png" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default-dark\40px.png" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default-dark\style.css" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default-dark\style.min.css" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default-dark\throbber.gif" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default\32px.png" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default\40px.png" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default\style.css" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default\style.min.css" />
+    <Content Include="assets\plugins\jsTree\dist\themes\default\throbber.gif" />
+    <Content Include="assets\plugins\jsTree\gruntfile.js" />
+    <Content Include="assets\plugins\jsTree\src\intro.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.changed.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.checkbox.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.conditionalselect.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.contextmenu.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.dnd.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.massload.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.search.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.sort.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.state.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.types.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.unique.js" />
+    <Content Include="assets\plugins\jsTree\src\jstree.wholerow.js" />
+    <Content Include="assets\plugins\jsTree\src\misc.js" />
+    <Content Include="assets\plugins\jsTree\src\outro.js" />
+    <Content Include="assets\plugins\jsTree\src\sample.js" />
+    <Content Include="assets\plugins\jsTree\src\themes\default-dark\32px.png" />
+    <Content Include="assets\plugins\jsTree\src\themes\default-dark\40px.png" />
+    <Content Include="assets\plugins\jsTree\src\themes\default-dark\style.css" />
+    <Content Include="assets\plugins\jsTree\src\themes\default-dark\throbber.gif" />
+    <Content Include="assets\plugins\jsTree\src\themes\default\32px.png" />
+    <Content Include="assets\plugins\jsTree\src\themes\default\40px.png" />
+    <Content Include="assets\plugins\jsTree\src\themes\default\style.css" />
+    <Content Include="assets\plugins\jsTree\src\themes\default\throbber.gif" />
+    <Content Include="assets\plugins\jsTree\src\vakata-jstree.js" />
+    <Content Include="assets\plugins\jsTree\test\unit\index.html" />
+    <Content Include="assets\plugins\jsTree\test\unit\libs\qunit.css" />
+    <Content Include="assets\plugins\jsTree\test\unit\libs\qunit.js" />
+    <Content Include="assets\plugins\jsTree\test\unit\test.js" />
+    <Content Include="assets\plugins\jsTree\test\visual\desktop\index.html" />
+    <Content Include="assets\plugins\jsTree\test\visual\mobile\index.html" />
+    <Content Include="assets\plugins\jsTree\test\visual\screenshots\desktop\.png" />
+    <Content Include="assets\plugins\jsTree\test\visual\screenshots\desktop\desktop.png" />
+    <Content Include="assets\plugins\jsTree\test\visual\screenshots\desktop\home.png" />
+    <Content Include="assets\plugins\jsTree\test\visual\screenshots\mobile\.png" />
+    <Content Include="assets\plugins\jsTree\test\visual\screenshots\mobile\home.png" />
+    <Content Include="assets\plugins\jsTree\test\visual\screenshots\mobile\mobile.png" />
+    <Content Include="assets\plugins\ModalPopups.js" />
+    <Content Include="assets\plugins\morris-chart\css\morris.css" />
+    <Content Include="assets\plugins\morris-chart\js\morris.min.js" />
+    <Content Include="assets\plugins\morris-chart\js\raphael-min.js" />
+    <Content Include="assets\plugins\multi-select\css\multi-select.css" />
+    <Content Include="assets\plugins\multi-select\img\switch.png" />
+    <Content Include="assets\plugins\multi-select\js\jquery.multi-select.js" />
+    <Content Include="assets\plugins\multi-select\js\jquery.quicksearch.js" />
+    <Content Include="assets\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="assets\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="assets\plugins\prettyphoto\dark_rounded\btnNext.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_rounded\btnPrevious.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_rounded\contentPattern.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_rounded\loader.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_rounded\sprite.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_square\btnNext.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_square\btnPrevious.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_square\loader.html" />
+    <Content Include="assets\plugins\prettyphoto\dark_square\sprite.html" />
+    <Content Include="assets\plugins\prettyphoto\default\default_thumb.png" />
+    <Content Include="assets\plugins\prettyphoto\default\loader.gif" />
+    <Content Include="assets\plugins\prettyphoto\default\sprite.png" />
+    <Content Include="assets\plugins\prettyphoto\default\sprite_next.png" />
+    <Content Include="assets\plugins\prettyphoto\default\sprite_prev.png" />
+    <Content Include="assets\plugins\prettyphoto\default\sprite_x.png" />
+    <Content Include="assets\plugins\prettyphoto\default\sprite_y.png" />
+    <Content Include="assets\plugins\prettyphoto\facebook\btnNext.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\btnPrevious.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\contentPatternBottom.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\contentPatternLeft.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\contentPatternRight.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\contentPatternTop.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\default_thumbnail.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\loader.html" />
+    <Content Include="assets\plugins\prettyphoto\facebook\sprite.html" />
+    <Content Include="assets\plugins\prettyphoto\jquery.prettyPhoto.js" />
+    <Content Include="assets\plugins\prettyphoto\light_rounded\btnNext.html" />
+    <Content Include="assets\plugins\prettyphoto\light_rounded\btnPrevious.html" />
+    <Content Include="assets\plugins\prettyphoto\light_rounded\loader.html" />
+    <Content Include="assets\plugins\prettyphoto\light_rounded\sprite.html" />
+    <Content Include="assets\plugins\prettyphoto\light_square\btnNext.html" />
+    <Content Include="assets\plugins\prettyphoto\light_square\btnPrevious.html" />
+    <Content Include="assets\plugins\prettyphoto\light_square\sprite.html" />
+    <Content Include="assets\plugins\prettyphoto\prettyPhoto.css" />
+    <Content Include="assets\plugins\rickshaw-chart\css\detail.css" />
+    <Content Include="assets\plugins\rickshaw-chart\css\extensions.css" />
+    <Content Include="assets\plugins\rickshaw-chart\css\graph.css" />
+    <Content Include="assets\plugins\rickshaw-chart\css\legend.css" />
+    <Content Include="assets\plugins\rickshaw-chart\css\lines.css" />
+    <Content Include="assets\plugins\rickshaw-chart\css\rickshaw.min.css" />
+    <Content Include="assets\plugins\rickshaw-chart\images\interp_cardinal.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\interp_linear.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\interp_step.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\offset_pct.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\offset_stack.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\offset_stream.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\offset_value.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\om_bar.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\om_lines.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\om_scatter.png" />
+    <Content Include="assets\plugins\rickshaw-chart\images\om_stack.png" />
+    <Content Include="assets\plugins\rickshaw-chart\js\Rickshaw.All.js" />
+    <Content Include="assets\plugins\rickshaw-chart\vendor\d3.v3.js" />
+    <Content Include="assets\plugins\sparkline-chart\jquery.sparkline.min.js" />
+    <Content Include="assets\plugins\TableTools-master\css\dataTables.tableTools.css" />
+    <Content Include="assets\plugins\TableTools-master\examples\ajax.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\alter_buttons.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\bootstrap.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\button_text.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\collection.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\defaults.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\index.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\jqueryui.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\multiple_tables.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\multi_instance.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\new_init.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\pdf_message.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\plug-in.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\select_column.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\select_multi.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\select_os.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\select_single.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\simple.xml" />
+    <Content Include="assets\plugins\TableTools-master\examples\swf_path.xml" />
+    <Content Include="assets\plugins\TableTools-master\images\collection.png" />
+    <Content Include="assets\plugins\TableTools-master\images\collection_hover.png" />
+    <Content Include="assets\plugins\TableTools-master\images\copy.png" />
+    <Content Include="assets\plugins\TableTools-master\images\copy_hover.png" />
+    <Content Include="assets\plugins\TableTools-master\images\csv.png" />
+    <Content Include="assets\plugins\TableTools-master\images\csv_hover.png" />
+    <Content Include="assets\plugins\TableTools-master\images\pdf.png" />
+    <Content Include="assets\plugins\TableTools-master\images\pdf_hover.png" />
+    <Content Include="assets\plugins\TableTools-master\images\print.png" />
+    <Content Include="assets\plugins\TableTools-master\images\print_hover.png" />
+    <Content Include="assets\plugins\TableTools-master\images\xls.png" />
+    <Content Include="assets\plugins\TableTools-master\images\xls_hover.png" />
+    <Content Include="assets\plugins\TableTools-master\js\dataTables.tableTools.js" />
+    <Content Include="assets\plugins\TableTools-master\License.txt" />
+    <Content Include="assets\plugins\TableTools-master\src\dataTables.tableTools.js" />
+    <Content Include="assets\plugins\TableTools-master\src\TableTools.js" />
+    <Content Include="assets\plugins\TableTools-master\src\ZeroClipboard.js" />
+    <Content Include="assets\plugins\TableTools-master\swf\copy_csv_xls.swf" />
+    <Content Include="assets\plugins\TableTools-master\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\itextsharp.xmlworker.dll" />
+    <Content Include="Content\LOC Logo &amp; Header.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Js\Admin\FormRights.js" />
+    <Content Include="Js\Admin\Role.js" />
+    <Content Include="Js\application.js" />
+    <Content Include="Js\Company\bank.js" />
+    <Content Include="Js\Company\category.js" />
+    <Content Include="Js\Company\CompanyCom.js" />
+    <Content Include="Js\Company\CompanyJs.js" />
+    <Content Include="Js\Company\DynamicEntity.js" />
+    <Content Include="Js\Company\entityMapping.js" />
+    <Content Include="Js\Company\entityModel.js" />
+    <Content Include="Js\Company\FieldCreation.js" />
+    <Content Include="Js\Company\formulaCreation_new.js" />
+    <Content Include="Js\Company\HRComponent.js" />
+    <Content Include="Js\Company\joiningDoc.js" />
+    <Content Include="Js\Company\lwfSetting.js" />
+    <Content Include="Js\Company\popup.js" />
+    <Content Include="Js\Company\PTax.js" />
+    <Content Include="Js\Admin\User.js" />
+    <Content Include="Js\Company\ShowPassword.js" />
+    <Content Include="Js\conformationbox\css.css" />
+    <Content Include="Js\conformationbox\jquery.ui.draggable.js" />
+    <Content Include="Js\conformationbox\jQuery.alert.js" />
+    <Content Include="Js\conformationbox\jQuery.js" />
+    <Content Include="Js\DataWizard\DWCatMasterfield.js" />
+    <Content Include="Js\DataWizard\DWCategory.js" />
+    <Content Include="Js\DataWizard\DWDeductions.js" />
+    <Content Include="Js\DataWizard\DWEarnings.js" />
+    <Content Include="Js\DataWizard\Filter.js" />
+    <Content Include="Js\DataWizard\Grouping.js" />
+    <Content Include="Js\DataWizard\Paysheet.js" />
+    <Content Include="Js\DataWizard\Payslipsetting.js" />
+    <Content Include="Js\DataWizard\PFChallan.js" />
+    <Content Include="Js\DataWizard\pfreport.js" />
+    <Content Include="Js\DataWizard\RoleForm.js" />
+    <Content Include="Js\Emp\academic.js" />
+    <Content Include="Js\Emp\address.js" />
+    <Content Include="Js\Emp\bankDetails.js" />
+    <Content Include="Js\Emp\benefitComponent.js" />
+    <Content Include="Js\Emp\emergencyContact.js" />
+    <Content Include="Js\Emp\Employee.js" />
+    <Content Include="Js\Emp\employeement.js" />
+    <Content Include="Js\Emp\family.js" />
+    <Content Include="Js\Emp\languageKnown.js" />
+    <Content Include="Js\Emp\monthlyInput.js" />
+    <Content Include="Js\Emp\MultiEntry.js" />
+    <Content Include="Js\Emp\nominee.js" />
+    <Content Include="Js\Emp\payrollHistroy.js" />
+    <Content Include="Js\Emp\training.js" />
+    <Content Include="Js\Leave\assignManger.js" />
+    <Content Include="Js\Leave\Calendar.js" />
+    <Content Include="Js\Leave\DebitLeave.js" />
+    <Content Include="Js\Leave\EmployeeLeaveReport.js" />
+    <Content Include="Js\Leave\EmployeeReport.js" />
+    <Content Include="Js\Leave\Holiday.js" />
+    <Content Include="Js\Leave\leaveFinanceYear.js" />
+    <Content Include="Js\Leave\leaveOpening.js" />
+    <Content Include="Js\Leave\LeaveopeningsImport.js" />
+    <Content Include="Js\Leave\LeaveReport.js" />
+    <Content Include="Js\Leave\leaveRequest.js" />
+    <Content Include="Js\Leave\MailConfiguration.js" />
+    <Content Include="Js\Leave\ManagerEligiblity.js" />
+    <Content Include="Js\Leave\MonthlyLeaveLimit.js" />
+    <Content Include="Js\Leave\postLeave.js" />
+    <Content Include="Js\Leave\Weekoff.js" />
+    <Content Include="Js\Loan\LoanEntry.js" />
+    <Content Include="Js\Loan\LoanMaster.js" />
+    <Content Include="Js\Login.js" />
+    <Content Include="Js\PayrollMain.js" />
+    <Content Include="Js\require.js" />
+    <Content Include="Js\salaryView.js" />
+    <Content Include="Js\SampleTest.js" />
+    <Content Include="Js\screen.js" />
+    <Content Include="Js\Setting\Emp_CodeSetting.js" />
+    <Content Include="Js\Setting\PremiumSetting.js" />
+    <Content Include="Js\Setting\RoleFormCommand.js" />
+    <Content Include="Js\Setting\Setting.js" />
+    <Content Include="Js\Tax\declaractionEntry.js" />
+    <Content Include="Js\Tax\financeYear.js" />
+    <Content Include="Js\Tax\form16Challan.js" />
+    <Content Include="Js\Tax\LICPremium.js" />
+    <Content Include="Js\Tax\MedicalInsurance.js" />
+    <Content Include="Js\Tax\otherIncomeHeads.js" />
+    <Content Include="Js\Tax\sectionMatching.js" />
+    <Content Include="Js\Tax\Slab.js" />
+    <Content Include="Js\Tax\taxBehavior.js" />
+    <Content Include="Js\Tax\txMatching.js" />
+    <Content Include="Js\Tax\txProcess.js" />
+    <Content Include="Js\Tax\txSection.js" />
+    <Content Include="Js\Trans\FullFinalSettlement.js" />
+    <Content Include="Js\Trans\GenerateForms.js" />
+    <Content Include="Js\Trans\increment.js" />
+    <Content Include="Js\Trans\lopCredit.js" />
+    <Content Include="Js\Trans\Release.js" />
+    <Content Include="Js\Trans\Separation.js" />
+    <Content Include="Js\Trans\StopPayment.js" />
+    <Content Include="Js\Trans\supplementary.js" />
+    <Content Include="Js\Util\import.js" />
+    <Content Include="Js\Util\Singleimport.js" />
+    <Content Include="Js\Util\TaxDeclarationImport.js" />
+    <Content Include="Js\Validator.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="assets\fonts\font-awesome\fonts\fontawesome-webfont78ce.eot" />
+    <Content Include="assets\fonts\font-awesome\fonts\fontawesome-webfont78ce.ttf" />
+    <Content Include="assets\fonts\font-awesome\fonts\fontawesome-webfont78ce.woff" />
+    <Content Include="assets\fonts\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\plugins\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="assets\plugins\fancytree-master\.editorconfig" />
+    <Content Include="assets\plugins\fancytree-master\.gitignore" />
+    <Content Include="assets\plugins\fancytree-master\.jshintrc" />
+    <Content Include="assets\plugins\fancytree-master\.project" />
+    <Content Include="assets\plugins\fancytree-master\.travis.yml" />
+    <Content Include="assets\plugins\fancytree-master\bin\conf.json" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\README.md" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\container.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\details.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\example.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\examples.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\exceptions.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\fires.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\layout.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\mainpage.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\members.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\method.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\methods.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\method_sig.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\params.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\properties.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\returns.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\jsdoc3-moogle\tmpl\tutorial.tmpl" />
+    <Content Include="assets\plugins\fancytree-master\bin\make_doc.sh" />
+    <Content Include="assets\plugins\fancytree-master\bower.json" />
+    <Content Include="assets\plugins\fancytree-master\CHANGELOG.md" />
+    <Content Include="assets\plugins\fancytree-master\CONTRIBUTING.md" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-empty.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-parse-error.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-pws-error.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-pws-ok.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-sub2.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-decide.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-dom.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-fs.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-instruments.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-local.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-plain.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-products.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree-taxonomy.json" />
+    <Content Include="assets\plugins\fancytree-master\demo\ajax-tree.json" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-awesome\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-bootstrap-n\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-bootstrap\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-common.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-custom-1\README.md" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-lion\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-vista\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win7\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-n\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8-xxl\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-win8\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\dist\skin-xp\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\doc\annotated-src\.folder" />
+    <Content Include="assets\plugins\fancytree-master\doc\icons_layout.ods" />
+    <Content Include="assets\plugins\fancytree-master\doc\jsdoc.conf.json" />
+    <Content Include="assets\plugins\fancytree-master\doc\README.md" />
+    <Content Include="assets\plugins\fancytree-master\doc\spec\SpecFocus.md" />
+    <Content Include="assets\plugins\fancytree-master\doc\teaser.pdn" />
+    <Content Include="assets\plugins\fancytree-master\doc\tutorials\howto-events.md" />
+    <Content Include="assets\plugins\fancytree-master\fancytree.jquery.json" />
+    <Content Include="assets\plugins\fancytree-master\Gruntfile.coffee" />
+    <Content Include="assets\plugins\fancytree-master\lib\Super-Theme-Switcher\README.md" />
+    <Content Include="assets\plugins\fancytree-master\package.json" />
+    <Content Include="assets\plugins\fancytree-master\README.md" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-awesome\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-bootstrap-n\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-bootstrap\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-common.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-lion\icons-lion.psp" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-lion\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-vista\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win7\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-n\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8-xxl\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-win8\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\src\skin-xp\ui.fancytree.less" />
+    <Content Include="assets\plugins\fancytree-master\test\ajax10k_nodes.json" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\ajax-empty.json" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\ajax-sub2.json" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\ajax-tree-plain.json" />
+    <Content Include="assets\plugins\fancytree-master\test\unit\ajax-tree.json" />
+    <Content Include="assets\plugins\jsTree\.gitignore" />
+    <Content Include="assets\plugins\jsTree\bower.json" />
+    <Content Include="assets\plugins\jsTree\component.json" />
+    <Content Include="assets\plugins\jsTree\composer.json" />
+    <Content Include="assets\plugins\jsTree\demo\basic\root.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\.htaccess" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\ajax_children.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\ajax_children2.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\asdf asdf" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\asdfasdf" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\asdfasdfasdfasdfasdf" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\asdf\New file4" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\ajax_children.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\ajax_demo_children.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\ajax_demo_roots.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\ajax_roots.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\assets\images\ajax_children2.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\data\root\jstree.json" />
+    <Content Include="assets\plugins\jsTree\demo\filebrowser\index.php" />
+    <Content Include="assets\plugins\jsTree\demo\sitebrowser\class.db.php" />
+    <Content Include="assets\plugins\jsTree\demo\sitebrowser\class.tree.php" />
+    <Content Include="assets\plugins\jsTree\demo\sitebrowser\index.php" />
+    <Content Include="assets\plugins\jsTree\jstree.jquery.json" />
+    <Content Include="assets\plugins\jsTree\LICENSE-MIT" />
+    <Content Include="assets\plugins\jsTree\package.json" />
+    <Content Include="assets\plugins\jsTree\README.md" />
+    <Content Include="assets\plugins\jsTree\src\themes\base.less" />
+    <Content Include="assets\plugins\jsTree\src\themes\default-dark\style.less" />
+    <Content Include="assets\plugins\jsTree\src\themes\default\style.less" />
+    <Content Include="assets\plugins\jsTree\src\themes\main.less" />
+    <Content Include="assets\plugins\jsTree\src\themes\mixins.less" />
+    <Content Include="assets\plugins\jsTree\src\themes\responsive.less" />
+    <Content Include="assets\plugins\TableTools-master\.gitignore" />
+    <Content Include="assets\plugins\TableTools-master\as3\lib\AlivePDF.swc" />
+    <Content Include="assets\plugins\TableTools-master\as3\ZeroClipboard.as" />
+    <Content Include="assets\plugins\TableTools-master\as3\ZeroClipboardPdf.as" />
+    <Content Include="assets\plugins\TableTools-master\bower.json" />
+    <Content Include="assets\plugins\TableTools-master\images\psd\collection.psd" />
+    <Content Include="assets\plugins\TableTools-master\images\psd\copy document.psd" />
+    <Content Include="assets\plugins\TableTools-master\images\psd\file_types.psd" />
+    <Content Include="assets\plugins\TableTools-master\images\psd\printer.psd" />
+    <Content Include="assets\plugins\TableTools-master\make.sh" />
+    <Content Include="assets\plugins\TableTools-master\Readme.md" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\.gitignore" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\bower.json" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\LICENSE" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\package.json" />
+    <Content Include="assets\plugins\bootstrap\bootstrap-vertical-tabs-1.2.1\README.md" />
+    <Content Include="assets\plugins\DataTables-master\.datatables-commit-sync" />
+    <Content Include="assets\plugins\DataTables-master\.gitignore" />
+    <Content Include="assets\plugins\DataTables-master\bower.json" />
+    <Content Include="assets\plugins\DataTables-master\composer.json" />
+    <Content Include="assets\plugins\DataTables-master\Contributing.md" />
+    <Content Include="assets\plugins\DataTables-master\dataTables.jquery.json" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\examples.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\resources\syntax\Syntax Highlighter license" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\ids-arrays.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\ids-objects.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\jsonp.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\objects.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\post.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\server_processing.php" />
+    <Content Include="assets\plugins\DataTables-master\examples\server_side\scripts\ssp.class.php" />
+    <Content Include="assets\plugins\DataTables-master\media\images\Sorting icons.psd" />
+    <Content Include="assets\plugins\DataTables-master\package.json" />
+    <Content Include="assets\plugins\DataTables-master\Readme.md" />
+    <None Include="Properties\PublishProfiles\fayaspublish.pubxml" />
+    <None Include="Properties\PublishProfiles\Local Pulish.pubxml" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\Localhost.pubxml" />
+    <None Include="Properties\PublishProfiles\Mindspay.pubxml" />
+    <None Include="Properties\PublishProfiles\MindspayLeaveFinalPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\PayrollLatest.pubxml" />
+    <None Include="Properties\PublishProfiles\viji.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\canvasjs.min.js" />
+    <Content Include="Scripts\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery.canvasjs.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Company\Category.cshtml" />
+    <Content Include="Views\Company\CategoryList.cshtml" />
+    <Content Include="Views\Company\Company.cshtml" />
+    <Content Include="Views\Company\CompanyList.cshtml" />
+    <Content Include="Views\Company\CompanyView.cshtml" />
+    <Content Include="Views\Company\DynamicEntity.cshtml" />
+    <Content Include="Views\Company\EmployeeList.cshtml" />
+    <Content Include="Views\Company\Entitymodel.cshtml" />
+    <Content Include="Views\Company\Field.cshtml" />
+    <Content Include="Views\Company\FormulaCreation.cshtml" />
+    <Content Include="Views\Company\HRComponent.cshtml" />
+    <Content Include="Views\Company\HrComponentList.cshtml" />
+    <Content Include="Views\Company\JoinDocument.cshtml" />
+    <Content Include="Views\Company\JoiningDocumentList.cshtml" />
+    <Content Include="Views\Company\Popup.cshtml" />
+    <Content Include="Views\Company\PopupList.cshtml" />
+    <Content Include="Views\Employee\Employee.cshtml" />
+    <Content Include="Views\Employee\Employeement.cshtml" />
+    <Content Include="Views\Employee\EmployeementList.cshtml" />
+    <Content Include="Views\Employee\Emp_Academic.cshtml" />
+    <Content Include="Views\Employee\Emp_AcademicList.cshtml" />
+    <Content Include="Views\Employee\Emp_Address.cshtml" />
+    <Content Include="Views\Employee\Emp_BenefitComponent.cshtml" />
+    <Content Include="Views\Employee\Emp_BenefitComponentList.cshtml" />
+    <Content Include="Views\Employee\Emp_EmergencyContact.cshtml" />
+    <Content Include="Views\Employee\Emp_EmergencyContactList.cshtml" />
+    <Content Include="Views\Employee\Emp_FamilyList.cshtml" />
+    <Content Include="Views\Employee\Emp_LanguageKnown.cshtml" />
+    <Content Include="Views\Employee\Emp_LanguageKnownList.cshtml" />
+    <Content Include="Views\Employee\Emp_Nominee.cshtml" />
+    <Content Include="Views\Employee\Emp_NomineeList.cshtml" />
+    <Content Include="Views\Employee\Emp_Training.cshtml" />
+    <Content Include="Views\Employee\Emp_TrainingList.cshtml" />
+    <Content Include="Views\Employee\Family.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\Loan\LoanEntry.cshtml" />
+    <Content Include="Views\Loan\LoanEntryList.cshtml" />
+    <Content Include="Views\Admin\User.cshtml" />
+    <Content Include="Views\Admin\UserList.cshtml" />
+    <Content Include="Views\Admin\Role.cshtml" />
+    <Content Include="Views\Admin\RoleList.cshtml" />
+    <Content Include="Views\Admin\FormRights.cshtml" />
+    <Content Include="Views\Admin\FormRightsList.cshtml" />
+    <Content Include="Views\Company\PTaxList.cshtml" />
+    <Content Include="Views\Loan\LoanMaster.cshtml" />
+    <Content Include="Views\Loan\LoanMasterList.cshtml" />
+    <Content Include="Views\Setting\Setting.cshtml" />
+    <Content Include="Views\Employee\MonthlyInput.cshtml" />
+    <Content Include="Views\Employee\PayrollProcess.cshtml" />
+    <Content Include="Views\Transaction\Increment.cshtml" />
+    <Content Include="Views\Transaction\TransView.cshtml" />
+    <Content Include="Views\Transaction\Release.cshtml" />
+    <Content Include="Views\Transaction\Separation.cshtml" />
+    <Content Include="Views\Transaction\StopPaymentList.cshtml" />
+    <Content Include="Views\Shared\_LeftMenu.cshtml" />
+    <Content Include="Views\Shared\_TopMenu.cshtml" />
+    <Content Include="Views\Shared\_Company.cshtml" />
+    <Content Include="Views\Util\Import.cshtml" />
+    <Content Include="Views\Transaction\StopPayment.cshtml" />
+    <Content Include="Views\Test.cshtml" />
+    <Content Include="Views\Transaction\FullFinalSettlement.cshtml" />
+    <Content Include="Views\Employee\Emp_JoiningDocument.cshtml" />
+    <Content Include="Views\Employee\Emp_JoiningDocumentList.cshtml" />
+    <Content Include="Views\Company\Bank.cshtml" />
+    <Content Include="Views\Company\BankList.cshtml" />
+    <Content Include="Views\Employee\Emp_BankDetails.cshtml" />
+    <Content Include="Views\Entity\DownloadFile.cshtml" />
+    <Content Include="Views\DataWizard\Index.cshtml" />
+    <Content Include="Views\DataWizard\Category.cshtml" />
+    <Content Include="Views\DataWizard\Earning.cshtml" />
+    <Content Include="Views\DataWizard\Filters.cshtml" />
+    <Content Include="Views\DataWizard\Grouping.cshtml" />
+    <Content Include="Views\DataWizard\Settings.cshtml" />
+    <Content Include="Views\DataWizard\CatMasterField.cshtml" />
+    <Content Include="Views\DataWizard\Deduction.cshtml" />
+    <Content Include="Views\Employee\PayslipGeneration.cshtml" />
+    <Content Include="Views\PFChallan\TemplateEdit.cshtml" />
+    <Content Include="Views\DataWizard\Paysheet.cshtml" />
+    <Content Include="Views\Setting\PremiumSetting.cshtml" />
+    <Content Include="Views\Setting\RoleFormCommandSetting.cshtml" />
+    <Content Include="Views\Employee\Emp_HRComponent.cshtml" />
+    <Content Include="Views\Employee\Emp_HRComponentList.cshtml" />
+    <Content Include="Views\Employee\Emp_SeparationList.cshtml" />
+    <Content Include="Views\Company\LWF.cshtml" />
+    <Content Include="Views\Transaction\LOPCredit.cshtml" />
+    <Content Include="Views\Shared\_TaxMenu.cshtml" />
+    <Content Include="Views\Home\TaxIndex.cshtml" />
+    <Content Include="Views\TaxSection\TaxSection.cshtml" />
+    <Content Include="Views\TaxSection\TaxSectionList.cshtml" />
+    <Content Include="Views\TaxSection\TaxSubSection.cshtml" />
+    <Content Include="Views\TaxSection\TaxSubSectionList.cshtml" />
+    <Content Include="Views\TaxSection\FinanceYear.cshtml" />
+    <Content Include="Views\Shared\_ITaxLayout.cshtml" />
+    <Content Include="Views\TaxSection\FinanceYearList.cshtml" />
+    <Content Include="Views\TaxSection\SectionMatchingList.cshtml" />
+    <Content Include="Views\TaxSection\TaxSlab.cshtml" />
+    <Content Include="Views\TaxSection\TaxSlabList.cshtml" />
+    <Content Include="Views\TaxSection\IncomeMatchingList.cshtml" />
+    <Content Include="Views\TaxSection\TaxFormula.cshtml" />
+    <Content Include="Views\TaxTransaction\DeclarationEntry.cshtml" />
+    <Content Include="Views\Company\TaxEntityModel.cshtml" />
+    <Content Include="Views\Company\TaxBehavior.cshtml" />
+    <Content Include="Views\Company\PTax.cshtml" />
+    <Content Include="Views\TaxSection\IncomeMatching.cshtml" />
+    <Content Include="Views\TaxSection\OtherIncomeHeads.cshtml" />
+    <Content Include="Views\TaxSection\OtherIncomeHeadsList.cshtml" />
+    <Content Include="Views\TaxSection\SectionMatching.cshtml" />
+    <Content Include="Views\TaxTransaction\TaxProcess.cshtml" />
+    <Content Include="Views\TaxTransaction\TaxReport.cshtml" />
+    <Content Include="Views\Reports\PFReport.cshtml" />
+    <Content Include="Views\Reports\EsiReport.cshtml" />
+    <Content Include="Views\Reports\FinancialReport.cshtml" />
+    <Content Include="Views\Leave\LeaveFinanceYear.cshtml" />
+    <Content Include="Views\Leave\LeaveFinanceYearList.cshtml" />
+    <Content Include="Views\Shared\_LeaveMenu.cshtml" />
+    <Content Include="Views\Leave\LeaveIndex.cshtml" />
+    <Content Include="Views\Leave\LeaveOpenings.cshtml" />
+    <Content Include="Views\Leave\AssignManager.cshtml" />
+    <Content Include="Views\Leave\LeaveRequest.cshtml" />
+    <Content Include="Views\Leave\LeaveDetail.cshtml" />
+    <Content Include="Views\Shared\_TopUserMenu.cshtml" />
+    <Content Include="Views\Shared\_UserMaster.cshtml" />
+    <Content Include="Views\Shared\EmployeeDetails.cshtml" />
+    <Content Include="Views\Shared\UserRegistration.cshtml" />
+    <Content Include="Views\Shared\_EmpMaster.cshtml" />
+    <Content Include="Views\Leave\AssignManagerNew.cshtml" />
+    <Content Include="Views\Employee\EmpPayslipGenerate.cshtml" />
+    <Content Include="Views\Login\ChangePassword.cshtml" />
+    <Content Include="Views\Setting\Emp_CodeSetting.cshtml" />
+    <Content Include="StaticData\Company Import.xls" />
+    <Content Include="Views\TaxSection\TAXHRAExemption.cshtml" />
+    <Content Include="Views\TaxTransaction\LICPremium.cshtml" />
+    <Content Include="Views\TaxTransaction\TDSWorksheet.cshtml" />
+    <Content Include="Views\TaxTransaction\LICPremium.cshtml" />
+    <Content Include="Views\Leave\EmployeeHolidayList.cshtml" />
+    <Content Include="Views\Leave\EmployeeLeavedashboard.cshtml" />
+    <Content Include="Views\Leave\EmployeeLeaveReport.cshtml" />
+    <Content Include="Views\Leave\HolidayList.cshtml" />
+    <Content Include="Views\Leave\HolidayRevertleave.cshtml" />
+    <Content Include="Views\Leave\HolidaySettings.cshtml" />
+    <Content Include="Views\Leave\LeaveCalendarDetails.cshtml" />
+    <Content Include="Views\Leave\MailConfiguration.cshtml" />
+    <Content Include="Views\Leave\WeekoffSettings.cshtml" />
+    <Content Include="Views\LeaveRequest\LeaveRequestApprove.cshtml" />
+    <Content Include="Views\LeaveRequest\LeaveRequestReject.cshtml" />
+    <Content Include="Views\Company\LeaveCalendar.cshtml" />
+    <Content Include="Views\Leave\AssignPopup.cshtml" />
+    <Content Include="Views\Leave\HRLEAVEREQUEST.cshtml" />
+    <Content Include="Views\Leave\ApproveRejectionByMail.cshtml" />
+    <Content Include="Views\Leave\HRAPPROVEREJECT.cshtml" />
+    <Content Include="Views\Leave\ApprovedLeave.cshtml" />
+    <Content Include="Views\Leave\CancelledLeave.cshtml" />
+    <Content Include="Views\Leave\DebitLeave.cshtml" />
+    <Content Include="Views\Leave\DebitleavePopup.cshtml" />
+    <Content Include="Views\Leave\PendingLeave.cshtml" />
+    <Content Include="Views\Leave\RejectedLeave.cshtml" />
+    <Content Include="Views\Leave\ChangeAssignManager.cshtml" />
+    <Content Include="Views\Leave\userReport.cshtml" />
+    <Content Include="Views\Leave\AssignManagerViewReport.cshtml" />
+    <Content Include="Views\Leave\PendingStatusList.cshtml" />
+    <Content Include="Views\Leave\HRViewReport.cshtml" />
+    <Content Include="Views\Leave\LeaveOpeningImportMaster.cshtml" />
+    <Content Include="Views\Util\Singleimport.cshtml" />
+    <Content Include="Views\Leave\LeaveBalanceReport.cshtml" />
+    <Content Include="Views\Leave\ManagerReportlevbalance.cshtml" />
+    <Content Include="Views\Leave\MonthlyLeaveSettings.cshtml" />
+    <Content Include="Views\Leave\MonthlyLeaveList.cshtml" />
+    <Content Include="Views\TaxTransaction\Form_16.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\Error.cshtml" />
+    <Content Include="Views\Shared\ShowPassword.cshtml" />
+    <Content Include="Views\Employee\MultiEntry.cshtml" />
+    <Content Include="Views\Leave\ManagerEligiblity.cshtml" />
+    <Content Include="Views\Employee\SalaryView.cshtml" />
+    <Content Include="Views\Help\Index.cshtml" />
+    <Content Include="Views\Setting\LockRelease.cshtml" />
+    <Content Include="Views\Employee\Form16TreeView.cshtml" />
+    <Content Include="Views\TaxTransaction\Form16PartB.cshtml" />
+    <Content Include="Views\TaxTransaction\Form16PartA.cshtml" />
+    <Content Include="Views\TaxTransaction\Form12BA.cshtml" />
+    <Content Include="Views\Employee\Form16PartATreeView.cshtml" />
+    <Content Include="Views\Employee\Form12BATreeView.cshtml" />
+    <Content Include="Views\TaxTransaction\Form24Q.cshtml" />
+    <Content Include="Views\TaxTransaction\Form16AChallanEntry.cshtml" />
+    <Content Include="Views\TaxTransaction\Form16AChallanView.cshtml" />
+    <Content Include="Views\TaxTransaction\LICpremiumform.cshtml" />
+    <Content Include="Views\TaxTransaction\TaxDeclarationReport.cshtml" />
+    <Content Include="Views\TaxTransaction\TDSPreviousEmployer.cshtml" />
+    <Content Include="Views\TaxTransaction\TDSStatement.cshtml" />
+    <Content Include="Views\TaxTransaction\WorkSheetExcel.cshtml" />
+    <Content Include="Views\TaxTransaction\WorksheetReportPreview.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\PremiumSetting\" />
+    <Folder Include="Views\TaxEntity\" />
+    <Folder Include="Views\TaxProcess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NotificationEngine\NotificationEngine.csproj">
+      <Project>{c2c5c918-ae88-4191-87ff-094a56eed3fe}</Project>
+      <Name>NotificationEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PayrollBO\PayrollBO.csproj">
+      <Project>{dc762d1a-f698-4cb1-89a2-746a535969db}</Project>
+      <Name>PayrollBO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PayRollReports\PayRollReports.csproj">
+      <Project>{d8ab811e-95a8-4b6b-847d-4942e0f1a11f}</Project>
+      <Name>PayRollReports</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TraceError\TraceError.csproj">
+      <Project>{2fb2f008-6a88-4620-b098-6b36e1fb6ce3}</Project>
+      <Name>TraceError</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\ESIChallan.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ESIExtract.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ESIExtractNew.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FFSettlement.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form12BB.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form16PartB.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form24.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form3A.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ITaxWorkSheet.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySheet.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySlip.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PaySlipWithCumulative.rdlc" />
+    <EmbeddedResource Include="Reports\PFChallan.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PFChallanXLReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PFExtract.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintRent.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52992</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52993/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,546 @@
+﻿<!-- Modal -->
+<form id="frmHRAProperty" data-toggle="validator" role="form" action="javascript:$txMatchingList.saveMatching()">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="H4">
+                    <label id="lblHead">Income From House Property -</label>
+                    <label id="lblPropertyID">1</label>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Name of the Employer
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAEmployerName" class="form-control" placeholder="Enter The Employer Name" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Employee Name
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAEmployee" class="form-control" placeholder="Enter The Employee Name" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Employee No
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAEmployeeNo" class="form-control" placeholder="Enter The Employee No" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                PAN
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAPAN" class="form-control" placeholder="Enter The PAN" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Financial Year
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAFinancialYear" class="form-control" placeholder="Enter The Financial Year" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                No of Properties<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRANoofProp" readonly onkeypress="return $validator.IsNumeric(event, this.id)" class="form-control Reqrd" placeholder="Enter The No of Properties" maxlength="2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7" style="font: bold;font-size: large;">
+                                <b>Income from House Property</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-12" style="font: bold;font-size: large;">
+                                <b>Details Required</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Property Reference Sl.No (Enter 1,2,3 etc)<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAPropertyRef" readonly class="form-control Reqrd" placeholder="Enter The Property Reference Sl.No" maxlength="3" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Name[s] of the owner[s] of the property<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRANameofOwner" class="form-control Reqrd" placeholder="Enter The Name of owner" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Address of the property<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAAddressofProper" class="form-control Reqrd" placeholder="Enter The Address of the property" />
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                            <div class="col-md-12">
+                                <label class="control-label col-md-7">
+                                    Name and address of the lender[s]
+                                </label>
+                                <div class="col-md-5">
+                                    <input type="text" id="txtHRANameandAddress" class="form-control" placeholder="Enter The Name and address" />
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Name of the lender[s]
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAName" class="form-control" placeholder="Enter The Name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Address of the lender[s]
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAAddress" class="form-control" placeholder="Enter The address" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                PAN of the lender[s]
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRALenderPAN" class="form-control" placeholder="Enter The PAN" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Amount of housing loan taken for the property<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRALoanAmount" class="form-control Reqrd" placeholder="Enter The Amount of housing loan" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Type of the lender[s]<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <select id="txtHRALenderType" class="form-control Reqrd">
+                                    <option value="0">--select--</option>
+                                    <option value="1">Financial Institution/Bank</option>
+                                    <option value="2">Employer</option>
+                                    <option value="3">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Purpose of Loan<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltHRAPurposeofLoan" class="form-control Reqrd">
+                                    <option value="0">--select--</option>
+                                    <option value="1">Purchase</option>
+                                    <option value="2">Construction</option>
+                                    <option value="3">Repair/Renewal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Date of Sanction of Loan <label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRALoanDate" class="form-control datepicker Reqrd" placeholder="Enter The Loan Sanction Date"
+                                       readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Is the property held in Joint name by 2 or more persons?<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltHRAIstheProperty" class="form-control Reqrd">
+                                    <option value="0">--select--</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="Lblinterest">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                If Joint property, then enter the share of interest [%] to be claimed by the employee. [Annexure 2 to be submitted for claiming Interest in case of Joint property]<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAshareofinterest" class="form-control Reqrd" maxlength="6" min="0" max="100" onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter The share of interest" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Interest payable on Housing Loan for the year<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAInterestPayable" class="form-control Reqrd" placeholder="Enter The Interest payable" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label id="lblpreconstruction" class="control-label col-md-7">
+                                Pre Construction period interest to be claimed in the year (if any). Note this is not as same as Pre-EMI interest.<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAPreConstraction" class="form-control Reqrd" placeholder="Enter The interest to be claimed" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Total Interest for the year <label id="lblTotalinterest"></label><label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRATotalInterest" class="form-control Reqrd" placeholder="Enter The Total Interest" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Interest (restricted to employee's share)<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAInterest" class="form-control Reqrd" placeholder="Enter The Interest" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7" id="lblIncaseofconstruction">
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltHRAconstruction" class="form-control Reqrd">
+                                    <option value="0">--select--</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Is the Property Self Occupied or Let Out? [see note below]<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltHRASelfoccupied" class="form-control Reqrd">
+                                    <option value="0">--select--</option>
+                                    <option value="1">Self Occupied</option>
+                                    <option value="2">Let Out</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="dvSelfOccufied">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-12" style="font: bold;font-size: large;">
+                                <b>Enter the following details if Self Occupied Property</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="dvSelfOccufieddrop">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Whether housing loan taken before 01/04/1999?<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <select id="sltHRALoanTakenBefore" class="form-control Reqrd">
+                                    <option value="0">--select--</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="letoutproperty">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-12" style="font: bold;font-size: large;">
+                                <b>Enter the following details if Let Out Property</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-7" style="font: bold;font-size: large;">
+                        </label>
+                    </div>
+                    <div class="form-group" id="lblgrossrentalincome">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Gross Rental Income p.a.<label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAReIncomePA" class="form-control Reqrd" placeholder="Enter The Gross Rental Income" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="lblmunicipaltax">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Municipal/Water/Sewerage taxed paid in <label id="lblmunicipal"></label><label style="color:red;font-size: 13px;margin-left: 5px;">*</label>
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAMuWaSetax" class="form-control Reqrd" placeholder="Enter The Taxes Paid" onkeypress="return $validator.IsNumeric(event, this.id)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-7" style="font: bold;font-size: large;">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-12" style="font: bold;font-size: large;">
+                                <b>Computation</b>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-7" style="font: bold;font-size: large;">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Gross Rental Income
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAGroReIncome" class="form-control" placeholder="Enter The Gross Rental Income" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Less: Municipal Taxes paid
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAMunicipalTaxes" class="form-control" placeholder="Enter The Municipal Taxes paid" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Balance
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRABalance" class="form-control" placeholder="Enter The Balance" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Less: Standard Deduction 30%
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAStdrdDedutn" class="form-control" placeholder="Enter The Standard Deduction" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Less: Interest on Housing Loan
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRAIntHosLoan" class="form-control" placeholder="Enter The Interest on Housing Loan" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <label class="control-label col-md-7">
+                                Net Income/(Loss) from House Property
+                            </label>
+                            <div class="col-md-5">
+                                <input type="text" id="txtHRANetIncome" class="form-control" placeholder="Enter The Net Income" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-right: 45px;">
+                <button type="button" id="btnHRAprevious" class="btn custom-button" style="display:none" onclick="$declaractionEntry.Previousbutton()">
+                    Previous
+                </button>
+                <button type="button" id="btnHRANext" style="display:none" class="btn custom-button" onclick="$declaractionEntry.nextbutton()">
+                    Save & Next
+                </button>
+                <button type="button" id="btnHRASave" class="btn custom-button" style="display:none" onclick="$declaractionEntry.SubmitHRA()">
+                    Save & Submit
+                </button>
+                <button type="button" id="btnHRAClear" class="btn custom-button" onclick="$declaractionEntry.HRAPremiumClear()">
+                    Clear
+                </button>
+                <button type="button" id="btnHRADelete" class="btn custom-button" onclick="$declaractionEntry.DeleteHRA()">
+                    Delete
+                </button>
+                <button type="button" class="btn custom-button" data-dismiss="modal" onclick="$declaractionEntry.HRAClose()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    $("#txtHRANoofProp").change(function () {
+        var SYSDate = new Date();
+        var SYSMonth = SYSDate.getMonth() + 1;
+        var SYSDat = SYSDate.getDate();
+        var SYSyear = SYSDate.getFullYear();
+        var INPMonth = $('#ddMonth').val();
+        var INPYear = $('#txtYear').val();
+        var InpDate = $declaractionEntry.INPdate;
+        
+        if (InpDate > SYSDat) {
+            var PropVal = $("#txtHRANoofProp").val();
+            var propertyCount = $declaractionEntry.PropertyCount;
+            var ExPropertyCount = $declaractionEntry.ExistingPropertyCount;
+            if (propertyCount > PropVal) {
+                $app.showAlert('No of Property Count Should be Greater than ' + '"' + propertyCount + '"', 4);
+                $("#txtHRANoofProp").val(ExPropertyCount);
+            }
+            if (PropVal > 1) {
+                $("#btnHRANext").css("display", "");
+                $("#btnHRASave").css("display", "none");
+            }
+            else {
+                $("#btnHRANext").css("display", "none");
+                $("#btnHRAprevious").css("display", "none");
+                $("#btnHRASave").css("display", "");
+            }
+        }
+    });
+    $("#txtHRALoanAmount").change(function () {
+        if ($('#txtHRALoanAmount').val() == 0) {
+            //$('#sltHRALoanTakenBefore').addClass("Reqrd");
+            $('#txtHRALenderType').removeClass("Reqrd");
+            $('#sltHRAPurposeofLoan').removeClass("Reqrd");
+            $('#txtHRALoanDate').removeClass("Reqrd");
+        }
+        else {
+
+        }
+    });
+
+    $("#txtHRAshareofinterest").change(function () {
+        var txtInterest = $('#txtHRAshareofinterest').val();
+        var HighValue = /^[-+]?\d{1,3}(\.\d{0,2})?$/;
+        if (txtInterest > 100 || !HighValue.test(txtInterest)) {
+            $app.showAlert("Joint property interest value should be between 00.00 to 100.00", 4);
+            $('#txtHRAshareofinterest').val('');
+        }
+    });
+    //$(document).ready(function () {
+    //    $("#txtHRAshareofinterest").keypress(function (e) {
+    //
+    //        var txtInt = $('#txtHRAshareofinterest').val();
+    //        if (e.which != 8 && e.which != 0 && e.which != 46 && (e.which < 48 || e.which > 57) && txtInt.split('.').length == 2) {
+    //            return false;
+    //        }
+    //    });
+    //});
+</script>
+<script>
+    $('.datepicker').datepicker({
+        calendarWeeks: true,
+        changeYear: true,
+        changeMonth: true,
+        autoclose: true,
+        todayHighlight: true,
+        dateFormat: 'dd/M/yy',
+        yearRange: "-120:+2",
+        beforeShowMonth: function (date) {
+            //                switch (date.getMonth()) {
+            //                    case 8:
+            //                        return false;
+            //                }
+        },
+        toggleActive: true
+    });
+    $('#txtHRALoanDate').datepicker({ changeMonth: true, changeYear: true, }).change(evt => {
+        var selectedDate = $('#txtHRALoanDate').datepicker('getDate');
+        var now = new Date();
+        now.setHours(0, 0, 0, 0);
+        if (selectedDate < now) {
+
+        } else {
+            $('#txtHRALoanDate').val('');
+        }
+    });
+
+</script>
+
+
+
+

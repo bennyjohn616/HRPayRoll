@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "CompanyView";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+<div class="form-horizontal">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-10">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Financial Year
+                        </label>
+                        <div class="col-md-8">
+                            @*<input type="text" id="sltYear" onkeypress="return $validator.IsNumeric(event,this.id)" maxlength="4" />*@
+                            <select id="FinYears" class="form-control" autofocus></select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>   
+    <div class="col-md-2">
+        <input type="button" id="btngenerate" value="Export Report" onclick="$GenerateForms.generateForm24QA()" class="btn custom-button btnRight">
+    </div>
+</div>
+
+<script src="~/Js/Trans/GenerateForms.js"></script>
+
+<script>
+    $GenerateForms.loadFinYrs();
+</script>
+
+@section Scripts
+{
+    <script src="~/Js/Trans/GenerateForms.js"></script>
+}

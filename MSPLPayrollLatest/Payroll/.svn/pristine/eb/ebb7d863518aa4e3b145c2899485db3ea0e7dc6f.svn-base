@@ -1,0 +1,257 @@
+﻿<style>
+/*   #msg {
+        display: block;
+        opacity: 0;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        padding: 1em;
+        background: #fff;
+        border: 1px solid #888;
+        box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
+        transition: opacity .3s ease-in-out;
+    }*/
+</style> 
+
+
+<h2>Declaration Entry</h2>
+<input type="hidden" id="hdnEmployeeId" value="@Session["EmployeeGUID"]" />
+<input type="hidden" id="hdnEmpId" value="@Session["EmployeeId"]" />
+<input type="hidden" id="hdnRoleName" value="@Session["RoleName"]" />
+<div id="msg">
+   
+</div>
+<input type="button" id="btn1" class="btn-group-lg col-lg-2 pull-right" value="Click to Proceed" />
+
+<form id="frmDeclaration">
+    <div class="row">
+        <div class="form-horizontal">
+            <div class="col-md-12">
+                <div class="col-sm-12">
+                    <div id="dvTax" style="display:normal">
+                        <div class="col-sm-5">
+                            <div class="form-group">
+                                <label class="control-label col-md-4">
+                                    Effective Month
+                                </label>
+                                <div class="col-md-6">
+                                    <select id="ddMonth" class="form-control">
+                                        <option id="">--Select---</option>
+                                        <option id="1" value="1">January</option>
+                                        <option id="2" value="2">February</option>
+                                        <option id="3" value="3">March</option>
+                                        <option id="4" value="4">April</option>
+                                        <option id="5" value="5">May</option>
+                                        <option id="6" value="6">June</option>
+                                        <option id="7" value="7">July</option>
+                                        <option id="8" value="8">August</option>
+                                        <option id="9" value="9">September</option>
+                                        <option id="10" value="10">October</option>
+                                        <option id="11" value="11">November</option>
+                                        <option id="12" value="12">December</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label col-md-3">
+                                    Effective Year
+                                </label>
+                                <div class="col-md-2">
+                                    <input type="text" id="txtYear" class="form-control" readonly onkeypress="return $validator.IsNumeric(event, this.id)" placeholder="Enter The Effective Year " maxlength="4" style="width: 65px;" />
+                                    @*<select id="txtYear"  class="form-control" autofocus></select>*@
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Category
+                            </label>
+                            <div class="col-md-6">
+                                <select id="ddlCategory" onchange="$declaractionEntry.loadEmployee()" class="form-control" autofocus></select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-3" id="#divtaxProof">
+                                @*Multi <input type="checkbox" id="chkMulti" onchange="$declaractionEntry.loadMulti()" />*@
+                            </div>
+                            <div class="col-md-3" id="#divtaxProof">
+                                @*Proof <input type="checkbox" id="chkProof" onchange="$declaractionEntry.loadProof()" />*@
+                                @*Proof <input type="checkbox" id="chkProof"/>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="dvEmp" class="col-md-12">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="control-label col-md-4">
+                                Employee
+                            </label>
+                            <div class="col-md-6">
+                                @*<select id="ddlEmployee" onchange="$declaractionEntry.loadtaxDeclarationSection()" class="form-control" autofocus></select>*@
+                                <select id="ddlEmployee" class="form-control" autofocus></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-2">
+                            <input type="button" id="btnViewSection" value="View" class="btn custom-button  "
+                                   data-toggle="modal" data-target="#ViewSection" onclick="$declaractionEntry.loadtaxDeclaration()">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="button" id="btnPrintsection" value="FORM 12BB" class="btn custom-button  "
+                                   data-toggle="modal" data-target="#ViewSection" onclick="$declaractionEntry.DownloadTaxDeclaration()">
+                        </div>
+                        <div class="col-md-2" style="padding-left: 65px;">
+                            <input type="button" id="btnPrintpdf" value="Print" class="btn custom-button  "
+                                   data-toggle="modal" data-target="#ViewSection" onclick="$declaractionEntry.DownloadTaxDeclarationpdf()">
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-sm-12 table-responsive">
+                    <div id="dvEmpoyeeDetail">   </div>
+                </div>
+            </div>
+            <div id="AddSection" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+                 data-keyboard="false">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="H4">
+                                TaxSections
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input type="button" onclick="$declaractionEntry.loadEmployee()" value="Apply & View" class="btn custom-button" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="dvtbltaxSections" class="table-responsive"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="pull-right">
+                <div class="form-group">
+                    <input type="button" id="btnAddSection" value="Add Tax" class="btn custom-button  "
+                           data-toggle="modal" data-target="#AddSection" @*onclick="$declaractionEntry.addTaxColumn()"*@>
+                    <input type="button" value="Save" class="btn custom-button" id="btnSaveDeclaration" onclick="$declaractionEntry.save()" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="ShowMedInsurance" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/TaxSection/MedicalInsurancePremium.cshtml")
+</div>
+<div id="rentPaid" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/TaxSection/ActualRentPaid.cshtml")
+</div>
+<div id="ShowHRAProperty" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/TaxSection/TAXHRAExemption.cshtml")
+</div>
+<div id="AddLICPremium" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+     data-keyboard="false">
+    @Html.Partial("~/Views/TaxTransaction/LICPremium.cshtml")
+</div>
+<script type="text/javascript" src="~/Js/Tax/declaractionEntry.js"></script>
+<script type="text/javascript" src="~/Js/Company/CompanyCom.js"></script>
+<script type="text/javascript" src="~/Js/Tax/LICPremium.js"></script>
+<script type="text/javascript" src="~/Js/Tax/MedicalInsurance.js"></script>
+
+
+<script type="text/javascript">
+    $('#frmDeclaration').hide();
+    $(document).ready(function (e) {
+        $('#msg').load($app.baseUrl + 'images/Message_newtax.htm');
+        $('#btn1').click(function (e) {
+            e.preventDefault();
+            $('#msg').hide();
+            $('#btn1').hide();
+            $('#frmDeclaration').show();
+        });
+        $declaractionEntry.typeofpage = "All"
+        $("#ddlEmployee").attr('disabled', false);
+        $("#ddlCategory").attr('disabled', false);
+
+        $("#ddMonth").change(function () {
+            var month = $('#ddMonth').val();
+            var sd = new Date($declaractionEntry.financeYear.startDate);
+            var ed = new Date($declaractionEntry.financeYear.EndDate);
+            if (ed.getMonth() + 1 >= month) {
+                $('#txtYear').val(ed.getFullYear());
+            }
+            else {
+                $('#txtYear').val(sd.getFullYear());
+            }
+            $declaractionEntry.loadSelectedEmployee();
+            $declaractionEntry.LoadLock();
+            return false;
+           
+        });
+
+        $("#txtYear").change(function () {
+            $declaractionEntry.loadSelectedEmployee();
+        });
+    });
+
+    function LICPremium() {
+
+        $LICpremium.FinancialyrId = $declaractionEntry.LICData.financialYearId;
+        $LICpremium.LICSectionId = $declaractionEntry.LICData.id;
+        $LICpremium.selectedEmployeeId = $('#ddlEmployee').val();
+        $LICpremium.AddInitialize();
+        $LICpremium.BindLICdetails();
+    }
+    $companyCom.loadCategory({ id: "ddlCategory" });
+    debugger;
+    if ($('#hdnEmployeeId').val() != "00000000-0000-0000-0000-000000000000") {
+        $declaractionEntry.loadEmployee();
+    }
+  
+    $companyCom.loadYear({ id: "txtYear" });
+    $declaractionEntry.loadInitial();
+    //$(document).keypress(function (event) {
+    //
+    //    var table = $('#tblDeclaration').DataTable();
+    //    var currcellvalue = table.cell(this).data();
+
+
+    //    $('#test_filter input').unbind();
+    //    $('#test_filter input').bind('keyup', function (e) {
+    //
+    //        if (e.keyCode == 13) {
+    //            oTable.fnFilter(this.value);
+    //        }
+    //    });
+    //});
+
+</script>

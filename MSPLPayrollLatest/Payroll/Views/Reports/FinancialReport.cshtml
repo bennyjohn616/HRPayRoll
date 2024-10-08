@@ -1,0 +1,126 @@
+﻿
+<div class="form-horizontal">
+
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class=" col-sm-12">
+                @ViewBag.Reporttitle
+              
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-10 " id="divSingleMonth">
+
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Month
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltMonth" class="form-control">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Year
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="sltYear" onkeypress="return $validator.IsNumeric(event,this.id)" maxlength="4" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-10 nodisp" id="divPeriod">
+
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Form
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="sltSYear" onkeypress="return $validator.IsNumeric(event,this.id)" maxlength="4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Tp
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="sltEYear" onkeypress="return $validator.IsNumeric(event,this.id)" maxlength="4" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <input type="button" id="btngeneratepdf" value="Generate PDF" onclick="$pfesiReport.GetReport()" class="btn custom-button btnRight">
+            </div>
+        </div>
+
+    </div>
+    <div class="row" id="divempcode">
+        <div class="col-md-12">
+            <div class="col-md-10">
+
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            EmployeeCode
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="txtEmpcode" value="" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="divCategory">
+        <div class="col-md-6">
+            @Html.Partial("~/Views/DataWizard/Category.cshtml")
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="form-horizontal">
+            <div class="col-sm-12">
+                @Html.Partial("~/Views/DataWizard/Filters.cshtml")
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $dwcategory.loadComponent();
+   // $pfesiReport.init();
+</script>
+
+<script src="~/Js/DataWizard/pfreport.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+@section scripts
+    {
+
+    <script src="~/Js/DataWizard/pfreport.js"></script>
+    <script src="~/Js/Company/CompanyCom.js"></script>
+}
+
+

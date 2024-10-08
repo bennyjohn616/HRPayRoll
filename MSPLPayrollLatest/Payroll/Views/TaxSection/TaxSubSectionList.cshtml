@@ -1,0 +1,43 @@
+﻿
+
+
+<h2>Tax SubSection</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label class="control-label col-sm-4">
+                Tax Section
+            </label>
+            <div class="col-sm-8">
+                <select id="sltTaxSection" class="form-control"></select>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-6">
+        <input type="button" id="btnAddFinancialYear" value="Add" class="btn custom-button btnRight marginbt7"
+               data-toggle="modal" data-target="#AddSection" onclick="$sectionMatching.addInitialize();">
+    </div>
+
+    <div id="dvSection" class="col-md-12 table-responsive">
+
+    </div>
+    <div id="AddSection" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static"
+         data-keyboard="false">
+        @Html.Partial("~/Views/TaxSection/TaxSubSection.cshtml")
+    </div>
+</div>
+<script src="~/Js/Tax/txSection.js" type="text/javascript"></script>
+<script src="~/Js/Tax/sectionMatching.js" type="text/javascript"></script>
+@section Scripts
+{
+    <script src="~/Js/Tax/txSection.js" type="text/javascript"></script>
+}
+<script>
+    $companyCom.loadSection({ id: 'sltTaxSection' },'','Section');
+    $companyCom.loadSection({ id: 'ddTxSection' },'','Section');
+    $txSection.selectedSectionparentId = '00000000-0000-0000-0000-000000000000';
+    $txSection.loadInitial();
+</script>

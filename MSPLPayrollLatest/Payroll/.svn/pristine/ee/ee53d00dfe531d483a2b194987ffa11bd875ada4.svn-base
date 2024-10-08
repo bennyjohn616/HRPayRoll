@@ -1,0 +1,79 @@
+﻿
+@{
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<div class="form-horizontal">
+
+
+    <div class="row">
+        <a href="#" id="PayslipTreeView">
+            <span class="title">
+                Click here : <u> Previous Year Payslips</u>
+            </span>
+        </a>
+        <div class="col-md-12">
+            <div class="col-md-10">
+                <input id="hdnEmpcode"
+                       name="hiddenName"
+                       type="hidden"
+                       value="@Session["EmployeeId"]" />
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Month
+                        </label>
+                        <div class="col-md-8">
+                            <select id="sltMonth" class="form-control">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">
+                            Year
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="sltYear" onkeypress="return $validator.IsNumeric(event,this.id)" maxlength="4" />
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-2">
+                <input type="button" id="btngeneratepdf" value="Generate PDF" onclick="$payrollHistroy.printHistory($('#hdnEmpcode').val())" class="btn custom-button btnRight">
+            </div>
+
+        </div>
+    
+    </div>
+</div>
+
+<script src="~/Js/Emp/payrollHistroy.js"></script>
+<script src="~/Js/DataWizard/Payslipsetting.js"></script>
+<script src="~/Js/Company/CompanyCom.js"></script>
+<script src="~/Js/salaryView.js"></script>
+<script type="text/javascript">
+    $('#PayslipTreeView').on("click", function (e) {     
+        if (this.id == '') {
+            return false;
+        }
+        else {
+            $payroll.CallControler(this);
+        }
+    });
+</script>
